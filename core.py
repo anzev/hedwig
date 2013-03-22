@@ -7,29 +7,41 @@ from collections import defaultdict
 from bitarray import bitarray
 from rdflib import RDF, RDFS, Namespace, URIRef
 import numpy as np
+import os
 
 class Example:
     '''
     Represents an example with its score, label, id and annotations.
     '''
+    ClassLabeled = 'class'
+    Ranked = 'ranked'
     def __init__(self, id, label, score, annotations=[], weights={}):
         self.id = id
         self.label = label
         self.score = score
+        if not type(score) in [str, unicode]:
+            self.target_type = Example.Ranked
+        else:
+            self.target_type = Example.ClassLabeled
         self.annotations = annotations
         self.weights = weights
         
     def __str__(self):
-        return '<id=%d, score=%.5f, label=%s>' % (self.id, self.score, self.label)
+        if self.score_type == ScoreTypeRanked:
+            return '<id=%d, score=%.5f, label=%s>' % (self.id, self.score, self.label)
+        else:
+            return '<id=%d, class=%s, label=%s>' % (self.id, self.score, self.label)
     
 class Rule:
     '''
     Represents a rule, along with its description, examples and statistics.
     '''
-    def __init__(self, kb, predicates=[]):
+    def __init__(self, kb, predicates=[], target=None):
         self.predicates = predicates
         self.kb = kb
         self.covered_examples = kb.get_full_domain()
+        self.target_type = kb.target_type
+        self.target = target
         # Allow only unary predicates
         for pred in predicates:
             if isinstance(pred, UnaryPredicate):
@@ -42,10 +54,11 @@ class Rule:
         self.latest_var = self.head_var
         
         # Statistics
-        self.score = None
-        self.coverage = None
-        self.mean = None
-        self.sd = None
+        self.score = -1
+        self.coverage = -1
+        self.mean = -1
+        self.sd = -1
+        self.distribution = {}
         self.__refresh_coverage()
         self.__refresh_statistics()
         
@@ -59,6 +72,7 @@ class Rule:
         new_rule.latest_var = self.latest_var
         new_rule.head_var = self.head_var
         new_rule.shared_var = {}
+        new_rule.target = self.target
         for var in self.shared_var:
             new_rule.shared_var[var] = self.shared_var[var][:]
         return new_rule 
@@ -155,9 +169,15 @@ class Rule:
         '''
         self.coverage = self.covered_examples.count()
         ex_scores = [self.kb.get_score(idx) for idx in self.kb.bits_to_indices(self.covered_examples)]
-        self.mean = np.average(ex_scores)
-        self.sd = np.std(ex_scores)
-        self.score = self.kb.score_fun(self)
+        if self.target_type == Example.Ranked:
+            self.mean = np.average(ex_scores)
+            self.sd = np.std(ex_scores)
+            self.score = self.kb.score_fun(self)
+        else:
+            self.distribution = defaultdict(int)
+            for score in ex_scores:
+                self.distribution[score] += 1
+            self.score = self.kb.score_fun(self)
     
     def similarity(self, rule):
         '''
@@ -264,9 +284,10 @@ class ExperimentKB:
         self.super_class_of = defaultdict(list)
         self.predicates = set()
         self.binary_predicates = set()
+        self.class_values = set()
         
         # Parse the examples schema
-        self.g.parse('examples.n3', format='n3')
+        self.g.parse(os.path.join(os.path.dirname(__file__), 'examples.n3'), format='n3')
         FIRST = Namespace('http://project-first.eu/ontology#')
         
         # Extract the available examples from the graph
@@ -279,13 +300,26 @@ class ExperimentKB:
             weights = {}
             for link in annotation_links:
                 annotation = [str(one) for one in self.g.objects(subject=link, predicate=FIRST.annotation)][0]
-                weight = [one for one in self.g.objects(subject=link, predicate=FIRST.weight)][0]
-                weights[annotation] = float(weight)
+                weights_list = [one for one in self.g.objects(subject=link, predicate=FIRST.weight)]
+                if weights_list:
+                    weights[annotation] = float(weights_list[0])
                 annotations.append(annotation)
-            score = list(self.g.objects(subject=ex_uri, predicate=FIRST.score))[0]
+            score_list = list(self.g.objects(subject=ex_uri, predicate=FIRST.score))
+            if score_list:
+                score = float(score_list[0])
+            else:
+                score_list = list(self.g.objects(subject=ex_uri, predicate=FIRST.class_label))
+                score = str(score_list[0])
+                self.class_values.add(score)
             self.uri_to_idx[ex_uri] = i
-            examples.append(Example(i, str(ex_uri), float(score), annotations=annotations, weights=weights))
+            examples.append(Example(i, str(ex_uri), score, annotations=annotations, weights=weights))
         self.examples = examples
+
+        # Ranked or class-labeled data
+        self.target_type = self.examples[0].target_type
+
+        if not self.examples:
+            raise Exception("No examples provided!")
         
         # Get the subClassOf hierarchy
         for sub, obj in self.g.subject_objects(predicate=RDFS.subClassOf):
@@ -316,7 +350,7 @@ class ExperimentKB:
 
         # Find the root classes
         roots = filter(lambda pred: self.sub_class_of[pred] == [], self.super_class_of.keys())
-        
+       
         # Add a dummy root
         self.dummy_root = 'root'
         self.predicates.add(self.dummy_root)
@@ -337,11 +371,10 @@ class ExperimentKB:
                     self.sub_class_of_closure[child].update(self.sub_class_of_closure[pred])
                     mems.update(closure(child, lvl + 1))
                 self.members[pred] = mems
-                #print pred, mems
                 return mems
             else:
                 return self.members[pred]
-        
+
         # Level-wise predicates
         self.levels = defaultdict(set)
         
@@ -388,8 +421,20 @@ class ExperimentKB:
                 self.reverse_bit_binary_members[pred][el] = self.indices_to_bits(self.reverse_binary_members[pred][el])
         
         # Statistics
-        self.mean = np.average([ex.score for ex in self.examples])
-        self.sd = np.std([ex.score for ex in self.examples])
+        if self.target_type == Example.Ranked:
+            self.mean = np.average([ex.score for ex in self.examples])
+            self.sd = np.std([ex.score for ex in self.examples])
+        else:
+            self.distribution = defaultdict(int)
+            for ex in self.examples:
+                self.distribution[ex.score] += 1
+
+        # def print_hierarchy(root, d=0):
+        #     print '%s%s' % ('\t'*d, root.encode('ascii', 'ignore'))
+        #     for subclass in self.super_class_of[root]:
+        #         print_hierarchy(subclass, d=d+1)
+        # print
+        # print_hierarchy(self.dummy_root)
 
     def user_defined(self, uri):
         '''
@@ -401,11 +446,11 @@ class ExperimentKB:
         '''
         Adds the resource 'sub' as a subclass of 'obj'.
         '''
-        sub, obj = str(sub), str(obj)
+        sub, obj = unicode(sub).encode('ascii', 'ignore'), unicode(obj).encode('ascii', 'ignore')
         self.predicates.update([sub, obj])
         self.sub_class_of[sub].append(obj)
         self.super_class_of[obj].append(sub)
-        
+
     def super_classes(self, pred):
         '''
         Returns all super classes of pred (with transitivity).

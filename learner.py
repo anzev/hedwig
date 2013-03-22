@@ -40,6 +40,22 @@ class ScoreFunctions:
                 max_diff = partial
         return max_diff
 
+    @staticmethod
+    def chi_squared(rule):
+        pass
+
+    @staticmethod
+    def wracc(rule):
+        nX = rule.coverage
+        N = len(rule.kb.examples)
+        nXY = rule.distribution[rule.target]
+        nY = rule.kb.distribution[rule.target]
+        if nX:
+            return nX / float(N) * (nXY/float(nX) - nY/float(N))
+        else:
+            return 0
+
+
 class Learner:
     '''
     Learner class, supporting various types of induction from the knowledge base.
@@ -49,19 +65,21 @@ class Learner:
     Similarity = 'similarity'
     Improvement = 'improvement'
     Default = 'default'
-    def __init__(self, kb, n=None, min_sup=1, sim=1):
+    def __init__(self, kb, n=None, min_sup=1, sim=1, depth=4, target=None):
         self.kb = kb
         self.n = n      # Beam length
         self.min_sup = min_sup
         self.sim = sim
         self.extending = Learner.Similarity
-    
+        self.depth = depth
+        self.target = list(self.kb.class_values)[0] if not target else target
+
     def induce_beam(self):
         '''
         Induces rules for the given knowledge base using beam search.
         '''
         root_pred = self.kb.get_root()
-        rules = [Rule(self.kb, predicates=[root_pred])]
+        rules = [Rule(self.kb, predicates=[root_pred], target=self.target)]
         while True:
             old_score = self.group_score(rules)
             new_rules = rules[:]
@@ -79,7 +97,7 @@ class Learner:
         Induces rules for the given knowledge base.
         '''
         root_pred = self.kb.get_root()
-        rules = [Rule(self.kb, predicates=[root_pred])]
+        rules = [Rule(self.kb, predicates=[root_pred], target=self.target)]
         rules = self.__induce_level(rules)
         return rules
     
@@ -90,19 +108,17 @@ class Learner:
         while True:
             old_score = self.group_score(rules)
             new_rules = rules[:]
-            for rule in rules:
+            for i, rule in enumerate(rules):
                 specializations = self.specialize(rule)
-#                for spec_rule in specializations:
-#                    if rule.similarity(spec_rule) == 1.0:
-#                        idx = new_rules.index(rule)
-#                        new_rules[idx] = spec_rule
-#                        break
                 self.extend(new_rules, specializations)
             # Take the first N rules
             rules = sorted(new_rules, key=lambda rule: rule.score, reverse=True)[:self.n]
+            # for r in rules:
+            #     print r
+            # print '-' * 10
             new_score = self.group_score(rules)
             #if not improved_level: #abs(new_score - old_score) < 1e-5:
-            if 1 - abs(old_score/new_score) < 0.01:
+            if not new_score or 1 - abs(old_score/new_score) < 0.01:
                 break
         return new_rules
     
@@ -126,7 +142,7 @@ class Learner:
             tmp_rules = rules[:]
             for rule in tmp_rules:
                 sim = rule.similarity(new_rule)
-                if sim >= self.sim:
+                if sim >= self.sim and len(rules) > self.n:
 #                    if sim == self.sim:
 #                        # If they are exactly the same, prefer the more specific description
 #                        idx = rules.index(rule)
@@ -162,7 +178,7 @@ class Learner:
         for pred in filter(lambda p: isinstance(p, UnaryPredicate), eligible_preds):
             for sub_class in self.kb.get_subclasses(pred):
                 new_rule = rule.clone_swap_with_subclass(pred, sub_class)
-                if self.good_enough(new_rule):
+                if self.can_specialize(new_rule):
                     specializations.append(new_rule)
         # Append new root            
         specializations.append(rule.clone_append(self.kb.dummy_root, producer_pred=rule.predicates[-1]))
@@ -178,7 +194,7 @@ class Learner:
         for pred in filter(lambda p: isinstance(p, UnaryPredicate), eligible_preds):
             for sub_class in self.kb.get_subclasses(pred):
                 new_rule = rule.clone_swap_with_subclass(pred, sub_class)
-                if self.good_enough(new_rule):
+                if self.can_specialize(new_rule):
                     specializations.append(new_rule)
         # This makes sure we are not specializing a default rule by appending, 
         # this rule should instead be reached by the specialization step above.
@@ -197,7 +213,7 @@ class Learner:
                     for pred in sorted(list(diff)): 
                         # Appending a new predicate, the last predicate is always the producer
                         new_rule = rule.clone_append(pred, producer_pred=rule.predicates[-1])
-                        if self.good_enough(new_rule):
+                        if self.can_specialize(new_rule):
                             specializations.append(new_rule)
                             break
         # Introduce new binary relation
@@ -214,15 +230,15 @@ class Learner:
         #    return specializations
         for pred in self.kb.binary_predicates:
             new_rule = rule.clone_append(pred, producer_pred=rule.predicates[-1], bin=True)
-            if self.good_enough(new_rule):
+            if self.can_specialize(new_rule):
                 specializations.append(new_rule)
         return specializations
     
-    def good_enough(self, rule):
+    def can_specialize(self, rule):
         '''
         Is the rule good enough to be further refined?
         '''
-        return rule.coverage >= self.min_sup
+        return rule.coverage >= self.min_sup and rule.size() < self.depth
     
     def group_score(self, rules):
         '''
