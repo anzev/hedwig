@@ -209,7 +209,11 @@ class Rule:
                 conj = '%s(%s, %s)' % (pred.label, pred.input_var, pred.output_var) 
             conjuncts.append(conj)
         s = ', '.join(conjuncts)
-        s += ' [size = %d, score = %.3f]' % (self.coverage, self.score)
+        if self.target_type == Example.ClassLabeled:
+            accuracy = self.distribution[self.target] / float(self.coverage)
+            s += ' [covered = %d, positive = %d, precision = %.3f, score = %.3f]' % (self.coverage, self.distribution[self.target], accuracy, self.score)
+        else:
+            s += ' [size = %d, score = %.3f]' % (self.coverage, self.score)
         return s
 
 class Predicate:
@@ -299,7 +303,7 @@ class ExperimentKB:
             annotations = []
             weights = {}
             for link in annotation_links:
-                annotation = [str(one) for one in self.g.objects(subject=link, predicate=FIRST.annotation)][0]
+                annotation = [unicode(one).encode('ascii', 'ignore') for one in self.g.objects(subject=link, predicate=FIRST.annotation)][0]
                 weights_list = [one for one in self.g.objects(subject=link, predicate=FIRST.weight)]
                 if weights_list:
                     weights[annotation] = float(weights_list[0])

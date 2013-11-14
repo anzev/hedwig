@@ -41,10 +41,6 @@ class ScoreFunctions:
         return max_diff
 
     @staticmethod
-    def chi_squared(rule):
-        pass
-
-    @staticmethod
     def wracc(rule):
         nX = rule.coverage
         N = len(rule.kb.examples)
@@ -55,6 +51,27 @@ class ScoreFunctions:
         else:
             return 0
 
+    @staticmethod
+    def precision(rule):
+        nX = rule.coverage
+        N = len(rule.kb.examples)
+        nXY = rule.distribution[rule.target]
+        nY = rule.kb.distribution[rule.target]
+        if nX:
+            return nXY/float(nX)
+        else:
+            return 0
+
+    @staticmethod
+    def chisq(rule):
+        N = len(rule.kb.examples)
+        z = rule.distribution[rule.target]/float(N)
+        x = rule.coverage/float(N)
+        y = rule.kb.distribution[rule.target]/float(N)
+        if x not in [0,1] and y not in [0,1]:
+            return N*(z - x*y)**2 / float(x*y*(1 - x)*(1 - y))
+        else: 
+            return 0
 
 class Learner:
     '''
@@ -71,7 +88,7 @@ class Learner:
         self.min_sup = min_sup
         self.sim = sim
         self.extending = Learner.Similarity
-        self.depth = depth
+        self.depth = depth # Max number of conjunctions
         self.target = list(self.kb.class_values)[0] if not target else target
 
     def induce_beam(self):
@@ -118,9 +135,10 @@ class Learner:
             # print '-' * 10
             new_score = self.group_score(rules)
             #if not improved_level: #abs(new_score - old_score) < 1e-5:
-            if not new_score or 1 - abs(old_score/new_score) < 0.01:
+            #print 1 - abs(old_score/(new_score+0.0001))
+            if 1 - abs(old_score/(new_score+0.0001)) < 0.01:
                 break
-        return new_rules
+        return rules
     
     def extend(self, rules, specializations):
         '''
@@ -138,22 +156,12 @@ class Learner:
         Extends the list based on how similar is 'new_rule' to the rules contained in 'rules'.
         '''
         for new_rule in specializations:
-            similar = False
             tmp_rules = rules[:]
             for rule in tmp_rules:
                 sim = rule.similarity(new_rule)
-                if sim >= self.sim and len(rules) > self.n:
-#                    if sim == self.sim:
-#                        # If they are exactly the same, prefer the more specific description
-#                        idx = rules.index(rule)
-#                        rules[idx] = new_rule
-#                        break
-#                    else:
-#                        similar = True
-#                        break
-                    similar = True
+                if sim >= self.sim and len(rules) > 0.5*self.n:
                     break
-            if not similar:
+            else:
                 rules.append(new_rule)
                 
     def extend_replace_worst(self, rules, specializations):
@@ -219,6 +227,8 @@ class Learner:
         # Introduce new binary relation
         if isinstance(rule.predicates[-1], UnaryPredicate):
             specializations.extend(self.specialize_add_relation(rule))
+        # for s in specializations:
+        #     print s
         return specializations
     
     def specialize_add_relation(self, rule):
@@ -238,7 +248,7 @@ class Learner:
         '''
         Is the rule good enough to be further refined?
         '''
-        return rule.coverage >= self.min_sup and rule.size() < self.depth
+        return rule.coverage > self.min_sup and rule.size() < self.depth
     
     def group_score(self, rules):
         '''
