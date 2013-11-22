@@ -9,12 +9,14 @@ from rdflib import RDF, RDFS, Namespace, URIRef
 import numpy as np
 import os
 
+
 class Example:
     '''
     Represents an example with its score, label, id and annotations.
     '''
     ClassLabeled = 'class'
     Ranked = 'ranked'
+
     def __init__(self, id, label, score, annotations=[], weights={}):
         self.id = id
         self.label = label
@@ -25,13 +27,18 @@ class Example:
             self.target_type = Example.ClassLabeled
         self.annotations = annotations
         self.weights = weights
-        
+
     def __str__(self):
         if self.score_type == ScoreTypeRanked:
-            return '<id=%d, score=%.5f, label=%s>' % (self.id, self.score, self.label)
+            return '<id=%d, score=%.5f, label=%s>' % (self.id,
+                                                      self.score,
+                                                      self.label)
         else:
-            return '<id=%d, class=%s, label=%s>' % (self.id, self.score, self.label)
-    
+            return '<id=%d, class=%s, label=%s>' % (self.id,
+                                                    self.score,
+                                                    self.label)
+
+
 class Rule:
     '''
     Represents a rule, along with its description, examples and statistics.
@@ -42,17 +49,22 @@ class Rule:
         self.covered_examples = kb.get_full_domain()
         self.target_type = kb.target_type
         self.target = target
+
         # Allow only unary predicates
         for pred in predicates:
             if isinstance(pred, UnaryPredicate):
                 self.covered_examples &= pred.domain[pred.input_var]
-                
-        self.head_var = self.predicates[0].input_var if self.predicates else None
-        self.shared_var = { self.head_var : self.predicates }  # Dictionary of predicates that share a certain variable
-        
+
+        self.head_var = None
+        if self.predicates:
+            self.head_var = self.predicates[0].input_var
+
+        # Dictionary of predicates that share a certain variable
+        self.shared_var = {self.head_var: self.predicates}
+
         # Predicates that currently can be specialized
         self.latest_var = self.head_var
-        
+
         # Statistics
         self.score = -1
         self.coverage = -1
@@ -61,7 +73,7 @@ class Rule:
         self.distribution = {}
         self.__refresh_coverage()
         self.__refresh_statistics()
-        
+
     def clone(self):
         '''
         Returns a clone of this rule. The predicates themselves are NOT cloned.
@@ -75,100 +87,123 @@ class Rule:
         new_rule.target = self.target
         for var in self.shared_var:
             new_rule.shared_var[var] = self.shared_var[var][:]
-        return new_rule 
-    
+        return new_rule
+
     def clone_swap_with_subclass(self, target_pred, child_pred_label):
         '''
-        Returns a copy of this rule where 'target_pred' is swapped for 'child_pred_label'.
+        Returns a copy of this rule where
+        'target_pred' is swapped for 'child_pred_label'.
         '''
         new_rule = self.clone()
-                
-        # Create the instance of the child pred 
-        child_pred = UnaryPredicate(child_pred_label, self.kb.get_members(child_pred_label), self.kb, producer_pred=target_pred.producer_predicate, custom_var_name=target_pred.input_var)
-        
+
+        # Create the instance of the child pred
+        producer_pred = target_pred.producer_predicate
+        var_name = target_pred.input_var
+        child_pred = UnaryPredicate(child_pred_label,
+                                    self.kb.get_members(child_pred_label),
+                                    self.kb,
+                                    producer_pred=producer_pred,
+                                    custom_var_name=var_name)
+
         Rule.__replace(new_rule.predicates, target_pred, child_pred)
-        new_rule.covered_examples = self.covered_examples & child_pred.domain[child_pred.input_var]
-        
+        new_rule.covered_examples = self.covered_examples & \
+            child_pred.domain[child_pred.input_var]
+
         # Reference possible consumers
         child_pred.consumer_predicate = target_pred.consumer_predicate
-        
+
         # Update the backlinks
         if child_pred.producer_predicate:
             child_pred.producer_predicate.consumer_predicate = child_pred
-        if child_pred.consumer_predicate: 
+        if child_pred.consumer_predicate:
             child_pred.consumer_predicate.producer_predicate = child_pred
-            
+
         # Update the shared var list
         shared_list = new_rule.shared_var[target_pred.input_var]
         Rule.__replace(shared_list, target_pred, child_pred)
-        
+
         # Recalc the covered examples and statistics
         new_rule.__refresh_coverage()
         new_rule.__refresh_statistics()
-               
+
         return new_rule
-    
+
     def clone_append(self, predicate_label, producer_pred, bin=False):
         '''
-        Returns a copy of this rule where 'predicate_label' is appended to the rule.
+        Returns a copy of this rule where 'predicate_label'
+        is appended to the rule.
         '''
         if not bin:
             new_rule = self.clone()
-            predicate = UnaryPredicate(predicate_label, self.kb.get_members(predicate_label), self.kb, producer_pred=producer_pred)
+            predicate = UnaryPredicate(predicate_label,
+                                       self.kb.get_members(predicate_label),
+                                       self.kb,
+                                       producer_pred=producer_pred)
             new_rule.predicates.append(predicate)
             new_rule.shared_var[producer_pred.output_var].append(predicate)
-            #new_rule.covered_examples = self.covered_examples & predicate.domain[predicate.input_var]
         else:
             new_rule = self.clone()
-            predicate = BinaryPredicate(predicate_label, self.kb.get_members(predicate_label), self.kb, producer_pred=producer_pred)
+            predicate = BinaryPredicate(predicate_label,
+                                        self.kb.get_members(predicate_label),
+                                        self.kb,
+                                        producer_pred=producer_pred)
             new_rule.predicates.append(predicate)
+
             # Introduce new variable
             new_rule.shared_var[predicate.output_var] = [predicate]
             new_rule.shared_var[predicate.input_var].append(predicate)
             new_rule.latest_var = predicate.output_var
-            
+
         new_rule.__refresh_coverage()
         new_rule.__refresh_statistics()
         return new_rule
-    
+
     @staticmethod
     def __replace(l, target, replacement):
         idx = l.index(target)
         l[idx] = replacement
-    
+
     def __refresh_coverage(self):
         '''
         Recalculates the covered examples.
         '''
-        self.covered_examples = self.__covered_examples(self.shared_var[self.head_var])
-    
+        var = self.shared_var[self.head_var]
+        self.covered_examples = self.__covered_examples(var)
+
     def __covered_examples(self, predicates):
         '''
-        Recursively calculates the covered examples for a given set of predicates that share a variable.
+        Recursively calculates the covered examples for a given set of
+        predicates that share a variable.
         '''
         covered_examples = self.kb.get_full_domain()
         for pred in predicates:
             if isinstance(pred, BinaryPredicate):
+
+                # Predicates that share the new variable, without 'pred'
                 shared = self.shared_var[pred.output_var][:]
-                shared.remove(pred)     # predicates that share the new variable, without 'pred'
-                existential_covered_examples = self.__covered_examples(shared)
+                shared.remove(pred)
+                existential_cov_examples = self.__covered_examples(shared)
                 reverse_members = self.kb.get_reverse_members(pred.label)
                 tmp_covered = self.kb.get_empty_domain()
+
                 # Calculate all examples that have a pair for this relation
-                for idx in self.kb.bits_to_indices(existential_covered_examples):
+                for idx in self.kb.bits_to_indices(existential_cov_examples):
                     if reverse_members.has_key(idx):
                         tmp_covered |= reverse_members[idx]
                 covered_examples &= tmp_covered
             else:
                 covered_examples &= pred.domain[pred.input_var]
         return covered_examples
-    
+
     def __refresh_statistics(self):
         '''
         Recalculates the statistics for this rule.
         '''
         self.coverage = self.covered_examples.count()
-        ex_scores = [self.kb.get_score(idx) for idx in self.kb.bits_to_indices(self.covered_examples)]
+
+        indices = self.kb.bits_to_indices(self.covered_examples)
+        ex_scores = [self.kb.get_score(idx) for idx in indices]
+
         if self.target_type == Example.Ranked:
             self.mean = np.average(ex_scores)
             self.sd = np.std(ex_scores)
@@ -178,57 +213,73 @@ class Rule:
             for score in ex_scores:
                 self.distribution[score] += 1
             self.score = self.kb.score_fun(self)
-    
+
     def similarity(self, rule):
         '''
         Calculates the similarity between this rule and 'rule'.
         '''
         intersection = self.covered_examples & rule.covered_examples
-        #descr_int = set([pred.label for pred in self.predicates]).intersection(set([pred.label for pred in rule.predicates]))   # Similarity of the descriptions
-        #return 0.9 * intersection.count() / float(max(self.coverage, rule.coverage)) + 0.1 * len(descr_int) / float(max(len(self.predicates), len(rule.predicates)))
         return intersection.count() / float(max(self.coverage, rule.coverage))
-    
+
     def size(self):
         '''
         Returns the number of conjunts.
         '''
         return len(self.predicates)
-    
+
     def examples(self):
         '''
         Returns the covered examples.
         '''
-        return [self.kb.examples[idx] for idx in self.kb.bits_to_indices(self.covered_examples)]
-    
+        indices = self.kb.bits_to_indices(self.covered_examples)
+        return [self.kb.examples[idx] for idx in indices]
+
     def __str__(self):
         conjuncts = []
         for pred in self.predicates:
             if isinstance(pred, UnaryPredicate):
                 conj = '%s(%s)' % (pred.label, pred.input_var)
             else:
-                conj = '%s(%s, %s)' % (pred.label, pred.input_var, pred.output_var) 
+                conj = '%s(%s, %s)' % (pred.label,
+                                       pred.input_var,
+                                       pred.output_var)
             conjuncts.append(conj)
+
         s = ', '.join(conjuncts)
+
         if self.target_type == Example.ClassLabeled:
+
             accuracy = self.distribution[self.target] / float(self.coverage)
-            s += ' [covered = %d, positive = %d, precision = %.3f, score = %.3f]' % (self.coverage, self.distribution[self.target], accuracy, self.score)
+            stats = (self.coverage,
+                     self.distribution[self.target],
+                     accuracy,
+                     self.score)
+            s += ' [cov=%d, pos=%d, prec=%.3f, score=%.3f]' % stats
+
         else:
-            s += ' [size = %d, score = %.3f]' % (self.coverage, self.score)
+            s += ' [size=%d, score=%.3f]' % (self.coverage, self.score)
+
         return s
+
 
 class Predicate:
     '''
     Represents a predicate as a member of a certain rule.
     '''
     i = -1
+
     def __init__(self, label, kb, producer_pred):
         self.label = label
         self.kb = kb
-        self.producer_predicate = producer_pred  # Whose predicate's out var this predicate consumes
+
+        # Whose predicate's out var this predicate consumes
+        self.producer_predicate = producer_pred
         if self.producer_predicate:
             producer_pred.consumer_predicate = self
-        self.consumer_predicate = None  # Which predicate consumes this predicate's out var
-        
+
+        # Which predicate consumes this predicate's out var
+        self.consumer_predicate = None
+
     @staticmethod
     def _avar():
         '''
@@ -237,18 +288,27 @@ class Predicate:
         Predicate.i = Predicate.i + 1
         return 'X%d' % Predicate.i
 
+
 class UnaryPredicate(Predicate):
     '''
     A unary predicate.
     '''
-    def __init__(self, label, members, kb, producer_pred=None, custom_var_name=None):
+    def __init__(self, label, members, kb,
+                 producer_pred=None,
+                 custom_var_name=None):
         Predicate.__init__(self, label, kb, producer_pred)
+
         if not producer_pred:
-            self.input_var = Predicate._avar() if not custom_var_name else custom_var_name
+            if not custom_var_name:
+                self.input_var = Predicate._avar()
+            else:
+                self.input_var = custom_var_name
         else:
             self.input_var = producer_pred.output_var
+
         self.output_var = self.input_var
-        self.domain = {self.input_var : members}
+        self.domain = {self.input_var: members}
+
 
 class BinaryPredicate(Predicate):
     '''
@@ -259,27 +319,41 @@ class BinaryPredicate(Predicate):
         The predicate's name and the tuples satisfying it.
         '''
         Predicate.__init__(self, label, kb, producer_pred)
+
         # The input var should match with the producers output var
-        self.input_var = Predicate._avar() if not producer_pred else producer_pred.output_var
+        if not producer_pred:
+            self.input_var = Predicate._avar()
+        else:
+            self.input_var = producer_pred.output_var
+
         self.output_var = Predicate._avar()
         if producer_pred:
-            potential_inputs = self.producer_predicate.domain[self.producer_predicate.output_var]
+            prod_out_var = self.producer_predicate.output_var
+            potential_inputs = self.producer_predicate.domain[prod_out_var]
+
             # Find which inputs have pairs
             inputs = potential_inputs & kb.get_domains(label)[0]
             outputs = kb.get_empty_domain()
             for el1 in kb.bits_to_indices(inputs):
                 outputs |= pairs[el1]
-        else:  # No producer predicate.
+        else:
+            # No producer predicate.
             inputs, outputs = kb.get_domains(label)
-        self.domain = {self.input_var : inputs, self.output_var : outputs}
+
+        self.domain = {self.input_var: inputs, self.output_var: outputs}
+
 
 class ExperimentKB:
     '''
     The knowledge base for one specific experiment.
     '''
-    def __init__(self, triplets, score_fun, user_namespaces=[], instances_as_leaves=True):
+    def __init__(self, triplets, score_fun,
+                 user_namespaces=[],
+                 instances_as_leaves=True):
         '''
-        Initialize the knowledge base with the given triplet graph. The target class is given with 'target_class' - this is the class to be described in the induction step.
+        Initialize the knowledge base with the given triplet graph.
+        The target class is given with 'target_class' - this is the
+        class to be described in the induction step.
         '''
         self.g = triplets
         self.user_namespaces = user_namespaces
@@ -289,34 +363,63 @@ class ExperimentKB:
         self.predicates = set()
         self.binary_predicates = set()
         self.class_values = set()
-        
+
         # Parse the examples schema
-        self.g.parse(os.path.join(os.path.dirname(__file__), 'examples.n3'), format='n3')
+        path = os.path.join(os.path.dirname(__file__), 'assets/examples.n3')
+        self.g.parse(path, format='n3')
         FIRST = Namespace('http://project-first.eu/ontology#')
-        
+
         # Extract the available examples from the graph
-        self.examples_uris = [ex for ex in self.g.subjects(predicate=RDF.type, object=FIRST.Example)]
+        ex_subjects = self.g.subjects(predicate=RDF.type, object=FIRST.Example)
+        self.examples_uris = [ex for ex in ex_subjects]
         self.uri_to_idx = {}
+
         examples = []
         for i, ex_uri in enumerate(self.examples_uris):
-            annotation_links = [annot for annot in self.g.objects(subject=ex_uri, predicate=FIRST.annotated_with)]
+
+            # Query for annotation link objects
+            annot_objects = self.g.objects(subject=ex_uri,
+                                           predicate=FIRST.annotated_with)
+
+            annotation_links = [annot for annot in annot_objects]
             annotations = []
             weights = {}
+            to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
+
             for link in annotation_links:
-                annotation = [unicode(one).encode('ascii', 'ignore') for one in self.g.objects(subject=link, predicate=FIRST.annotation)][0]
-                weights_list = [one for one in self.g.objects(subject=link, predicate=FIRST.weight)]
+
+                # Query for annotation objects via this link
+                annot_objects = self.g.objects(subject=link,
+                                               predicate=FIRST.annotation)
+                annotation = [to_uni(one) for one in annot_objects][0]
+
+                # Query for weights on this link
+                weight_objects = self.g.objects(subject=link,
+                                                predicate=FIRST.weight)
+                weights_list = [one for one in weight_objects]
+
                 if weights_list:
                     weights[annotation] = float(weights_list[0])
+
                 annotations.append(annotation)
-            score_list = list(self.g.objects(subject=ex_uri, predicate=FIRST.score))
+
+            # Scores
+            score_list = list(self.g.objects(subject=ex_uri,
+                                             predicate=FIRST.score))
             if score_list:
                 score = float(score_list[0])
             else:
-                score_list = list(self.g.objects(subject=ex_uri, predicate=FIRST.class_label))
+                # Classes
+                score_list = list(self.g.objects(subject=ex_uri,
+                                                 predicate=FIRST.class_label))
                 score = str(score_list[0])
                 self.class_values.add(score)
+
             self.uri_to_idx[ex_uri] = i
-            examples.append(Example(i, str(ex_uri), score, annotations=annotations, weights=weights))
+            examples.append(Example(i, str(ex_uri), score,
+                                    annotations=annotations,
+                                    weights=weights))
+
         self.examples = examples
 
         # Ranked or class-labeled data
@@ -324,24 +427,29 @@ class ExperimentKB:
 
         if not self.examples:
             raise Exception("No examples provided!")
-        
+
         # Get the subClassOf hierarchy
         for sub, obj in self.g.subject_objects(predicate=RDFS.subClassOf):
             if self.user_defined(sub) and self.user_defined(obj):
                 self.add_sub_class(sub, obj)
-        
+
         # Include the instances as predicates as well
         if instances_as_leaves:
             for sub, obj in self.g.subject_objects(predicate=RDF.type):
                 if self.user_defined(sub) and self.user_defined(obj):
                     self.add_sub_class(sub, obj)
-        
+
         # Find the user-defined object predicates defined between examples
-        for pred in set(self.g.subjects(predicate=RDFS.domain, object=FIRST.Example)) \
-                        .intersection(self.g.subjects(predicate=RDFS.range, object=FIRST.Example)):
+        examples_as_domain = set(self.g.subjects(object=FIRST.Example,
+                                                 predicate=RDFS.domain))
+
+        examples_as_range = set(self.g.subjects(object=FIRST.Example,
+                                                predicate=RDFS.range))
+
+        for pred in examples_as_domain.intersection(examples_as_range):
             if self.user_defined(pred):
                 self.binary_predicates.add(str(pred))
-        
+
         # Calculate the members for each predicate
         self.members = defaultdict(set)
         for ex in examples:
@@ -349,81 +457,97 @@ class ExperimentKB:
                 if instances_as_leaves:
                     self.members[inst].add(ex.id)
                 else:
-                    for obj in self.g.objects(subject=URIRef(inst), predicate=RDF.type):
+                    # Query for 'parents' of a given instance
+                    inst_parents = self.g.objects(subject=URIRef(inst),
+                                                  predicate=RDF.type)
+
+                    for obj in inst_parents:
                         self.members[str(obj)].add(ex.id)
 
         # Find the root classes
-        roots = filter(lambda pred: self.sub_class_of[pred] == [], self.super_class_of.keys())
-       
+        roots = filter(lambda pred: self.sub_class_of[pred] == [],
+                       self.super_class_of.keys())
+
         # Add a dummy root
         self.dummy_root = 'root'
         self.predicates.add(self.dummy_root)
         for root in roots:
             self.add_sub_class(root, self.dummy_root)
-        
+
         self.sub_class_of_closure = defaultdict(set)
         for pred in self.super_class_of.keys():
             self.sub_class_of_closure[pred].update(self.sub_class_of[pred])
-        
+
         # Calc the closure to get the members of the subClassOf hierarchy
         def closure(pred, lvl):
             children = self.super_class_of[pred]
             self.levels[lvl].add(pred)
+
             if children:
                 mems = set()
-                for child in children: 
-                    self.sub_class_of_closure[child].update(self.sub_class_of_closure[pred])
+                for child in children:
+                    parent_closure = self.sub_class_of_closure[pred]
+                    self.sub_class_of_closure[child].update(parent_closure)
                     mems.update(closure(child, lvl + 1))
                 self.members[pred] = mems
+
                 return mems
             else:
                 return self.members[pred]
 
         # Level-wise predicates
         self.levels = defaultdict(set)
-        
+
         # Run the closure from root
         closure(self.dummy_root, 0)
-               
+
         # Members of non-unary predicates
         self.binary_members = defaultdict(dict)
         self.reverse_binary_members = defaultdict(dict)
+
         for pred in self.binary_predicates:
             pairs = self.g.subject_objects(predicate=URIRef(pred))
+
             for pair in pairs:
                 el1, el2 = self.uri_to_idx[pair[0]], self.uri_to_idx[pair[1]]
                 if self.binary_members[pred].has_key(el1):
                     self.binary_members[pred][el1].append(el2)
                 else:
                     self.binary_members[pred][el1] = [el2]
-                
+
                 # Add the reverse as well
                 if self.reverse_binary_members[pred].has_key(el2):
                     self.reverse_binary_members[pred][el2].append(el1)
                 else:
                     self.reverse_binary_members[pred][el2] = [el1]
-        
-        # Bitset of examples for input and output 
+
+        # Bitset of examples for input and output
         self.binary_domains = {}
         for pred in self.binary_predicates:
             self.binary_domains[pred] = (
-                self.indices_to_bits(self.binary_members[pred].keys()), 
+                self.indices_to_bits(self.binary_members[pred].keys()),
                 self.indices_to_bits(self.reverse_binary_members[pred].keys())
             )
-        
+
         # Calc the corresponding bitsets
         self.bit_members = {}
         for pred in self.members.keys():
             self.bit_members[pred] = self.indices_to_bits(self.members[pred])
-              
+
         self.bit_binary_members = defaultdict(dict)
         self.reverse_bit_binary_members = defaultdict(dict)
+
         for pred in self.binary_members.keys():
+
             for el in self.binary_members[pred].keys():
-                self.bit_binary_members[pred][el] = self.indices_to_bits(self.binary_members[pred][el])
+                indices = self.indices_to_bits(self.binary_members[pred][el])
+                self.bit_binary_members[pred][el] = indices
+
             for el in self.reverse_binary_members[pred].keys():
-                self.reverse_bit_binary_members[pred][el] = self.indices_to_bits(self.reverse_binary_members[pred][el])
-        
+                reverse_members = self.reverse_binary_members[pred][el]
+                indices = self.indices_to_bits(reverse_members)
+                self.reverse_bit_binary_members[pred][el] = indices
+
         # Statistics
         if self.target_type == Example.Ranked:
             self.mean = np.average([ex.score for ex in self.examples])
@@ -433,24 +557,23 @@ class ExperimentKB:
             for ex in self.examples:
                 self.distribution[ex.score] += 1
 
-        # def print_hierarchy(root, d=0):
-        #     print '%s%s' % ('\t'*d, root.encode('ascii', 'ignore'))
-        #     for subclass in self.super_class_of[root]:
-        #         print_hierarchy(subclass, d=d+1)
-        # print
-        # print_hierarchy(self.dummy_root)
-
     def user_defined(self, uri):
         '''
         Is this resource user defined?
         '''
-        return any([uri.startswith(ns) for ns in self.user_namespaces]) if self.user_namespaces else True
-        
+        defined = True
+        if self.user_namespaces:
+            defined = any([uri.startswith(ns) for ns in self.user_namespaces])
+
+        return defined
+
     def add_sub_class(self, sub, obj):
         '''
         Adds the resource 'sub' as a subclass of 'obj'.
         '''
-        sub, obj = unicode(sub).encode('ascii', 'ignore'), unicode(obj).encode('ascii', 'ignore')
+        to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
+        sub, obj = to_uni(sub), to_uni(obj)
+
         self.predicates.update([sub, obj])
         self.sub_class_of[sub].append(obj)
         self.super_class_of[obj].append(sub)
@@ -460,71 +583,89 @@ class ExperimentKB:
         Returns all super classes of pred (with transitivity).
         '''
         return self.sub_class_of_closure[pred]
-    
+
     def get_root(self):
         '''
         Root predicate, which covers all examples.
         '''
-        return UnaryPredicate(self.dummy_root, self.get_full_domain(), self, custom_var_name='X')
-            
+        return UnaryPredicate(self.dummy_root, self.get_full_domain(), self,
+                              custom_var_name='X')
+
     def get_subclasses(self, predicate, producer_pred=None):
         '''
         Returns a list of subclasses (as predicate objects) for 'predicate'.
         '''
-        #return [UnaryPredicate(pred_label, self.bit_members[pred_label], self, producer_pred) for pred_label in self.super_class_of[predicate.label]]
         return self.super_class_of[predicate.label]
-        
+
     def get_members(self, predicate, bit=True):
         '''
-        Returns the examples for this predicate, either as a bitset or a set of ids.
+        Returns the examples for this predicate,
+        either as a bitset or a set of ids.
         '''
+        members = None
         if predicate in self.predicates:
-            return self.bit_members[predicate] if bit else self.members[predicate]
+            if bit:
+                members = self.bit_members[predicate]
+            else:
+                members = self.members[predicate]
         else:
-            return self.bit_binary_members[predicate] if bit else self.binary_members[predicate]
-        
+            if bit:
+                members = self.bit_binary_members[predicate]
+            else:
+                members = self.binary_members[predicate]
+
+        return members
+
     def get_reverse_members(self, predicate, bit=True):
         '''
-        Returns the examples for this predicate, either as a bitset or a set of ids.
+        Returns the examples for this predicate,
+        either as a bitset or a set of ids.
         '''
-        return self.reverse_bit_binary_members[predicate] if bit else self.reverse_binary_members[predicate]
-    
+        reverse_members = None
+        if bit:
+            reverse_members = self.reverse_bit_binary_members[predicate]
+        else:
+            reverse_members = self.reverse_binary_members[predicate]
+
+        return reverse_members
+
     def get_domains(self, predicate):
         '''
-        Returns the bitsets for input and outputexamples of the binary predicate 'predicate'.
+        Returns the bitsets for input and outputexamples
+        of the binary predicate 'predicate'.
         '''
         return self.binary_domains[predicate]
-    
+
     def get_examples(self):
         '''
         Returns all examples for this experiment.
         '''
         return self.examples
-    
+
     def n_examples(self):
         '''
         Returns the number of examples.
         '''
         return len(self.examples)
-    
+
     def get_full_domain(self):
         '''
         Returns a bitset covering all examples.
         '''
         return bitarray([True] * self.n_examples())
-    
+
     def get_empty_domain(self):
         '''
         Returns a bitset covering no examples.
         '''
         return bitarray([False] * self.n_examples())
-    
+
     def get_score(self, ex_idx):
         '''
         Returns the score for example id 'ex_idx'.
         '''
         return self.examples[ex_idx].score
-    
+
     def bits_to_indices(self, bits):
         '''
         Converts the bitset to a set of indices.
@@ -539,4 +680,3 @@ class ExperimentKB:
         for idx in indices:
             bits[idx] = True
         return bits
-    
