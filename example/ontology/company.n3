@@ -1,0 +1,4026 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://project-first.eu/ontology#> .
+
+:comp_AIR_LIQUIDE_S_A a :Industry ;
+	rdfs:label "Air Liquide S.A." ;
+	:ID_NOTATION "46799" ;
+	:issues :stock_AIR_LIQUIDE .
+
+:comp_ALLIANZ_SE a :Insurance ;
+	rdfs:label "Allianz SE" ;
+	:ID_NOTATION "46761" ;
+	:issues :stock_ALLIANZ .
+
+:comp_ANHEUSER_BUSCH_INBEV a :Industry ;
+	rdfs:label "ANHEUSER-BUSCH INBEV" ;
+	:ID_NOTATION "247826" ;
+	:issues :stock_ANHEUSER_BUSCH_INB .
+
+:comp_ARCELORMITTAL_S_A a :Industry ;
+	rdfs:label "ArcelorMittal S.A." ;
+	:ID_NOTATION "264848" ;
+	:issues :stock_ARCELORMITTAL .
+
+:comp_ASSICURAZIONI_GENERALI_S_P_A a :Insurance ;
+	rdfs:label "Assicurazioni Generali S.p.A." ;
+	:ID_NOTATION "46812" ;
+	:issues :stock_ASSICURAZIONI_GENERALI .
+
+:comp_AXA_S_A a :Insurance ;
+	rdfs:label "AXA S.A." ;
+	:ID_NOTATION "47263" ;
+	:issues :stock_AXA .
+
+:comp_BANCO_SANTANDER_S_A a :Bank ;
+	rdfs:label "Banco Santander S.A." ;
+	:ID_NOTATION "47516" ;
+	:issues :stock_BANCO_SANTANDER_CENTRAL_HISP .
+
+:comp_BASF_SE a :Industry ;
+	rdfs:label "BASF SE" ;
+	:ID_NOTATION "45660" ;
+	:issues :stock_BASF .
+
+:comp_BAYER_AG a :Industry ;
+	rdfs:label "Bayer AG" ;
+	:ID_NOTATION "45996" ;
+	:issues :stock_BAYER .
+
+:comp_BAYERISCHE_MOTOREN_WERKE_AG a :Industry ;
+	rdfs:label "Bayerische Motoren Werke AG" ;
+	:ID_NOTATION "45682" ;
+	:issues :stock_BMW .
+
+:comp_BANCO_BILBAO_VIZCAYA_ARGENTARIA_S_A a :Bank ;
+	rdfs:label "Banco Bilbao Vizcaya Argentaria S.A." ;
+	:ID_NOTATION "48814" ;
+	:issues :stock_BANCO_BILBAO_VIZCAYA_ARGENTA .
+
+:comp_BNP_PARIBAS_S_A a :Bank ;
+	rdfs:label "BNP Paribas S.A." ;
+	:ID_NOTATION "49913" ;
+	:issues :stock_BNP_PARIBAS .
+
+:comp_CARREFOUR_S_A a :Other ;
+	rdfs:label "Carrefour S.A." ;
+	:ID_NOTATION "47003" ;
+	:issues :stock_CARREFOUR .
+
+:comp_CRH_PLC a :Industry ;
+	rdfs:label "CRH PLC" ;
+	:ID_NOTATION "47866" ;
+	:issues :stock_CRH .
+
+:comp_DAIMLER_AG a :Industry ;
+	rdfs:label "Daimler AG" ;
+	:ID_NOTATION "46460" ;
+	:issues :stock_DAIMLER .
+
+:comp_DANONE_S_A a :Industry ;
+	rdfs:label "Danone S.A." ;
+	:ID_NOTATION "46896" ;
+	:issues :stock_GROUPE_DANONE .
+
+:comp_DEUTSCHE_BANK_AG a :Bank ;
+	rdfs:label "Deutsche Bank AG" ;
+	:ID_NOTATION "45652" ;
+	:issues :stock_DT_BANK .
+
+:comp_DEUTSCHE_BOERSE_AG a :Other ;
+	rdfs:label "Deutsche Börse AG" ;
+	:ID_NOTATION "46040" ;
+	:issues :stock_DEUTSCHE_BOERSE .
+
+:comp_DEUTSCHE_TELEKOM_AG a :Other ;
+	rdfs:label "Deutsche Telekom AG" ;
+	:ID_NOTATION "45922" ;
+	:issues :stock_DEUTSCHE_TELEKOM .
+
+:comp_E_ON_AG a :Industry ;
+	rdfs:label "E.ON AG" ;
+	:ID_NOTATION "46623" ;
+	:issues :stock_E_ON .
+
+:comp_ENEL_S_P_A a :Industry ;
+	rdfs:label "Enel S.p.A." ;
+	:ID_NOTATION "55245" ;
+	:issues :stock_ENEL .
+
+:comp_ENI_S_P_A a :Industry ;
+	rdfs:label "ENI S.p.A." ;
+	:ID_NOTATION "50953" ;
+	:issues :stock_ENI .
+
+:comp_FRANCE_TELECOM_S_A a :Other ;
+	rdfs:label "France Telecom S.A." ;
+	:ID_NOTATION "52081" ;
+	:issues :stock_FRANCE_TELECOM .
+
+:comp_GDF_SUEZ_S_A a :Industry ;
+	rdfs:label "GDF Suez S.A." ;
+	:ID_NOTATION "406979" ;
+	:issues :stock_GDF_SUEZ .
+
+:comp_IBERDROLA_S_A a :Industry ;
+	rdfs:label "Iberdrola S.A." ;
+	:ID_NOTATION "46916" ;
+	:issues :stock_IBERDROLA .
+
+:comp_INDUSTRIA_DE_DISENO_TEXTIL_S_A_INDITEX a :Industry ;
+	rdfs:label "Industria de Diseno Textil S.A. (inditex)" ;
+	:ID_NOTATION "255077" ;
+	:issues :stock_INDITEX .
+
+:comp_ING_GROEP_N_V a :Insurance ;
+	rdfs:label "ING Groep N.V." ;
+	:ID_NOTATION "49153" ;
+	:issues :stock_ING_GROEP_N_V .
+
+:comp_INTESA_SANPAOLO_S_P_A a :Bank ;
+	rdfs:label "Intesa Sanpaolo S.p.A." ;
+	:ID_NOTATION "46842" ;
+	:issues :stock_INTESA_SANPAOLO .
+
+:comp_L_OREAL_S_A a :Industry ;
+	rdfs:label "L'Oreal S.A." ;
+	:ID_NOTATION "47137" ;
+	:issues :stock_L_OREAL .
+
+:comp_LVMH_MO_T_HENNESSY_LOUIS_VUITTON_S_A a :Industry ;
+	rdfs:label "LVMH Moët Hennessy Louis Vuitton S.A." ;
+	:ID_NOTATION "47079" ;
+	:issues :stock_LVMH_MOET_HENNESY .
+
+:comp_MUENCHENER_RUECKVERSICHERUNGS_GESELLSCHAFT_AG a :Insurance ;
+	rdfs:label "Münchener Rückversicherungs-Gesellschaft AG" ;
+	:ID_NOTATION "46781" ;
+	:issues :stock_MUNCH_RUCK .
+
+:comp_NOKIA_CORP a :Industry ;
+	rdfs:label "Nokia Corp." ;
+	:ID_NOTATION "48410" ;
+	:issues :stock_NOKIA .
+
+:comp_KONINKLIJKE_PHILIPS_ELECTRONICS_N_V a :Industry ;
+	rdfs:label "Koninklijke Philips Electronics N.V." ;
+	:ID_NOTATION "56093" ;
+	:issues :stock_PHILIPS_ELECTRONICS .
+
+:comp_REPSOL_YPF_S_A a :Industry ;
+	rdfs:label "Repsol YPF S.A." ;
+	:ID_NOTATION "48876" ;
+	:issues :stock_REPSOL_YPF .
+
+:comp_RWE_AG a :Industry ;
+	rdfs:label "RWE AG" ;
+	:ID_NOTATION "46444" ;
+	:issues :stock_RWE .
+
+:comp_COMPAGNIE_DE_SAINT_GOBAIN_S_A a :Industry ;
+	rdfs:label "Compagnie de Saint-Gobain S.A." ;
+	:ID_NOTATION "48530" ;
+	:issues :stock_SAINT_GOBAIN .
+
+:comp_SANOFI_S_A a :Industry ;
+	rdfs:label "Sanofi S.A." ;
+	:ID_NOTATION "53882" ;
+	:issues :stock_SANOFI .
+
+:comp_SAP_AG a :Other ;
+	rdfs:label "SAP AG" ;
+	:ID_NOTATION "46469" ;
+	:issues :stock_SAP .
+
+:comp_SCHNEIDER_ELECTRIC_SA a :Industry ;
+	rdfs:label "Schneider Electric SA" ;
+	:ID_NOTATION "47612" ;
+	:issues :stock_SCHNEIDER_ELECTRIC .
+
+:comp_SIEMENS_AG a :Industry ;
+	rdfs:label "Siemens AG" ;
+	:ID_NOTATION "46512" ;
+	:issues :stock_SIEMENS .
+
+:comp_SOCIETE_GENERALE_S_A a :Bank ;
+	rdfs:label "Societe Generale S.A." ;
+	:ID_NOTATION "48644" ;
+	:issues :stock_SOC_GEN .
+
+:comp_TELECOM_ITALIA_S_P_A a :Other ;
+	rdfs:label "Telecom Italia S.p.A." ;
+	:ID_NOTATION "47019" ;
+	:issues :stock_TELECOM_ITALIA .
+
+:comp_TELEFONICA_S_A a :Other ;
+	rdfs:label "Telefonica S.A." ;
+	:ID_NOTATION "46860" ;
+	:issues :stock_TELEFONICA .
+
+:comp_TOTAL_S_A a :Industry ;
+	rdfs:label "Total S.A." ;
+	:ID_NOTATION "46856" ;
+	:issues :stock_TOTAL .
+
+:comp_UNIBAIL_RODAMCO_SE a :Other ;
+	rdfs:label "Unibail-Rodamco SE" ;
+	:ID_NOTATION "127555" ;
+	:issues :stock_UNIBAIL_S_A_INH .
+
+:comp_UNICREDIT_S_P_A a :Bank ;
+	rdfs:label "UniCredit S.p.A." ;
+	:ID_NOTATION "46867" ;
+	:issues :stock_UNICREDIT .
+
+:comp_UNILEVER_N_V a :Industry ;
+	rdfs:label "Unilever N.V." ;
+	:ID_NOTATION "47605" ;
+	:issues :stock_UNILEVER_NV .
+
+:comp_VINCI_S_A a :Industry ;
+	rdfs:label "VINCI S.A." ;
+	:ID_NOTATION "48095" ;
+	:issues :stock_VINCI .
+
+:comp_VIVENDI_S_A a :Other ;
+	rdfs:label "VIVENDI S.A." ;
+	:ID_NOTATION "47145" ;
+	:issues :stock_VIVENDI_UNIVERSAL .
+
+:comp_VOLKSWAGEN_AG a :Industry ;
+	rdfs:label "Volkswagen AG" ;
+	:ID_NOTATION "46644" ;
+	:issues :stock_VW_VZ .
+
+:comp_ABB_LTD a :Industry ;
+	rdfs:label "ABB Ltd." ;
+	:ID_NOTATION "53761" ;
+	:issues :stock_ABB .
+
+:comp_ANGLO_AMERICAN_PLC a :Industry ;
+	rdfs:label "Anglo American Plc" ;
+	:ID_NOTATION "53952" ;
+	:issues :stock_Anglo_American_PLC .
+
+:comp_ASTRAZENECA_PLC a :Industry ;
+	rdfs:label "AstraZeneca PLC" ;
+	:ID_NOTATION "49783" ;
+	:issues :stock_ASTRAZENECA .
+
+:comp_BARCLAYS_PLC a :Other ;
+	rdfs:label "Barclays PLC" ;
+	:ID_NOTATION "150426" ;
+	:issues :stock_BARCLAYS .
+
+:comp_BG_GROUP_PLC a :Industry ;
+	rdfs:label "BG Group PLC" ;
+	:ID_NOTATION "55503" ;
+	:issues :stock_BG_GROUP .
+
+:comp_BHP_BILLITON_PLC a :Industry ;
+	rdfs:label "BHP Billiton PLC" ;
+	:ID_NOTATION "48690" ;
+	:issues :stock_BHP_BILLITON .
+
+:comp_BP_PLC a :Industry ;
+	rdfs:label "BP PLC" ;
+	:ID_NOTATION "46831" ;
+	:issues :stock_BP .
+
+:comp_BRITISH_AMERICAN_TOBACCO_PLC a :Industry ;
+	rdfs:label "British American Tobacco PLC" ;
+	:ID_NOTATION "53295" ;
+	:issues :stock_BRITISH_AMERICAN_TOBACCO .
+
+:comp_CREDIT_SUISSE_GROUP_AG a :Bank ;
+	rdfs:label "Credit Suisse Group AG" ;
+	:ID_NOTATION "48873" ;
+	:issues :stock_CREDIT_SUISSE_GROUP .
+
+:comp_DIAGEO_PLC a :Industry ;
+	rdfs:label "Diageo plc" ;
+	:ID_NOTATION "46903" ;
+	:issues :stock_DIAGEO .
+
+:comp_ERICSSON_LM a :Industry ;
+	rdfs:label "ERICSSON (LM)" ;
+	:ID_NOTATION "46794" ;
+	:issues :stock_ERICSSON_B .
+
+:comp_GLAXOSMITHKLINE_PLC a :Industry ;
+	rdfs:label "GlaxoSmithKline PLC" ;
+	:ID_NOTATION "47616" ;
+	:issues :stock_GLAXOSMITHKLINE .
+
+:comp_HENNES_MAURITZ a :Industry ;
+	rdfs:label "H & M Hennes & Mauritz AB" ;
+	:ID_NOTATION "48549" ;
+	:issues :stock_HENNES_MAURITZ .
+
+:comp_HSBC_HOLDINGS_PLC a :Bank ;
+	rdfs:label "HSBC Holdings PLC" ;
+	:ID_NOTATION "54575" ;
+	:issues :stock_HSBC_HOLDINGS .
+
+:comp_IMPERIAL_TOBACCO_GROUP_PLC a :Industry ;
+	rdfs:label "Imperial Tobacco Group PLC" ;
+	:ID_NOTATION "51592" ;
+	:issues :stock_IMPERIAL_TOBACCO_GROUP .
+
+:comp_NATIONAL_GRID_PLC a :Industry ;
+	rdfs:label "National Grid PLC" ;
+	:ID_NOTATION "51019" ;
+	:issues :stock_NATIONAL_GRID .
+
+:comp_NESTLE_S_A a :Industry ;
+	rdfs:label "Nestle S.A." ;
+	:ID_NOTATION "49870" ;
+	:issues :stock_NESTLE_SA .
+
+:comp_NOVARTIS_AG a :Industry ;
+	rdfs:label "Novartis AG" ;
+	:ID_NOTATION "51776" ;
+	:issues :stock_NOVARTIS .
+
+:comp_RIO_TINTO_PLC a :Industry ;
+	rdfs:label "Rio Tinto PLC" ;
+	:ID_NOTATION "46989" ;
+	:issues :stock_RIO_TINTO .
+
+:comp_ROCHE_HOLDING_AG a :Industry ;
+	rdfs:label "Roche Holding AG" ;
+	:ID_NOTATION "47226" ;
+	:issues :stock_ROCHE_GS .
+
+:comp_ROYAL_DUTCH_SHELL_PLC a :Industry ;
+	rdfs:label "Royal Dutch Shell PLC" ;
+	:ID_NOTATION "52171" ;
+	:issues :stock_ROYAL_DUTCH_SHELL .
+
+:comp_STANDARD_CHARTERED_PLC a :Bank ;
+	rdfs:label "Standard Chartered PLC" ;
+	:ID_NOTATION "47536" ;
+	:issues :stock_STANDARD_CHARTERED .
+
+:comp_TESCO_PLC a :Other ;
+	rdfs:label "Tesco PLC" ;
+	:ID_NOTATION "47025" ;
+	:issues :stock_TESCO .
+
+:comp_UBS_AG a :Bank ;
+	rdfs:label "UBS AG" ;
+	:ID_NOTATION "53113" ;
+	:issues :stock_UBS_AG .
+
+:comp_UNILEVER_PLC a :Industry ;
+	rdfs:label "Unilever PLC" ;
+	:ID_NOTATION "53810" ;
+	:issues :stock_UNILEVER .
+
+:comp_VODAFONE_GROUP_PLC a :Other ;
+	rdfs:label "Vodafone Group Plc" ;
+	:ID_NOTATION "48827" ;
+	:issues :stock_VODAFONE_GRP .
+
+:comp_ZURICH_INSURANCE_GROUP_AG a :Insurance ;
+	rdfs:label "Zurich Insurance Group AG" ;
+	:ID_NOTATION "53212" ;
+	:issues :stock_ZURICH_FINANCIAL_SERVICES .
+
+:comp_ANTOFAGASTA_PLC a :Other ;
+	rdfs:label "Antofagasta PLC" ;
+	:ID_NOTATION "110386" ;
+	:issues :stock_ANTOFAGASTA .
+
+:comp_ARM_HOLDINGS_PLC a :Industry ;
+	rdfs:label "ARM Holdings PLC" ;
+	:ID_NOTATION "143131" ;
+	:issues :stock_ARM_HOLDINGS .
+
+:comp_ASSOCIATED_BRITISH_FOODS_PLC a :Industry ;
+	rdfs:label "Associated British Foods PLC" ;
+	:ID_NOTATION "53908" ;
+	:issues :stock_ASSOCIATED_BRITISH_FOODS .
+
+:comp_AVIVA_PLC a :Insurance ;
+	rdfs:label "Aviva PLC" ;
+	:ID_NOTATION "47154" ;
+	:issues :stock_AVIVA .
+
+:comp_BAE_SYSTEMS_PLC a :Industry ;
+	rdfs:label "BAE Systems PLC" ;
+	:ID_NOTATION "131273" ;
+	:issues :stock_BAE_SYSTEMS .
+
+:comp_BRITISH_LAND_CO_PLC a :Other ;
+	rdfs:label "BRITISH LAND CO. PLC" ;
+	:ID_NOTATION "47018" ;
+	:issues :stock_BRITISH_LAND_COMPANY .
+
+:comp_BRITISH_SKY_BROADCASTING_GROUP_PLC a :Other ;
+	rdfs:label "British Sky Broadcasting Group plc" ;
+	:ID_NOTATION "50513" ;
+	:issues :stock_BRITISH_SKY_BROADCASTING .
+
+:comp_BT_GROUP_PLC a :Other ;
+	rdfs:label "BT Group PLC" ;
+	:ID_NOTATION "48279" ;
+	:issues :stock_BT_GROUP .
+
+:comp_BURBERRY_GROUP_PLC a :Industry ;
+	rdfs:label "Burberry Group plc" ;
+	:ID_NOTATION "270575" ;
+	:issues :stock_BURBERRY_GROUP .
+
+:comp_THE_CAPITA_GROUP_PLC a :Other ;
+	rdfs:label "The Capita Group Plc" ;
+	:ID_NOTATION "50811" ;
+	:issues :stock_CAPITA_GROUP_ORD_2_066666P .
+
+:comp_CARNIVAL_PLC a :Industry ;
+	rdfs:label "Carnival PLC" ;
+	:ID_NOTATION "48676" ;
+	:issues :stock_CARNIVAL .
+
+:comp_CENTRICA_PLC a :Industry ;
+	rdfs:label "Centrica plc" ;
+	:ID_NOTATION "53889" ;
+	:issues :stock_CENTRICA .
+
+:comp_COMPASS_GROUP_PLC a :Other ;
+	rdfs:label "Compass Group PLC" ;
+	:ID_NOTATION "153318" ;
+	:issues :stock_COMPASS_GROUP .
+
+:comp_CRH_PLC :issues :stock_CRH_0 .
+
+:comp_CRODA_INTERNATIONAL_PLC a :Industry ;
+	rdfs:label "Croda International PLC" ;
+	:ID_NOTATION "132272" ;
+	:issues :stock_CRODA_INTERNATIONAL .
+
+:comp_EURASIAN_NATURAL_RESOURCES_CORPORATION_PLC a :Industry ;
+	rdfs:label "Eurasian Natural Resources Corporation plc" ;
+	:ID_NOTATION "464564" ;
+	:issues :stock_EURSN_NAT_RES .
+
+:comp_EVRAZ_PLC a :Other ;
+	rdfs:label "Evraz PLC" ;
+	:ID_NOTATION "855478" ;
+	:issues :stock_EVRAZ_ORD_USD1_00 .
+
+:comp_EXPERIAN_PLC a :Industry ;
+	rdfs:label "Experian PLC" ;
+	:ID_NOTATION "433781" ;
+	:issues :stock_EXPERIAN .
+
+:comp_FRESNILLO_PLC a :Industry ;
+	rdfs:label "Fresnillo PLC" ;
+	:ID_NOTATION "466633" ;
+	:issues :stock_FRESNILLO_ORD_USD0_50 .
+
+:comp_GKN_PLC a :Industry ;
+	rdfs:label "GKN PLC" ;
+	:ID_NOTATION "46902" ;
+	:issues :stock_GKN .
+
+:comp_GLENCORE_INTERNATIONAL_PLC a :Industry ;
+	rdfs:label "Glencore International PLC" ;
+	:ID_NOTATION "824878" ;
+	:issues :stock_GLENCORE_ORD_USD0_01 .
+
+:comp_ICAP_PLC a :Other ;
+	rdfs:label "ICAP plc" ;
+	:ID_NOTATION "406419" ;
+	:issues :stock_ICAP .
+
+:comp_IMI_PLC a :Industry ;
+	rdfs:label "IMI PLC" ;
+	:ID_NOTATION "47486" ;
+	:issues :stock_IMI .
+
+:comp_INTERNATIONAL_CONSOLIDATED_AIRLINES_GROUP_S_A a :Industry ;
+	rdfs:label "International Consolidated Airlines Group S.A." ;
+	:ID_NOTATION "800008" ;
+	:issues :stock_INTL_CONSOL_AIR_ORD_EUR0_50_CDI .
+
+:comp_INTERNATIONAL_POWER_PLC a :Industry ;
+	rdfs:label "International Power PLC" ;
+	:ID_NOTATION "49163" ;
+	:issues :stock_INTERNATIONAL_POWER .
+
+:comp_ITV_PLC a :Other ;
+	rdfs:label "ITV PLC" ;
+	:ID_NOTATION "405118" ;
+	:issues :stock_ITV .
+
+:comp_JOHNSON_MATTHEY_PLC a :Industry ;
+	rdfs:label "Johnson, Matthey PLC" ;
+	:ID_NOTATION "47269" ;
+	:issues :stock_JOHNSON_MATTHEY .
+
+:comp_KAZAKHMYS_PLC a :Other ;
+	rdfs:label "Kazakhmys PLC" ;
+	:ID_NOTATION "146202" ;
+	:issues :stock_KAZAKHMYS .
+
+:comp_KINGFISHER_PLC a :Other ;
+	rdfs:label "Kingfisher PLC" ;
+	:ID_NOTATION "48105" ;
+	:issues :stock_KINGFISHER .
+
+:comp_LLOYDS_BANKING_GROUP_PLC a :Bank ;
+	rdfs:label "Lloyds Banking Group PLC" ;
+	:ID_NOTATION "48502" ;
+	:issues :stock_Lloyds_Banking_Group_PLC .
+
+:comp_MAN_GROUP_PLC a :Other ;
+	rdfs:label "Man Group PLC" ;
+	:ID_NOTATION "50462" ;
+	:issues :stock_MAN_GR .
+
+:comp_MARKS_SPENCER_GROUP_PLC a :Other ;
+	rdfs:label "Marks & Spencer Group PLC" ;
+	:ID_NOTATION "46938" ;
+	:issues :stock_MARKS_SPENCER_GROUP .
+
+:comp_MORRISON_SUPERMARKETS_PLC a :Other ;
+	rdfs:label "Morrison Supermarkets PLC" ;
+	:ID_NOTATION "135835" ;
+	:issues :stock_MORRISON_SUPERMARKETS .
+
+:comp_NEXT_PLC a :Other ;
+	rdfs:label "NEXT PLC" ;
+	:ID_NOTATION "47827" ;
+	:issues :stock_NEXT .
+
+:comp_PEARSON_PLC a :Other ;
+	rdfs:label "Pearson PLC" ;
+	:ID_NOTATION "47460" ;
+	:issues :stock_PEARSON .
+
+:comp_PETROFAC_LTD a :Industry ;
+	rdfs:label "Petrofac Ltd." ;
+	:ID_NOTATION "408284" ;
+	:issues :stock_Petrofac_Ld .
+
+:comp_POLYMETAL_INTERNATIONAL_PLC a :Company ;
+	rdfs:label "Polymetal International PLC" ;
+	:ID_NOTATION "866039" ;
+	:issues :stock_POLYMET_INT_ORD_NPV .
+
+:comp_PRUDENTIAL_PLC a :Insurance ;
+	rdfs:label "Prudential PLC" ;
+	:ID_NOTATION "46980" ;
+	:issues :stock_PRUDENTIAL .
+
+:comp_RANDGOLD_RESOURCES_LTD a :Industry ;
+	rdfs:label "Randgold Resources Ltd." ;
+	:ID_NOTATION "141727" ;
+	:issues :stock_RANDGOLD_RESOURCES .
+
+:comp_RECKITT_BENCKISER_GROUP_PLC a :Industry ;
+	rdfs:label "Reckitt Benckiser Group PLC" ;
+	:ID_NOTATION "136892" ;
+	:issues :stock_RCKTT_BNCKRS .
+
+:comp_REXAM_PLC a :Industry ;
+	rdfs:label "Rexam PLC" ;
+	:ID_NOTATION "47597" ;
+	:issues :stock_REXAM .
+
+:comp_ROLLS_ROYCE_HOLDINGS_PLC a :Industry ;
+	rdfs:label "Rolls Royce Holdings PLC" ;
+	:ID_NOTATION "48616" ;
+	:issues :stock_ROLLS_ROYCE_HLG_ORD_SHS_20P .
+
+:comp_THE_ROYAL_BANK_OF_SCOTLAND_GROUP_PLC a :Bank ;
+	rdfs:label "The Royal Bank of Scotland Group PLC" ;
+	:ID_NOTATION "47902" ;
+	:issues :stock_ROYAL_BANK_OF_SCOTLAND_GROUP .
+
+:comp_ROYAL_DUTCH_SHELL_PLC :issues :stock_ROYAL_DUTCH_SHELL_PLC_B .
+
+:comp_RSA_INSURANCE_GROUP_PLC a :Insurance ;
+	rdfs:label "RSA Insurance Group PLC" ;
+	:ID_NOTATION "53848" ;
+	:issues :stock_ROYAL_SUN_ALLIANCE_INS_GRP .
+
+:comp_SABMILLER_PLC a :Industry ;
+	rdfs:label "SABMiller PLC" ;
+	:ID_NOTATION "50293" ;
+	:issues :stock_SABMILLER .
+
+:comp_THE_SAGE_GROUP_PLC a :Other ;
+	rdfs:label "The Sage Group PLC" ;
+	:ID_NOTATION "49429" ;
+	:issues :stock_SAGE_GROUP .
+
+:comp_J_SAINSBURY_PLC a :Other ;
+	rdfs:label "J Sainsbury PLC" ;
+	:ID_NOTATION "47826" ;
+	:issues :stock_SAINSBURY_J .
+
+:comp_SERCO_GROUP_PLC a :Other ;
+	rdfs:label "Serco Group PLC" ;
+	:ID_NOTATION "51123" ;
+	:issues :stock_SERCO_GROUP .
+
+:comp_SEVERN_TRENT_PLC a :Industry ;
+	rdfs:label "Severn Trent Plc" ;
+	:ID_NOTATION "48982" ;
+	:issues :stock_SEVERN_TRNT .
+
+:comp_SHIRE_PLC a :Industry ;
+	rdfs:label "Shire plc" ;
+	:ID_NOTATION "52868" ;
+	:issues :stock_SHIRE_PLC .
+
+:comp_SMITH_NEPHEW_PLC a :Industry ;
+	rdfs:label "Smith & Nephew PLC" ;
+	:ID_NOTATION "46999" ;
+	:issues :stock_SMITH_NEPHEW .
+
+:comp_SMITHS_GROUP_PLC a :Industry ;
+	rdfs:label "Smiths Group PLC" ;
+	:ID_NOTATION "47577" ;
+	:issues :stock_SMITHS_GROUP .
+
+:comp_SCOTTISH_AND_SOUTHERN_ENERGY_PLC a :Industry ;
+	rdfs:label "Scottish and Southern Energy plc" ;
+	:ID_NOTATION "49240" ;
+	:issues :stock_SCOTTISH_SOUTHERN_ENERGY .
+
+:comp_STANDARD_LIFE_PLC a :Insurance ;
+	rdfs:label "Standard Life plc" ;
+	:ID_NOTATION "432962" ;
+	:issues :stock_STANDARD_LIFE .
+
+:comp_TATE_LYLE_PLC a :Industry ;
+	rdfs:label "Tate & Lyle plc" ;
+	:ID_NOTATION "47204" ;
+	:issues :stock_TATE_LYLE .
+
+:comp_TULLOW_OIL_PLC a :Industry ;
+	rdfs:label "Tullow Oil plc" ;
+	:ID_NOTATION "127310" ;
+	:issues :stock_TULLOW_OIL .
+
+:comp_UNITED_UTILITIES_GROUP_PLC a :Industry ;
+	rdfs:label "United Utilities Group PLC" ;
+	:ID_NOTATION "48981" ;
+	:issues :stock_UTD_UTILITIES_GRP .
+
+:comp_VEDANTA_RESOURCES_PLC a :Industry ;
+	rdfs:label "Vedanta Resources plc" ;
+	:ID_NOTATION "405018" ;
+	:issues :stock_VEDANTA_RESOURCES .
+
+:comp_XSTRATA_PLC a :Industry ;
+	rdfs:label "Xstrata PLC" ;
+	:ID_NOTATION "149262" ;
+	:issues :stock_XSTRATA .
+
+:comp_ADIDAS_AG a :Industry ;
+	rdfs:label "adidas AG" ;
+	:ID_NOTATION "45487" ;
+	:issues :stock_ADIDAS_AG .
+
+:comp_BEIERSDORF_AG a :Industry ;
+	rdfs:label "Beiersdorf AG" ;
+	:ID_NOTATION "45690" ;
+	:issues :stock_BEIERSDORF .
+
+:comp_COMMERZBANK_AG a :Bank ;
+	rdfs:label "Commerzbank AG" ;
+	:ID_NOTATION "46709" ;
+	:issues :stock_COMMERZBANK .
+
+:comp_DEUTSCHE_LUFTHANSA_AG a :Other ;
+	rdfs:label "Deutsche Lufthansa AG" ;
+	:ID_NOTATION "46741" ;
+	:issues :stock_DEUTSCHE_LUFTHANSA_REG .
+
+:comp_DEUTSCHE_POST_AG a :Other ;
+	rdfs:label "Deutsche Post AG" ;
+	:ID_NOTATION "45919" ;
+	:issues :stock_DEUTSCHE_POST .
+
+:comp_FRESENIUS_MEDICAL_CARE_AG_CO_KGAA a :Industry ;
+	rdfs:label "Fresenius Medical Care AG & Co. KGaA" ;
+	:ID_NOTATION "46027" ;
+	:issues :stock_FRESENIUS_MEDICAL_CARE .
+
+:comp_FRESENIUS_SE_CO_KGAA a :Industry ;
+	rdfs:label "Fresenius SE & Co. KGaA" ;
+	:ID_NOTATION "46026" ;
+	:issues :stock_FRES_SE_C .
+
+:comp_HEIDELBERGCEMENT_AG a :Industry ;
+	rdfs:label "HeidelbergCement AG" ;
+	:ID_NOTATION "46102" ;
+	:issues :stock_HEIDELBERGCEMENT .
+
+:comp_HENKEL_AG_CO_KGAA a :Industry ;
+	rdfs:label "Henkel AG & Co. KGaA" ;
+	:ID_NOTATION "46103" ;
+	:issues :stock_HENKEL_KGAA_VORZUG .
+
+:comp_INFINEON_TECHNOLOGIES_AG a :Industry ;
+	rdfs:label "Infineon Technologies AG" ;
+	:ID_NOTATION "46227" ;
+	:issues :stock_INFINEON_TECHNOLOGIES .
+
+:comp_K_S_AG a :Industry ;
+	rdfs:label "K+S AG" ;
+	:ID_NOTATION "46465" ;
+	:issues :stock_K_S .
+
+:comp_LINDE_AG a :Industry ;
+	rdfs:label "Linde AG" ;
+	:ID_NOTATION "46283" ;
+	:issues :stock_LINDE .
+
+:comp_MAN_SE a :Industry ;
+	rdfs:label "MAN SE" ;
+	:ID_NOTATION "46080" ;
+	:issues :stock_MAN .
+
+:comp_MERCK_KGAA a :Industry ;
+	rdfs:label "Merck KGaA" ;
+	:ID_NOTATION "46319" ;
+	:issues :stock_MERCK_KGAA .
+
+:comp_METRO_AG a :Other ;
+	rdfs:label "METRO AG" ;
+	:ID_NOTATION "46534" ;
+	:issues :stock_METRO .
+
+:comp_THYSSENKRUPP_AG a :Industry ;
+	rdfs:label "ThyssenKrupp AG" ;
+	:ID_NOTATION "46600" ;
+	:issues :stock_THYSSENKRUPP .
+
+:comp_ACCOR_S_A a :Industry ;
+	rdfs:label "ACCOR S.A." ;
+	:ID_NOTATION "47615" ;
+	:issues :stock_ACCOR .
+
+:comp_ALCATEL_LUCENT a :Industry ;
+	rdfs:label "Alcatel-Lucent" ;
+	:ID_NOTATION "251506" ;
+	:issues :stock_ALCATEL .
+
+:comp_ALSTOM_S_A a :Industry ;
+	rdfs:label "Alstom S.A." ;
+	:ID_NOTATION "53108" ;
+	:issues :stock_ALSTOM .
+
+:comp_BOUYGUES_S_A a :Industry ;
+	rdfs:label "Bouygues S.A." ;
+	:ID_NOTATION "47512" ;
+	:issues :stock_BOUYGUES .
+
+:comp_CAP_GEMINI_S_A a :Other ;
+	rdfs:label "Cap Gemini S.A." ;
+	:ID_NOTATION "48328" ;
+	:issues :stock_CAP_GEMINI .
+
+:comp_CREDIT_AGRICOLE_S_A a :Bank ;
+	rdfs:label "Credit Agricole S.A." ;
+	:ID_NOTATION "111039" ;
+	:issues :stock_CREDIT_AGRICOLE .
+
+:comp_EUROPEAN_AERONAUTIC_DEFENCE_AND_SPACE_COMPANY_EADS a :Industry ;
+	rdfs:label "European Aeronautic Defence and Space Company EADS N.V." ;
+	:ID_NOTATION "56014" ;
+	:issues :stock_EUROPEAN_AERONAUTIC_DEFENCE .
+
+:comp_ELECTRICITE_DE_FRANCE_E_D_F a :Industry ;
+	rdfs:label "Electricite de France (E.D.F.)" ;
+	:ID_NOTATION "407929" ;
+	:issues :stock_EDF .
+
+:comp_ESSILOR_INTERNATIONAL_SA a :Other ;
+	rdfs:label "Essilor International SA" ;
+	:ID_NOTATION "47754" ;
+	:issues :stock_ESSILOR_INTERNATIONAL .
+
+:comp_LAFARGE_S_A a :Industry ;
+	rdfs:label "Lafarge S.A." ;
+	:ID_NOTATION "46846" ;
+	:issues :stock_LAFARGE .
+
+:comp_LEGRAND_S_A a :Industry ;
+	rdfs:label "Legrand S.A." ;
+	:ID_NOTATION "47546" ;
+	:issues :stock_LEGRAND_PROMESSE .
+
+:comp_MICHELIN_S_A a :Industry ;
+	rdfs:label "Michelin S.A." ;
+	:ID_NOTATION "46857" ;
+	:issues :stock_MICHELIN_CGDE_B .
+
+:comp_PERNOD_RICARD_S_A a :Industry ;
+	rdfs:label "Pernod-Ricard S.A." ;
+	:ID_NOTATION "47087" ;
+	:issues :stock_PERNOD_RICARD .
+
+:comp_PEUGEOT_S_A a :Industry ;
+	rdfs:label "Peugeot S.A." ;
+	:ID_NOTATION "47004" ;
+	:issues :stock_PEUGEOT .
+
+:comp_PPR_S_A a :Other ;
+	rdfs:label "PPR S.A." ;
+	:ID_NOTATION "46900" ;
+	:issues :stock_PPR .
+
+:comp_PUBLICIS_GROUPE_S_A a :Other ;
+	rdfs:label "Publicis Groupe S.A." ;
+	:ID_NOTATION "249600" ;
+	:issues :stock_PUBLICIS_GROUPE .
+
+:comp_RENAULT_S_A a :Industry ;
+	rdfs:label "Renault S.A." ;
+	:ID_NOTATION "50437" ;
+	:issues :stock_RENAULT .
+
+:comp_SAFRAN a :Industry ;
+	rdfs:label "SAFRAN" ;
+	:ID_NOTATION "54909" ;
+	:issues :stock_SAFRAN_S_A_INH .
+
+:comp_STMICROELECTRONICS_N_V a :Industry ;
+	rdfs:label "STMicroelectronics N.V." ;
+	:ID_NOTATION "50501" ;
+	:issues :stock_STMICROELECTRONICS .
+
+:comp_TECHNIP_S_A a :Industry ;
+	rdfs:label "Technip S.A." ;
+	:ID_NOTATION "50363" ;
+	:issues :stock_TECHNIP .
+
+:comp_VALLOUREC a :Industry ;
+	rdfs:label "Vallourec" ;
+	:ID_NOTATION "138551" ;
+	:issues :stock_VALLOUREC .
+
+:comp_VEOLIA_ENVIRONNEMENT_S_A a :Industry ;
+	rdfs:label "Veolia Environnement S.A." ;
+	:ID_NOTATION "45503" ;
+	:issues :stock_VEOLIA_ENVIRONNEMENT .
+
+:comp_A2A_S_P_A a :Industry ;
+	rdfs:label "A2A S.p.A." ;
+	:ID_NOTATION "53198" ;
+	:issues :stock_A2A_SPA .
+
+:comp_ANSALDO_STS_S_P_A a :Industry ;
+	rdfs:label "Ansaldo STS S.p.A." ;
+	:ID_NOTATION "110383" ;
+	:issues :stock_ANSALDO_STS .
+
+:comp_ATLANTIA_S_P_A a :Industry ;
+	rdfs:label "Atlantia S.p.A." ;
+	:ID_NOTATION "53358" ;
+	:issues :stock_ATLANTIA .
+
+:comp_AUTOGRILL_S_P_A a :Other ;
+	rdfs:label "Autogrill S.p.A." ;
+	:ID_NOTATION "52310" ;
+	:issues :stock_AUTOGRILL .
+
+:comp_AZIMUT_HOLDING_S_P_A a :Insurance ;
+	rdfs:label "Azimut Holding S.p.A." ;
+	:ID_NOTATION "409975" ;
+	:issues :stock_AZIMUT_HLDG .
+
+:comp_BANCA_MONTE_DEI_PASCHI_DI_SIENA_S_P_A a :Bank ;
+	rdfs:label "Banca Monte dei Paschi di Siena S.p.A." ;
+	:ID_NOTATION "54068" ;
+	:issues :stock_BANCA_MONTE_DEI_PASCHI_SIENA .
+
+:comp_BANCA_POPOLARE_DELL_EMILIA_ROMAGNA_S_C_A_R_L a :Bank ;
+	rdfs:label "Banca Popolare dell'Emilia Romagna S.C.a.R.L." ;
+	:ID_NOTATION "133062" ;
+	:issues :stock_BCA_POP_EMIL .
+
+:comp_BANCA_POPOLARE_DI_MILANO_S_C_A_R_L a :Bank ;
+	rdfs:label "Banca Popolare di Milano S.C.a.R.L" ;
+	:ID_NOTATION "136591" ;
+	:issues :stock_BCA_POP_MILANO .
+
+:comp_BANCO_POPOLARE_S_P_A a :Bank ;
+	rdfs:label "Banco Popolare S.p.A." ;
+	:ID_NOTATION "449497" ;
+	:issues :stock_BANCO_POP .
+
+:comp_BUZZI_UNICEM_S_P_A a :Industry ;
+	rdfs:label "Buzzi Unicem S.p.A." ;
+	:ID_NOTATION "55128" ;
+	:issues :stock_BUZZI_UNICHEM .
+
+:comp_DAVIDE_CAMPARI_MILANO_S_P_A a :Industry ;
+	rdfs:label "Davide Campari-Milano S.p.A." ;
+	:ID_NOTATION "256516" ;
+	:issues :stock_DAVIDE_CAMPARI_DAVIDE_CAMPARI_ORD_SHS .
+
+:comp_DIASORIN_S_P_A a :Industry ;
+	rdfs:label "DiaSorin S.p.A." ;
+	:ID_NOTATION "450976" ;
+	:issues :stock_DIASORIN .
+
+:comp_ENEL_GREEN_POWER_S_P_A a :Other ;
+	rdfs:label "Enel Green Power S.P.A." ;
+	:ID_NOTATION "778367" ;
+	:issues :stock_ENEL_GREE .
+
+:comp_EXOR_S_P_A a :Other ;
+	rdfs:label "EXOR S.p.A." ;
+	:ID_NOTATION "47539" ;
+	:issues :stock_EXOR .
+
+:comp_FIAT_INDUSTRIAL_S_P_A a :Industry ;
+	rdfs:label "Fiat Industrial S.p.A." ;
+	:ID_NOTATION "793770" ;
+	:issues :stock_FIAT_INDUSTRIAL_ORD_SHS .
+
+:comp_FIAT_S_P_A a :Industry ;
+	rdfs:label "FIAT S.p.A." ;
+	:ID_NOTATION "47600" ;
+	:issues :stock_FIAT .
+
+:comp_FINMECCANICA_S_P_A a :Industry ;
+	rdfs:label "Finmeccanica S.p.A." ;
+	:ID_NOTATION "137431" ;
+	:issues :stock_FINMECCANICA .
+
+:comp_IMPREGILO_S_P_A a :Industry ;
+	rdfs:label "IMPREGILO S.p.A." ;
+	:ID_NOTATION "48014" ;
+	:issues :stock_IMPREGILO .
+
+:comp_LOTTOMATICA_S_P_A a :Other ;
+	rdfs:label "Lottomatica S.p.A." ;
+	:ID_NOTATION "424925" ;
+	:issues :stock_LOTTOMATICA .
+
+:comp_LUXOTTICA_GROUP_S_P_A a :Industry ;
+	rdfs:label "Luxottica Group S.p.A." ;
+	:ID_NOTATION "49010" ;
+	:issues :stock_LUXOTTICA_GROUP .
+
+:comp_MEDIASET_S_P_A a :Other ;
+	rdfs:label "Mediaset S.p.A." ;
+	:ID_NOTATION "51411" ;
+	:issues :stock_MEDIASET .
+
+:comp_MEDIOBANCA_S_P_A a :Bank ;
+	rdfs:label "Mediobanca S.p.A." ;
+	:ID_NOTATION "46941" ;
+	:issues :stock_MEDIOBANCA .
+
+:comp_MEDIOLANUM_S_P_A a :Insurance ;
+	rdfs:label "Mediolanum S.p.A." ;
+	:ID_NOTATION "51264" ;
+	:issues :stock_MEDIOLANUM .
+
+:comp_PARMALAT_S_P_A a :Industry ;
+	rdfs:label "Parmalat S.p.A." ;
+	:ID_NOTATION "49091" ;
+	:issues :stock_PARMALAT .
+
+:comp_PIRELLI_C_S_P_A a :Industry ;
+	rdfs:label "Pirelli & C. S.p.A." ;
+	:ID_NOTATION "136448" ;
+	:issues :stock_PIRELLI_CO .
+
+:comp_PRYSMIAN_S_P_A a :Industry ;
+	rdfs:label "Prysmian S.p.A." ;
+	:ID_NOTATION "444335" ;
+	:issues :stock_PRYSMIAN_SPA .
+
+:comp_SAIPEM_S_P_A a :Industry ;
+	rdfs:label "Saipem S.p.A." ;
+	:ID_NOTATION "48250" ;
+	:issues :stock_SAIPEM .
+
+:comp_SALVATORE_FERRAGAMO_ITALIA_S_P_A a :Other ;
+	rdfs:label "Salvatore Ferragamo Italia S.p.A." ;
+	:ID_NOTATION "860998" ;
+	:issues :stock_SALE_FERR .
+
+:comp_SNAM_S_P_A a :Industry ;
+	rdfs:label "Snam S.p.A." ;
+	:ID_NOTATION "267677" ;
+	:issues :stock_SNAM_RETE_GAS .
+
+:comp_STMICROELECTRONICS_N_V :issues :stock_STMICROELECTRONICS_0 .
+
+:comp_TENARIS_S_A a :Other ;
+	rdfs:label "Tenaris S.A." ;
+	:ID_NOTATION "343978" ;
+	:issues :stock_TENARIS .
+
+:comp_TOD_S_S_P_A a :Industry ;
+	rdfs:label "Tod's S.p.A." ;
+	:ID_NOTATION "141433" ;
+	:issues :stock_TOD_SSPA .
+
+:comp_TERNA_S_P_A a :Industry ;
+	rdfs:label "Terna S.p.A." ;
+	:ID_NOTATION "127229" ;
+	:issues :stock_TERNA .
+
+:comp_UNIONE_DI_BANCHE_ITALIANE_SCPA a :Bank ;
+	rdfs:label "Unione di Banche Italiane Scpa" ;
+	:ID_NOTATION "402998" ;
+	:issues :stock_BANCHE_POPOLARI_UNITE_SCARL .
+
+:comp_ABENGOA_S_A a :Other ;
+	rdfs:label "Abengoa S.A." ;
+	:ID_NOTATION "51770" ;
+	:issues :stock_ABENGOA .
+
+:comp_ABERTIS_INFRAESTRUCTURAS_S_A a :Industry ;
+	rdfs:label "Abertis Infraestructuras, S.A." ;
+	:ID_NOTATION "48555" ;
+	:issues :stock_ABERTIS_INFRA_NOM .
+
+:comp_ACCIONA_S_A a :Industry ;
+	rdfs:label "Acciona, S.A." ;
+	:ID_NOTATION "47938" ;
+	:issues :stock_ACCIONA .
+
+:comp_ACERINOX_S_A a :Industry ;
+	rdfs:label "Acerinox, S.A." ;
+	:ID_NOTATION "130740" ;
+	:issues :stock_ACERINOX_SA .
+
+:comp_ACS_ACTIVIDADES_DE_CONSTRUCCION_Y_SERVICIOS_S_A a :Industry ;
+	rdfs:label "Acs, Actividades de Construccion y Servicios S.A." ;
+	:ID_NOTATION "49131" ;
+	:issues :stock_ACS_ACTIV .
+
+:comp_AMADEUS_IT_HOLDING_S_A a :Other ;
+	rdfs:label "Amadeus IT Holding S.A." ;
+	:ID_NOTATION "692270" ;
+	:issues :stock_AMAT_IT .
+
+:comp_ARCELORMITTAL_S_A :issues :stock_ARCELORMITTAL_0 .
+
+:comp_BANCO_POPULAR_ESPANOL_S_A a :Bank ;
+	rdfs:label "Banco Popular Espanol S.A." ;
+	:ID_NOTATION "47103" ;
+	:issues :stock_BCO_POP_ESP_NOM .
+
+:comp_BANKIA_S_A a :Bank ;
+	rdfs:label "BANKIA S.A." ;
+	:ID_NOTATION "834388" ;
+	:issues :stock_BANKIA .
+
+:comp_BANKINTER_S_A a :Bank ;
+	rdfs:label "Bankinter, S.A." ;
+	:ID_NOTATION "48259" ;
+	:issues :stock_BANKINTER .
+
+:comp_BANCO_DE_SABADELL_S_A a :Bank ;
+	rdfs:label "Banco de Sabadell S.A." ;
+	:ID_NOTATION "251474" ;
+	:issues :stock_BCO_DE_SABADELL_BANCO_DE_SABADELL_ORD_SHS .
+
+:comp_BOLSAS_Y_MERCADOS_ESPANOLES_S_A a :Other ;
+	rdfs:label "Bolsas y Mercados Espanoles S.A." ;
+	:ID_NOTATION "427642" ;
+	:issues :stock_BOLSAS_Y .
+
+:comp_CAIXABANK_S_A a :Other ;
+	rdfs:label "Caixabank S.A." ;
+	:ID_NOTATION "456069" ;
+	:issues :stock_CaixaBank .
+
+:comp_DISTRIBUIDORA_INTERNACIONAL_DE_ALIMENTACION_S_A a :Other ;
+	rdfs:label "Distribuidora Internacional de Alimentacion S.A." ;
+	:ID_NOTATION "834479" ;
+	:issues :stock_DISE_ALIM .
+
+:comp_ENAGAS_S_A a :Industry ;
+	rdfs:label "Enagas S.A." ;
+	:ID_NOTATION "269960" ;
+	:issues :stock_ENAGAS .
+
+:comp_ENDESA_S_A a :Industry ;
+	rdfs:label "Endesa S.A." ;
+	:ID_NOTATION "48447" ;
+	:issues :stock_ENDESA .
+
+:comp_FOMENTO_DE_CONSTRUCCIONES_Y_CONTRATAS_S_A a :Industry ;
+	rdfs:label "Fomento de Construcciones y Contratas S.A." ;
+	:ID_NOTATION "133252" ;
+	:issues :stock_FOMENTO_CON .
+
+:comp_GAMESA_CORPORACION_TECNOLOGICA_S_A a :Industry ;
+	rdfs:label "Gamesa Corporacion Tecnologica S.A." ;
+	:ID_NOTATION "128642" ;
+	:issues :stock_GAMESA_CO .
+
+:comp_GAS_NATURAL_SDG_S_A a :Industry ;
+	rdfs:label "Gas Natural SDG S.A." ;
+	:ID_NOTATION "132368" ;
+	:issues :stock_GAS_NATURAL_SDG_INH .
+
+:comp_GRIFOLS_S_A a :Industry ;
+	rdfs:label "Grifols S.A." ;
+	:ID_NOTATION "421935" ;
+	:issues :stock_GRIFOLS_S .
+
+:comp_INDRA_SISTEMAS_S_A a :Other ;
+	rdfs:label "Indra Sistemas S.A." ;
+	:ID_NOTATION "810299" ;
+	:issues :stock_INDRA_SISTMS_A .
+
+:comp_INTERNATIONAL_CONSOLIDATED_AIRLINES_GROUP_S_A :issues :stock_INTL_CONSOL_AIR_ORD_EUR0_50_CDI_0 .
+
+:comp_MAPFRE_S_A a :Insurance ;
+	rdfs:label "Mapfre S.A." ;
+	:ID_NOTATION "47331" ;
+	:issues :stock_MAPFRE_SA .
+
+:comp_MEDIASET_ESPANA_COMUNICACION_S_A a :Other ;
+	rdfs:label "Mediaset Espana Comunicacion S.A." ;
+	:ID_NOTATION "406422" ;
+	:issues :stock_MEDT_ESPA .
+
+:comp_OBRASCON_HUARTE_LAIN_S_A a :Other ;
+	rdfs:label "Obrascon Huarte Lain S.A." ;
+	:ID_NOTATION "49305" ;
+	:issues :stock_OBRASCON .
+
+:comp_RED_ELECTRICA_CORPORACION_S_A a :Industry ;
+	rdfs:label "Red Electrica Corporacion S.A." ;
+	:ID_NOTATION "54657" ;
+	:issues :stock_RED_ELEC .
+
+:comp_SACYR_VALLEHERMOSO_S_A a :Industry ;
+	rdfs:label "Sacyr Vallehermoso, S.A." ;
+	:ID_NOTATION "47107" ;
+	:issues :stock_SACYR_VALLEHERM_INH .
+
+:comp_TECNICAS_REUNIDAS_S_A a :Industry ;
+	rdfs:label "Tecnicas Reunidas, S.A." ;
+	:ID_NOTATION "432929" ;
+	:issues :stock_TECNICAS_RED .
+
+:comp_ACTELION_LTD a :Industry ;
+	rdfs:label "Actelion Ltd." ;
+	:ID_NOTATION "55903" ;
+	:issues :stock_ACTELION .
+
+:comp_ADECCO_S_A a :Other ;
+	rdfs:label "Adecco S.A." ;
+	:ID_NOTATION "48324" ;
+	:issues :stock_ADECCO .
+
+:comp_COMPAGNIE_FINANCIERE_RICHEMONT_SA a :Industry ;
+	rdfs:label "Compagnie Financiere Richemont SA" ;
+	:ID_NOTATION "48819" ;
+	:issues :stock_CFR_A .
+
+:comp_GIVAUDAN_SA a :Industry ;
+	rdfs:label "Givaudan SA" ;
+	:ID_NOTATION "55981" ;
+	:issues :stock_GIVAUDAN .
+
+:comp_HOLCIM_LTD a :Industry ;
+	rdfs:label "Holcim Ltd." ;
+	:ID_NOTATION "48332" ;
+	:issues :stock_HOLCIM .
+
+:comp_JULIUS_BAER_GRUPPE_AG a :Other ;
+	rdfs:label "Julius Bär Gruppe AG" ;
+	:ID_NOTATION "511318" ;
+	:issues :stock_JULS_BAER .
+
+:comp_SGS_S_A a :Other ;
+	rdfs:label "SGS S.A." ;
+	:ID_NOTATION "49054" ;
+	:issues :stock_SGS .
+
+:comp_THE_SWATCH_GROUP_AG a :Industry ;
+	rdfs:label "The Swatch Group AG" ;
+	:ID_NOTATION "47901" ;
+	:issues :stock_SWATCH_GROUP_I .
+
+:comp_SWISS_RE_AG a :Other ;
+	rdfs:label "Swiss Re AG" ;
+	:ID_NOTATION "46996" ;
+	:issues :stock_SWIS_RE .
+
+:comp_SWISSCOM_AG a :Other ;
+	rdfs:label "Swisscom AG" ;
+	:ID_NOTATION "53312" ;
+	:issues :stock_SWISSCOM .
+
+:comp_SYNGENTA_AG a :Industry ;
+	rdfs:label "Syngenta AG" ;
+	:ID_NOTATION "145777" ;
+	:issues :stock_SYNGENTA .
+
+:comp_SYNTHES_INC a :Other ;
+	rdfs:label "Synthes Inc." ;
+	:ID_NOTATION "54036" ;
+	:issues :stock_SYNTHES .
+
+:comp_TRANSOCEAN_LTD a :Other ;
+	rdfs:label "Transocean Ltd." ;
+	:ID_NOTATION "49802" ;
+	:issues :stock_TRNSOCEAN .
+
+:comp_AEGON_N_V a :Insurance ;
+	rdfs:label "AEGON N.V." ;
+	:ID_NOTATION "47452" ;
+	:issues :stock_AEGON .
+
+:comp_AIR_FRANCE_KLM_S_A a :Other ;
+	rdfs:label "Air France-KLM S.A." ;
+	:ID_NOTATION "47221" ;
+	:issues :stock_AIR_FRANCE_KLM .
+
+:comp_AKZO_NOBEL_N_V a :Industry ;
+	rdfs:label "AKZO NOBEL N.V." ;
+	:ID_NOTATION "53028" ;
+	:issues :stock_AKZO_NOBEL .
+
+:comp_APERAM_S_A a :Industry ;
+	rdfs:label "Aperam S.A." ;
+	:ID_NOTATION "802121" ;
+	:issues :stock_APERAM_ORD_APERAM_ORD_SHS .
+
+:comp_ASML_HOLDING_N_V a :Industry ;
+	rdfs:label "ASML Holding N.V." ;
+	:ID_NOTATION "50596" ;
+	:issues :stock_ASML_HOLDING_OR_ASML_HOLDING_ORD_SHS .
+
+:comp_CORIO_N_V a :Other ;
+	rdfs:label "Corio N.V." ;
+	:ID_NOTATION "212051" ;
+	:issues :stock_CORIO .
+
+:comp_FUGRO_N_V a :Industry ;
+	rdfs:label "Fugro N.V." ;
+	:ID_NOTATION "112482" ;
+	:issues :stock_FUGRO_NV .
+
+:comp_HEINEKEN_N_V a :Industry ;
+	rdfs:label "HEINEKEN N.V." ;
+	:ID_NOTATION "46907" ;
+	:issues :stock_HEINEKEN .
+
+:comp_AHOLD_N_V a :Other ;
+	rdfs:label "Ahold N.V." ;
+	:ID_NOTATION "46906" ;
+	:issues :stock_KONINKLIJKE_AHOLD .
+
+:comp_KONINKLIJKE_BOSKALIS_WESTMINSTER_N_V a :Industry ;
+	rdfs:label "Koninklijke Boskalis Westminster N.V." ;
+	:ID_NOTATION "110894" ;
+	:issues :stock_ROYAL_BOSK_WEST .
+
+:comp_KONINKLIJKE_DSM_N_V a :Industry ;
+	rdfs:label "Koninklijke DSM N.V." ;
+	:ID_NOTATION "111977" ;
+	:issues :stock_DSM_NV .
+
+:comp_KONINKLIJKE_KPN_N_V a :Other ;
+	rdfs:label "Koninklijke KPN N.V." ;
+	:ID_NOTATION "50265" ;
+	:issues :stock_KONINKLIJKE_KPN .
+
+:comp_POSTNL_N_V a :Other ;
+	rdfs:label "PostNL N.V." ;
+	:ID_NOTATION "53044" ;
+	:issues :stock_POSTNL .
+
+:comp_RANDSTAD_HOLDING_N_V a :Other ;
+	rdfs:label "Randstad Holding N.V." ;
+	:ID_NOTATION "49065" ;
+	:issues :stock_RANDSTAD_EUR0_10 .
+
+:comp_REED_ELSEVIER_N_V a :Other ;
+	rdfs:label "Reed Elsevier N.V." ;
+	:ID_NOTATION "47885" ;
+	:issues :stock_REED_ELS_NV .
+
+:comp_ROYAL_DUTCH_SHELL_PLC :issues :stock_ROYAL_DUTCH_SHELL_0 .
+
+:comp_SBM_OFFSHORE_N_V a :Industry ;
+	rdfs:label "SBM Offshore N.V." ;
+	:ID_NOTATION "48251" ;
+	:issues :stock_SBM_OFFSHORE .
+
+:comp_TNT_EXPRESS_N_V a :Other ;
+	rdfs:label "TNT EXPRESS N.V." ;
+	:ID_NOTATION "843743" ;
+	:issues :stock_TNT_EXPR .
+
+:comp_TOMTOM_N_V a :Other ;
+	rdfs:label "TomTom N.V." ;
+	:ID_NOTATION "407683" ;
+	:issues :stock_TOMTOM_NV .
+
+:comp_WOLTERS_KLUWER_N_V a :Other ;
+	rdfs:label "Wolters Kluwer N.V." ;
+	:ID_NOTATION "47857" ;
+	:issues :stock_WOLTERS_KWOLT_KLUW .
+
+:comp_ACKERMANS_VAN_HAAREN a :Industry ;
+	rdfs:label "ACKERMANS & VAN HAAREN" ;
+	:ID_NOTATION "131235" ;
+	:issues :stock_ACKERMANS_ORD_ACKERMANS_ORD_SHS .
+
+:comp_AGEAS_SA_NV a :Insurance ;
+	rdfs:label "ageas SA/NV" ;
+	:ID_NOTATION "47593" ;
+	:issues :stock_AGEAS_EX_FORTI_AGEAS_EX_FORTI .
+
+:comp_BEFIMMO_SCA a :Industry ;
+	rdfs:label "BEFIMMO SCA" ;
+	:ID_NOTATION "212178" ;
+	:issues :stock_BEFIMMO_NPV_SICAFI .
+
+:comp_BEKAERT a :Industry ;
+	rdfs:label "Bekaert" ;
+	:ID_NOTATION "131398" ;
+	:issues :stock_BEKAERT_D_ORD_SHS .
+
+:comp_BELGACOM_S_A a :Industry ;
+	rdfs:label "BELGACOM S.A." ;
+	:ID_NOTATION "405919" ;
+	:issues :stock_BELGACOM .
+
+:comp_COFINIMMO_SICAFI a :Industry ;
+	rdfs:label "COFINIMMO-SICAFI" ;
+	:ID_NOTATION "212371" ;
+	:issues :stock_COFINIMMO_REIT_COFINIMMO_REIT .
+
+:comp_COLRUYT a :Industry ;
+	rdfs:label "Franz Colruyt Etablissementen" ;
+	:ID_NOTATION "47799" ;
+	:issues :stock_COLRUYT_D_ORD_ETABLISSEMENTS_FR_COLRUYT_ORD_SHS .
+
+:comp_D_IETEREN_SA a :Industry ;
+	rdfs:label "D'IETEREN SA" ;
+	:ID_NOTATION "134472" ;
+	:issues :stock_SA_DIET .
+
+:comp_DELHAIZE_GROUP a :Industry ;
+	rdfs:label "DELHAIZE GROUP" ;
+	:ID_NOTATION "132673" ;
+	:issues :stock_DELHAIZE_ORD_GROUPE_DELHAIZE_ORD_SHS .
+
+:comp_ELIA_SYSTEM_OPERATOR a :Company ;
+	rdfs:label "ELIA SYSTEM OPERATOR" ;
+	:ID_NOTATION "413673" ;
+	:issues :stock_ELIA_SYST .
+
+:comp_GBL a :Industry ;
+	rdfs:label "Groupe Bruxelles Lambert (GBL) SA" ;
+	:ID_NOTATION "48635" ;
+	:issues :stock_GPE_BRUX_LAMBRT .
+
+:comp_KBC a :Bank ;
+	rdfs:label "KBC" ;
+	:ID_NOTATION "47212" ;
+	:issues :stock_KBC_GR .
+
+:comp_MOBISTAR a :Industry ;
+	rdfs:label "MOBISTAR" ;
+	:ID_NOTATION "53326" ;
+	:issues :stock_MOBISTAR .
+
+:comp_NYRSTAR_NV a :Industry ;
+	rdfs:label "NYRSTAR NV NPV" ;
+	:ID_NOTATION "457513" ;
+	:issues :stock_NYRSTAR_NV .
+
+:comp_SOLVAY a :Industry ;
+	rdfs:label "SOLVAY" ;
+	:ID_NOTATION "47300" ;
+	:issues :stock_SOLVAY_NPV .
+
+:comp_TELENET a :Other ;
+	rdfs:label "TELENET GRP HLDG" ;
+	:ID_NOTATION "407622" ;
+	:issues :stock_TELENET_NPV .
+
+:comp_UCB a :Industry ;
+	rdfs:label "UCB" ;
+	:ID_NOTATION "138309" ;
+	:issues :stock_UCB .
+
+:comp_UMICORE a :Industry ;
+	rdfs:label "UMICORE" ;
+	:ID_NOTATION "46814" ;
+	:issues :stock_UMICORE_ORDUMICORE_ORD_SHS .
+
+:comp_BPI_ES_1000 a :Bank ;
+	rdfs:label "BPI-SGPS SA" ;
+	:ID_NOTATION "48711" ;
+	:issues :stock_BANCO_BPI .
+
+:comp_BANCO_COMERCIAL_PORTUGU_S_S_A a :Bank ;
+	rdfs:label "Banco Comercial Português S.A." ;
+	:ID_NOTATION "48705" ;
+	:issues :stock_BCO_COM_PORT_NOM .
+
+:comp_BANCO_ESPIRITO_SANTO_S_A a :Bank ;
+	rdfs:label "Banco Espirito Santo S.A." ;
+	:ID_NOTATION "49415" ;
+	:issues :stock_BCO_ESP_SAN .
+
+:comp_BRISA a :Industry ;
+	rdfs:label "BRISA" ;
+	:ID_NOTATION "249573" ;
+	:issues :stock_BRISA_AUT_PRIV .
+
+:comp_CIMPOR a :Industry ;
+	rdfs:label "CIMPOR" ;
+	:ID_NOTATION "50374" ;
+	:issues :stock_CIMPOR_CMNTS_PT .
+
+:comp_EDP_RENOVAVEIS_SA a :Industry ;
+	rdfs:label "EDP RENOVAVEIS SA" ;
+	:ID_NOTATION "467500" ;
+	:issues :stock_EDP_RENOV .
+
+:comp_ENERGIAS_DE_PORTUGAL a :Industry ;
+	rdfs:label "Energias de Portugal" ;
+	:ID_NOTATION "52105" ;
+	:issues :stock_EDP_ENERGIAS_PORTUG .
+
+:comp_GALP_ENERGIA a :Company ;
+	rdfs:label "GALP ENERGIA" ;
+	:ID_NOTATION "434534" ;
+	:issues :stock_GALP_ENERGIA_SGPS .
+
+:comp_J_MARTINS_SGPS a :Industry ;
+	rdfs:label "Jeronimo Martins SGPS SA" ;
+	:ID_NOTATION "49012" ;
+	:issues :stock_JERONIMO_MRTNS .
+
+:comp_MOTA_ENGIL a :Industry ;
+	rdfs:label "Engil-Sociedade Gestora De Participacoes" ;
+	:ID_NOTATION "50842" ;
+	:issues :stock_MOTA_ENGL_SGPS .
+
+:comp_PORTUCEL_EMPRESA_PRODUTORA_DE_PASTA_E_PAPEL a :Industry ;
+	rdfs:label "PORTUCPortucel - Empresa Produtora de Pasta e Papel EL IND" ;
+	:ID_NOTATION "50741" ;
+	:issues :stock_PORT_EMP_PROD .
+
+:comp_PORTUGAL_TELECOM a :Industry ;
+	rdfs:label "Portugal Telekom SA" ;
+	:ID_NOTATION "50709" ;
+	:issues :stock_PORT_TEL_SG .
+
+:comp_REN a :Other ;
+	rdfs:label "RENE.LIS" ;
+	:ID_NOTATION "450254" ;
+	:issues :stock_REDES_ENEREDES_ENE .
+
+:comp_SEMAPA_SGPS a :Industry ;
+	rdfs:label "SEMAPA SOCIEDADE DE INVESTIMENTO E GESTAO SGPS SA" ;
+	:ID_NOTATION "126601" ;
+	:issues :stock_SEMAPA_SOC .
+
+:comp_SONAE_S_A a :Industry ;
+	rdfs:label "Sonae S.A." ;
+	:ID_NOTATION "249584" ;
+	:issues :stock_SONAE_SGPS .
+
+:comp_SONAE_COM a :Industry ;
+	rdfs:label "Sonae SGPS S.A." ;
+	:ID_NOTATION "48572" ;
+	:issues :stock_SONAE_COM .
+
+:comp_ZON_MULTIMEDIA a :Industry ;
+	rdfs:label "ZON MULTIMEDIA" ;
+	:ID_NOTATION "249568" ;
+	:issues :stock_ZON_MULTIMEDIA .
+
+:comp_AMER_YHTYMA a :Industry ;
+	rdfs:label "AMER A" ;
+	:ID_NOTATION "48394" ;
+	:issues :stock_AMER_SPORTS_A .
+
+:comp_CARGOTEC_CORP a :Industry ;
+	rdfs:label "CARGOTEC CORP." ;
+	:ID_NOTATION "406760" ;
+	:issues :stock_CARGOTEC_CORP_B .
+
+:comp_ELISA_COMMS a :Industry ;
+	rdfs:label "Elisa Communications Oyj" ;
+	:ID_NOTATION "46169" ;
+	:issues :stock_ELISA_OYJ_A .
+
+:comp_FORTUM a :Industry ;
+	rdfs:label "FORTUM" ;
+	:ID_NOTATION "53345" ;
+	:issues :stock_FORTUM_OYJ .
+
+:comp_KEMIRA a :Industry ;
+	rdfs:label "KEMIRA" ;
+	:ID_NOTATION "50433" ;
+	:issues :stock_KEMIRA_OY .
+
+:comp_KESKO_CORP a :Industry ;
+	rdfs:label "Kesko Corporation" ;
+	:ID_NOTATION "49585" ;
+	:issues :stock_KESKO_B .
+
+:comp_KONECRANES_OYJ a :Industry ;
+	rdfs:label "Konecranes Oyj" ;
+	:ID_NOTATION "141032" ;
+	:issues :stock_KONECRANES_INTL .
+
+:comp_METSO_CORP a :Industry ;
+	rdfs:label "METSO CORP." ;
+	:ID_NOTATION "54570" ;
+	:issues :stock_METSO_CORP .
+
+:comp_NESTE_OIL_CORPORATION a :Industry ;
+	rdfs:label "NESTE OIL CORPORATION" ;
+	:ID_NOTATION "406579" ;
+	:issues :stock_NESTE_OIL_CORP .
+
+:comp_NORDEA_BANK a :Bank ;
+	rdfs:label "NORDEA BANK AB" ;
+	:ID_NOTATION "52658" ;
+	:issues :stock_NORDEA_BANK_FDR .
+
+:comp_ORION a :Industry ;
+	rdfs:label "ORION CORP  B" ;
+	:ID_NOTATION "49724" ;
+	:issues :stock_ORION_COR .
+
+:comp_OUTOKUMPU a :Industry ;
+	rdfs:label "OUTOKUMPU" ;
+	:ID_NOTATION "49659" ;
+	:issues :stock_OUTOKUMPU_A .
+
+:comp_OUTOTEC_OYJ a :Industry ;
+	rdfs:label "OUTOTEC OYJ" ;
+	:ID_NOTATION "433754" ;
+	:issues :stock_OUTOTEC_OYJ .
+
+:comp_POHJOLA_BANK a :Bank ;
+	rdfs:label "POHJOLA BANK" ;
+	:ID_NOTATION "141288" ;
+	:issues :stock_POHJOLA_BK_A .
+
+:comp_SAMPO_PLC a :Industry ;
+	rdfs:label "SAMPO PLC" ;
+	:ID_NOTATION "49186" ;
+	:issues :stock_SAMPO_PLC .
+
+:comp_STORA_ENSO a :Industry ;
+	rdfs:label "Stora Enso OYJ" ;
+	:ID_NOTATION "48409" ;
+	:issues :stock_STORA_ENSO_OYJ_R .
+
+:comp_TELIASONERA_AB a :Industry ;
+	rdfs:label "TeliaSonera AB" ;
+	:ID_NOTATION "55987" ;
+	:issues :stock_TELIASONERA .
+
+:comp_UPM_KYMMENE a :Bank ;
+	rdfs:label "UPM KYMMENE" ;
+	:ID_NOTATION "49148" ;
+	:issues :stock_UPM_KYMMENE_OYJ .
+
+:comp_WARTSILA a :Industry ;
+	rdfs:label "WARTSILA" ;
+	:ID_NOTATION "216939" ;
+	:issues :stock_WARTSILA_OYJ_ABP .
+
+:comp_ABB_LTD :issues :stock_ABB_0 .
+
+:comp_ALFA_LAVAL a :Industry ;
+	rdfs:label "Alfa Corporate AB" ;
+	:ID_NOTATION "52915" ;
+	:issues :stock_ALFA_LAVAL .
+
+:comp_ASSA_ABLOY_AB a :Industry ;
+	rdfs:label "Assa Abloy AB" ;
+	:ID_NOTATION "142763" ;
+	:issues :stock_ASSA_ABLOY_B .
+
+:comp_ASTRAZENECA_PLC :issues :stock_ASTRAZENECA_0 .
+
+:comp_ATLAS_COPCO_AB a :Industry ;
+	rdfs:label "Atlas Copco AB" ;
+	:ID_NOTATION "47719" ;
+	:issues :stock_ATLAS_COPCO .
+
+:comp_BOLIDEN a :Industry ;
+	rdfs:label "BOLIDEN" ;
+	:ID_NOTATION "141758" ;
+	:issues :stock_BOLIDEN .
+
+:comp_ELECTROLUX_AB a :Industry ;
+	rdfs:label "Electrolux AB" ;
+	:ID_NOTATION "47062" ;
+	:issues :stock_ELECTROLUX_B .
+
+:comp_GETINGE a :Industry ;
+	rdfs:label "GETINGE" ;
+	:ID_NOTATION "50157" ;
+	:issues :stock_GETINGE_B .
+
+:comp_INVESTOR a :Industry ;
+	rdfs:label "INVESTOR AB" ;
+	:ID_NOTATION "47278" ;
+	:issues :stock_INVESTOR_B .
+
+:comp_LUNDIN_PETROLEUM a :Industry ;
+	rdfs:label "LUNDIN PETROLEUM" ;
+	:ID_NOTATION "128351" ;
+	:issues :stock_LUNDIN_PETR .
+
+:comp_MODERN_TIMES a :Industry ;
+	rdfs:label "MODERN TIMES GP" ;
+	:ID_NOTATION "54603" ;
+	:issues :stock_MTG_B .
+
+:comp_NOKIA_CORP :issues :stock_NOKIA_0 .
+
+:comp_NORDEA_BANK :issues :stock_NORDEA .
+
+:comp_SANDVIK_AB a :Industry ;
+	rdfs:label "Sandvik AB" ;
+	:ID_NOTATION "47967" ;
+	:issues :stock_SANDVIK .
+
+:comp_SCANIA_AB a :Industry ;
+	rdfs:label "Scania AB" ;
+	:ID_NOTATION "51193" ;
+	:issues :stock_SCANIA_B .
+
+:comp_SECURITAS_AB a :Industry ;
+	rdfs:label "Securitas AB" ;
+	:ID_NOTATION "49458" ;
+	:issues :stock_SECURITAS .
+
+:comp_SEB_A a :Bank ;
+	rdfs:label "Skandinaviska Enskilda Banken Ab" ;
+	:ID_NOTATION "47580" ;
+	:issues :stock_SEB_A .
+
+:comp_SKANSKA_AB a :Industry ;
+	rdfs:label "Skanska AB" ;
+	:ID_NOTATION "137470" ;
+	:issues :stock_SKANSKA .
+
+:comp_SKF_AB a :Industry ;
+	rdfs:label "SKF AB" ;
+	:ID_NOTATION "47022" ;
+	:issues :stock_SKF_B .
+
+:comp_SVENSKA_CELLULOSA_AB a :Industry ;
+	rdfs:label "Svenska Cellulosa AB" ;
+	:ID_NOTATION "47299" ;
+	:issues :stock_SCA_B .
+
+:comp_SWEDBANK a :Bank ;
+	rdfs:label "SWEDBANK" ;
+	:ID_NOTATION "128976" ;
+	:issues :stock_SWEDBANK_A .
+
+:comp_SWEDISH_MATCH a :Industry ;
+	rdfs:label "SWEDISH MaTCH ADR" ;
+	:ID_NOTATION "51284" ;
+	:issues :stock_SWEDISH_MATCH .
+
+:comp_TELE2_AB a :Industry ;
+	rdfs:label "Tele2 AB" ;
+	:ID_NOTATION "53142" ;
+	:issues :stock_TELE2_B .
+
+:comp_TELIASONERA_AB :issues :stock_TELIASONERA_0 .
+
+:comp_VOLVO_AB a :Industry ;
+	rdfs:label "Volvo AB" ;
+	:ID_NOTATION "47260" ;
+	:issues :stock_VOLVO_B .
+
+:comp_3M_CO a :Industry ;
+	rdfs:label "3M Co." ;
+	:ID_NOTATION "46944" ;
+	:issues :stock_3M .
+
+:comp_ALCOA_INC a :Industry ;
+	rdfs:label "Alcoa Inc." ;
+	:ID_NOTATION "46803" ;
+	:issues :stock_ALCOA .
+
+:comp_AMERICAN_EXPRESS_CO a :Bank ;
+	rdfs:label "American Express Co." ;
+	:ID_NOTATION "46806" ;
+	:issues :stock_AMEXCO .
+
+:comp_AT_T_INC a :Other ;
+	rdfs:label "AT&T Inc." ;
+	:ID_NOTATION "48183" ;
+	:issues :stock_AT_T_INC .
+
+:comp_BANK_OF_AMERICA_CORP a :Bank ;
+	rdfs:label "Bank of America Corp." ;
+	:ID_NOTATION "47468" ;
+	:issues :stock_BANK_AMERICA .
+
+:comp_BOEING_CO a :Industry ;
+	rdfs:label "Boeing Co." ;
+	:ID_NOTATION "46827" ;
+	:issues :stock_BOEING .
+
+:comp_CATERPILLAR_INC a :Industry ;
+	rdfs:label "Caterpillar Inc." ;
+	:ID_NOTATION "46840" ;
+	:issues :stock_CATERPILLAR .
+
+:comp_CHEVRON_CORP a :Industry ;
+	rdfs:label "Chevron Corp." ;
+	:ID_NOTATION "47017" ;
+	:issues :stock_CHEVRON .
+
+:comp_CISCO_SYSTEMS_INC a :Industry ;
+	rdfs:label "Cisco Systems, Inc." ;
+	:ID_NOTATION "49027" ;
+	:issues :stock_CISCO_SYSTEMS .
+
+:comp_THE_COCA_COLA_CO a :Industry ;
+	rdfs:label "The Coca Cola Co." ;
+	:ID_NOTATION "46849" ;
+	:issues :stock_COCA_COLA .
+
+:comp_E_I_DUPONT_DE_NEMOURS_CO a :Industry ;
+	rdfs:label "E.I. DuPont de Nemours & Co." ;
+	:ID_NOTATION "46976" ;
+	:issues :stock_DU_PONT .
+
+:comp_EXXONMOBIL_CORP a :Industry ;
+	rdfs:label "ExxonMobil Corp." ;
+	:ID_NOTATION "47016" ;
+	:issues :stock_EXXON_MOB .
+
+:comp_GENERAL_ELECTRIC_CO a :Industry ;
+	rdfs:label "General Electric Co." ;
+	:ID_NOTATION "46891" ;
+	:issues :stock_GEN_ELEC .
+
+:comp_HEWLETT_PACKARD_CO a :Industry ;
+	rdfs:label "Hewlett-Packard Co." ;
+	:ID_NOTATION "46911" ;
+	:issues :stock_HEWLETT_PACKARD .
+
+:comp_THE_HOME_DEPOT_INC a :Other ;
+	rdfs:label "The Home Depot Inc." ;
+	:ID_NOTATION "48046" ;
+	:issues :stock_HOME_DEPOT .
+
+:comp_INTEL_CORP a :Industry ;
+	rdfs:label "Intel Corp." ;
+	:ID_NOTATION "47258" ;
+	:issues :stock_INTEL .
+
+:comp_INTERNATIONAL_BUSINESS_MACHINES_CORP a :Industry ;
+	rdfs:label "International Business Machines Corp." ;
+	:ID_NOTATION "46920" ;
+	:issues :stock_IBM .
+
+:comp_JOHNSON_JOHNSON a :Industry ;
+	rdfs:label "Johnson & Johnson" ;
+	:ID_NOTATION "47073" ;
+	:issues :stock_JOHNSON_JOHNSON .
+
+:comp_JPMORGAN_CHASE_CO a :Bank ;
+	rdfs:label "JPMorgan Chase & Co." ;
+	:ID_NOTATION "46844" ;
+	:issues :stock_JPMORGAN_CHASE .
+
+:comp_KRAFT_FOODS_INC a :Industry ;
+	rdfs:label "Kraft Foods Inc." ;
+	:ID_NOTATION "255726" ;
+	:issues :stock_KRAFT_FOODS .
+
+:comp_MCDONALD_S_CORP a :Other ;
+	rdfs:label "McDonald's Corp." ;
+	:ID_NOTATION "47350" ;
+	:issues :stock_MC_DONALDS .
+
+:comp_MERCK_CO_INC a :Industry ;
+	rdfs:label "Merck & Co. Inc." ;
+	:ID_NOTATION "46942" ;
+	:issues :stock_MERCK_CO .
+
+:comp_MICROSOFT_CORP a :Other ;
+	rdfs:label "Microsoft Corp." ;
+	:ID_NOTATION "48412" ;
+	:issues :stock_MICROSOFT .
+
+:comp_PFIZER_INC a :Industry ;
+	rdfs:label "Pfizer Inc." ;
+	:ID_NOTATION "46968" ;
+	:issues :stock_PFIZER .
+
+:comp_THE_PROCTER_GAMBLE_CO a :Industry ;
+	rdfs:label "The Procter & Gamble Co." ;
+	:ID_NOTATION "46979" ;
+	:issues :stock_PROCT_GAMB .
+
+:comp_THE_TRAVELERS_COMPANIES_INC a :Insurance ;
+	rdfs:label "The Travelers Companies, Inc." ;
+	:ID_NOTATION "47608" ;
+	:issues :stock_TRAVELERS_CO_S .
+
+:comp_UNITED_TECHNOLOGIES_CORP a :Industry ;
+	rdfs:label "United Technologies Corp." ;
+	:ID_NOTATION "47043" ;
+	:issues :stock_UTD_TECHNOL .
+
+:comp_VERIZON_COMMUNICATIONS_INC a :Other ;
+	rdfs:label "Verizon Communications Inc." ;
+	:ID_NOTATION "48185" ;
+	:issues :stock_VERIZON .
+
+:comp_WAL_MART_STORES_INC a :Other ;
+	rdfs:label "Wal-Mart Stores Inc." ;
+	:ID_NOTATION "47646" ;
+	:issues :stock_WAL_MART_STORES .
+
+:comp_WALT_DISNEY_CO a :Other ;
+	rdfs:label "Walt Disney Co." ;
+	:ID_NOTATION "47259" ;
+	:issues :stock_DISNEY_WALT_CO .
+
+:comp_ABBOTT_LABORATORIES a :Industry ;
+	rdfs:label "Abbott Laboratories" ;
+	:ID_NOTATION "46797" ;
+	:issues :stock_ABBOTT_LABOR .
+
+:comp_ABERCROMBIE a :Industry ;
+	rdfs:label "Abercrombie & Fitch Co." ;
+	:ID_NOTATION "51598" ;
+	:issues :stock_ABERCROMBIE_A .
+
+:comp_ACCENTURE_PLC a :Other ;
+	rdfs:label "Accenture PLC" ;
+	:ID_NOTATION "508475" ;
+	:issues :stock_ACCENTURE .
+
+:comp_ADOBE_SYSTEMS_INC a :Industry ;
+	rdfs:label "Adobe Systems Inc." ;
+	:ID_NOTATION "48522" ;
+	:issues :stock_ADOBE_SYST .
+
+:comp_ADVANCED_MICRO_DEVICES_INC a :Industry ;
+	rdfs:label "ADVANCED MICRO DEVICES INC." ;
+	:ID_NOTATION "47753" ;
+	:issues :stock_ADVANCED_MIC_DEV .
+
+:comp_THE_AES_CORPORATION a :Industry ;
+	rdfs:label "The AES Corporation" ;
+	:ID_NOTATION "49264" ;
+	:issues :stock_AES_CORP_USD0_01 .
+
+:comp_AFLAC_INCORPORATED a :Insurance ;
+	rdfs:label "AFLAC INCORPORATED" ;
+	:ID_NOTATION "47059" ;
+	:issues :stock_AFLAC .
+
+:comp_AGILENT_TECHNOLOGIES_INC a :Industry ;
+	rdfs:label "AGILENT TECHNOLOGIES, INC." ;
+	:ID_NOTATION "55327" ;
+	:issues :stock_ARGLNT_TECH .
+
+:comp_AIR_PRODS_CHEM a :Industry ;
+	rdfs:label "Air Products and Chemicals, Inc." ;
+	:ID_NOTATION "47211" ;
+	:issues :stock_AIR_PROD_CHEM .
+
+:comp_AIRGAS a :Industry ;
+	rdfs:label "AIRGAS INC" ;
+	:ID_NOTATION "48600" ;
+	:issues :stock_AIRGAS .
+
+:comp_AKAMAI_TECHNOLOGIES_INC a :Other ;
+	rdfs:label "Akamai Technologies, Inc." ;
+	:ID_NOTATION "55279" ;
+	:issues :stock_AKAMAI_TECH .
+
+:comp_ALLEGHENY_TECHNOLOGIES_INCORPORATED a :Industry ;
+	rdfs:label "Allegheny Technologies Incorporated" ;
+	:ID_NOTATION "55464" ;
+	:issues :stock_ALLEGHNY_TECH .
+
+:comp_ALLERGAN_INC a :Industry ;
+	rdfs:label "Allergan, Inc." ;
+	:ID_NOTATION "48922" ;
+	:issues :stock_ALLERGAN .
+
+:comp_ALLSTATE_CORP a :Insurance ;
+	rdfs:label "Allstate Corp." ;
+	:ID_NOTATION "49780" ;
+	:issues :stock_ALLSTATE_CORP .
+
+:comp_ALPHA_NATURAL_RESOURCES_INC a :Industry ;
+	rdfs:label "ALPHA NATURAL RESOURCES INC" ;
+	:ID_NOTATION "408953" ;
+	:issues :stock_ALPHA_NAT .
+
+:comp_ALTERA_CORP a :Industry ;
+	rdfs:label "Altera Corp." ;
+	:ID_NOTATION "48800" ;
+	:issues :stock_ALTERA_CORP .
+
+:comp_ALTRIA_GROUP_INC a :Industry ;
+	rdfs:label "Altria Group Inc." ;
+	:ID_NOTATION "46949" ;
+	:issues :stock_ALTRIA_GROUP .
+
+:comp_AMAZON_COM_INC a :Other ;
+	rdfs:label "Amazon.com Inc." ;
+	:ID_NOTATION "52086" ;
+	:issues :stock_AMAZON_COM .
+
+:comp_AMERICAN_ELECTRIC_POWER_COMPANY_INC a :Industry ;
+	rdfs:label "American Electric Power Company, Inc." ;
+	:ID_NOTATION "46805" ;
+	:issues :stock_AMER_ELECT_POWER .
+
+:comp_AMERICAN_INTERNATIONAL_GROUP_INC a :Other ;
+	rdfs:label "American International Group Inc." ;
+	:ID_NOTATION "47561" ;
+	:issues :stock_AMER_INT_GRP .
+
+:comp_AMERIPRISE_FINANCIAL_INC a :Insurance ;
+	rdfs:label "AMERIPRISE FINANCIAL INC." ;
+	:ID_NOTATION "408042" ;
+	:issues :stock_AMERIPRISE_FINCL .
+
+:comp_AMGEN_INC a :Industry ;
+	rdfs:label "Amgen Inc." ;
+	:ID_NOTATION "48144" ;
+	:issues :stock_AMGEN .
+
+:comp_ANADARKO_PETROLEUM_CORP a :Industry ;
+	rdfs:label "Anadarko Petroleum Corp." ;
+	:ID_NOTATION "48500" ;
+	:issues :stock_ANADARKO_PET .
+
+:comp_ANALOG_DEVICES_INC a :Industry ;
+	rdfs:label "Analog Devices, Inc." ;
+	:ID_NOTATION "47725" ;
+	:issues :stock_ANALOG_DEVICES .
+
+:comp_APACHE_CORP a :Industry ;
+	rdfs:label "Apache Corp." ;
+	:ID_NOTATION "47397" ;
+	:issues :stock_APACHE_CP .
+
+:comp_APOLLO_GROUP_INC a :Other ;
+	rdfs:label "Apollo Group Inc." ;
+	:ID_NOTATION "51087" ;
+	:issues :stock_APOLLO_GRP .
+
+:comp_APPLE_INC a :Industry ;
+	rdfs:label "Apple Inc." ;
+	:ID_NOTATION "47970" ;
+	:issues :stock_APPLE_INC .
+
+:comp_APPLIED_MATERIALS_INC a :Industry ;
+	rdfs:label "Applied Materials, Inc." ;
+	:ID_NOTATION "47906" ;
+	:issues :stock_APPLIED_MATERIALS .
+
+:comp_ARCHER_DANIELS_MIDLAND_COMPANY a :Industry ;
+	rdfs:label "Archer Daniels Midland Company" ;
+	:ID_NOTATION "47162" ;
+	:issues :stock_ARCHER_DAN .
+
+:comp_AUTODESK_INC a :Other ;
+	rdfs:label "Autodesk Inc." ;
+	:ID_NOTATION "48337" ;
+	:issues :stock_AUTODESK_NPV .
+
+:comp_AUTOMATIC_DATA_PROCESSING_INC a :Industry ;
+	rdfs:label "Automatic Data Processing, Inc." ;
+	:ID_NOTATION "46816" ;
+	:issues :stock_AUTOMATIC_DATA_PRO .
+
+:comp_AUTONATION a :Industry ;
+	rdfs:label "Autonation Inc." ;
+	:ID_NOTATION "49144" ;
+	:issues :stock_AUTONATION .
+
+:comp_AVERY_DENNISON_CORPORATION a :Industry ;
+	rdfs:label "Avery Dennison Corporation" ;
+	:ID_NOTATION "131247" ;
+	:issues :stock_AVERY_DENN .
+
+:comp_AVON_PRODUCTS_INC a :Industry ;
+	rdfs:label "Avon Products Inc." ;
+	:ID_NOTATION "47129" ;
+	:issues :stock_AVON_PRDCTS .
+
+:comp_BAKER_HUGHES_INC a :Industry ;
+	rdfs:label "Baker Hughes Inc." ;
+	:ID_NOTATION "48599" ;
+	:issues :stock_BAKER_HUGHES .
+
+:comp_BANK_OF_NEW_YORK_MELLON_CORP a :Industry ;
+	rdfs:label "Bank of New York Mellon Corp." ;
+	:ID_NOTATION "449755" ;
+	:issues :stock_BANK_OF_NY_MELLON .
+
+:comp_C_R_BARD_INC a :Industry ;
+	rdfs:label "C. R. Bard, Inc." ;
+	:ID_NOTATION "110686" ;
+	:issues :stock_BARD_CR .
+
+:comp_BAXTER_INTERNATIONAL_INC a :Industry ;
+	rdfs:label "Baxter International Inc." ;
+	:ID_NOTATION "47127" ;
+	:issues :stock_BAXTER_INTL .
+
+:comp_BB_T_CORP a :Bank ;
+	rdfs:label "BB&T Corp." ;
+	:ID_NOTATION "49513" ;
+	:issues :stock_BB_T_CP_USD5 .
+
+:comp_BECTON_DICKINSON a :Industry ;
+	rdfs:label "Becton, Dickinson and Company" ;
+	:ID_NOTATION "47407" ;
+	:issues :stock_BECT_DICKIN_USD1 .
+
+:comp_BED_BATH_BEYOND_INC a :Other ;
+	rdfs:label "Bed Bath & Beyond Inc." ;
+	:ID_NOTATION "49520" ;
+	:issues :stock_BED_BATH .
+
+:comp_BERKSHIRE_HATHAWAY_INC a :Insurance ;
+	rdfs:label "Berkshire Hathaway Inc." ;
+	:ID_NOTATION "51309" ;
+	:issues :stock_BERK_HATH_CL_B .
+
+:comp_BEST_BUY a :Industry ;
+	rdfs:label "Best Buy Co., Inc." ;
+	:ID_NOTATION "48667" ;
+	:issues :stock_BEST_BUY_CO .
+
+:comp_BIG_LOTS_INC a :Industry ;
+	rdfs:label "Big Lots Inc." ;
+	:ID_NOTATION "254958" ;
+	:issues :stock_BIG_LOTS_INC .
+
+:comp_BIOGEN_IDEC_INC a :Industry ;
+	rdfs:label "Biogen Idec Inc." ;
+	:ID_NOTATION "48036" ;
+	:issues :stock_BIOGEN_IDEC .
+
+:comp_BLACKROCK_INC a :Industry ;
+	rdfs:label "BlackRock Inc." ;
+	:ID_NOTATION "55208" ;
+	:issues :stock_BLACKROCK_INC_A .
+
+:comp_H_R_BLOCK a :Industry ;
+	rdfs:label "H&R Block, Inc." ;
+	:ID_NOTATION "47554" ;
+	:issues :stock_BLOCK_H_R_NPV .
+
+:comp_BMC_SOFTWARE_INC a :Other ;
+	rdfs:label "BMC Software Inc." ;
+	:ID_NOTATION "249457" ;
+	:issues :stock_BMC_SFTWRE_USD0_01 .
+
+:comp_BORG_WARNER_INC a :Industry ;
+	rdfs:label "Borg Warner Inc." ;
+	:ID_NOTATION "49877" ;
+	:issues :stock_BORG_WRN .
+
+:comp_BOSTON_SCIENT a :Industry ;
+	rdfs:label "Boston Scientific Corporation" ;
+	:ID_NOTATION "49485" ;
+	:issues :stock_BOSTON_SCIENTIFIC .
+
+:comp_BRISTOL_MYERS_SQUIBB_CO a :Industry ;
+	rdfs:label "Bristol-Myers Squibb Co." ;
+	:ID_NOTATION "46829" ;
+	:issues :stock_BRISTOL_MYERS_SQUIBBDL_10 .
+
+:comp_BROADCOM_CORP a :Industry ;
+	rdfs:label "Broadcom Corp." ;
+	:ID_NOTATION "52928" ;
+	:issues :stock_BROADCOM_CORP .
+
+:comp_CA_INC a :Other ;
+	rdfs:label "CA, Inc." ;
+	:ID_NOTATION "48067" ;
+	:issues :stock_CA_INC .
+
+:comp_CABOT_OIL_GAS_CORP a :Industry ;
+	rdfs:label "CABOT OIL & GAS CORP" ;
+	:ID_NOTATION "132182" ;
+	:issues :stock_CABOT_OIL_A_USD .
+
+:comp_CAMERON_INTERNATIONAL_CORP a :Industry ;
+	rdfs:label "Cameron International Corp" ;
+	:ID_NOTATION "50786" ;
+	:issues :stock_CAMERON_INTL .
+
+:comp_CAMPBELL_SOUP_CO a :Industry ;
+	rdfs:label "Campbell Soup Co." ;
+	:ID_NOTATION "46836" ;
+	:issues :stock_CAMPBELL .
+
+:comp_CAPITAL_ONE_FINANCIAL_CORP a :Other ;
+	rdfs:label "Capital One Financial Corp." ;
+	:ID_NOTATION "50498" ;
+	:issues :stock_CAP1_FINL .
+
+:comp_CARNIVAL_PLC :issues :stock_CRNVL_CORP .
+
+:comp_CBS_CORP a :Other ;
+	rdfs:label "CBS Corp." ;
+	:ID_NOTATION "411358" ;
+	:issues :stock_CBS_CLS_B_COM_STK .
+
+:comp_CELGENE_CORP a :Industry ;
+	rdfs:label "Celgene Corp." ;
+	:ID_NOTATION "49168" ;
+	:issues :stock_CELGENE .
+
+:comp_CENTURYLINK_INC a :Industry ;
+	rdfs:label "CENTURYLINK INC" ;
+	:ID_NOTATION "48000" ;
+	:issues :stock_CNTYR_LNK .
+
+:comp_CERNER_CORP a :Industry ;
+	rdfs:label "Cerner Corp." ;
+	:ID_NOTATION "50415" ;
+	:issues :stock_CERNER_CRP .
+
+:comp_CF_INDUSTRIES_HOLDINGS_INC a :Company ;
+	rdfs:label "CF INDUSTRIES HOLDINGS INC" ;
+	:ID_NOTATION "411534" ;
+	:issues :stock_CF_INDUST .
+
+:comp_C_H_ROBINSON_WORLDWIDE_INC a :Other ;
+	rdfs:label "C.H. Robinson Worldwide Inc." ;
+	:ID_NOTATION "52505" ;
+	:issues :stock_CH_ROBNSN_W_WIDE .
+
+:comp_CHESAPEAKE_ENERGY_CORP a :Industry ;
+	rdfs:label "CHESAPEAKE ENERGY CORP." ;
+	:ID_NOTATION "132019" ;
+	:issues :stock_CHESP_ENEGY .
+
+:comp_CIGNA_CORPORATION a :Insurance ;
+	rdfs:label "Cigna Corporation" ;
+	:ID_NOTATION "48043" ;
+	:issues :stock_CIGNA_CP .
+
+:comp_CINTAS_CORPORATION a :Industry ;
+	rdfs:label "Cintas Corporation" ;
+	:ID_NOTATION "49102" ;
+	:issues :stock_CINTAS_NPV .
+
+:comp_CITIGROUP_INC a :Bank ;
+	rdfs:label "Citigroup Inc." ;
+	:ID_NOTATION "48513" ;
+	:issues :stock_CITIGROUP_USD0_01 .
+
+:comp_CITRIX_SYSTEMS_INC a :Other ;
+	rdfs:label "Citrix Systems Inc." ;
+	:ID_NOTATION "51038" ;
+	:issues :stock_CITRIX_SYSTEMS .
+
+:comp_CLIFFS_NATURAL_RES a :Industry ;
+	rdfs:label "CLIFFS NATURAL RESOURCES INC" ;
+	:ID_NOTATION "111300" ;
+	:issues :stock_CLIFFS_NAT_RES .
+
+:comp_CLOROX a :Industry ;
+	rdfs:label "Clorox Co." ;
+	:ID_NOTATION "47328" ;
+	:issues :stock_CLOROX_CO .
+
+:comp_CME_GROUP_INC a :Company ;
+	rdfs:label "CME Group Inc" ;
+	:ID_NOTATION "429688" ;
+	:issues :stock_CME_GROUP_INC_A .
+
+:comp_COACH_INC a :Industry ;
+	rdfs:label "COACH INC." ;
+	:ID_NOTATION "152208" ;
+	:issues :stock_COACH_INC .
+
+:comp_COGNIZANT_TECHNOLOGY_SOLUTIONS_CORP a :Other ;
+	rdfs:label "Cognizant Technology Solutions Corp." ;
+	:ID_NOTATION "53173" ;
+	:issues :stock_COGNIZANT_TEC .
+
+:comp_COLGATE_PALMOLIVE_CO a :Industry ;
+	rdfs:label "Colgate-Palmolive Co." ;
+	:ID_NOTATION "46851" ;
+	:issues :stock_COLGATE .
+
+:comp_COMCAST_CORP a :Industry ;
+	rdfs:label "Comcast Corp." ;
+	:ID_NOTATION "48799" ;
+	:issues :stock_COMCAST_CORP_NEW .
+
+:comp_COMERICA_INCORPORATED a :Bank ;
+	rdfs:label "Comerica Incorporated" ;
+	:ID_NOTATION "132119" ;
+	:issues :stock_COMERCIA_INC .
+
+:comp_COMPUTER_SCIENCE a :Industry ;
+	rdfs:label "Computer Sciences Corp." ;
+	:ID_NOTATION "47272" ;
+	:issues :stock_COMSCICOMSTKUSD .
+
+:comp_CONAGRA_INC a :Industry ;
+	rdfs:label "ConAgra, Inc." ;
+	:ID_NOTATION "47671" ;
+	:issues :stock_CONAGRA_FOODS .
+
+:comp_CONOCOPHILLIPS a :Industry ;
+	rdfs:label "ConocoPhillips" ;
+	:ID_NOTATION "46971" ;
+	:issues :stock_CONOCOPHILLIPS .
+
+:comp_CONSOL_ENERGY a :Industry ;
+	rdfs:label "Consol Inc." ;
+	:ID_NOTATION "53932" ;
+	:issues :stock_CONSOL_ENE .
+
+:comp_CONSOLIDATED_EDISON a :Industry ;
+	rdfs:label "CONSOLIDATED EDISON, INC." ;
+	:ID_NOTATION "52695" ;
+	:issues :stock_CONSOL_EDS_USD0_10 .
+
+:comp_CORNING a :Industry ;
+	rdfs:label "Corning Inc." ;
+	:ID_NOTATION "46864" ;
+	:issues :stock_CORNING .
+
+:comp_COSTCO_WHOLESALE_CORP a :Other ;
+	rdfs:label "Costco Wholesale Corp." ;
+	:ID_NOTATION "139578" ;
+	:issues :stock_COSTCO_WHOLESALE .
+
+:comp_COVIDIEN_PLC a :Other ;
+	rdfs:label "Covidien PLC" ;
+	:ID_NOTATION "448559" ;
+	:issues :stock_COVIDIEN .
+
+:comp_CSX_CORP a :Industry ;
+	rdfs:label "CSX Corp." ;
+	:ID_NOTATION "47957" ;
+	:issues :stock_CSX_CORP .
+
+:comp_CUMMINS a :Industry ;
+	rdfs:label "CUMMINS INC." ;
+	:ID_NOTATION "47060" ;
+	:issues :stock_CUMMINS_INC_COM .
+
+:comp_CVS_CAREMARK_CORP a :Industry ;
+	rdfs:label "CVS Caremark Corp." ;
+	:ID_NOTATION "47529" ;
+	:issues :stock_CVS_CAREMARK_CORP .
+
+:comp_DANAHER a :Industry ;
+	rdfs:label "Danaher Corporation" ;
+	:ID_NOTATION "47984" ;
+	:issues :stock_DANAHER_CORP .
+
+:comp_DAVITA a :Industry ;
+	rdfs:label "DaVita Inc." ;
+	:ID_NOTATION "50966" ;
+	:issues :stock_DAVITA_INC .
+
+:comp_DEAN_FOODS_CO a :Industry ;
+	rdfs:label "Suiza Foods Corporation" ;
+	:ID_NOTATION "51254" ;
+	:issues :stock_DEAN_FOODS .
+
+:comp_DEERE_CO a :Industry ;
+	rdfs:label "Deere & Company" ;
+	:ID_NOTATION "46871" ;
+	:issues :stock_DEERE_CO .
+
+:comp_DELL_INC a :Industry ;
+	rdfs:label "Dell Inc." ;
+	:ID_NOTATION "48783" ;
+	:issues :stock_DELL .
+
+:comp_DENBURY_RSC a :Industry ;
+	rdfs:label "DENBURY RESOURCES INC" ;
+	:ID_NOTATION "111928" ;
+	:issues :stock_DENBURY_RES .
+
+:comp_DENTSPLY_INTERNATIONAL_INC a :Industry ;
+	rdfs:label "DENTSPLY International Inc." ;
+	:ID_NOTATION "49576" ;
+	:issues :stock_DENTSPLY_INTL .
+
+:comp_DEVON_ENERGY_CORP a :Industry ;
+	rdfs:label "Devon Energy Corp." ;
+	:ID_NOTATION "55060" ;
+	:issues :stock_DEVON_ENERGY .
+
+:comp_DIAMOND_OFFSHORE a :Industry ;
+	rdfs:label "DIAMOND OFFSHRE DRILLING INC" ;
+	:ID_NOTATION "111930" ;
+	:issues :stock_DIAMOND_ODMD_OFFSH .
+
+:comp_DIRECTV a :Other ;
+	rdfs:label "DIRECTV" ;
+	:ID_NOTATION "515638" ;
+	:issues :stock_DIRECTV .
+
+:comp_DISCOVER_FINANCIAL_SERVICES a :Company ;
+	rdfs:label "DISCOVER FINANCIAL SERVICES" ;
+	:ID_NOTATION "450995" ;
+	:issues :stock_DISCOVER .
+
+:comp_DOLLAR_TREE_INC a :Other ;
+	rdfs:label "Dollar Tree Inc." ;
+	:ID_NOTATION "50625" ;
+	:issues :stock_DOLLAR_TREE_INC .
+
+:comp_THE_DOW_CHEMICAL_CO a :Industry ;
+	rdfs:label "The Dow Chemical Co." ;
+	:ID_NOTATION "47638" ;
+	:issues :stock_DOW_CHEM .
+
+:comp_D_R_HORTON_INC a :Industry ;
+	rdfs:label "D.R. HORTON INC." ;
+	:ID_NOTATION "132713" ;
+	:issues :stock_DR_HORTON .
+
+:comp_DR_PEPPER_SNAPPLE_GROUP_INC a :Industry ;
+	rdfs:label "DR PEPPER SNAPPLE GROUP INC" ;
+	:ID_NOTATION "465434" ;
+	:issues :stock_DR_PEPPER_SNAPPLE .
+
+:comp_DUKE_ENERGY_CORPORATION a :Industry ;
+	rdfs:label "Duke Energy Corporation" ;
+	:ID_NOTATION "47502" ;
+	:issues :stock_DUKE_ENER .
+
+:comp_E_TRADE_GROUP_E_TRADE_BANK_AG a :Bank ;
+	rdfs:label "E*Trade Group (E*Trade Bank AG)" ;
+	:ID_NOTATION "51537" ;
+	:issues :stock_E_TRADE_FIN .
+
+:comp_EASTMAN_CHEM a :Industry ;
+	rdfs:label "Eastman Chemical Company" ;
+	:ID_NOTATION "50083" ;
+	:issues :stock_EASTMN_CHEM .
+
+:comp_EATON_CORP a :Industry ;
+	rdfs:label "Eaton Corp." ;
+	:ID_NOTATION "46879" ;
+	:issues :stock_EATON_CP .
+
+:comp_EBAY_INC a :Other ;
+	rdfs:label "eBay Inc." ;
+	:ID_NOTATION "53330" ;
+	:issues :stock_EBAY .
+
+:comp_ECOLAB a :Industry ;
+	rdfs:label "Ecolab Inc." ;
+	:ID_NOTATION "47180" ;
+	:issues :stock_ECOLAB .
+
+:comp_EDISON_INTL a :Industry ;
+	rdfs:label "Edison International" ;
+	:ID_NOTATION "49898" ;
+	:issues :stock_EDISON_INTL .
+
+:comp_EDWARDS_LIFESCIENCES a :Industry ;
+	rdfs:label "EDWARDS LIFESCIENCES CORPORATION" ;
+	:ID_NOTATION "55914" ;
+	:issues :stock_EDWARDS_LIFESCI .
+
+:comp_EL_PASO_CORP a :Industry ;
+	rdfs:label "El Paso Corp." ;
+	:ID_NOTATION "53279" ;
+	:issues :stock_EL_PASO_CORP .
+
+:comp_ELECTRONIC_ARTS_INC a :Other ;
+	rdfs:label "Electronic Arts Inc." ;
+	:ID_NOTATION "48996" ;
+	:issues :stock_EL_ARTS .
+
+:comp_ELI_LILLY_CO a :Industry ;
+	rdfs:label "Eli Lilly & Co." ;
+	:ID_NOTATION "47492" ;
+	:issues :stock_LILLY_ELI .
+
+:comp_EMC_CORP a :Industry ;
+	rdfs:label "EMC Corp." ;
+	:ID_NOTATION "48565" ;
+	:issues :stock_EMC_CORP_MASS .
+
+:comp_EMERSON_ELECTRIC_CO a :Industry ;
+	rdfs:label "Emerson Electric Co." ;
+	:ID_NOTATION "46881" ;
+	:issues :stock_EMERS_ELEC .
+
+:comp_ENTERGY_CORP a :Industry ;
+	rdfs:label "Entergy Corp." ;
+	:ID_NOTATION "50106" ;
+	:issues :stock_ENTERGY .
+
+:comp_EOG_RESOURCES a :Industry ;
+	rdfs:label "EOG Resources, Inc." ;
+	:ID_NOTATION "48954" ;
+	:issues :stock_EOG_RESRCS .
+
+:comp_EQT_CORP a :Industry ;
+	rdfs:label "EQT CORPORATION" ;
+	:ID_NOTATION "112206" ;
+	:issues :stock_EQT .
+
+:comp_EQUIFAX a :Industry ;
+	rdfs:label "Equifax Inc." ;
+	:ID_NOTATION "47190" ;
+	:issues :stock_EQUIFAX .
+
+:comp_ESTEE_LAUDER a :Industry ;
+	rdfs:label "Estee Lauder Companies, Inc." ;
+	:ID_NOTATION "249604" ;
+	:issues :stock_ESTEE_LAUDER .
+
+:comp_EXELON_CORP a :Industry ;
+	rdfs:label "Exelon Corp." ;
+	:ID_NOTATION "46969" ;
+	:issues :stock_EXELON .
+
+:comp_EXPEDIA_INC a :Industry ;
+	rdfs:label "Expedia Inc." ;
+	:ID_NOTATION "414220" ;
+	:issues :stock_EXPEDIA .
+
+:comp_EXPEDITORS_INTERNATIONAL_OF_WASHINGTON_INC a :Other ;
+	rdfs:label "Expeditors International of Washington Inc." ;
+	:ID_NOTATION "48775" ;
+	:issues :stock_EXPDTR_INT_WSHTON .
+
+:comp_EXPRESS_SCRIPTS_HOLDING_INC a :Other ;
+	rdfs:label "Express Scripts Holding Inc." ;
+	:ID_NOTATION "877139" ;
+	:issues :stock_EXPS_SCRI .
+
+:comp_F5_NETWORKS_INC a :Industry ;
+	rdfs:label "F5 Networks, Inc." ;
+	:ID_NOTATION "54064" ;
+	:issues :stock_F5_NETWRK_INC .
+
+:comp_FAMILY_DLR_STRS a :Industry ;
+	rdfs:label "Family Dollar Stores, Inc." ;
+	:ID_NOTATION "47571" ;
+	:issues :stock_FAMILY_DOLLAR .
+
+:comp_FASTENAL_CO a :Industry ;
+	rdfs:label "Fastenal Co." ;
+	:ID_NOTATION "49936" ;
+	:issues :stock_FASTNAL .
+
+:comp_FEDEX_CORP a :Other ;
+	rdfs:label "FedEx Corp." ;
+	:ID_NOTATION "52733" ;
+	:issues :stock_FEDEX_CORP .
+
+:comp_FIFTH_THIRD_BANCORP a :Bank ;
+	rdfs:label "FIFTH THIRD BANCORP" ;
+	:ID_NOTATION "48756" ;
+	:issues :stock_5TH_3RD_BANCO .
+
+:comp_FIRST_SOLAR_INC a :Industry ;
+	rdfs:label "First Solar Inc." ;
+	:ID_NOTATION "450514" ;
+	:issues :stock_FIRST_SOLAR .
+
+:comp_FIRSTENERGY_CORP a :Industry ;
+	rdfs:label "FirstEnergy Corp." ;
+	:ID_NOTATION "145155" ;
+	:issues :stock_FIRST_ENERGY_USD_1 .
+
+:comp_FISERV_INC a :Other ;
+	rdfs:label "Fiserv Inc." ;
+	:ID_NOTATION "49224" ;
+	:issues :stock_FISERV .
+
+:comp_FLIR_SYSTEMS_INC a :Other ;
+	rdfs:label "Flir Systems Inc." ;
+	:ID_NOTATION "53373" ;
+	:issues :stock_FLIR_SUS .
+
+:comp_FLOWSERVE a :Industry ;
+	rdfs:label "FLOWSERVE CORP" ;
+	:ID_NOTATION "145007" ;
+	:issues :stock_FLOWSERVE .
+
+:comp_FLUOR_CORPS a :Industry ;
+	rdfs:label "FLUOR CORPS" ;
+	:ID_NOTATION "249576" ;
+	:issues :stock_FLUOR .
+
+:comp_FMC a :Industry ;
+	rdfs:label "FMC Corp." ;
+	:ID_NOTATION "48453" ;
+	:issues :stock_FMC_CP .
+
+:comp_FMC_TECHNOLOGIES a :Company ;
+	rdfs:label "FMC TECHNOLOGIES" ;
+	:ID_NOTATION "255787" ;
+	:issues :stock_FMC_TCHNLGS .
+
+:comp_FORD_MOTOR_CO a :Industry ;
+	rdfs:label "Ford Motor Co." ;
+	:ID_NOTATION "46888" ;
+	:issues :stock_FORD .
+
+:comp_FOREST_LABS a :Industry ;
+	rdfs:label "Forest laboratories Inc." ;
+	:ID_NOTATION "47344" ;
+	:issues :stock_FOREST_LABS .
+
+:comp_FOSSIL_INC a :Other ;
+	rdfs:label "Fossil Inc." ;
+	:ID_NOTATION "49758" ;
+	:issues :stock_FOSSIL_INC .
+
+:comp_FREEPORT_MCMORAN_COPPER_GOLD_INC a :Industry ;
+	rdfs:label "Freeport-McMoRan Copper & Gold Inc." ;
+	:ID_NOTATION "48769" ;
+	:issues :stock_FREEPRT_MCMRN_COPP .
+
+:comp_FRONTIER_COMMUNICATIONS_CORPORATION a :Industry ;
+	rdfs:label "FRONTIER COMMUNICATIONS CORPORATION" ;
+	:ID_NOTATION "143750" ;
+	:issues :stock_FRONTIER_COMM .
+
+:comp_GAMESTOP_CORP a :Company ;
+	rdfs:label "GAMESTOP CORP" ;
+	:ID_NOTATION "264486" ;
+	:issues :stock_GAMESTOP .
+
+:comp_GANNETT a :Industry ;
+	rdfs:label "Gannett Co., Inc." ;
+	:ID_NOTATION "47160" ;
+	:issues :stock_GANNETT .
+
+:comp_GAP a :Industry ;
+	rdfs:label "Gap Inc." ;
+	:ID_NOTATION "47784" ;
+	:issues :stock_GAP .
+
+:comp_GENERAL_DYNAMICS_CORP a :Industry ;
+	rdfs:label "General Dynamics Corp." ;
+	:ID_NOTATION "46890" ;
+	:issues :stock_GEN_DYN .
+
+:comp_GENERAL_MILLS a :Industry ;
+	rdfs:label "General Mills Inc." ;
+	:ID_NOTATION "47135" ;
+	:issues :stock_GEN_MLLS .
+
+:comp_GENWORTH_FINANCIAL_INC a :Bank ;
+	rdfs:label "GENWORTH FINANCIAL INC" ;
+	:ID_NOTATION "415145" ;
+	:issues :stock_GENWORTH .
+
+:comp_GILEAD_SCIENCES_INC a :Industry ;
+	rdfs:label "Gilead Sciences Inc." ;
+	:ID_NOTATION "49707" ;
+	:issues :stock_GILEAD_SCIENCES .
+
+:comp_GOLDMAN_SACHS_GROUP_INC a :Other ;
+	rdfs:label "Goldman Sachs Group Inc." ;
+	:ID_NOTATION "53814" ;
+	:issues :stock_GLD_SACHS .
+
+:comp_GOODYEAR_TIRE a :Industry ;
+	rdfs:label "Goodyear Tire & Rubber Company" ;
+	:ID_NOTATION "46898" ;
+	:issues :stock_GOODYEAR .
+
+:comp_GOOGLE_INC a :Other ;
+	rdfs:label "Google Inc." ;
+	:ID_NOTATION "405900" ;
+	:issues :stock_GOOGLE .
+
+:comp_HALLIBURTON_CO a :Industry ;
+	rdfs:label "Halliburton Co." ;
+	:ID_NOTATION "47149" ;
+	:issues :stock_HALLIBURTON .
+
+:comp_HARLEY_DAVIDSON a :Industry ;
+	rdfs:label "Harley-Davidson" ;
+	:ID_NOTATION "48472" ;
+	:issues :stock_Harley_Davidson_Inc .
+
+:comp_HARMAN_INTL a :Industry ;
+	rdfs:label "HARMAN INTL" ;
+	:ID_NOTATION "48535" ;
+	:issues :stock_HARMAN_INTL .
+
+:comp_THE_HARTFORD_FINANCIAL_SERVICES_GROUP_INC a :Insurance ;
+	rdfs:label "The Hartford Financial Services Group Inc." ;
+	:ID_NOTATION "51055" ;
+	:issues :stock_HARTFORD_FINL_USD .
+
+:comp_HASBRO_INC a :Industry ;
+	rdfs:label "Hasbro Inc." ;
+	:ID_NOTATION "47588" ;
+	:issues :stock_HASBRO .
+
+:comp_H_J_HEINZ_CO a :Industry ;
+	rdfs:label "H.J. Heinz Co." ;
+	:ID_NOTATION "46908" ;
+	:issues :stock_HEINZ_HJ .
+
+:comp_HELMERICH_PAYNE_INC a :Industry ;
+	rdfs:label "HELMERICH & PAYNE INC" ;
+	:ID_NOTATION "113020" ;
+	:issues :stock_HELMERICH .
+
+:comp_HESS_CORPORATION a :Industry ;
+	rdfs:label "HESS CORPORATION" ;
+	:ID_NOTATION "47451" ;
+	:issues :stock_HESS_CORP .
+
+:comp_HONEYWELL_INTERNATIONAL_INC a :Industry ;
+	rdfs:label "Honeywell International Inc." ;
+	:ID_NOTATION "48351" ;
+	:issues :stock_HONEYWELL_INTL .
+
+:comp_HOSPIRA_INC a :Industry ;
+	rdfs:label "Hospira Inc." ;
+	:ID_NOTATION "406999" ;
+	:issues :stock_HOSPIRA_I .
+
+:comp_HUMANA a :Insurance ;
+	rdfs:label "Humana Inc." ;
+	:ID_NOTATION "47322" ;
+	:issues :stock_HUMANA_INC .
+
+:comp_HUNTINGTON_BANCSHARES a :Bank ;
+	rdfs:label "Huntington Bancshares Incorporated" ;
+	:ID_NOTATION "48112" ;
+	:issues :stock_HUNTINGTON_NPV .
+
+:comp_ILLINOIS_TOOL a :Industry ;
+	rdfs:label "Illinois Tool Works Inc." ;
+	:ID_NOTATION "47665" ;
+	:issues :stock_ILL_TOOL_NPV .
+
+:comp_INGERSOLL_RAND_PLC a :Industry ;
+	rdfs:label "Ingersoll-Rand PLC" ;
+	:ID_NOTATION "46918" ;
+	:issues :stock_INGERSOLL .
+
+:comp_INTEGRYS_ENERGY_GROUP_INC a :Company ;
+	rdfs:label "INTEGRYS ENERGY GROUP INC." ;
+	:ID_NOTATION "127920" ;
+	:issues :stock_INTEGRYS_ENRGY_GRP .
+
+:comp_INTERNATIONAL_FLAVORS_FRAGANCES_INC a :Industry ;
+	rdfs:label "International Flavors & Fragances Inc." ;
+	:ID_NOTATION "47136" ;
+	:issues :stock_INT_FLAVORS .
+
+:comp_INTL_GAME_TECH a :Industry ;
+	rdfs:label "International Game Technology" ;
+	:ID_NOTATION "48059" ;
+	:issues :stock_INTL_GAME_TECH .
+
+:comp_INTERNATIONAL_PAPER_CO a :Industry ;
+	rdfs:label "INTERNATIONAL PAPER CO." ;
+	:ID_NOTATION "46923" ;
+	:issues :stock_INT_PAPER .
+
+:comp_INTERPUBLIC_GRP a :Industry ;
+	rdfs:label "The Interpublic Group of Companies, Inc." ;
+	:ID_NOTATION "46950" ;
+	:issues :stock_INTPUB_GR .
+
+:comp_INTUIT_INC a :Other ;
+	rdfs:label "Intuit Inc." ;
+	:ID_NOTATION "49731" ;
+	:issues :stock_INTUIT .
+
+:comp_INTUITIVE_SURGICAL_INC a :Industry ;
+	rdfs:label "Intuitive Surgical Inc." ;
+	:ID_NOTATION "55881" ;
+	:issues :stock_INTUITIVE_SURGICAL .
+
+:comp_INVESCO_LTD a :Other ;
+	rdfs:label "Invesco PLC" ;
+	:ID_NOTATION "47335" ;
+	:issues :stock_INVESCO_LTD .
+
+:comp_IRON_MOUNTAIN a :Industry ;
+	rdfs:label "Iron Mountain Inc." ;
+	:ID_NOTATION "51108" ;
+	:issues :stock_IRON_MOUNTN_INC_PA .
+
+:comp_J_C_PENNEY a :Industry ;
+	rdfs:label "J. C. Penney Company Inc." ;
+	:ID_NOTATION "46964" ;
+	:issues :stock_J_C_Penney .
+
+:comp_JABIL_CIRCUIT a :Industry ;
+	rdfs:label "Jabil Circuit, Inc." ;
+	:ID_NOTATION "49779" ;
+	:issues :stock_JABIL_CIRCT .
+
+:comp_JDS_UNIPHASE_CORP a :Industry ;
+	rdfs:label "JDS UNIPHASE CORP." ;
+	:ID_NOTATION "51143" ;
+	:issues :stock_JDS_UNIPHASE .
+
+:comp_JOHNSON_CONTROLS a :Industry ;
+	rdfs:label "Johnson Controls, Inc." ;
+	:ID_NOTATION "47364" ;
+	:issues :stock_Johnson_Controls_Inc .
+
+:comp_JOY_GLOBAL_INC a :Other ;
+	rdfs:label "Joy Global Inc." ;
+	:ID_NOTATION "47504" ;
+	:issues :stock_JOY_GLOBL_INC .
+
+:comp_JUNIPER_NETWORKS_INC a :Industry ;
+	rdfs:label "Juniper Networks, Inc." ;
+	:ID_NOTATION "54573" ;
+	:issues :stock_JUNIPER_NETWORKS .
+
+:comp_KELLOGG a :Industry ;
+	rdfs:label "Kellogg Company" ;
+	:ID_NOTATION "47075" ;
+	:issues :stock_KELLOGG_CO .
+
+:comp_KEYCORP a :Bank ;
+	rdfs:label "KeyCorp" ;
+	:ID_NOTATION "48281" ;
+	:issues :stock_KEYCORP .
+
+:comp_KIMBERLY_CLARK a :Industry ;
+	rdfs:label "Kimberly-Clark Corporation" ;
+	:ID_NOTATION "47227" ;
+	:issues :stock_KIMBERLY_CLARK .
+
+:comp_KLA_TENCOR_CORP a :Other ;
+	rdfs:label "KLA-Tencor Corp." ;
+	:ID_NOTATION "47960" ;
+	:issues :stock_KLA_TENCOR_CORP .
+
+:comp_KOHL_S_CORP a :Industry ;
+	rdfs:label "Kohl's Corporation" ;
+	:ID_NOTATION "49504" ;
+	:issues :stock_KOHLS_CORP .
+
+:comp_KROGER a :Industry ;
+	rdfs:label "The Kroger Co." ;
+	:ID_NOTATION "46933" ;
+	:issues :stock_KROGER .
+
+:comp_L_3_COMMUNICATIONS_HLDGS_INC a :Industry ;
+	rdfs:label "L-3 COMMUNICATIONS HLDGS INC." ;
+	:ID_NOTATION "141620" ;
+	:issues :stock_L3_COMM .
+
+:comp_LENNAR a :Industry ;
+	rdfs:label "Lennar Corp." ;
+	:ID_NOTATION "46885" ;
+	:issues :stock_LENNAR .
+
+:comp_LEXMARK_INTL a :Industry ;
+	rdfs:label "Lexmark Int. Grp., Inc." ;
+	:ID_NOTATION "50988" ;
+	:issues :stock_LEXMAX_INTL_A .
+
+:comp_LIFE_TECHNOLOGIES_CORP a :Industry ;
+	rdfs:label "Life Technologies Corp." ;
+	:ID_NOTATION "53673" ;
+	:issues :stock_LIFE_TECH .
+
+:comp_LIMITED_BRANDS_INC a :Industry ;
+	rdfs:label "Limited Brands Inc." ;
+	:ID_NOTATION "47810" ;
+	:issues :stock_LTD_BRNDS_INC .
+
+:comp_LINCOLN_NATIONAL_CORP a :Insurance ;
+	rdfs:label "Lincoln National Corp." ;
+	:ID_NOTATION "47557" ;
+	:issues :stock_LINCOLN_NATL .
+
+:comp_LINEAR_TECHNOLOGY_CORP a :Industry ;
+	rdfs:label "Linear Technology Corp." ;
+	:ID_NOTATION "48575" ;
+	:issues :stock_LINEAR_TECH_CORP .
+
+:comp_LOCKHEED_MARTIN_CORP a :Industry ;
+	rdfs:label "Lockheed Martin Corp." ;
+	:ID_NOTATION "50633" ;
+	:issues :stock_LOCKHEED_MARTIN .
+
+:comp_LORILLARD_INC a :Industry ;
+	rdfs:label "LORILLARD INC" ;
+	:ID_NOTATION "467965" ;
+	:issues :stock_LORILLARD .
+
+:comp_LOWE_S_COMPANIES_INC a :Other ;
+	rdfs:label "Lowe's Companies Inc." ;
+	:ID_NOTATION "47563" ;
+	:issues :stock_LOWE_S_COS .
+
+:comp_LSI_LOGIC a :Industry ;
+	rdfs:label "LSI Logic Corporation" ;
+	:ID_NOTATION "48128" ;
+	:issues :stock_LSI_CORPOLSI .
+
+:comp_MACYS_INC a :Industry ;
+	rdfs:label "MACYS INC" ;
+	:ID_NOTATION "49438" ;
+	:issues :stock_MACY_S .
+
+:comp_MARATHON_OIL a :Industry ;
+	rdfs:label "Marathon Oil Corp." ;
+	:ID_NOTATION "47046" ;
+	:issues :stock_MARATHON_OIL .
+
+:comp_MARATHON_PETROLEUM_CORP a :Industry ;
+	rdfs:label "Marathon Petroleum Corp." ;
+	:ID_NOTATION "834454" ;
+	:issues :stock_MARN_PETR .
+
+:comp_MARSH_MCLENNAN_COS_INC a :Company ;
+	rdfs:label "Marsh & McLennan Cos. Inc." ;
+	:ID_NOTATION "47473" ;
+	:issues :stock_MARSH_MCLN .
+
+:comp_MASCO a :Industry ;
+	rdfs:label "Masco Corporation" ;
+	:ID_NOTATION "47326" ;
+	:issues :stock_MASCO .
+
+:comp_MASTERCARD_INC a :Other ;
+	rdfs:label "MasterCard Inc." ;
+	:ID_NOTATION "432643" ;
+	:issues :stock_MASTERCD .
+
+:comp_MATTEL_INC a :Industry ;
+	rdfs:label "Mattel Inc." ;
+	:ID_NOTATION "46939" ;
+	:issues :stock_MATTEL .
+
+:comp_MCCORMICK a :Industry ;
+	rdfs:label "McCormick & Company  Mccormick" ;
+	:ID_NOTATION "47457" ;
+	:issues :stock_MCCORMICK_NV_NPV .
+
+:comp_MCGRAW_HILL_COMPANIES_INC a :Industry ;
+	rdfs:label "McGraw-Hill Companies, Inc." ;
+	:ID_NOTATION "125019" ;
+	:issues :stock_MCGRAW_HILL .
+
+:comp_MCKESSON_CORPORATION a :Industry ;
+	rdfs:label "MCKESSON CORPORATION" ;
+	:ID_NOTATION "135506" ;
+	:issues :stock_MCKESSON_CORP .
+
+:comp_MEAD_JOHNSON_NUTRITION_CO a :Company ;
+	rdfs:label "Mead Johnson Nutrition Co." ;
+	:ID_NOTATION "488463" ;
+	:issues :stock_MEAD_JOHN .
+
+:comp_MEDTRONIC_INC a :Industry ;
+	rdfs:label "Medtronic Inc." ;
+	:ID_NOTATION "47484" ;
+	:issues :stock_MEDTRONIC .
+
+:comp_METLIFE_INC a :Other ;
+	rdfs:label "MetLife Inc." ;
+	:ID_NOTATION "55718" ;
+	:issues :stock_METLIFE_INC .
+
+:comp_MICROCHIP_TECHNOLOGY_INC a :Industry ;
+	rdfs:label "Microchip Technology Inc." ;
+	:ID_NOTATION "49736" ;
+	:issues :stock_MICROCHIP_TECH .
+
+:comp_MICRON_TECHNOLOGY_INC a :Industry ;
+	rdfs:label "Micron Technology Inc." ;
+	:ID_NOTATION "48246" ;
+	:issues :stock_MICRON_TECHN .
+
+:comp_MOLEX_INC a :Industry ;
+	rdfs:label "MOLEX INC." ;
+	:ID_NOTATION "47712" ;
+	:issues :stock_MOLEX .
+
+:comp_MONSANTO_CO a :Industry ;
+	rdfs:label "Monsanto Co." ;
+	:ID_NOTATION "150190" ;
+	:issues :stock_MONSANTO_MNSNT .
+
+:comp_MOODY_S_CORPORATION a :Other ;
+	rdfs:label "Moody's Corporation" ;
+	:ID_NOTATION "53165" ;
+	:issues :stock_MOODYS .
+
+:comp_MORGAN_STANLEY a :Other ;
+	rdfs:label "Morgan Stanley" ;
+	:ID_NOTATION "230649" ;
+	:issues :stock_MORGAN_STANLEY .
+
+:comp_MOSAIC a :Industry ;
+	rdfs:label "Mosaic Co." ;
+	:ID_NOTATION "419716" ;
+	:issues :stock_MOSC_CO .
+
+:comp_MOTOROLA_MOBILITY_HOLDINGS a :Company ;
+	rdfs:label "MOTOROLA MOBILITY HOLDINGS" ;
+	:ID_NOTATION "806130" ;
+	:issues :stock_MOTA_MOBI .
+
+:comp_MOTOROLA_SOLUTIONS a :Industry ;
+	rdfs:label "Motorola Solutions Inc." ;
+	:ID_NOTATION "47142" ;
+	:issues :stock_MOTA_SOLU .
+
+:comp_MYLAN_INC a :Industry ;
+	rdfs:label "Mylan Inc." ;
+	:ID_NOTATION "48169" ;
+	:issues :stock_MYLAN .
+
+:comp_NASDAQ_OMX_GROUP_INC a :Company ;
+	rdfs:label "NASDAQ OMX GROUP INC" ;
+	:ID_NOTATION "270201" ;
+	:issues :stock_NASDAQ_OMNAS_STK_M .
+
+:comp_NATIONAL_OILWELL_VARCO_INC a :Industry ;
+	rdfs:label "National Oilwell Varco Inc." ;
+	:ID_NOTATION "51679" ;
+	:issues :stock_NAT_OILWELL_VARCO .
+
+:comp_NETAPP_INC a :Industry ;
+	rdfs:label "NetApp Inc." ;
+	:ID_NOTATION "51008" ;
+	:issues :stock_NETWORK_APPLIANCE .
+
+:comp_NETFLIX_INC a :Other ;
+	rdfs:label "Netflix Inc." ;
+	:ID_NOTATION "267798" ;
+	:issues :stock_NETFLIX .
+
+:comp_NEWFIELD_EXPLORATION a :Industry ;
+	rdfs:label "Newfield Exploration Co." ;
+	:ID_NOTATION "51074" ;
+	:issues :stock_NEWFIELD_EXP .
+
+:comp_NEWMONT_MINING a :Industry ;
+	rdfs:label "Newmont Mining Corporation" ;
+	:ID_NOTATION "47128" ;
+	:issues :stock_NEWMONT .
+
+:comp_NEWS_CORP a :Other ;
+	rdfs:label "News Corp." ;
+	:ID_NOTATION "231482" ;
+	:issues :stock_NEWS_CORP_CLS_A .
+
+:comp_NIKE_INC a :Industry ;
+	rdfs:label "NIKE Inc." ;
+	:ID_NOTATION "48048" ;
+	:issues :stock_NIKE .
+
+:comp_NOBLE_CORPORATION a :Industry ;
+	rdfs:label "Noble Corporation" ;
+	:ID_NOTATION "48355" ;
+	:issues :stock_NOBLE .
+
+:comp_NOBLE_ENERGY a :Industry ;
+	rdfs:label "Noble Energy Inc." ;
+	:ID_NOTATION "135977" ;
+	:issues :stock_NOBLE_ENGY .
+
+:comp_NORDSTROM a :Industry ;
+	rdfs:label "NORDSTROM" ;
+	:ID_NOTATION "48132" ;
+	:issues :stock_NORDSTROM .
+
+:comp_NORFOLK_SOUTHERN_CORP a :Industry ;
+	rdfs:label "Norfolk Southern Corp." ;
+	:ID_NOTATION "48053" ;
+	:issues :stock_NRFLK_STHRN .
+
+:comp_NORTHERN_TRUST a :Bank ;
+	rdfs:label "Northern Trust Corporation" ;
+	:ID_NOTATION "47153" ;
+	:issues :stock_NRTHN_TST .
+
+:comp_NORTHROP_GRUMMAN a :Industry ;
+	rdfs:label "Northrop Grumman Corp." ;
+	:ID_NOTATION "46957" ;
+	:issues :stock_NRTHROP_GRUM .
+
+:comp_NOVELLUS_SYSTEMS_INC a :Industry ;
+	rdfs:label "NOVELLUS SYSTEMS INC." ;
+	:ID_NOTATION "48808" ;
+	:issues :stock_NOVELLUS_SYS .
+
+:comp_NRG_ENERGY_INC a :Company ;
+	rdfs:label "NRG ENERGY INC" ;
+	:ID_NOTATION "420556" ;
+	:issues :stock_NRG_ENERGY .
+
+:comp_NUCOR a :Industry ;
+	rdfs:label "Nucor Corp." ;
+	:ID_NOTATION "46959" ;
+	:issues :stock_NUCOR_CORP .
+
+:comp_NVIDIA_CORP a :Other ;
+	rdfs:label "NVIDIA Corp." ;
+	:ID_NOTATION "53563" ;
+	:issues :stock_NVIDIA_CORP .
+
+:comp_NYSE_EURONEXT a :Other ;
+	rdfs:label "NYSE Euronext" ;
+	:ID_NOTATION "442874" ;
+	:issues :stock_NYSE_EURO .
+
+:comp_OCCIDENTAL_PETROLEUM_CORP a :Industry ;
+	rdfs:label "Occidental Petroleum Corp." ;
+	:ID_NOTATION "46960" ;
+	:issues :stock_OCC_PETROL .
+
+:comp_ONEOK_INC a :Industry ;
+	rdfs:label "ONEOK Inc." ;
+	:ID_NOTATION "125621" ;
+	:issues :stock_ONEOK_NPV .
+
+:comp_ORACLE_CORP a :Other ;
+	rdfs:label "Oracle Corp." ;
+	:ID_NOTATION "48477" ;
+	:issues :stock_ORACLE_CORP .
+
+:comp_O_REILLY_AUTOMOTIVE_INC a :Other ;
+	rdfs:label "O'Reilly Automotive Inc." ;
+	:ID_NOTATION "794998" ;
+	:issues :stock_OREY_AUTO .
+
+:comp_PACCAR_INC a :Industry ;
+	rdfs:label "PACCAR Inc." ;
+	:ID_NOTATION "47660" ;
+	:issues :stock_PACCAR_INC .
+
+:comp_PALL a :Industry ;
+	rdfs:label "Pall Corporation" ;
+	:ID_NOTATION "47530" ;
+	:issues :stock_PALL_CORP .
+
+:comp_PARKER_HANNIFIN a :Industry ;
+	rdfs:label "Parker-Hannifin Corporation" ;
+	:ID_NOTATION "47279" ;
+	:issues :stock_PRK_HANNFN .
+
+:comp_PATTERSON_COMPANIES_INC a :Industry ;
+	rdfs:label "Patterson Companies Inc." ;
+	:ID_NOTATION "247533" ;
+	:issues :stock_PATTERSON .
+
+:comp_PAYCHEX_INC a :Other ;
+	rdfs:label "Paychex Inc." ;
+	:ID_NOTATION "48171" ;
+	:issues :stock_PAYCHEX .
+
+:comp_PEABODY_ENERGY_CORP a :Industry ;
+	rdfs:label "PEABODY ENERGY CORP" ;
+	:ID_NOTATION "264557" ;
+	:issues :stock_PEABODY_ENERGY .
+
+:comp_PEPSICO_INC a :Industry ;
+	rdfs:label "PepsiCo Inc." ;
+	:ID_NOTATION "46965" ;
+	:issues :stock_PEPSICO .
+
+:comp_PERKINELMER a :Industry ;
+	rdfs:label "Perkinelmer Inc." ;
+	:ID_NOTATION "46880" ;
+	:issues :stock_PRKNLMR .
+
+:comp_PERRIGO_CO a :Industry ;
+	rdfs:label "Perrigo Co." ;
+	:ID_NOTATION "49460" ;
+	:issues :stock_PERRIGO .
+
+:comp_PHILIP_MORRIS_INTERNATIONAL_INC a :Industry ;
+	rdfs:label "Philip Morris International Inc." ;
+	:ID_NOTATION "465143" ;
+	:issues :stock_PHILIP_MORRIS_INTL .
+
+:comp_PIONEER_NATURAL_RESOURCES_CO a :Industry ;
+	rdfs:label "PIONEER NATURAL RESOURCES CO" ;
+	:ID_NOTATION "143771" ;
+	:issues :stock_PION_NAT_USD0_01 .
+
+:comp_PITNEY_BOWES a :Industry ;
+	rdfs:label "Pitney-Bowes Inc." ;
+	:ID_NOTATION "46973" ;
+	:issues :stock_PITNEY_BOWES .
+
+:comp_PLUM_CREEK_TIMBER_CO_INC a :Industry ;
+	rdfs:label "Plum Creek Timber Co Inc." ;
+	:ID_NOTATION "125786" ;
+	:issues :stock_PLUM_CREEK_TIM .
+
+:comp_PPL_CORP a :Industry ;
+	rdfs:label "PPL Corp." ;
+	:ID_NOTATION "126017" ;
+	:issues :stock_PPL_CP .
+
+:comp_PRAXAIR a :Industry ;
+	rdfs:label "Praxair, Inc." ;
+	:ID_NOTATION "49527" ;
+	:issues :stock_PRAXAIR .
+
+:comp_PRICELINE_COM_INC a :Industry ;
+	rdfs:label "Priceline.com Inc." ;
+	:ID_NOTATION "53768" ;
+	:issues :stock_PRICELINE_COM .
+
+:comp_PRINCIPAL_FINANCIAL_GROUP_INC a :Insurance ;
+	rdfs:label "Principal Financial Group Inc." ;
+	:ID_NOTATION "261272" ;
+	:issues :stock_PRINCIPAL_FIN .
+
+:comp_PRUDENTIAL_FINANCIAL a :Insurance ;
+	rdfs:label "Prudential Financial Inc." ;
+	:ID_NOTATION "130911" ;
+	:issues :stock_PRUDENT_FINANCIAL .
+
+:comp_PUBL_SVC_ENTER a :Industry ;
+	rdfs:label "Public Service Enterprise Group Incorpor" ;
+	:ID_NOTATION "46981" ;
+	:issues :stock_PUBLIC_SERV_NPV .
+
+:comp_PULTE_CORPORATION a :Industry ;
+	rdfs:label "Pulte Corporation" ;
+	:ID_NOTATION "136498" ;
+	:issues :stock_PULE_GRP .
+
+:comp_QUALCOMM_INC a :Other ;
+	rdfs:label "QUALCOMM Inc." ;
+	:ID_NOTATION "49366" ;
+	:issues :stock_QUALCOMM .
+
+:comp_QUANTA_SERVICES a :Industry ;
+	rdfs:label "Quanta Services Inc." ;
+	:ID_NOTATION "142892" ;
+	:issues :stock_QUANTA_SER_USD .
+
+:comp_QUEST_DIAG a :Industry ;
+	rdfs:label "QUEST DIAG" ;
+	:ID_NOTATION "51809" ;
+	:issues :stock_QUST_DIAGNSTC .
+
+:comp_RALPH_LAUREN_CORP a :Company ;
+	rdfs:label "RALPH LAUREN CORP" ;
+	:ID_NOTATION "843652" ;
+	:issues :stock_RALH_LAUR .
+
+:comp_RAYTHEON_CO a :Industry ;
+	rdfs:label "Raytheon Co." ;
+	:ID_NOTATION "46986" ;
+	:issues :stock_RAYTHEON_CO .
+
+:comp_RED_HAT a :Industry ;
+	rdfs:label "Red Hat Inc." ;
+	:ID_NOTATION "54608" ;
+	:issues :stock_RED_HAT .
+
+:comp_REGIONS_FINANCIAL_CORPORATION a :Bank ;
+	rdfs:label "Regions Financial Corporation" ;
+	:ID_NOTATION "48020" ;
+	:issues :stock_REGIONS_F .
+
+:comp_REPUBLIC_SERVICES_INC a :Company ;
+	rdfs:label "REPUBLIC SERVICES INC" ;
+	:ID_NOTATION "143903" ;
+	:issues :stock_REPUBLIC_SERV .
+
+:comp_REYNOLDS_AMERICAN a :Industry ;
+	rdfs:label "Reynolds American Inc." ;
+	:ID_NOTATION "54053" ;
+	:issues :stock_REYNLDS_AMER .
+
+:comp_ROCKWELL_AUTOMATION a :Industry ;
+	rdfs:label "Rockwell Automation Inc." ;
+	:ID_NOTATION "51742" ;
+	:issues :stock_ROCKWELL_AUTO .
+
+:comp_ROCKWELL_COLLINS a :Industry ;
+	rdfs:label "Rockwell Collins Inc." ;
+	:ID_NOTATION "256217" ;
+	:issues :stock_RCKWLL_CLLNS .
+
+:comp_ROPER_INDUST a :Industry ;
+	rdfs:label "Roper Industries Inc." ;
+	:ID_NOTATION "137194" ;
+	:issues :stock_ROPER_INDS .
+
+:comp_ROSS_STORES_INC a :Other ;
+	rdfs:label "Ross Stores Inc." ;
+	:ID_NOTATION "48344" ;
+	:issues :stock_ROSS_STORES .
+
+:comp_ROWAN_COMPANIES a :Industry ;
+	rdfs:label "Rowan Companies Inc." ;
+	:ID_NOTATION "47293" ;
+	:issues :stock_ROWAN_COS .
+
+:comp_SALESFORCE_COM_INC a :Other ;
+	rdfs:label "SALESFORCE.COM INC." ;
+	:ID_NOTATION "405999" ;
+	:issues :stock_SALESFORCE .
+
+:comp_SANDISK_CORP a :Industry ;
+	rdfs:label "SanDisk Corp." ;
+	:ID_NOTATION "50957" ;
+	:issues :stock_SANDISK_CORP .
+
+:comp_SARA_LEE_CORP a :Industry ;
+	rdfs:label "Sara Lee Corp." ;
+	:ID_NOTATION "46861" ;
+	:issues :stock_SARA_LEE .
+
+:comp_SCHLUMBERGER_LIMITED a :Industry ;
+	rdfs:label "Schlumberger Limited" ;
+	:ID_NOTATION "47088" ;
+	:issues :stock_SCHLUMBERGER .
+
+:comp_CHARLES_SCHWAB a :Industry ;
+	rdfs:label "Charles Schwab Corp." ;
+	:ID_NOTATION "48707" ;
+	:issues :stock_SCHWB_CHRLS .
+
+:comp_SEALED_AIR a :Industry ;
+	rdfs:label "Sealed Air Corp." ;
+	:ID_NOTATION "52887" ;
+	:issues :stock_SEALED_AIR .
+
+:comp_SEARS_HOLDINGS_CORP a :Other ;
+	rdfs:label "Sears Holdings Corp." ;
+	:ID_NOTATION "406959" ;
+	:issues :stock_SEARS_HLDGS .
+
+:comp_SEMPRA_ENERGY a :Industry ;
+	rdfs:label "Sempra Energy" ;
+	:ID_NOTATION "53170" ;
+	:issues :stock_SEMPRA_ENER_NPV .
+
+:comp_SIGMA_ALDRICH_CORP a :Industry ;
+	rdfs:label "Sigma-Aldrich Corp." ;
+	:ID_NOTATION "47751" ;
+	:issues :stock_SIGMA_ALDRCH .
+
+:comp_SIMON_PROPERTY_GROUP_INC a :Industry ;
+	rdfs:label "Simon Property Group Inc." ;
+	:ID_NOTATION "126917" ;
+	:issues :stock_SIMON_PROP .
+
+:comp_SLM_CORPORATION a :Industry ;
+	rdfs:label "SLM CORPORATION" ;
+	:ID_NOTATION "126796" ;
+	:issues :stock_SLM_CORP .
+
+:comp_J_M_SMUCKER_CO a :Industry ;
+	rdfs:label "J.M. SMUCKER COMPANY" ;
+	:ID_NOTATION "152630" ;
+	:issues :stock_SMUCKER_J .
+
+:comp_SOUTHERN_CO a :Industry ;
+	rdfs:label "Southern Co." ;
+	:ID_NOTATION "47014" ;
+	:issues :stock_STHRN_CO .
+
+:comp_SOUTHWEST_AIRLINES_CO a :Industry ;
+	rdfs:label "Southwest Airlines Co." ;
+	:ID_NOTATION "47735" ;
+	:issues :stock_SW_AIR_1 .
+
+:comp_SOUTHWESTERN_ENERGY_CO a :Company ;
+	rdfs:label "SOUTHWESTERN ENERGY CO" ;
+	:ID_NOTATION "127108" ;
+	:issues :stock_SW_ENERGY_USD .
+
+:comp_SPRINT_NEXTEL_CORP a :Other ;
+	rdfs:label "Sprint Nextel Corp." ;
+	:ID_NOTATION "47373" ;
+	:issues :stock_SPR_NEXTEL_CORP_FON_1_DL2 .
+
+:comp_ST_JUDE_MEDICAL a :Industry ;
+	rdfs:label "St. Jude Medical, Inc." ;
+	:ID_NOTATION "47819" ;
+	:issues :stock_ST_JUDE_MED .
+
+:comp_STANLEY_BLACK_DECKER a :Industry ;
+	rdfs:label "Stanley Black & Decker Inc." ;
+	:ID_NOTATION "137863" ;
+	:issues :stock_STAY_BLAC .
+
+:comp_STAPLES_INC a :Other ;
+	rdfs:label "Staples Inc." ;
+	:ID_NOTATION "48884" ;
+	:issues :stock_STAPLES .
+
+:comp_STARBUCKS_CORP a :Other ;
+	rdfs:label "Starbucks Corp." ;
+	:ID_NOTATION "49544" ;
+	:issues :stock_STARBUCKS_CORP .
+
+:comp_STATE_STREET a :Bank ;
+	rdfs:label "State Street Corporation" ;
+	:ID_NOTATION "47876" ;
+	:issues :stock_STATE_STREET .
+
+:comp_STERICYCLE_INC a :Other ;
+	rdfs:label "Stericycle Inc." ;
+	:ID_NOTATION "51543" ;
+	:issues :stock_STERCYCLE .
+
+:comp_STRYKER a :Industry ;
+	rdfs:label "Stryker Corporation" ;
+	:ID_NOTATION "47889" ;
+	:issues :stock_STRYKER .
+
+:comp_SUNOCO_INC a :Industry ;
+	rdfs:label "Sunoco, Inc." ;
+	:ID_NOTATION "137809" ;
+	:issues :stock_SUNOCO .
+
+:comp_SUNTRUST_BANKS a :Bank ;
+	rdfs:label "Suntrust Banks Inc." ;
+	:ID_NOTATION "48503" ;
+	:issues :stock_SUNTST_BNKS .
+
+:comp_SYMANTEC_CORP a :Other ;
+	rdfs:label "Symantec Corp." ;
+	:ID_NOTATION "49071" ;
+	:issues :stock_SYMANTEC_CORP .
+
+:comp_SYSCO a :Industry ;
+	rdfs:label "Sysco Corporation" ;
+	:ID_NOTATION "47535" ;
+	:issues :stock_SYSCO .
+
+:comp_TARGET_CORP a :Other ;
+	rdfs:label "Target Corp." ;
+	:ID_NOTATION "47301" ;
+	:issues :stock_TARGET_CO .
+
+:comp_TYCO_ELECTRONICS a :Industry ;
+	rdfs:label "TYCO ELECTRONICS LTD." ;
+	:ID_NOTATION "450994" ;
+	:issues :stock_TE_CONN .
+
+:comp_TENET_HEALTHCARE a :Industry ;
+	rdfs:label "Tenet Healthcare Corporation" ;
+	:ID_NOTATION "47432" ;
+	:issues :stock_TENET_HLTH .
+
+:comp_TESORO_CORPORATION a :Industry ;
+	rdfs:label "TESORO CORPORATION" ;
+	:ID_NOTATION "127432" ;
+	:issues :stock_TESORO .
+
+:comp_TEXAS_INSTRUMENTS_INC a :Industry ;
+	rdfs:label "Texas Instruments Inc." ;
+	:ID_NOTATION "47027" ;
+	:issues :stock_TEXAS_INSTR .
+
+:comp_TEXTRON a :Industry ;
+	rdfs:label "Textron Inc." ;
+	:ID_NOTATION "47029" ;
+	:issues :stock_TEXTRON .
+
+:comp_THERMO_FISHER_SCIENTIFIC a :Industry ;
+	rdfs:label "THERMO FISHER SCIENTIFIC" ;
+	:ID_NOTATION "221913" ;
+	:issues :stock_THERMO_FISHER_SC .
+
+:comp_TIFFANY a :Industry ;
+	rdfs:label "Tiffany & Co." ;
+	:ID_NOTATION "48591" ;
+	:issues :stock_TIFFANY_CO .
+
+:comp_TIME_WARNER_CABLE_INC a :Company ;
+	rdfs:label "TIME WARNER CABLE INC." ;
+	:ID_NOTATION "459945" ;
+	:issues :stock_TIME_WARNCBLE .
+
+:comp_TIME_WARNER_INC a :Other ;
+	rdfs:label "Time Warner Inc." ;
+	:ID_NOTATION "245727" ;
+	:issues :stock_TIME_WARN .
+
+:comp_TITANIUM_METALS_CORP a :Industry ;
+	rdfs:label "Titanium Metals Corp." ;
+	:ID_NOTATION "51379" ;
+	:issues :stock_TITANIUM_METALS .
+
+:comp_TJX a :Industry ;
+	rdfs:label "The TJX Companies, Inc." ;
+	:ID_NOTATION "47206" ;
+	:issues :stock_TJX_COS .
+
+:comp_TRIPADVISOR_INC a :Company ;
+	rdfs:label "Tripadvisor Inc" ;
+	:ID_NOTATION "861658" ;
+	:issues :stock_TRIPADVIS .
+
+:comp_TYCO_INTERNATIONAL_LTD a :Industry ;
+	rdfs:label "Tyco International Ltd." ;
+	:ID_NOTATION "140796" ;
+	:issues :stock_TYCO_LTDS .
+
+:comp_TYSON_FOODS_INC a :Industry ;
+	rdfs:label "TYSON FOODS INC." ;
+	:ID_NOTATION "143343" ;
+	:issues :stock_TYSON_FOOD_A .
+
+:comp_UNION_PACIFIC_CORP a :Industry ;
+	rdfs:label "Union Pacific Corp." ;
+	:ID_NOTATION "47450" ;
+	:issues :stock_UNION_PAC_CORP .
+
+:comp_UNITED_PARCEL_SERVICE_INC a :Other ;
+	rdfs:label "United Parcel Service Inc." ;
+	:ID_NOTATION "55331" ;
+	:issues :stock_UNITED_PARCEL_SE_B .
+
+:comp_UNITED_STATES_STEEL_CORPORATION a :Industry ;
+	rdfs:label "UNITED STATES STEEL CORPORATION" ;
+	:ID_NOTATION "49223" ;
+	:issues :stock_UNITED_STATES_STEEL_CORP .
+
+:comp_UNITEDHEALTH_GROUP_INC a :Other ;
+	rdfs:label "UnitedHealth Group Inc." ;
+	:ID_NOTATION "138374" ;
+	:issues :stock_UNITEDHEALTH_GRP .
+
+:comp_URBAN_OUTFITTERS_INC a :Industry ;
+	rdfs:label "Urban Outfitters Inc." ;
+	:ID_NOTATION "50057" ;
+	:issues :stock_URBAN_OUTFTTRS .
+
+:comp_U_S_BANCORP a :Bank ;
+	rdfs:label "U.S. Bancorp" ;
+	:ID_NOTATION "47696" ;
+	:issues :stock_US_BANCORP .
+
+:comp_VF a :Industry ;
+	rdfs:label "V.F. Corporation" ;
+	:ID_NOTATION "47401" ;
+	:issues :stock_VF_CORP_NPV .
+
+:comp_VALERO_ENERGY_CORPORATION a :Industry ;
+	rdfs:label "VALERO ENERGY CORPORATION" ;
+	:ID_NOTATION "463878" ;
+	:issues :stock_VALERO .
+
+:comp_VARIAN_MEDICAL a :Company ;
+	rdfs:label "VARIAN MEDICAL SYSTEMS INC" ;
+	:ID_NOTATION "138463" ;
+	:issues :stock_VARIAN_MED_SYST .
+
+:comp_VERISIGN_INC a :Industry ;
+	rdfs:label "Verisign Inc." ;
+	:ID_NOTATION "52641" ;
+	:issues :stock_VERISIGN .
+
+:comp_VIACOM a :Industry ;
+	rdfs:label "VIACOM B" ;
+	:ID_NOTATION "48686" ;
+	:issues :stock_VIACOM_B_N_VT .
+
+:comp_VISA_INC a :Industry ;
+	rdfs:label "VISA Inc." ;
+	:ID_NOTATION "464076" ;
+	:issues :stock_VISA_INC .
+
+:comp_WALGREEN_CO a :Industry ;
+	rdfs:label "Walgreen Co." ;
+	:ID_NOTATION "47270" ;
+	:issues :stock_WALGREEN .
+
+:comp_WASTE_MANAGEMENT a :Industry ;
+	rdfs:label "Waste Management Inc." ;
+	:ID_NOTATION "50516" ;
+	:issues :stock_WASTE_MGMT .
+
+:comp_WATERS a :Industry ;
+	rdfs:label "Waters Corporation" ;
+	:ID_NOTATION "50998" ;
+	:issues :stock_WATERS_CRP .
+
+:comp_WELLPOINT_INC a :Industry ;
+	rdfs:label "Wellpoint Inc." ;
+	:ID_NOTATION "51668" ;
+	:issues :stock_WELLPOINT_INC .
+
+:comp_WELLS_FARGO_CO a :Bank ;
+	rdfs:label "Wells Fargo & Co." ;
+	:ID_NOTATION "138917" ;
+	:issues :stock_WELLS_FARGO .
+
+:comp_WESTERN_DIGITAL a :Industry ;
+	rdfs:label "Western Digital Corp." ;
+	:ID_NOTATION "47750" ;
+	:issues :stock_WESTN_DIGITAL .
+
+:comp_WESTERN_UNION a :Company ;
+	rdfs:label "WESTERN UNION CO" ;
+	:ID_NOTATION "433697" ;
+	:issues :stock_WESTERN_UNION_CO .
+
+:comp_WEYERHAEUSER_CO a :Industry ;
+	rdfs:label "Weyerhaeuser Co." ;
+	:ID_NOTATION "47170" ;
+	:issues :stock_WEYERHAEUSER_1_25 .
+
+:comp_WHIRLPOOL_CORP a :Industry ;
+	rdfs:label "Whirlpool Corp." ;
+	:ID_NOTATION "47307" ;
+	:issues :stock_WHRLPOOL .
+
+:comp_WHOLE_FOODS_MARKET_INC a :Other ;
+	rdfs:label "Whole Foods Market Inc." ;
+	:ID_NOTATION "49774" ;
+	:issues :stock_WHOLE_FOODS .
+
+:comp_WILLIAMS_COMPANIES_INC a :Industry ;
+	rdfs:label "Williams Companies Inc." ;
+	:ID_NOTATION "47244" ;
+	:issues :stock_WILLIAMS_COS .
+
+:comp_WINDSTREAM_CORP a :Company ;
+	rdfs:label "Windstream Corp." ;
+	:ID_NOTATION "433046" ;
+	:issues :stock_WINDSTREAM .
+
+:comp_WYNN_RESORTS_LTD a :Other ;
+	rdfs:label "Wynn Resorts Ltd." ;
+	:ID_NOTATION "339998" ;
+	:issues :stock_WYNN_RESORTS_LTD .
+
+:comp_XCEL_ENERGY_INC a :Industry ;
+	rdfs:label "Xcel Energy Inc." ;
+	:ID_NOTATION "47217" ;
+	:issues :stock_XCEL_ENGY .
+
+:comp_XEROX_CORP a :Industry ;
+	rdfs:label "Xerox Corp." ;
+	:ID_NOTATION "47139" ;
+	:issues :stock_XEROX .
+
+:comp_XILINX_INC a :Industry ;
+	rdfs:label "Xilinx, Inc." ;
+	:ID_NOTATION "49095" ;
+	:issues :stock_XILINX .
+
+:comp_YAHOO_INC a :Other ;
+	rdfs:label "Yahoo! Inc." ;
+	:ID_NOTATION "51243" ;
+	:issues :stock_YAHOO .
+
+:comp_YUM_BRANDS a :Industry ;
+	rdfs:label "YUM BRANDS" ;
+	:ID_NOTATION "52391" ;
+	:issues :stock_YUM_BRANDS .
+
+:comp_ZIMMER_HOLDINGS_INC a :Industry ;
+	rdfs:label "Zimmer Holdings Inc." ;
+	:ID_NOTATION "257032" ;
+	:issues :stock_ZIMMER_HLD .
+
+:comp_ZIONS_BANCORP a :Bank ;
+	rdfs:label "Zions Bancorporation" ;
+	:ID_NOTATION "47349" ;
+	:issues :stock_ZIONS_BANCORP .
+
+:comp_ACTIVISION_BLIZZARD_INC a :Other ;
+	rdfs:label "Activision Blizzard Inc." ;
+	:ID_NOTATION "48140" ;
+	:issues :stock_ACTIVISION_BLIZZRD .
+
+:comp_ALEXION_PHARMACEUTICALS_INC a :Industry ;
+	rdfs:label "Alexion Pharmaceuticals Inc." ;
+	:ID_NOTATION "51156" ;
+	:issues :stock_ALEXION_PHARM .
+
+:comp_AVAGO_TECHNOLOGIES_LTD a :Other ;
+	rdfs:label "Avago Technologies Ltd." ;
+	:ID_NOTATION "507153" ;
+	:issues :stock_AVAO_TECH .
+
+:comp_BAIDU_INC a :Other ;
+	rdfs:label "Baidu Inc." ;
+	:ID_NOTATION "407179" ;
+	:issues :stock_BAIDU_COM .
+
+:comp_CHECK_POINT_SOFTWARE_TECHNOLOGIES_LTD a :Other ;
+	rdfs:label "Check Point Software Technologies Ltd." ;
+	:ID_NOTATION "51447" ;
+	:issues :stock_CHECK_POINT_SOFTW_TECHS .
+
+:comp_CTRIP_COM_INTERNATIONAL_LTD a :Industry ;
+	rdfs:label "Ctrip.com International Ltd." ;
+	:ID_NOTATION "412582" ;
+	:issues :stock_CTRIP_COM_ADR .
+
+:comp_FLEXTRONICS_INTERNATIONAL_LTD a :Industry ;
+	rdfs:label "Flextronics International Ltd." ;
+	:ID_NOTATION "148633" ;
+	:issues :stock_FLXTRNCS_INTL .
+
+:comp_GARMIN_LTD a :Industry ;
+	rdfs:label "Garmin Ltd." ;
+	:ID_NOTATION "717058" ;
+	:issues :stock_GARMIN .
+
+:comp_GREEN_MOUNTAIN_COFFEE_ROASTERS_INC a :Industry ;
+	rdfs:label "Green Mountain Coffee Roasters Inc." ;
+	:ID_NOTATION "49931" ;
+	:issues :stock_GREEN_MTN_COF .
+
+:comp_HENRY_SCHEIN_INC a :Industry ;
+	rdfs:label "Henry Schein Inc." ;
+	:ID_NOTATION "50970" ;
+	:issues :stock_HENRY_SCHEIN_NPV .
+
+:comp_INFOSYS_LTD a :Other ;
+	rdfs:label "Infosys Ltd." ;
+	:ID_NOTATION "53752" ;
+	:issues :stock_INFOSYS_TECHS_ADR_IR_10 .
+
+:comp_LAM_RESEARCH_CORP a :Industry ;
+	rdfs:label "Lam Research Corp." ;
+	:ID_NOTATION "48314" ;
+	:issues :stock_LAM_RESEARCH .
+
+:comp_LIBERTY_MEDIA_CORP a :Other ;
+	rdfs:label "Liberty Media Corp." ;
+	:ID_NOTATION "406439" ;
+	:issues :stock_LBTY_INT .
+
+:comp_MARVELL_TECHNOLOGY_GROUP_LTD a :Industry ;
+	rdfs:label "Marvell Technology Group Ltd." ;
+	:ID_NOTATION "55441" ;
+	:issues :stock_MARVELL_TECH .
+
+:comp_MAXIM_INTEGRATED_PRODUCTS_INC a :Industry ;
+	rdfs:label "Maxim Integrated Products Inc." ;
+	:ID_NOTATION "48841" ;
+	:issues :stock_MAXIM_INTEGRTD .
+
+:comp_MONSTER_BEVERAGE_CORP a :Industry ;
+	rdfs:label "Monster Beverage Corp." ;
+	:ID_NOTATION "54576" ;
+	:issues :stock_MONR_BEVE .
+
+:comp_NUANCE_COMMUNICATIONS_INC a :Industry ;
+	rdfs:label "Nuance Communications Inc." ;
+	:ID_NOTATION "55823" ;
+	:issues :stock_NUANCE_COMM .
+
+:comp_RANDGOLD_RESOURCES_LTD :issues :stock_RANDGOLD_ADS_ADS_EACH_REPR_1_ORD_USD0_05 .
+
+:comp_RESEARCH_IN_MOTION_LTD a :Industry ;
+	rdfs:label "Research in Motion Ltd." ;
+	:ID_NOTATION "52453" ;
+	:issues :stock_RESEARCH_IN_MOTION .
+
+:comp_SEAGATE_TECHNOLOGY_PLC a :Industry ;
+	rdfs:label "Seagate Technology PLC" ;
+	:ID_NOTATION "513249" ;
+	:issues :stock_SEAE_TECH .
+
+:comp_SIRIUS_XM_RADIO_INC a :Industry ;
+	rdfs:label "Sirius XM Radio Inc." ;
+	:ID_NOTATION "51819" ;
+	:issues :stock_SIRIUS_XM_RAD .
+
+:comp_TEVA_PHARMACEUTICAL_INDUSTRIES_LTD a :Industry ;
+	rdfs:label "Teva Pharmaceutical Industries Ltd." ;
+	:ID_NOTATION "49352" ;
+	:issues :stock_TEVA_PHARMACEUT_ADR .
+
+:comp_VERTEX_PHARMACEUTICALS_INC a :Industry ;
+	rdfs:label "Vertex Pharmaceuticals Inc." ;
+	:ID_NOTATION "49324" ;
+	:issues :stock_VERTEX_PHARMAC .
+
+:comp_VIRGIN_MEDIA_INC a :Other ;
+	rdfs:label "Virgin Media Inc." ;
+	:ID_NOTATION "459420" ;
+	:issues :stock_Virgin_Media_Inc .
+
+:comp_VODAFONE_GROUP_PLC :issues :stock_VODAFONE_ADR .
+
+:comp_WARNER_CHILCOTT_PLC a :Industry ;
+	rdfs:label "Warner Chilcott PLC" ;
+	:ID_NOTATION "434034" ;
+	:issues :stock_WARR_CHIL .
+
+:comp_ANZ_BANKING_GRP a :Bank ;
+	rdfs:label "AUSTRALIA & NEW ZEALAND BANKING GROUP LTD." ;
+	:ID_NOTATION "48479" ;
+	:issues :stock_A_N_Z_BKG_GRP .
+
+:comp_BHP_BILLITON_PLC :issues :stock_BHP_BILLITON_0 .
+
+:comp_CANON a :Industry ;
+	rdfs:label "Canon Inc." ;
+	:ID_NOTATION "47057" ;
+	:issues :stock_CANON .
+
+:comp_CHEUNG_KONG a :Industry ;
+	rdfs:label "Cheung Kong Holdings Ltd." ;
+	:ID_NOTATION "47720" ;
+	:issues :stock_CHEUNG_KONG .
+
+:comp_CHINA_MOBILE_LTD a :Industry ;
+	rdfs:label "China Mobile (Hong-Kong) Ltd." ;
+	:ID_NOTATION "52458" ;
+	:issues :stock_CHINA_MOBILE_HK .
+
+:comp_CLP_HOLDINGS_LTD a :Industry ;
+	rdfs:label "CLP Holdings Ltd." ;
+	:ID_NOTATION "47675" ;
+	:issues :stock_CLP_HLDGS .
+
+:comp_COMMONWEALTH_BK a :Bank ;
+	rdfs:label "Commonwealth Bank Australia Ltd." ;
+	:ID_NOTATION "49309" ;
+	:issues :stock_COMMONW_BK_AUSTR .
+
+:comp_DBS_GROUP_HLD a :Bank ;
+	rdfs:label "Development Bank of Singapore Ltd" ;
+	:ID_NOTATION "47699" ;
+	:issues :stock_DBS_GRP_HLDGS .
+
+:comp_EAST_JAPAN_RY a :Industry ;
+	rdfs:label "East Japan Railway Company" ;
+	:ID_NOTATION "49948" ;
+	:issues :stock_EAST_JPN_RLWY .
+
+:comp_FUJI_PHOTO_FILM a :Industry ;
+	rdfs:label "Fuji Photo Film Co., Ltd." ;
+	:ID_NOTATION "47188" ;
+	:issues :stock_FUJI_PHOTO_FILM_YN_50 .
+
+:comp_HANG_SENG_BANK a :Bank ;
+	rdfs:label "Hang Seng Bank Ltd." ;
+	:ID_NOTATION "47713" ;
+	:issues :stock_HANG_SENG_BK .
+
+:comp_HITACHI a :Industry ;
+	rdfs:label "Hitachi Ltd." ;
+	:ID_NOTATION "47070" ;
+	:issues :stock_HITACHI .
+
+:comp_HONDA_MOTOR a :Industry ;
+	rdfs:label "Honda Motor Co.Ltd." ;
+	:ID_NOTATION "47071" ;
+	:issues :stock_HONDA_MOTOR .
+
+:comp_HUTCHISON_WHAMPOA_LTD a :Industry ;
+	rdfs:label "Hutchison Whampoa Ltd." ;
+	:ID_NOTATION "47828" ;
+	:issues :stock_HUTCHISON_WHAMPOA .
+
+:comp_KYOCERA_CORP a :Industry ;
+	rdfs:label "Kyocera Corp." ;
+	:ID_NOTATION "47637" ;
+	:issues :stock_KYOCERA_CORP .
+
+:comp_MITSUB_UFJ_FIN_GROUP a :Bank ;
+	rdfs:label "Mitsubishi UFJ Financial Group Inc." ;
+	:ID_NOTATION "245904" ;
+	:issues :stock_MITSUBISHI_TOKYO_FINL_GRP .
+
+:comp_NATL_AUST_BANK a :Bank ;
+	rdfs:label "National Australia Bank Ltd." ;
+	:ID_NOTATION "47126" ;
+	:issues :stock_NATL_AUSTR_BK .
+
+:comp_NINTENDO_CO_LTD a :Industry ;
+	rdfs:label "Nintendo Co., Ltd." ;
+	:ID_NOTATION "47811" ;
+	:issues :stock_NINTENDO_CO_LTD_YN_50 .
+
+:comp_NISSAN_MOTOR a :Industry ;
+	rdfs:label "Nissan Motor Co., Ltd." ;
+	:ID_NOTATION "47119" ;
+	:issues :stock_NISSAN_MOTOR .
+
+:comp_NOMURA_HOLDINGS_LTD a :Other ;
+	rdfs:label "Nomura Holdings Ltd." ;
+	:ID_NOTATION "47362" ;
+	:issues :stock_NOMURA_HOLDING .
+
+:comp_NTT_DOCOMO_INC a :Industry ;
+	rdfs:label "NTT Docomo Inc." ;
+	:ID_NOTATION "53331" ;
+	:issues :stock_NTT_DOCOMO .
+
+:comp_PANASONIC_CORP a :Industry ;
+	rdfs:label "PANASONIC CORP" ;
+	:ID_NOTATION "47111" ;
+	:issues :stock_MATSUSHITA_EL_IND .
+
+:comp_RIO_TINTO a :Industry ;
+	rdfs:label "Rio Tinto Ltd." ;
+	:ID_NOTATION "47219" ;
+	:issues :stock_RIO_TINTO_0 .
+
+:comp_SHARP_CORP a :Industry ;
+	rdfs:label "Sharp Corporation" ;
+	:ID_NOTATION "47241" ;
+	:issues :stock_SHARP .
+
+:comp_SHIN_ETSU_CHEM a :Industry ;
+	rdfs:label "Shin-Etsu Chemical Co. Ltd." ;
+	:ID_NOTATION "47534" ;
+	:issues :stock_SHIN_ETSU_CHEM_YN_50 .
+
+:comp_SONY a :Industry ;
+	rdfs:label "Sony Corporation" ;
+	:ID_NOTATION "47120" ;
+	:issues :stock_SONY_CORP .
+
+:comp_SUMITOMO_MITSUI_FINANCIAL_GROUP a :Bank ;
+	rdfs:label "SUMITOMO MITSUI FINANCIAL GROUP" ;
+	:ID_NOTATION "338084" ;
+	:issues :stock_SUMITOMO_MITSUI_FINL_GRP .
+
+:comp_SUN_HUNG_KAI_PTS a :Industry ;
+	rdfs:label "Sun Hung Kai Properties Limited" ;
+	:ID_NOTATION "47672" ;
+	:issues :stock_SUN_HUNG_PRP .
+
+:comp_TAKEDA_CHEM_INDS a :Industry ;
+	rdfs:label "Takeda Chemical Industries, Ltd." ;
+	:ID_NOTATION "47132" ;
+	:issues :stock_TAKEDA_PHARM_CO_LTD_YN_50 .
+
+:comp_TELSTRA_CORP_LTD a :Industry ;
+	rdfs:label "Telstra Corp. Ltd." ;
+	:ID_NOTATION "52508" ;
+	:issues :stock_TELSTR_CORP .
+
+:comp_TOKYO_ELEC_PWR a :Industry ;
+	rdfs:label "Tokyo Electric Power Co. Inc." ;
+	:ID_NOTATION "47430" ;
+	:issues :stock_TOKYO_EL_PWR_YN_500 .
+
+:comp_TOSHIBA a :Industry ;
+	rdfs:label "Toshiba Corporation" ;
+	:ID_NOTATION "47114" ;
+	:issues :stock_TOSHIBA .
+
+:comp_TOYOTA_MOTOR_CO a :Industry ;
+	rdfs:label "Toyota Motor Corporation" ;
+	:ID_NOTATION "47098" ;
+	:issues :stock_TOYOTA_MOTOR_CORP_YN_50 .
+
+:comp_UTD_OVERSEAS_BK a :Bank ;
+	rdfs:label "United Overseas bank Ltd." ;
+	:ID_NOTATION "49015" ;
+	:issues :stock_UTD_OV_BK .
+
+:comp_WESTPAC a :Bank ;
+	rdfs:label "Westpac Banking Corp." ;
+	:ID_NOTATION "47164" ;
+	:issues :stock_WESTPAC_BK .
+
+:comp_WOOLWORTHS a :Industry ;
+	rdfs:label "Woolworths LTD." ;
+	:ID_NOTATION "49828" ;
+	:issues :stock_WOOLWRTHS .
+
+:comp_ANDRITZ_AG a :Industry ;
+	rdfs:label "Andritz AG" ;
+	:ID_NOTATION "152287" ;
+	:issues :stock_ANDRITZ .
+
+:comp_CA_IMMOBILIEN_ANLAGEN_AG a :Other ;
+	rdfs:label "CA Immobilien Anlagen AG" ;
+	:ID_NOTATION "131800" ;
+	:issues :stock_CA_IMM_ANLAGEN_CA_IMMOBILIEN_ORD_SHS .
+
+:comp_CONWERT_IMMOBILIEN_INVEST_SE a :Other ;
+	rdfs:label "conwert Immobilien Invest SE" ;
+	:ID_NOTATION "339008" ;
+	:issues :stock_CONWERT_IMMO_OR_CONWERT_IMMO_ORD_SHS .
+
+:comp_ERSTE_GROUP_BANK_AG a :Bank ;
+	rdfs:label "Erste Group Bank AG" ;
+	:ID_NOTATION "52506" ;
+	:issues :stock_ERSTE_GROUP_BAN_ERSTE_GROUP_BANK_AG_ORD_SHS .
+
+:comp_EVN_AG a :Industry ;
+	rdfs:label "EVN AG" ;
+	:ID_NOTATION "48989" ;
+	:issues :stock_EVN .
+
+:comp_IMMOFINANZ_AG a :Other ;
+	rdfs:label "Immofinanz AG" ;
+	:ID_NOTATION "130945" ;
+	:issues :stock_IMMOFINANZ_IMMOB_ANLAGEN .
+
+:comp_MAYR_MELNHOF_KARTON_AG a :Industry ;
+	rdfs:label "Mayr-Melnhof Karton AG" ;
+	:ID_NOTATION "50219" ;
+	:issues :stock_MAYR_MELNHOF_KARTON .
+
+:comp_OESTERREICHISCHE_POST_AG a :Other ;
+	rdfs:label "Österreichische Post AG" ;
+	:ID_NOTATION "432622" ;
+	:issues :stock_OESTERREICHISCHE_POST .
+
+:comp_OMV_AG a :Industry ;
+	rdfs:label "OMV AG" ;
+	:ID_NOTATION "48714" ;
+	:issues :stock_OMV .
+
+:comp_RAIFFEISEN_BANK_INTERNATIONAL_AG a :Bank ;
+	rdfs:label "Raiffeisen Bank International AG" ;
+	:ID_NOTATION "406519" ;
+	:issues :stock_RAIFF_BANK_INT_RAIFFEISEN_BANK_INT_AG_ORD_SHS .
+
+:comp_RHI_AG a :Industry ;
+	rdfs:label "RHI AG" ;
+	:ID_NOTATION "48708" ;
+	:issues :stock_RHI .
+
+:comp_SCHOELLER_BLECKMANN_OILFIELD_EQUIPMENT_AG a :Industry ;
+	rdfs:label "Schoeller-Bleckmann Oilfield Equipment AG" ;
+	:ID_NOTATION "52143" ;
+	:issues :stock_SCHOELLER_BLECKMANN_OILF .
+
+:comp_STRABAG_SE a :Industry ;
+	rdfs:label "STRABAG SE" ;
+	:ID_NOTATION "110653" ;
+	:issues :stock_STRABAG_SE_ORD_STRABAG_SE_ORD_SHS .
+
+:comp_TELEKOM_AUSTRIA_AG a :Other ;
+	rdfs:label "Telekom Austria AG" ;
+	:ID_NOTATION "142184" ;
+	:issues :stock_TELEKOM_AUSTRIA .
+
+:comp_VERBUND_AG a :Industry ;
+	rdfs:label "VERBUND AG" ;
+	:ID_NOTATION "48938" ;
+	:issues :stock_OESTERR_EL_WIRT_INH .
+
+:comp_VIENNA_INSURANCE_GROUP_AG_WIENER_VERSICHERUNG_GRUP a :Insurance ;
+	rdfs:label "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe" ;
+	:ID_NOTATION "50413" ;
+	:issues :stock_VIENNA_INSURANCE_GROUP .
+
+:comp_VOESTALPINE_AG a :Industry ;
+	rdfs:label "voestalpine AG" ;
+	:ID_NOTATION "50891" ;
+	:issues :stock_VOESTALPINE .
+
+:comp_WIENERBERGER_AG a :Industry ;
+	rdfs:label "Wienerberger AG" ;
+	:ID_NOTATION "221797" ;
+	:issues :stock_WIENERBERGER .
+
+:comp_ZUMTOBEL_AG a :Industry ;
+	rdfs:label "Zumtobel AG" ;
+	:ID_NOTATION "432442" ;
+	:issues :stock_ZUMTOBEL_ORD_ZUMTOBEL_ORD_SHS .
+

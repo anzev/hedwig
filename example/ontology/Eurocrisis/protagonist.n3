@@ -1,0 +1,341 @@
+﻿@prefix : <http://project-first.eu/ontology#>.
+@prefix OWL: <http://www.w3.org/2002/07/owl#>.
+@prefix RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix XSD: <http://www.w3.org/2001/XMLSchema#>.
+
+:Andrea_Enria_Gazetteer
+	:term "Andrea Enria";
+	a :Gazetteer.
+
+:Andrea_Enria_Surname_Gazetteer
+	:hasDocumentLevelCondition :Andrea_Enria_Gazetteer;
+	:term "Enria";
+	a :Gazetteer.
+
+:Andrea_Enria
+	:identifiedBy :Andrea_Enria_Gazetteer,
+		:Andrea_Enria_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Andrea Enria".
+
+:Angela_Merkel_Gazetteer
+	:term "Angela Merkel";
+	a :Gazetteer.
+
+:Angela_Merkel_Surname_Gazetteer
+	:hasDocumentLevelCondition :Angela_Merkel_Gazetteer;
+	:term "Merkel";
+	a :Gazetteer.
+
+:Angela_Merkel
+	:identifiedBy :Angela_Merkel_Gazetteer,
+		:Angela_Merkel_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Angela Merkel".
+
+:Antonis_Samaras_Gazetteer
+	:term "Antonis Samaras";
+	a :Gazetteer.
+
+:Antonis_Samaras_Surname_Gazetteer
+	:hasDocumentLevelCondition :Antonis_Samaras_Gazetteer;
+	:term "Samaras";
+	a :Gazetteer.
+
+:Antonis_Samaras
+	:identifiedBy :Antonis_Samaras_Gazetteer,
+		:Antonis_Samaras_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Antonis Samaras".
+
+:Brendan_McDonagh_Gazetteer
+	:term "Brendan McDonagh";
+	a :Gazetteer.
+
+:Brendan_McDonagh_Surname_Gazetteer
+	:hasDocumentLevelCondition :Brendan_McDonagh_Gazetteer;
+	:term "McDonagh";
+	a :Gazetteer.
+
+:Brendan_McDonagh
+	:identifiedBy :Brendan_McDonagh_Gazetteer,
+		:Brendan_McDonagh_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Brendan McDonagh".
+
+:Brian_Cowen_Gazetteer
+	:term "Brian Cowen";
+	a :Gazetteer.
+
+:Brian_Cowen_Surname_Gazetteer
+	:hasDocumentLevelCondition :Brian_Cowen_Gazetteer;
+	:term "Cowen";
+	a :Gazetteer.
+
+:Brian_Cowen
+	:identifiedBy :Brian_Cowen_Gazetteer,
+		:Brian_Cowen_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Brian Cowen".
+
+:Charles_Dallara_Gazetteer
+	:term "Charles Dallara";
+	a :Gazetteer.
+
+:Charles_Dallara_Surname_Gazetteer
+	:hasDocumentLevelCondition :Charles_Dallara_Gazetteer;
+	:term "Dallara";
+	a :Gazetteer.
+
+:Charles_Dallara
+	:identifiedBy :Charles_Dallara_Gazetteer,
+		:Charles_Dallara_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Charles Dallara".
+
+:Christine_Lagarde_Gazetteer
+	:term "Christine Lagarde";
+	a :Gazetteer.
+
+:Christine_Lagarde_Surname_Gazetteer
+	:hasDocumentLevelCondition :Christine_Lagarde_Gazetteer;
+	:term "Lagarde";
+	a :Gazetteer.
+
+:Christine_Lagarde
+	:identifiedBy :Christine_Lagarde_Gazetteer,
+		:Christine_Lagarde_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Christine Lagarde".
+
+:François_Hollande_Gazetteer
+	:term "François Hollande";
+    :term "Francois Hollande";
+	a :Gazetteer.
+
+:François_Hollande_Surname_Gazetteer
+	:hasDocumentLevelCondition :François_Hollande_Gazetteer;
+	:term "Hollande";
+	a :Gazetteer.
+
+:François_Hollande
+	:identifiedBy :François_Hollande_Gazetteer,
+		:François_Hollande_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "François Hollande".
+
+:George_Papandreou_Gazetteer
+	:term "George Papandreou";
+	a :Gazetteer.
+
+:George_Papandreou_Surname_Gazetteer
+	:hasDocumentLevelCondition :George_Papandreou_Gazetteer;
+	:term "Papandreou";
+	a :Gazetteer.
+
+:George_Papandreou
+	:identifiedBy :George_Papandreou_Gazetteer,
+		:George_Papandreou_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "George Papandreou".
+
+:Herman_Van_Rompuy_Gazetteer
+	:term "Herman Van Rompuy";
+	a :Gazetteer.
+
+:Herman_Van_Rompuy_Surname_Gazetteer
+	:hasDocumentLevelCondition :Herman_Van_Rompuy_Gazetteer;
+	:term "Van Rompuy";
+	a :Gazetteer.
+
+:Herman_Van_Rompuy
+	:identifiedBy :Herman_Van_Rompuy_Gazetteer,
+		:Herman_Van_Rompuy_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Herman Van Rompuy".
+
+:Jean-Claude_Juncker_Gazetteer
+	:term "Jean-Claude Juncker";
+	a :Gazetteer.
+
+:Jean-Claude_Juncker_Surname_Gazetteer
+	:hasDocumentLevelCondition :Jean-Claude_Juncker_Gazetteer;
+	:term "Juncker";
+	a :Gazetteer.
+
+:Jean-Claude_Juncker
+	:identifiedBy :Jean-Claude_Juncker_Gazetteer,
+		:Jean-Claude_Juncker_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Jean-Claude Juncker".
+
+:Jean-Claude_Trichet_Gazetteer
+	:term "Jean-Claude Trichet";
+	a :Gazetteer.
+
+:Jean-Claude_Trichet_Surname_Gazetteer
+	:hasDocumentLevelCondition :Jean-Claude_Trichet_Gazetteer;
+	:term "Trichet";
+	a :Gazetteer.
+
+:Jean-Claude_Trichet
+	:identifiedBy :Jean-Claude_Trichet_Gazetteer,
+		:Jean-Claude_Trichet_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Jean-Claude Trichet".
+
+:José_Barroso_Gazetteer
+	:term "José Barroso";
+    :term "Jose Barroso";
+    :term "José Manuel Barroso";
+    :term "Jose Manuel Barroso";
+	a :Gazetteer.
+
+:José_Barroso_Surname_Gazetteer
+	:hasDocumentLevelCondition :José_Barroso_Gazetteer;
+	:term "Barroso";
+	a :Gazetteer.
+
+:José_Barroso
+	:identifiedBy :José_Barroso_Gazetteer,
+		:José_Barroso_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "José Barroso".
+
+:Klaus_Regling_Gazetteer
+	:term "Klaus Regling";
+	a :Gazetteer.
+
+:Klaus_Regling_Surname_Gazetteer
+	:hasDocumentLevelCondition :Klaus_Regling_Gazetteer;
+	:term "Regling";
+	a :Gazetteer.
+
+:Klaus_Regling
+	:identifiedBy :Klaus_Regling_Gazetteer,
+		:Klaus_Regling_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Klaus Regling".
+
+:Lucas_Papademos_Gazetteer
+	:term "Lucas Papademos";
+	a :Gazetteer.
+
+:Lucas_Papademos_Surname_Gazetteer
+	:hasDocumentLevelCondition :Lucas_Papademos_Gazetteer;
+	:term "Papademos";
+	a :Gazetteer.
+
+:Lucas_Papademos
+	:identifiedBy :Lucas_Papademos_Gazetteer,
+		:Lucas_Papademos_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Lucas Papademos".
+
+:Mariano_Rajoy_Gazetteer
+	:term "Mariano Rajoy";
+	a :Gazetteer.
+
+:Mariano_Rajoy_Surname_Gazetteer
+	:hasDocumentLevelCondition :Mariano_Rajoy_Gazetteer;
+	:term "Rajoy";
+	a :Gazetteer.
+
+:Mariano_Rajoy
+	:identifiedBy :Mariano_Rajoy_Gazetteer,
+		:Mariano_Rajoy_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Mariano Rajoy".
+
+:Mario_Draghi_Gazetteer
+	:term "Mario Draghi";
+	a :Gazetteer.
+
+:Mario_Draghi_Surname_Gazetteer
+	:hasDocumentLevelCondition :Mario_Draghi_Gazetteer;
+	:term "Draghi";
+	a :Gazetteer.
+
+:Mario_Draghi
+	:identifiedBy :Mario_Draghi_Gazetteer,
+		:Mario_Draghi_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Mario Draghi".
+
+:Mario_Monti_Gazetteer
+	:term "Mario Monti";
+	a :Gazetteer.
+
+:Mario_Monti_Surname_Gazetteer
+	:hasDocumentLevelCondition :Mario_Monti_Gazetteer;
+	:term "Monti";
+	a :Gazetteer.
+
+:Mario_Monti
+	:identifiedBy :Mario_Monti_Gazetteer,
+		:Mario_Monti_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Mario Monti".
+
+:Nicolas_Sarkozy_Gazetteer
+	:term "Nicolas Sarkozy";
+	a :Gazetteer.
+
+:Nicolas_Sarkozy_Surname_Gazetteer
+	:hasDocumentLevelCondition :Nicolas_Sarkozy_Gazetteer;
+	:term "Sarkozy";
+	a :Gazetteer.
+
+:Nicolas_Sarkozy
+	:identifiedBy :Nicolas_Sarkozy_Gazetteer,
+		:Nicolas_Sarkozy_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Nicolas Sarkozy".
+
+:Olli_Rehn_Gazetteer
+	:term "Olli Rehn";
+	a :Gazetteer.
+
+:Olli_Rehn_Surname_Gazetteer
+	:hasDocumentLevelCondition :Olli_Rehn_Gazetteer;
+	:term "Rehn";
+	a :Gazetteer.
+
+:Olli_Rehn
+	:identifiedBy :Olli_Rehn_Gazetteer,
+		:Olli_Rehn_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Olli Rehn".
+
+:Silvio_Berlusconi_Gazetteer
+	:term "Silvio Berlusconi";
+	a :Gazetteer.
+
+:Silvio_Berlusconi_Surname_Gazetteer
+	:hasDocumentLevelCondition :Silvio_Berlusconi_Gazetteer;
+	:term "Berlusconi";
+	a :Gazetteer.
+
+:Silvio_Berlusconi
+	:identifiedBy :Silvio_Berlusconi_Gazetteer,
+		:Silvio_Berlusconi_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Silvio Berlusconi".
+
+:Wolfgang_Schäuble_Gazetteer
+	:term "Wolfgang Schäuble";
+    :term "Wolfgang Schaeuble";
+	a :Gazetteer.
+
+:Wolfgang_Schäuble_Surname_Gazetteer
+	:hasDocumentLevelCondition :Wolfgang_Schäuble_Gazetteer;
+	:term "Schäuble";
+    :term "Schaeuble";
+	a :Gazetteer.
+
+:Wolfgang_Schäuble
+	:identifiedBy :Wolfgang_Schäuble_Gazetteer,
+		:Wolfgang_Schäuble_Surname_Gazetteer;
+	a :Protagonist;
+	RDFS:label "Wolfgang Schäuble".

@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://project-first.eu/ontology#> .
+
+:Eurocrisis a owl:Class ;   
+	:settings "c=ic/l=y" ;   # ignore case; lematize = yes
+    rdfs:label "Eurocrisis topic";
+    rdfs:subClassOf :SentimentObject.
+
+:Finance a owl:Class ;
+	rdfs:label "Finance" ;
+	rdfs:subClassOf :Eurocrisis .
+    
+:Protagonist a owl:Class ;
+    :settings "c=acl/l=n" ;   # capitalization = all caps loose; lematize = no
+	rdfs:label "Protagonist" ;
+	rdfs:subClassOf :Eurocrisis .
+    
+  
+ 

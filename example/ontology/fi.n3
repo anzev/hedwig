@@ -1,0 +1,6285 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://project-first.eu/ontology#> .
+
+:stock_AIR_LIQUIDE a :Stock ;
+	rdfs:label "AIR LIQUIDE(L') EUR5.50" ;
+	:ID_NOTATION "195688" ;
+	:ISIN "FR0000120073" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ALLIANZ a :Stock ;
+	rdfs:label "ALLIANZ ORD ALLIANZ ORD SHS" ;
+	:ID_NOTATION "1937897" ;
+	:ISIN "DE0008404005" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ANHEUSER_BUSCH_INB a :Stock ;
+	rdfs:label "ANHEUSER-BUSCH INBEV NPV" ;
+	:ID_NOTATION "26096217" ;
+	:ISIN "BE0003793107" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ARCELORMITTAL a :Stock ;
+	rdfs:label "ARCELORMITTAL NPV" ;
+	:ID_NOTATION "19150056" ;
+	:ISIN "LU0323134006" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ASSICURAZIONI_GENERALI a :Stock ;
+	rdfs:label "ASSICURAZIONI GENERALI SPA EUR1" ;
+	:ID_NOTATION "207450" ;
+	:ISIN "IT0000062072" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_AXA a :Stock ;
+	rdfs:label "AXA EUR2.29" ;
+	:ID_NOTATION "195749" ;
+	:ISIN "FR0000120628" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_BANCO_SANTANDER_CENTRAL_HISP a :Stock ;
+	rdfs:label "BANCO SANTANDER SA EUR0.50(REGD)" ;
+	:ID_NOTATION "8407797" ;
+	:ISIN "ES0113900J37" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_BASF a :Stock ;
+	rdfs:label "BASF SE ORD SHS" ;
+	:ID_NOTATION "37886885" ;
+	:ISIN "DE000BASF111" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_BAYER a :Stock ;
+	rdfs:label "BAYER ORD REG SHS" ;
+	:ID_NOTATION "30820934" ;
+	:ISIN "DE000BAY0017" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_BMW a :Stock ;
+	rdfs:label "BAYERISCHE MOTOREN WERKE AG EUR1" ;
+	:ID_NOTATION "143094" ;
+	:ISIN "DE0005190003" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_BANCO_BILBAO_VIZCAYA_ARGENTA a :Stock ;
+	rdfs:label "BBVA ORD ORD EUR0.49" ;
+	:ID_NOTATION "8407748" ;
+	:ISIN "ES0113211835" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_BNP_PARIBAS a :Stock ;
+	rdfs:label "BNP PARIBAS EUR2" ;
+	:ID_NOTATION "195935" ;
+	:ISIN "FR0000131104" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_CARREFOUR a :Stock ;
+	rdfs:label "CARREFOUR EUR2.50" ;
+	:ID_NOTATION "195694" ;
+	:ISIN "FR0000120172" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_CRH a :Stock ;
+	rdfs:label "CRH ORD EUR 0.32" ;
+	:ID_NOTATION "206331" ;
+	:ISIN "IE0001827041" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_DAIMLER a :Stock ;
+	rdfs:label "DAIMLER AG ORD NPV(REGD)" ;
+	:ID_NOTATION "161766" ;
+	:ISIN "DE0007100000" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_GROUPE_DANONE a :Stock ;
+	rdfs:label "DANONE EUR0.25" ;
+	:ID_NOTATION "195758" ;
+	:ISIN "FR0000120644" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_DT_BANK a :Stock ;
+	rdfs:label "DEUTSCHE BANK AG NPV(REGD)" ;
+	:ID_NOTATION "142991" ;
+	:ISIN "DE0005140008" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_DEUTSCHE_BOERSE a :Stock ;
+	rdfs:label "DEUTSCHE BOERSE AG NPV(REGD)" ;
+	:ID_NOTATION "2036789" ;
+	:ISIN "DE0005810055" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_DEUTSCHE_TELEKOM a :Stock ;
+	rdfs:label "DEUTSCHE TELEKOM AG NPV(REGD)" ;
+	:ID_NOTATION "2025437" ;
+	:ISIN "DE0005557508" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_E_ON a :Stock ;
+	rdfs:label "E.ON N ORD E ON N ORD SHS" ;
+	:ID_NOTATION "24022547" ;
+	:ISIN "DE000ENAG999" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ENEL a :Stock ;
+	rdfs:label "ENEL EUR1" ;
+	:ID_NOTATION "2022380" ;
+	:ISIN "IT0003128367" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ENI a :Stock ;
+	rdfs:label "ENI EUR1" ;
+	:ID_NOTATION "1918373" ;
+	:ISIN "IT0003132476" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_FRANCE_TELECOM a :Stock ;
+	rdfs:label "FRANCE TELECOM EUR4" ;
+	:ID_NOTATION "195948" ;
+	:ISIN "FR0000133308" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_GDF_SUEZ a :Stock ;
+	rdfs:label "GDF SUEZ EUR1" ;
+	:ID_NOTATION "12388884" ;
+	:ISIN "FR0010208488" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_IBERDROLA a :Stock ;
+	rdfs:label "IBERDROLA SA EUR0.75" ;
+	:ID_NOTATION "19623012" ;
+	:ISIN "ES0144580Y14" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_INDITEX a :Stock ;
+	rdfs:label "INDITEX (IND.DE DISENO TEXTIL SA) EUR0.15" ;
+	:ID_NOTATION "8407849" ;
+	:ISIN "ES0148396015" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ING_GROEP_N_V a :Stock ;
+	rdfs:label "ING GROEP NV CVA EUR0.24" ;
+	:ID_NOTATION "1968917" ;
+	:ISIN "NL0000303600" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_INTESA_SANPAOLO a :Stock ;
+	rdfs:label "INTESA SANPAOLO S.P.A. EUR0.52" ;
+	:ID_NOTATION "1996311" ;
+	:ISIN "IT0000072618" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_L_OREAL a :Stock ;
+	rdfs:label "L'OREAL ORD SHS" ;
+	:ID_NOTATION "195714" ;
+	:ISIN "FR0000120321" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_LVMH_MOET_HENNESY a :Stock ;
+	rdfs:label "LVMH MOET-HENNESSY LOUIS VUITTON EUR0.30" ;
+	:ID_NOTATION "195773" ;
+	:ISIN "FR0000121014" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_MUNCH_RUCK a :Stock ;
+	rdfs:label "MUENCHENER RUECKVERSICHERUNGS AG NPV(REGD)" ;
+	:ID_NOTATION "186563" ;
+	:ISIN "DE0008430026" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_NOKIA a :Stock ;
+	rdfs:label "NOKIA CORPORATION" ;
+	:ID_NOTATION "1544707" ;
+	:ISIN "FI0009000681" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_PHILIPS_ELECTRONICS a :Stock ;
+	rdfs:label "PHILIPS ELECTRONICS(KONINKLIJKE)NV EUR0.20" ;
+	:ID_NOTATION "1962574" ;
+	:ISIN "NL0000009538" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_REPSOL_YPF a :Stock ;
+	rdfs:label "REPSOL YPF SA EUR1" ;
+	:ID_NOTATION "8407794" ;
+	:ISIN "ES0173516115" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_RWE a :Stock ;
+	rdfs:label "RWE AG NPV" ;
+	:ID_NOTATION "160037" ;
+	:ISIN "DE0007037129" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_SAINT_GOBAIN a :Stock ;
+	rdfs:label "SAINT GOBAIN OR COMPAGNIE DE ST-GOBAIN ORD SHS" ;
+	:ID_NOTATION "195843" ;
+	:ISIN "FR0000125007" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_SANOFI a :Stock ;
+	rdfs:label "SANOFI EUR2" ;
+	:ID_NOTATION "195743" ;
+	:ISIN "FR0000120578" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_SAP a :Stock ;
+	rdfs:label "SAP AG ORD NPV" ;
+	:ID_NOTATION "163500" ;
+	:ISIN "DE0007164600" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_SCHNEIDER_ELECTRIC a :Stock ;
+	rdfs:label "SCHNEIDER ELECTRIC EUR4.00" ;
+	:ID_NOTATION "195832" ;
+	:ISIN "FR0000121972" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_SIEMENS a :Stock ;
+	rdfs:label "SIEMENS N ORD SIEMENS ORD SHS" ;
+	:ID_NOTATION "1929749" ;
+	:ISIN "DE0007236101" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_SOC_GEN a :Stock ;
+	rdfs:label "SOCIETE GENERALE EUR1.25" ;
+	:ID_NOTATION "1544924" ;
+	:ISIN "FR0000130809" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_TELECOM_ITALIA a :Stock ;
+	rdfs:label "TELECOM ITALIA SPA EUR0.55" ;
+	:ID_NOTATION "7795307" ;
+	:ISIN "IT0003497168" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_TELEFONICA a :Stock ;
+	rdfs:label "TELEFONICA SA O TELEFONICA ORD SHS" ;
+	:ID_NOTATION "8407807" ;
+	:ISIN "ES0178430E18" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_TOTAL a :Stock ;
+	rdfs:label "TOTAL ORD TOTAL ORD SHS" ;
+	:ID_NOTATION "195703" ;
+	:ISIN "FR0000120271" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_UNIBAIL_S_A_INH a :Stock ;
+	rdfs:label "UNIBAIL-RODAMCO SE EUR5" ;
+	:ID_NOTATION "45439" ;
+	:ISIN "FR0000124711" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_UNICREDIT a :Stock ;
+	rdfs:label "UNICREDIT SPA NPV" ;
+	:ID_NOTATION "207469" ;
+	:ISIN "IT0004781412" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_UNILEVER_NV a :Stock ;
+	rdfs:label "UNILEVER NV CVA EUR0.16" ;
+	:ID_NOTATION "1941121" ;
+	:ISIN "NL0000009355" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_VINCI a :Stock ;
+	rdfs:label "VINCI EUR2.50" ;
+	:ID_NOTATION "1544899" ;
+	:ISIN "FR0000125486" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_VIVENDI_UNIVERSAL a :Stock ;
+	rdfs:label "VIVENDI SA EUR5.50" ;
+	:ID_NOTATION "195799" ;
+	:ISIN "FR0000127771" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_VW_VZ a :Stock ;
+	rdfs:label "VOLKSWAGEN AG NON VTG PRF NPV" ;
+	:ID_NOTATION "176173" ;
+	:ISIN "DE0007664039" ;
+	:memberOf :index_EURO_STOXX_50_EUR .
+
+:stock_ABB a :Stock ;
+	rdfs:label "ABB LTD CHF1.03 (REGD)" ;
+	:ID_NOTATION "101012" ;
+	:ISIN "CH0012221716" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_AIR_LIQUIDE :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ALLIANZ :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_Anglo_American_PLC a :Stock ;
+	rdfs:label "ANGLO AMERICAN PLC ORD USD0.54945" ;
+	:ID_NOTATION "9454476" ;
+	:ISIN "GB00B1XZS820" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ANHEUSER_BUSCH_INB :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ASTRAZENECA a :Stock ;
+	rdfs:label "ASTRAZENECA ORD USD0.25" ;
+	:ID_NOTATION "9454374" ;
+	:ISIN "GB0009895292" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BANCO_SANTANDER_CENTRAL_HISP :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BARCLAYS a :Stock ;
+	rdfs:label "BARCLAYS ORD GBP0.25" ;
+	:ID_NOTATION "9454489" ;
+	:ISIN "GB0031348658" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BASF :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BAYER :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BANCO_BILBAO_VIZCAYA_ARGENTA :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BG_GROUP a :Stock ;
+	rdfs:label "BG GROUP PLC ORD 10P" ;
+	:ID_NOTATION "9454508" ;
+	:ISIN "GB0008762899" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BHP_BILLITON a :Stock ;
+	rdfs:label "BHP BILLITON PLC USD0.50" ;
+	:ID_NOTATION "9454484" ;
+	:ISIN "GB0000566504" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BNP_PARIBAS :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BP a :Stock ;
+	rdfs:label "BP ORD USD0.25" ;
+	:ID_NOTATION "9454510" ;
+	:ISIN "GB0007980591" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_BRITISH_AMERICAN_TOBACCO a :Stock ;
+	rdfs:label "BRITISH AMERICAN TOBACCO PLC ORD 25P" ;
+	:ID_NOTATION "9454487" ;
+	:ISIN "GB0002875804" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_CREDIT_SUISSE_GROUP a :Stock ;
+	rdfs:label "CREDIT SUISSE GROUP CHF0.04(REGD)" ;
+	:ID_NOTATION "100295" ;
+	:ISIN "CH0012138530" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_DAIMLER :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_DT_BANK :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_DEUTSCHE_TELEKOM :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_DIAGEO a :Stock ;
+	rdfs:label "DIAGEO ORD 28 101/108P" ;
+	:ID_NOTATION "9454407" ;
+	:ISIN "GB0002374006" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_E_ON :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ENI :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ERICSSON_B a :Stock ;
+	rdfs:label "ERICSSON SER'B' NPV" ;
+	:ID_NOTATION "3744814" ;
+	:ISIN "SE0000108656" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_FRANCE_TELECOM :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_GDF_SUEZ :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_GLAXOSMITHKLINE a :Stock ;
+	rdfs:label "GLAXOSMITHKLINE ORD GBP0.25" ;
+	:ID_NOTATION "9454571" ;
+	:ISIN "GB0009252882" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_HENNES_MAURITZ a :Stock ;
+	rdfs:label "HENNES & MAURITZ SER'B'NPV" ;
+	:ID_NOTATION "247954" ;
+	:ISIN "SE0000106270" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_HSBC_HOLDINGS a :Stock ;
+	rdfs:label "HSBC HLDGS PLC, ORD $0.50 (UK REG)" ;
+	:ID_NOTATION "200953" ;
+	:ISIN "GB0005405286" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_IMPERIAL_TOBACCO_GROUP a :Stock ;
+	rdfs:label "IMPERIAL TOBACCO GROUP ORD GBP0.10" ;
+	:ID_NOTATION "9454588" ;
+	:ISIN "GB0004544929" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ING_GROEP_N_V :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_LVMH_MOET_HENNESY :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_NATIONAL_GRID a :Stock ;
+	rdfs:label "NATIONAL GRID ORD GBP0.113953" ;
+	:ID_NOTATION "9454629" ;
+	:ISIN "GB00B08SNH34" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_NESTLE_SA a :Stock ;
+	rdfs:label "NESTLE SA CHF0.10(REGD)" ;
+	:ID_NOTATION "100533" ;
+	:ISIN "CH0038863350" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_NOVARTIS a :Stock ;
+	rdfs:label "NOVARTIS AG CHF0.50(REGD)" ;
+	:ID_NOTATION "101502" ;
+	:ISIN "CH0012005267" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_RIO_TINTO a :Stock ;
+	rdfs:label "RIO TINTO ORD GBP0.10" ;
+	:ID_NOTATION "9454653" ;
+	:ISIN "GB0007188757" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ROCHE_GS a :Stock ;
+	rdfs:label "ROCHE HOLDINGS AG GENUSSCHEINE NPV" ;
+	:ID_NOTATION "100563" ;
+	:ISIN "CH0012032048" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ROYAL_DUTCH_SHELL a :Stock ;
+	rdfs:label "ROYAL DUTCH SHELL PLC, A' ORD EUR0.07" ;
+	:ID_NOTATION "12515415" ;
+	:ISIN "GB00B03MLX29" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_SANOFI :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_SAP :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_SIEMENS :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_STANDARD_CHARTERED a :Stock ;
+	rdfs:label "STANDARD CHARTERED PLC ORD USD0.50" ;
+	:ID_NOTATION "9454342" ;
+	:ISIN "GB0004082847" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_TELEFONICA :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_TESCO a :Stock ;
+	rdfs:label "TESCO PLC ORD 5P" ;
+	:ID_NOTATION "9454349" ;
+	:ISIN "GB0008847096" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_TOTAL :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_UBS_AG a :Stock ;
+	rdfs:label "UBS AG CHF0.10" ;
+	:ID_NOTATION "1535545" ;
+	:ISIN "CH0024899483" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_UNILEVER_NV :memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_UNILEVER a :Stock ;
+	rdfs:label "UNILEVER PLC ORD GBP0.031111" ;
+	:ID_NOTATION "9454401" ;
+	:ISIN "GB00B10RZP78" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_VODAFONE_GRP a :Stock ;
+	rdfs:label "VODAFONE GROUP ORD USD0.11428571" ;
+	:ID_NOTATION "9454654" ;
+	:ISIN "GB00B16GWD56" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ZURICH_FINANCIAL_SERVICES a :Stock ;
+	rdfs:label "ZURICH INSURANCE GROUP AG CHF0.10" ;
+	:ID_NOTATION "108971" ;
+	:ISIN "CH0011075394" ;
+	:memberOf :index_STOXX_EUROPE_50_EUR .
+
+:stock_ABERDEEN_ASSET_MGMT a :Stock ;
+	rdfs:label "ABDN.ASSET.MAN. ORD 10P" ;
+	:ID_NOTATION "9454175" ;
+	:ISIN "GB0000031285" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ADMIRAL_GROUP a :Stock ;
+	rdfs:label "ADMIRAL GROUP ORD GBP0.001" ;
+	:ID_NOTATION "10535404" ;
+	:ISIN "GB00B02J6398" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_AGGREKO_ORD_13_549_775P a :Stock ;
+	rdfs:label "AGGREKO ORD 13 549/775P" ;
+	:ID_NOTATION "9454403" ;
+	:ISIN "GB00B4WQ2Z29" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_AMEC a :Stock ;
+	rdfs:label "AMEC ORD GBP0.50" ;
+	:ID_NOTATION "9454473" ;
+	:ISIN "GB0000282623" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_Anglo_American_PLC :memberOf :index_FTSE_100_INDEX .
+
+:stock_ANTOFAGASTA a :Stock ;
+	rdfs:label "ANTOFAGASTA ORD GBP0.05" ;
+	:ID_NOTATION "9454481" ;
+	:ISIN "GB0000456144" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ARM_HOLDINGS a :Stock ;
+	rdfs:label "ARM HOLDINGS PLC ORD 0.05P" ;
+	:ID_NOTATION "9454541" ;
+	:ISIN "GB0000595859" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ASHMORE_ORD_0_01P a :Stock ;
+	rdfs:label "ASHMORE ORD 0.01P" ;
+	:ID_NOTATION "15863139" ;
+	:ISIN "GB00B132NW22" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ASSOCIATED_BRITISH_FOODS a :Stock ;
+	rdfs:label "ASSOCIATED BRITISH FOODS ORD GBP0.0568" ;
+	:ID_NOTATION "9454569" ;
+	:ISIN "GB0006731235" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ASTRAZENECA :memberOf :index_FTSE_100_INDEX .
+
+:stock_AVIVA a :Stock ;
+	rdfs:label "AVIVA ORD GBP0.25" ;
+	:ID_NOTATION "9454530" ;
+	:ISIN "GB0002162385" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_BAE_SYSTEMS a :Stock ;
+	rdfs:label "BAE SYSTEMS ORD GBP0.025" ;
+	:ID_NOTATION "46983" ;
+	:ISIN "GB0002634946" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_BARCLAYS :memberOf :index_FTSE_100_INDEX .
+
+:stock_BG_GROUP :memberOf :index_FTSE_100_INDEX .
+
+:stock_BHP_BILLITON :memberOf :index_FTSE_100_INDEX .
+
+:stock_BP :memberOf :index_FTSE_100_INDEX .
+
+:stock_BRITISH_AMERICAN_TOBACCO :memberOf :index_FTSE_100_INDEX .
+
+:stock_BRITISH_LAND_COMPANY a :Stock ;
+	rdfs:label "BRITISH LAND CO ORD GBP0.25" ;
+	:ID_NOTATION "9454509" ;
+	:ISIN "GB0001367019" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_BRITISH_SKY_BROADCASTING a :Stock ;
+	rdfs:label "BRITISH SKY BROADCASTING GROUP ORD GBP0.50" ;
+	:ID_NOTATION "9454513" ;
+	:ISIN "GB0001411924" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_BT_GROUP a :Stock ;
+	rdfs:label "BT GROUP ORD 5P" ;
+	:ID_NOTATION "9454511" ;
+	:ISIN "GB0030913577" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_BUNZL a :Stock ;
+	rdfs:label "BUNZL ORD 32 1/7P" ;
+	:ID_NOTATION "9454517" ;
+	:ISIN "GB00B0744B38" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_BURBERRY_GROUP a :Stock ;
+	rdfs:label "BURBERRY GROUP PLC ORD 0.05P" ;
+	:ID_NOTATION "9453925" ;
+	:ISIN "GB0031743007" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_CAPITA_GROUP_ORD_2_066666P a :Stock ;
+	rdfs:label "CAPITA GROUP ORD 2.066666P" ;
+	:ID_NOTATION "9454414" ;
+	:ISIN "GB00B23K0M20" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_Capital_Shopping_Centres_Group_PLC a :Stock ;
+	rdfs:label "CAPITAL SHOPPING CENTRES GROUP PLC ORD 50P" ;
+	:ID_NOTATION "9454354" ;
+	:ISIN "GB0006834344" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_CARNIVAL a :Stock ;
+	rdfs:label "CARNIVAL PLC ORD USD1.66" ;
+	:ID_NOTATION "9454460" ;
+	:ISIN "GB0031215220" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_CENTRICA a :Stock ;
+	rdfs:label "CENTRICA ORD GBP0.061728395" ;
+	:ID_NOTATION "10721593" ;
+	:ISIN "GB00B033F229" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_COMPASS_GROUP a :Stock ;
+	rdfs:label "COMPASS GROUP PLC ORD GBP0.10" ;
+	:ID_NOTATION "9454452" ;
+	:ISIN "GB0005331532" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_CRH_0 a :Stock ;
+	rdfs:label "CRH ORD EUR 0.32" ;
+	:ID_NOTATION "206330" ;
+	:ISIN "IE0001827041" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_CRODA_INTERNATIONAL a :Stock ;
+	rdfs:label "CRODA INTL. ORD 10P" ;
+	:ID_NOTATION "9454533" ;
+	:ISIN "GB0002335270" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_DIAGEO :memberOf :index_FTSE_100_INDEX .
+
+:stock_EURSN_NAT_RES a :Stock ;
+	rdfs:label "EURASIAN NATURAL RESOURCES CORP ORD USD0.20" ;
+	:ID_NOTATION "20649863" ;
+	:ISIN "GB00B29BCK10" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_EVRAZ_ORD_USD1_00 a :Stock ;
+	rdfs:label "EVRAZ ORD USD1.00" ;
+	:ID_NOTATION "53759978" ;
+	:ISIN "GB00B71N6K86" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_EXPERIAN a :Stock ;
+	rdfs:label "EXPERIAN PLC ORD USD0.10" ;
+	:ID_NOTATION "15830778" ;
+	:ISIN "GB00B19NLV48" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_FRESNILLO_ORD_USD0_50 a :Stock ;
+	rdfs:label "FRESNILLO ORD USD0.50" ;
+	:ID_NOTATION "22901689" ;
+	:ISIN "GB00B2QPKJ12" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_GROUP_4_SECURICOR a :Stock ;
+	rdfs:label "G4S ORD GBP0.25" ;
+	:ID_NOTATION "10331212" ;
+	:ISIN "GB00B01FLG62" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_GKN a :Stock ;
+	rdfs:label "GKN PLC ORD GBP0.10" ;
+	:ID_NOTATION "9454579" ;
+	:ISIN "GB0030646508" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_GLAXOSMITHKLINE :memberOf :index_FTSE_100_INDEX .
+
+:stock_GLENCORE_ORD_USD0_01 a :Stock ;
+	rdfs:label "GLENCORE ORD USD0.01" ;
+	:ID_NOTATION "46526645" ;
+	:ISIN "JE00B4T3BW64" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_HAMMERSON a :Stock ;
+	rdfs:label "HAMMERSON ORD GBP0.25" ;
+	:ID_NOTATION "9454426" ;
+	:ISIN "GB0004065016" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_HARGREAVES_LANS_ORD_0_4P a :Stock ;
+	rdfs:label "HARGREAVES LANS ORD 0.4P" ;
+	:ID_NOTATION "17720031" ;
+	:ISIN "GB00B1VZ0M25" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_HSBC_HOLDINGS :memberOf :index_FTSE_100_INDEX .
+
+:stock_ICAP a :Stock ;
+	rdfs:label "ICAP ORD GBP0.10" ;
+	:ID_NOTATION "9229893" ;
+	:ISIN "GB0033872168" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_IMI a :Stock ;
+	rdfs:label "IMI ORD GBP0.25" ;
+	:ID_NOTATION "9454591" ;
+	:ISIN "GB0004579636" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_IMPERIAL_TOBACCO_GROUP :memberOf :index_FTSE_100_INDEX .
+
+:stock_INTERCON_HTL a :Stock ;
+	rdfs:label "INTERCONTL HOTELS ORD GBP0.13617" ;
+	:ID_NOTATION "14991205" ;
+	:ISIN "GB00B1WQCS47" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_INTERTEK_GROUP a :Stock ;
+	rdfs:label "INTERTEK GROUP PLC ORD 1P" ;
+	:ID_NOTATION "9453910" ;
+	:ISIN "GB0031638363" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_INTL_CONSOL_AIR_ORD_EUR0_50_CDI a :Stock ;
+	rdfs:label "INTL CONSOL AIR ORD EUR0.50 (CDI)" ;
+	:ID_NOTATION "42536944" ;
+	:ISIN "ES0177542018" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_INTERNATIONAL_POWER a :Stock ;
+	rdfs:label "INTL POWER ORD 50P" ;
+	:ID_NOTATION "9454631" ;
+	:ISIN "GB0006320161" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ITV a :Stock ;
+	rdfs:label "ITV ORD 10P" ;
+	:ID_NOTATION "10400243" ;
+	:ISIN "GB0033986497" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_JOHNSON_MATTHEY a :Stock ;
+	rdfs:label "JOHNSON MATTHEY ORD GBP1" ;
+	:ID_NOTATION "9454596" ;
+	:ISIN "GB0004764071" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_KAZAKHMYS a :Stock ;
+	rdfs:label "KAZAKHMYS ORD GBP0.20" ;
+	:ID_NOTATION "13029952" ;
+	:ISIN "GB00B0HZPV38" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_KINGFISHER a :Stock ;
+	rdfs:label "KINGFISHER ORD GBP0.157142857" ;
+	:ID_NOTATION "9454372" ;
+	:ISIN "GB0033195214" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_LAND_SECURITIES_GROUP a :Stock ;
+	rdfs:label "LAND SECURITIES GROUP ORD GBP0.10" ;
+	:ID_NOTATION "9454600" ;
+	:ISIN "GB0031809436" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_LEGAL_GENERAL_GROUP a :Stock ;
+	rdfs:label "LEGAL & GENERAL GROUP PLC, ORD 2 1/2P" ;
+	:ID_NOTATION "9454602" ;
+	:ISIN "GB0005603997" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_Lloyds_Banking_Group_PLC a :Stock ;
+	rdfs:label "LLOYDS BANKING GROUP PLC ORD 10P" ;
+	:ID_NOTATION "9454345" ;
+	:ISIN "GB0008706128" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_MAN_GR a :Stock ;
+	rdfs:label "MAN GROUP ORD USD0.03428571" ;
+	:ID_NOTATION "15414422" ;
+	:ISIN "GB00B28KQ186" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_MARKS_SPENCER_GROUP a :Stock ;
+	rdfs:label "MARKS & SPENCER GROUP ORD GBP0.25" ;
+	:ID_NOTATION "9454612" ;
+	:ISIN "GB0031274896" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_MEGGITT a :Stock ;
+	rdfs:label "MEGGITT ORD 5P" ;
+	:ID_NOTATION "9454617" ;
+	:ISIN "GB0005758098" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_MORRISON_SUPERMARKETS a :Stock ;
+	rdfs:label "MORRISON(WM.)SUPERMARKETS ORD GBP0.10" ;
+	:ID_NOTATION "9454623" ;
+	:ISIN "GB0006043169" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_NATIONAL_GRID :memberOf :index_FTSE_100_INDEX .
+
+:stock_NEXT a :Stock ;
+	rdfs:label "NEXT ORD GBP0.10" ;
+	:ID_NOTATION "9454585" ;
+	:ISIN "GB0032089863" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_OLD_MUTUAL_ORD_11_3_7P a :Stock ;
+	rdfs:label "OLD MUTUAL ORD 11 3/7P" ;
+	:ID_NOTATION "9454663" ;
+	:ISIN "GB00B77J0862" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_PEARSON a :Stock ;
+	rdfs:label "PEARSON ORD GBP0.25" ;
+	:ID_NOTATION "9454639" ;
+	:ISIN "GB0006776081" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_Petrofac_Ld a :Stock ;
+	rdfs:label "PETROFAC LD ORD USD0.02" ;
+	:ID_NOTATION "13014474" ;
+	:ISIN "GB00B0H2K534" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_POLYMET_INT_ORD_NPV a :Stock ;
+	rdfs:label "POLYMET INT ORD NPV" ;
+	:ID_NOTATION "53873926" ;
+	:ISIN "JE00B6T5S470" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_PRUDENTIAL a :Stock ;
+	rdfs:label "PRUDENTIAL ORD GBP0.05" ;
+	:ID_NOTATION "9454651" ;
+	:ISIN "GB0007099541" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_RANDGOLD_RESOURCES a :Stock ;
+	rdfs:label "RANDGOLD RESOURCES ORD USD0.05" ;
+	:ID_NOTATION "9454400" ;
+	:ISIN "GB00B01C3S32" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_RCKTT_BNCKRS a :Stock ;
+	rdfs:label "RECKITT BENCKISER GROUP PLC ORD GBP0.10" ;
+	:ID_NOTATION "9454657" ;
+	:ISIN "GB00B24CGK77" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_REED_ELSEVIER a :Stock ;
+	rdfs:label "REED ELSEVIER GBP0.1444" ;
+	:ID_NOTATION "9454659" ;
+	:ISIN "GB00B2B0DG97" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_Resolution_Ld a :Stock ;
+	rdfs:label "RESOLUTION LD ORD NPV" ;
+	:ID_NOTATION "26417409" ;
+	:ISIN "GG00B62W2327" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_REXAM a :Stock ;
+	rdfs:label "REXAM ORD GBX64.285714" ;
+	:ID_NOTATION "9454500" ;
+	:ISIN "GB0004250451" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_RIO_TINTO :memberOf :index_FTSE_100_INDEX .
+
+:stock_ROLLS_ROYCE_HLG_ORD_SHS_20P a :Stock ;
+	rdfs:label "ROLLS-ROYCE HLG ORD SHS 20P" ;
+	:ID_NOTATION "9454664" ;
+	:ISIN "GB00B63H8491" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ROYAL_BANK_OF_SCOTLAND_GROUP a :Stock ;
+	rdfs:label "ROYAL BANK OF SCOTLAND GROUP PLC ORD 25P" ;
+	:ID_NOTATION "9454666" ;
+	:ISIN "GB0007547838" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ROYAL_DUTCH_SHELL_PLC_B a :Stock ;
+	rdfs:label "ROYAL DUTCH SHELL PLC 'B' ORD EUR0.07" ;
+	:ID_NOTATION "12556703" ;
+	:ISIN "GB00B03MM408" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ROYAL_DUTCH_SHELL :memberOf :index_FTSE_100_INDEX .
+
+:stock_ROYAL_SUN_ALLIANCE_INS_GRP a :Stock ;
+	rdfs:label "RSA INSURANCE GROUP PLC ORD GBP0.275" ;
+	:ID_NOTATION "9454344" ;
+	:ISIN "GB0006616899" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SABMILLER a :Stock ;
+	rdfs:label "SABMILLER ORD USD0.10" ;
+	:ID_NOTATION "9454597" ;
+	:ISIN "GB0004835483" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SAGE_GROUP a :Stock ;
+	rdfs:label "SAGE GROUP ORD GBP0.01" ;
+	:ID_NOTATION "9454328" ;
+	:ISIN "GB0008021650" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SAINSBURY_J a :Stock ;
+	rdfs:label "SAINSBURY(J) ORD GBP0.28571428" ;
+	:ID_NOTATION "10310840" ;
+	:ISIN "GB00B019KW72" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SCHRODERS_PLC_NON_VOTING a :Stock ;
+	rdfs:label "SCHRODERS NON VTG ORD GBP1" ;
+	:ID_NOTATION "9454675" ;
+	:ISIN "GB0002395811" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SCHRODERS a :Stock ;
+	rdfs:label "SCHRODERS VTG SHS GBP1" ;
+	:ID_NOTATION "9454670" ;
+	:ISIN "GB0002405495" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SERCO_GROUP a :Stock ;
+	rdfs:label "SERCO GROUP ORD GBP0.02" ;
+	:ID_NOTATION "9454413" ;
+	:ISIN "GB0007973794" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SEVERN_TRNT a :Stock ;
+	rdfs:label "SEVERN TRENT ORD GBP0.9789" ;
+	:ID_NOTATION "9454482" ;
+	:ISIN "GB00B1FH8J72" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SHIRE_PLC a :Stock ;
+	rdfs:label "SHIRE ORD GBP0.05" ;
+	:ID_NOTATION "9454327" ;
+	:ISIN "JE00B2QKY057" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SMITH_NEPHEW a :Stock ;
+	rdfs:label "SMITH & NEPHEW ORD USD0.20" ;
+	:ID_NOTATION "9454334" ;
+	:ISIN "GB0009223206" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SMITHS_GROUP a :Stock ;
+	rdfs:label "SMITHS GROUP PLC ORD GBP0.375" ;
+	:ID_NOTATION "9454335" ;
+	:ISIN "GB00B1WY2338" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_SCOTTISH_SOUTHERN_ENERGY a :Stock ;
+	rdfs:label "SSE ORD 50P" ;
+	:ID_NOTATION "9454320" ;
+	:ISIN "GB0007908733" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_STANDARD_CHARTERED :memberOf :index_FTSE_100_INDEX .
+
+:stock_STANDARD_LIFE a :Stock ;
+	rdfs:label "STANDARD LIFE ORD GBP0.10" ;
+	:ID_NOTATION "15198473" ;
+	:ISIN "GB00B16KPT44" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_TATE_LYLE a :Stock ;
+	rdfs:label "TATE & LYLE ORD 25P" ;
+	:ID_NOTATION "9454346" ;
+	:ISIN "GB0008754136" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_TESCO :memberOf :index_FTSE_100_INDEX .
+
+:stock_TULLOW_OIL a :Stock ;
+	rdfs:label "TULLOW OIL PLC ORD GBP0.10" ;
+	:ID_NOTATION "9454417" ;
+	:ISIN "GB0001500809" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_UNILEVER :memberOf :index_FTSE_100_INDEX .
+
+:stock_UTD_UTILITIES_GRP a :Stock ;
+	rdfs:label "UNITED UTILITIES GROUP PLC ORD GBP0.05" ;
+	:ID_NOTATION "201123" ;
+	:ISIN "GB00B39J2M42" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_VEDANTA_RESOURCES a :Stock ;
+	rdfs:label "VEDANTA RESOURCES ORD USD0.10" ;
+	:ID_NOTATION "9453915" ;
+	:ISIN "GB0033277061" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_VODAFONE_GRP :memberOf :index_FTSE_100_INDEX .
+
+:stock_WEIR_GROUP a :Stock ;
+	rdfs:label "WEIR GROUP ORD GBP0.125" ;
+	:ID_NOTATION "9454362" ;
+	:ISIN "GB0009465807" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_Whitbread_PLC a :Stock ;
+	rdfs:label "WHITBREAD PLC ORD 76 122/153P" ;
+	:ID_NOTATION "9454365" ;
+	:ISIN "GB00B1KJJ408" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_Wolseley_PLC a :Stock ;
+	rdfs:label "WOLSELEY PLC ORD 10P" ;
+	:ID_NOTATION "9454370" ;
+	:ISIN "JE00B3YWCQ29" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_WPP a :Stock ;
+	rdfs:label "WPP PLC ORD GBP0.10" ;
+	:ID_NOTATION "9454369" ;
+	:ISIN "JE00B3DMTY01" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_XSTRATA a :Stock ;
+	rdfs:label "XSTRATA PLC, ORD USD0.50" ;
+	:ID_NOTATION "9453920" ;
+	:ISIN "GB0031411001" ;
+	:memberOf :index_FTSE_100_INDEX .
+
+:stock_ADIDAS_AG a :Stock ;
+	rdfs:label "ADIDAS AG NPV (REGD)" ;
+	:ID_NOTATION "39471840" ;
+	:ISIN "DE000A1EWWW0" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_ALLIANZ :memberOf :index_GERMANY_DAX_TR .
+
+:stock_BASF :memberOf :index_GERMANY_DAX_TR .
+
+:stock_BAYER :memberOf :index_GERMANY_DAX_TR .
+
+:stock_BMW :memberOf :index_GERMANY_DAX_TR .
+
+:stock_BEIERSDORF a :Stock ;
+	rdfs:label "BEIERSDORF AG NPV" ;
+	:ID_NOTATION "143111" ;
+	:ISIN "DE0005200000" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_COMMERZBANK a :Stock ;
+	rdfs:label "COMMERZBANK ORD COMMERZBANK ORD SHS" ;
+	:ID_NOTATION "180039" ;
+	:ISIN "DE0008032004" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_DAIMLER :memberOf :index_GERMANY_DAX_TR .
+
+:stock_DT_BANK :memberOf :index_GERMANY_DAX_TR .
+
+:stock_DEUTSCHE_BOERSE :memberOf :index_GERMANY_DAX_TR .
+
+:stock_DEUTSCHE_LUFTHANSA_REG a :Stock ;
+	rdfs:label "DEUTSCHE LUFTHANSA AG ORD NPV (REGD)(VINK)" ;
+	:ID_NOTATION "1543196" ;
+	:ISIN "DE0008232125" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_DEUTSCHE_POST a :Stock ;
+	rdfs:label "DEUTSCHE POST AG NPV(REGD)" ;
+	:ID_NOTATION "144553" ;
+	:ISIN "DE0005552004" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_DEUTSCHE_TELEKOM :memberOf :index_GERMANY_DAX_TR .
+
+:stock_E_ON :memberOf :index_GERMANY_DAX_TR .
+
+:stock_FRESENIUS_MEDICAL_CARE a :Stock ;
+	rdfs:label "FRESENIUS MEDIC FRESENIUS MEDICAL CARE ORD SHS" ;
+	:ID_NOTATION "150288" ;
+	:ISIN "DE0005785802" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_FRES_SE_C a :Stock ;
+	rdfs:label "FRESENIUS SE&CO KGAA NPV" ;
+	:ID_NOTATION "1958612" ;
+	:ISIN "DE0005785604" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_HEIDELBERGCEMENT a :Stock ;
+	rdfs:label "HEIDELBERGCEMENT AG NPV" ;
+	:ID_NOTATION "152371" ;
+	:ISIN "DE0006047004" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_HENKEL_KGAA_VORZUG a :Stock ;
+	rdfs:label "HENKEL AG&CO. KGAA NON-VTG PRF NPV" ;
+	:ID_NOTATION "152378" ;
+	:ISIN "DE0006048432" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_INFINEON_TECHNOLOGIES a :Stock ;
+	rdfs:label "INFINEON TECHNOLOGIES AG ORD NPV (REGD)" ;
+	:ID_NOTATION "154990" ;
+	:ISIN "DE0006231004" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_K_S a :Stock ;
+	rdfs:label "K&S AG NPV (REGD)" ;
+	:ID_NOTATION "49543290" ;
+	:ISIN "DE000KSAG888" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_LINDE a :Stock ;
+	rdfs:label "LINDE AG NPV" ;
+	:ID_NOTATION "158199" ;
+	:ISIN "DE0006483001" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_MAN a :Stock ;
+	rdfs:label "MAN SE ORD NPV" ;
+	:ID_NOTATION "151264" ;
+	:ISIN "DE0005937007" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_MERCK_KGAA a :Stock ;
+	rdfs:label "MERCK KGAA NPV" ;
+	:ID_NOTATION "158463" ;
+	:ISIN "DE0006599905" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_METRO a :Stock ;
+	rdfs:label "METRO AG ORD NPV" ;
+	:ID_NOTATION "164251" ;
+	:ISIN "DE0007257503" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_MUNCH_RUCK :memberOf :index_GERMANY_DAX_TR .
+
+:stock_RWE :memberOf :index_GERMANY_DAX_TR .
+
+:stock_SAP :memberOf :index_GERMANY_DAX_TR .
+
+:stock_SIEMENS :memberOf :index_GERMANY_DAX_TR .
+
+:stock_THYSSENKRUPP a :Stock ;
+	rdfs:label "THYSSENKRUPP AG NPV" ;
+	:ID_NOTATION "167332" ;
+	:ISIN "DE0007500001" ;
+	:memberOf :index_GERMANY_DAX_TR .
+
+:stock_VW_VZ :memberOf :index_GERMANY_DAX_TR .
+
+:stock_ACCOR a :Stock ;
+	rdfs:label "ACCOR EUR3" ;
+	:ID_NOTATION "195718" ;
+	:ISIN "FR0000120404" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_AIR_LIQUIDE :memberOf :index_FRANCE_CAC_40 .
+
+:stock_ALCATEL a :Stock ;
+	rdfs:label "ALCATEL-LUCENT EUR2" ;
+	:ID_NOTATION "195885" ;
+	:ISIN "FR0000130007" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_ALSTOM a :Stock ;
+	rdfs:label "ALSTOM EUR7.00" ;
+	:ID_NOTATION "195700" ;
+	:ISIN "FR0010220475" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_ARCELORMITTAL :memberOf :index_FRANCE_CAC_40 .
+
+:stock_AXA :memberOf :index_FRANCE_CAC_40 .
+
+:stock_BNP_PARIBAS :memberOf :index_FRANCE_CAC_40 .
+
+:stock_BOUYGUES a :Stock ;
+	rdfs:label "BOUYGUES EUR1" ;
+	:ID_NOTATION "195725" ;
+	:ISIN "FR0000120503" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_CAP_GEMINI a :Stock ;
+	rdfs:label "CAP GEMINI EUR8" ;
+	:ID_NOTATION "195855" ;
+	:ISIN "FR0000125338" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_CARREFOUR :memberOf :index_FRANCE_CAC_40 .
+
+:stock_CREDIT_AGRICOLE a :Stock ;
+	rdfs:label "CREDIT AGRICOLE SA EUR3" ;
+	:ID_NOTATION "4925967" ;
+	:ISIN "FR0000045072" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_GROUPE_DANONE :memberOf :index_FRANCE_CAC_40 .
+
+:stock_EUROPEAN_AERONAUTIC_DEFENCE a :Stock ;
+	rdfs:label "EADS(EURO AERONAUTIC DEFENSE SPACE) EUR1" ;
+	:ID_NOTATION "1549220" ;
+	:ISIN "NL0000235190" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_EDF a :Stock ;
+	rdfs:label "ELECTRICITE DE FRANCE EUR0.5" ;
+	:ID_NOTATION "13268003" ;
+	:ISIN "FR0010242511" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_ESSILOR_INTERNATIONAL a :Stock ;
+	rdfs:label "ESSILOR INTERNATIONAL EUR0.18" ;
+	:ID_NOTATION "195820" ;
+	:ISIN "FR0000121667" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_FRANCE_TELECOM :memberOf :index_FRANCE_CAC_40 .
+
+:stock_GDF_SUEZ :memberOf :index_FRANCE_CAC_40 .
+
+:stock_L_OREAL :memberOf :index_FRANCE_CAC_40 .
+
+:stock_LAFARGE a :Stock ;
+	rdfs:label "LAFARGE EUR4" ;
+	:ID_NOTATION "195736" ;
+	:ISIN "FR0000120537" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_LEGRAND_PROMESSE a :Stock ;
+	rdfs:label "LEGRAND SA EUR4" ;
+	:ID_NOTATION "14554787" ;
+	:ISIN "FR0010307819" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_LVMH_MOET_HENNESY :memberOf :index_FRANCE_CAC_40 .
+
+:stock_MICHELIN_CGDE_B a :Stock ;
+	rdfs:label "MICHELIN(CIE GLE DES ETABL.) EUR2(REGD)" ;
+	:ID_NOTATION "195786" ;
+	:ISIN "FR0000121261" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_PERNOD_RICARD a :Stock ;
+	rdfs:label "PERNOD RICARD EUR1.55" ;
+	:ID_NOTATION "195763" ;
+	:ISIN "FR0000120693" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_PEUGEOT a :Stock ;
+	rdfs:label "PEUGEOT SA EUR1" ;
+	:ID_NOTATION "2012178" ;
+	:ISIN "FR0000121501" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_PPR a :Stock ;
+	rdfs:label "PPR EUR4" ;
+	:ID_NOTATION "195807" ;
+	:ISIN "FR0000121485" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_PUBLICIS_GROUPE a :Stock ;
+	rdfs:label "PUBLICIS GROUPE SA EUR0.40" ;
+	:ID_NOTATION "1544919" ;
+	:ISIN "FR0000130577" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_RENAULT a :Stock ;
+	rdfs:label "RENAULT SA EUR3.81" ;
+	:ID_NOTATION "1544927" ;
+	:ISIN "FR0000131906" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_SAFRAN_S_A_INH a :Stock ;
+	rdfs:label "SAFRAN EUR0.20" ;
+	:ID_NOTATION "1544785" ;
+	:ISIN "FR0000073272" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_SAINT_GOBAIN :memberOf :index_FRANCE_CAC_40 .
+
+:stock_SANOFI :memberOf :index_FRANCE_CAC_40 .
+
+:stock_SCHNEIDER_ELECTRIC :memberOf :index_FRANCE_CAC_40 .
+
+:stock_SOC_GEN :memberOf :index_FRANCE_CAC_40 .
+
+:stock_STMICROELECTRONICS a :Stock ;
+	rdfs:label "STMICROELECTRONICS EUR1.04" ;
+	:ID_NOTATION "244460" ;
+	:ISIN "NL0000226223" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_TECHNIP a :Stock ;
+	rdfs:label "TECHNIP NPV" ;
+	:ID_NOTATION "195937" ;
+	:ISIN "FR0000131708" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_TOTAL :memberOf :index_FRANCE_CAC_40 .
+
+:stock_UNIBAIL_S_A_INH :memberOf :index_FRANCE_CAC_40 .
+
+:stock_VALLOUREC a :Stock ;
+	rdfs:label "VALLOUREC(USIN A TUB DE LOR ESCAUT) EUR2.00" ;
+	:ID_NOTATION "45408" ;
+	:ISIN "FR0000120354" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_VEOLIA_ENVIRONNEMENT a :Stock ;
+	rdfs:label "VEOLIA ENVIRONNEMENT EUR5" ;
+	:ID_NOTATION "195836" ;
+	:ISIN "FR0000124141" ;
+	:memberOf :index_FRANCE_CAC_40 .
+
+:stock_VINCI :memberOf :index_FRANCE_CAC_40 .
+
+:stock_VIVENDI_UNIVERSAL :memberOf :index_FRANCE_CAC_40 .
+
+:stock_A2A_SPA a :Stock ;
+	rdfs:label "A2A SPA EUR0.52" ;
+	:ID_NOTATION "2050132" ;
+	:ISIN "IT0001233417" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_ANSALDO_STS a :Stock ;
+	rdfs:label "ANSALDO STS EUR0.5" ;
+	:ID_NOTATION "14508697" ;
+	:ISIN "IT0003977540" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_ASSICURAZIONI_GENERALI :memberOf :index_FTSE_MIB_INDEX .
+
+:stock_ATLANTIA a :Stock ;
+	rdfs:label "ATLANTIA SPA EUR1" ;
+	:ID_NOTATION "8082820" ;
+	:ISIN "IT0003506190" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_AUTOGRILL a :Stock ;
+	rdfs:label "AUTOGRILL SPA EUR0.52" ;
+	:ID_NOTATION "1952929" ;
+	:ISIN "IT0001137345" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_AZIMUT_HLDG a :Stock ;
+	rdfs:label "AZIMUT HLDG S.P.A NPV" ;
+	:ID_NOTATION "10294723" ;
+	:ISIN "IT0003261697" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_BANCA_MONTE_DEI_PASCHI_SIENA a :Stock ;
+	rdfs:label "BANCA MONTE DEI PASCHI DI SIENA NPV" ;
+	:ID_NOTATION "1546149" ;
+	:ISIN "IT0001334587" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_BCA_POP_EMIL a :Stock ;
+	rdfs:label "BANCA POPOLARE DELL'EMILIA ROMAGNA EUR3" ;
+	:ID_NOTATION "1530568" ;
+	:ISIN "IT0000066123" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_BCA_POP_MILANO a :Stock ;
+	rdfs:label "BANCA POPOLARE DI MILANO NPV" ;
+	:ID_NOTATION "56081" ;
+	:ISIN "IT0000064482" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_BANCO_POP a :Stock ;
+	rdfs:label "BANCO POPOLARE SOC COOPERATIVA NPV" ;
+	:ID_NOTATION "18341929" ;
+	:ISIN "IT0004231566" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_BUZZI_UNICHEM a :Stock ;
+	rdfs:label "BUZZI UNICEM SPA EUR0.60" ;
+	:ID_NOTATION "208901" ;
+	:ISIN "IT0001347308" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_DAVIDE_CAMPARI_DAVIDE_CAMPARI_ORD_SHS a :Stock ;
+	rdfs:label "DAVIDE CAMPARI DAVIDE CAMPARI ORD SHS" ;
+	:ID_NOTATION "3414730" ;
+	:ISIN "IT0003849244" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_DIASORIN a :Stock ;
+	rdfs:label "DIASORIN SPA EUR1" ;
+	:ID_NOTATION "18530142" ;
+	:ISIN "IT0003492391" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_ENEL :memberOf :index_FTSE_MIB_INDEX .
+
+:stock_ENEL_GREE a :Stock ;
+	rdfs:label "ENEL GREEN POWER SPA EUR0.20" ;
+	:ID_NOTATION "39669824" ;
+	:ISIN "IT0004618465" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_ENI :memberOf :index_FTSE_MIB_INDEX .
+
+:stock_EXOR a :Stock ;
+	rdfs:label "EXOR EUR1" ;
+	:ID_NOTATION "27924395" ;
+	:ISIN "IT0001353140" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_FIAT_INDUSTRIAL_ORD_SHS a :Stock ;
+	rdfs:label "FIAT INDUSTRIAL ORD SHS" ;
+	:ID_NOTATION "41599473" ;
+	:ISIN "IT0004644743" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_FIAT a :Stock ;
+	rdfs:label "FIAT ORD SHS" ;
+	:ID_NOTATION "1530731" ;
+	:ISIN "IT0001976403" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_FINMECCANICA a :Stock ;
+	rdfs:label "FINMECCANICA SPA EUR4.40" ;
+	:ID_NOTATION "56801" ;
+	:ISIN "IT0003856405" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_IMPREGILO a :Stock ;
+	rdfs:label "IMPREGILO SPA NPV" ;
+	:ID_NOTATION "207496" ;
+	:ISIN "IT0003865570" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_INTESA_SANPAOLO :memberOf :index_FTSE_MIB_INDEX .
+
+:stock_LOTTOMATICA a :Stock ;
+	rdfs:label "LOTTOMATICA SPA EUR1" ;
+	:ID_NOTATION "13581899" ;
+	:ISIN "IT0003990402" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_LUXOTTICA_GROUP a :Stock ;
+	rdfs:label "LUXOTTICA GROUP EUR0.06" ;
+	:ID_NOTATION "2043381" ;
+	:ISIN "IT0001479374" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_MEDIASET a :Stock ;
+	rdfs:label "MEDIASET EUR0.52" ;
+	:ID_NOTATION "208228" ;
+	:ISIN "IT0001063210" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_MEDIOBANCA a :Stock ;
+	rdfs:label "MEDIOBANCA DI CREDITO FINANZ SPA EUR0.5" ;
+	:ID_NOTATION "1947889" ;
+	:ISIN "IT0000062957" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_MEDIOLANUM a :Stock ;
+	rdfs:label "MEDIOLANUM EUR0.1" ;
+	:ID_NOTATION "208743" ;
+	:ISIN "IT0001279501" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_PARMALAT a :Stock ;
+	rdfs:label "PARMALAT S.P.A EUR1" ;
+	:ID_NOTATION "13025532" ;
+	:ISIN "IT0003826473" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_PIRELLI_CO a :Stock ;
+	rdfs:label "PIRELLI & CO NPV" ;
+	:ID_NOTATION "56109" ;
+	:ISIN "IT0004623051" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_PRYSMIAN_SPA a :Stock ;
+	rdfs:label "PRYSMIAN SPA EUR0.10" ;
+	:ID_NOTATION "17651645" ;
+	:ISIN "IT0004176001" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_SAIPEM a :Stock ;
+	rdfs:label "SAIPEM EUR1" ;
+	:ID_NOTATION "207482" ;
+	:ISIN "IT0000068525" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_SALE_FERR a :Stock ;
+	rdfs:label "SALVATORE FERRAGAMO EUR0.10" ;
+	:ID_NOTATION "47369696" ;
+	:ISIN "IT0004712375" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_SNAM_RETE_GAS a :Stock ;
+	rdfs:label "SNAM EUR1" ;
+	:ID_NOTATION "4362746" ;
+	:ISIN "IT0003153415" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_STMICROELECTRONICS_0 a :Stock ;
+	rdfs:label "STMICROELECTRONICS EUR1.04" ;
+	:ID_NOTATION "2043076" ;
+	:ISIN "NL0000226223" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_TELECOM_ITALIA :memberOf :index_FTSE_MIB_INDEX .
+
+:stock_TENARIS a :Stock ;
+	rdfs:label "TENARIS S.A. USD1" ;
+	:ID_NOTATION "6532399" ;
+	:ISIN "LU0156801721" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_TOD_SSPA a :Stock ;
+	rdfs:label "TOD'S SPA EUR2" ;
+	:ID_NOTATION "1995352" ;
+	:ISIN "IT0003007728" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_TERNA a :Stock ;
+	rdfs:label "TRASMISSIONE ELETTRICITA RETE NAZIO ORD EUR0.22" ;
+	:ID_NOTATION "10284195" ;
+	:ISIN "IT0003242622" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_UNICREDIT :memberOf :index_FTSE_MIB_INDEX .
+
+:stock_BANCHE_POPOLARI_UNITE_SCARL a :Stock ;
+	rdfs:label "UNIONE DI BANCHE ITALIANE SCPA EUR2.50" ;
+	:ID_NOTATION "7585748" ;
+	:ISIN "IT0003487029" ;
+	:memberOf :index_FTSE_MIB_INDEX .
+
+:stock_ABENGOA a :Stock ;
+	rdfs:label "ABENGOA SA EUR1.00" ;
+	:ID_NOTATION "192547" ;
+	:ISIN "ES0105200416" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ABERTIS_INFRA_NOM a :Stock ;
+	rdfs:label "ABERTIS INFRAESTRUCTURAS EUR3 SERIE A" ;
+	:ID_NOTATION "8407761" ;
+	:ISIN "ES0111845014" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ACCIONA a :Stock ;
+	rdfs:label "ACCIONA SA EUR1" ;
+	:ID_NOTATION "8407741" ;
+	:ISIN "ES0125220311" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ACERINOX_SA a :Stock ;
+	rdfs:label "ACERINOX SA EUR0.25" ;
+	:ID_NOTATION "10324902" ;
+	:ISIN "ES0132105018" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ACS_ACTIV a :Stock ;
+	rdfs:label "ACS ACTIVIDADES DE CONSTRUCCION Y EUR0.5" ;
+	:ID_NOTATION "10242844" ;
+	:ISIN "ES0167050915" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_AMAT_IT a :Stock ;
+	rdfs:label "AMADEUS IT HLDGS SA EUR0.01" ;
+	:ID_NOTATION "192567" ;
+	:ISIN "ES0109067019" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ARCELORMITTAL_0 a :Stock ;
+	rdfs:label "ARCELORMITTAL NPV" ;
+	:ID_NOTATION "20263058" ;
+	:ISIN "LU0323134006" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_BCO_POP_ESP_NOM a :Stock ;
+	rdfs:label "BANCO POPULAR ESPANOL EUR0.10" ;
+	:ID_NOTATION "8407851" ;
+	:ISIN "ES0113790531" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_BANCO_SANTANDER_CENTRAL_HISP :memberOf :index_SPAIN_IBEX_35 .
+
+:stock_BANKIA a :Stock ;
+	rdfs:label "BANKIA S.A. EUR2" ;
+	:ID_NOTATION "48777998" ;
+	:ISIN "ES0113307039" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_BANKINTER a :Stock ;
+	rdfs:label "BANKINTER SA EUR0.3(REGD)" ;
+	:ID_NOTATION "8407751" ;
+	:ISIN "ES0113679I37" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_BANCO_BILBAO_VIZCAYA_ARGENTA :memberOf :index_SPAIN_IBEX_35 .
+
+:stock_BCO_DE_SABADELL_BANCO_DE_SABADELL_ORD_SHS a :Stock ;
+	rdfs:label "BCO DE SABADELL BANCO DE SABADELL ORD SHS" ;
+	:ID_NOTATION "8407796" ;
+	:ISIN "ES0113860A34" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_BOLSAS_Y a :Stock ;
+	rdfs:label "BOLSAS Y MERCADOS ESPANOLES EUR3.23" ;
+	:ID_NOTATION "15138471" ;
+	:ISIN "ES0115056139" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_CaixaBank a :Stock ;
+	rdfs:label "CAIXABANK S.A." ;
+	:ID_NOTATION "19641606" ;
+	:ISIN "ES0140609019" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_DISE_ALIM a :Stock ;
+	rdfs:label "DISTRIBUIDORA INTL DE ALIMENTACION EUR0.01" ;
+	:ID_NOTATION "48260490" ;
+	:ISIN "ES0126775032" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ENAGAS a :Stock ;
+	rdfs:label "ENAGAS SA EUR1.50" ;
+	:ID_NOTATION "8407775" ;
+	:ISIN "ES0130960018" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ENDESA a :Stock ;
+	rdfs:label "ENDESA SA EUR1.2" ;
+	:ID_NOTATION "8407773" ;
+	:ISIN "ES0130670112" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_FERROVIAL a :Stock ;
+	rdfs:label "FERROVIAL SA EUR0.2" ;
+	:ID_NOTATION "8407780" ;
+	:ISIN "ES0118900010" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_FOMENTO_CON a :Stock ;
+	rdfs:label "FOMENTO DE CONSTRUCCIONES Y CONTRA EUR1" ;
+	:ID_NOTATION "8407779" ;
+	:ISIN "ES0122060314" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_GAMESA_CO a :Stock ;
+	rdfs:label "GAMESA CORPORACION TECNOLOGIA EUR0.17" ;
+	:ID_NOTATION "10235411" ;
+	:ISIN "ES0143416115" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_GAS_NATURAL_SDG_INH a :Stock ;
+	rdfs:label "GAS NATURAL SDG SA EUR1" ;
+	:ID_NOTATION "8407784" ;
+	:ISIN "ES0116870314" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_GRIFOLS_S a :Stock ;
+	rdfs:label "GRIFOLS SA EUR0.5" ;
+	:ID_NOTATION "10303828" ;
+	:ISIN "ES0171996012" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_IBERDROLA :memberOf :index_SPAIN_IBEX_35 .
+
+:stock_INDITEX :memberOf :index_SPAIN_IBEX_35 .
+
+:stock_INDRA_SISTMS_A a :Stock ;
+	rdfs:label "INDRA SISTEMAS S.A EUR0.20 SER 'A'" ;
+	:ID_NOTATION "192706" ;
+	:ISIN "ES0118594417" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_INTL_CONSOL_AIR_ORD_EUR0_50_CDI_0 a :Stock ;
+	rdfs:label "INTL CONSOL AIR ORD EUR0.50 (CDI)" ;
+	:ID_NOTATION "42228402" ;
+	:ISIN "ES0177542018" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_MAPFRE_SA a :Stock ;
+	rdfs:label "MAPFRE SA EUR0.10" ;
+	:ID_NOTATION "8407826" ;
+	:ISIN "ES0124244E34" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_MEDT_ESPA a :Stock ;
+	rdfs:label "MEDIASET ESPANA COMUNICACION SA EUR0.5" ;
+	:ID_NOTATION "10270014" ;
+	:ISIN "ES0152503035" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_OBRASCON a :Stock ;
+	rdfs:label "OBRASCON HUARTE LAIN SA EUR0.6" ;
+	:ID_NOTATION "8407832" ;
+	:ISIN "ES0142090317" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_RED_ELEC a :Stock ;
+	rdfs:label "RED ELECTRICA CORP EUR2" ;
+	:ID_NOTATION "8407841" ;
+	:ISIN "ES0173093115" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_REPSOL_YPF :memberOf :index_SPAIN_IBEX_35 .
+
+:stock_SACYR_VALLEHERM_INH a :Stock ;
+	rdfs:label "SACYR VALLEHERMOSO SA EUR1" ;
+	:ID_NOTATION "8407805" ;
+	:ISIN "ES0182870214" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_TECNICAS_RED a :Stock ;
+	rdfs:label "TECNICAS REUNIDAS ORD EUR0.10" ;
+	:ID_NOTATION "14961168" ;
+	:ISIN "ES0178165017" ;
+	:memberOf :index_SPAIN_IBEX_35 .
+
+:stock_TELEFONICA :memberOf :index_SPAIN_IBEX_35 .
+
+:stock_ABB :memberOf :index_SWITZERLAND_SMI .
+
+:stock_ACTELION a :Stock ;
+	rdfs:label "ACTELION LTD CHF0.50 (REGD)" ;
+	:ID_NOTATION "19420075" ;
+	:ISIN "CH0010532478" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_ADECCO a :Stock ;
+	rdfs:label "ADECCO SA CHF1(REGD)" ;
+	:ID_NOTATION "102424" ;
+	:ISIN "CH0012138605" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_CFR_A a :Stock ;
+	rdfs:label "COMPAGNIE FINANCIERE RICHEMONT AG CHF1.00 (BR) SER 'A'" ;
+	:ID_NOTATION "100346" ;
+	:ISIN "CH0045039655" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_CREDIT_SUISSE_GROUP :memberOf :index_SWITZERLAND_SMI .
+
+:stock_GIVAUDAN a :Stock ;
+	rdfs:label "GIVAUDAN AG CHF10" ;
+	:ID_NOTATION "3395150" ;
+	:ISIN "CH0010645932" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_HOLCIM a :Stock ;
+	rdfs:label "HOLCIM CHF2(REGD)" ;
+	:ID_NOTATION "7422906" ;
+	:ISIN "CH0012214059" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_JULS_BAER a :Stock ;
+	rdfs:label "JULIUS BAER GRUPPE AG CHF0.02 (REGD)" ;
+	:ID_NOTATION "101585" ;
+	:ISIN "CH0102484968" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_NESTLE_SA :memberOf :index_SWITZERLAND_SMI .
+
+:stock_NOVARTIS :memberOf :index_SWITZERLAND_SMI .
+
+:stock_ROCHE_GS :memberOf :index_SWITZERLAND_SMI .
+
+:stock_SGS a :Stock ;
+	rdfs:label "SGS SA CHF1(REGD)" ;
+	:ID_NOTATION "35775" ;
+	:ISIN "CH0002497458" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_SWATCH_GROUP_I a :Stock ;
+	rdfs:label "SWATCH GROUP CHF2.25(BR)" ;
+	:ID_NOTATION "99899" ;
+	:ISIN "CH0012255151" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_SWIS_RE a :Stock ;
+	rdfs:label "SWISS RE AG CHF0.10" ;
+	:ID_NOTATION "46566298" ;
+	:ISIN "CH0126881561" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_SWISSCOM a :Stock ;
+	rdfs:label "SWISSCOM AG CHF1(REGD)" ;
+	:ID_NOTATION "103200" ;
+	:ISIN "CH0008742519" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_SYNGENTA a :Stock ;
+	rdfs:label "SYNGENTA CHF0.10(REGD)" ;
+	:ID_NOTATION "108897" ;
+	:ISIN "CH0011037469" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_SYNTHES a :Stock ;
+	rdfs:label "SYNTHES INC CHF0.001" ;
+	:ID_NOTATION "10552926" ;
+	:ISIN "US87162M4096" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_TRNSOCEAN a :Stock ;
+	rdfs:label "TRANSOCEAN LIMITED COM CHF15" ;
+	:ID_NOTATION "37096783" ;
+	:ISIN "CH0048265513" ;
+	:memberOf :index_SWITZERLAND_SMI .
+
+:stock_UBS_AG :memberOf :index_SWITZERLAND_SMI .
+
+:stock_ZURICH_FINANCIAL_SERVICES :memberOf :index_SWITZERLAND_SMI .
+
+:stock_AEGON a :Stock ;
+	rdfs:label "AEGON NV EUR 0.12" ;
+	:ID_NOTATION "14752101" ;
+	:ISIN "NL0000303709" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_AIR_FRANCE_KLM a :Stock ;
+	rdfs:label "AIR FRANCE-KLM EUR1.00" ;
+	:ID_NOTATION "194460" ;
+	:ISIN "FR0000031122" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_AKZO_NOBEL a :Stock ;
+	rdfs:label "AKZO NOBEL NV EUR2" ;
+	:ID_NOTATION "1934316" ;
+	:ISIN "NL0000009132" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_APERAM_ORD_APERAM_ORD_SHS a :Stock ;
+	rdfs:label "APERAM ORD APERAM ORD SHS" ;
+	:ID_NOTATION "42677400" ;
+	:ISIN "LU0569974404" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_ARCELORMITTAL :memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_ASML_HOLDING_OR_ASML_HOLDING_ORD_SHS a :Stock ;
+	rdfs:label "ASML HOLDING OR ASML HOLDING ORD SHS" ;
+	:ID_NOTATION "63480" ;
+	:ISIN "NL0006034001" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_CORIO a :Stock ;
+	rdfs:label "CORIO NV EUR10" ;
+	:ID_NOTATION "3067494" ;
+	:ISIN "NL0000288967" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_FUGRO_NV a :Stock ;
+	rdfs:label "FUGRO NV EUR0.05" ;
+	:ID_NOTATION "63545" ;
+	:ISIN "NL0000352565" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_HEINEKEN a :Stock ;
+	rdfs:label "HEINEKEN NV EUR1.60" ;
+	:ID_NOTATION "9664640" ;
+	:ISIN "NL0000009165" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_ING_GROEP_N_V :memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_KONINKLIJKE_AHOLD a :Stock ;
+	rdfs:label "KONINKLIJKE AHOLD NV EUR0.30" ;
+	:ID_NOTATION "19038495" ;
+	:ISIN "NL0006033250" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_ROYAL_BOSK_WEST a :Stock ;
+	rdfs:label "KONINKLIJKE BOSKALIS WESTMINSTER NV EUR0.80" ;
+	:ID_NOTATION "17833561" ;
+	:ISIN "NL0000852580" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_DSM_NV a :Stock ;
+	rdfs:label "KONINKLIJKE DSM NV EUR1.50" ;
+	:ID_NOTATION "14813273" ;
+	:ISIN "NL0000009827" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_KONINKLIJKE_KPN a :Stock ;
+	rdfs:label "KONINKLIJKE KPN NV EUR0.24" ;
+	:ID_NOTATION "1531560" ;
+	:ISIN "NL0000009082" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_PHILIPS_ELECTRONICS :memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_POSTNL a :Stock ;
+	rdfs:label "POSTNL N.V. EUR0.48" ;
+	:ID_NOTATION "46825177" ;
+	:ISIN "NL0009739416" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_RANDSTAD_EUR0_10 a :Stock ;
+	rdfs:label "RANDSTAD HLDGS NV EUR0.10" ;
+	:ID_NOTATION "245225" ;
+	:ISIN "NL0000379121" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_REED_ELS_NV a :Stock ;
+	rdfs:label "REED ELSEVIER NV EUR0.07" ;
+	:ID_NOTATION "20980276" ;
+	:ISIN "NL0006144495" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_ROYAL_DUTCH_SHELL_0 a :Stock ;
+	rdfs:label "ROYAL DUTCH SHELL PLC, A' ORD EUR0.07" ;
+	:ID_NOTATION "1943914" ;
+	:ISIN "GB00B03MLX29" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_SBM_OFFSHORE a :Stock ;
+	rdfs:label "SBM OFFSHORE NV EUR0.25" ;
+	:ID_NOTATION "14951097" ;
+	:ISIN "NL0000360618" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_TNT_EXPR a :Stock ;
+	rdfs:label "TNT EXPRESS NV EUR0.08" ;
+	:ID_NOTATION "45463414" ;
+	:ISIN "NL0009739424" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_TOMTOM_NV a :Stock ;
+	rdfs:label "TOMTOM NV EUR0.20" ;
+	:ID_NOTATION "12056241" ;
+	:ISIN "NL0000387058" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_UNIBAIL_S_A_INH :memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_UNILEVER_NV :memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_WOLTERS_KWOLT_KLUW a :Stock ;
+	rdfs:label "WOLTERS KLUWERS EUR0.12" ;
+	:ID_NOTATION "14941366" ;
+	:ISIN "NL0000395903" ;
+	:memberOf :index_NETHERLANDS_AEX_INDEX .
+
+:stock_ACKERMANS_ORD_ACKERMANS_ORD_SHS a :Stock ;
+	rdfs:label "ACKERMANS ORD ACKERMANS ORD SHS" ;
+	:ID_NOTATION "29354" ;
+	:ISIN "BE0003764785" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_AGEAS_EX_FORTI_AGEAS_EX_FORTI a :Stock ;
+	rdfs:label "AGEAS (EX-FORTI AGEAS (EX-FORTI" ;
+	:ID_NOTATION "94679" ;
+	:ISIN "BE0003801181" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_ANHEUSER_BUSCH_INB :memberOf :index_BELGIUM_BEL_20 .
+
+:stock_BEFIMMO_NPV_SICAFI a :Stock ;
+	rdfs:label "BEFIMMO SCA NPV SICAFI" ;
+	:ID_NOTATION "94659" ;
+	:ISIN "BE0003678894" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_BEKAERT_D_ORD_SHS a :Stock ;
+	rdfs:label "BEKAERT (D) ORD SHS" ;
+	:ID_NOTATION "29366" ;
+	:ISIN "BE0974258874" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_BELGACOM a :Stock ;
+	rdfs:label "BELGACOM SA NPV" ;
+	:ID_NOTATION "9421550" ;
+	:ISIN "BE0003810273" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_COFINIMMO_REIT_COFINIMMO_REIT a :Stock ;
+	rdfs:label "COFINIMMO REIT COFINIMMO REIT" ;
+	:ID_NOTATION "94635" ;
+	:ISIN "BE0003593044" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_COLRUYT_D_ORD_ETABLISSEMENTS_FR_COLRUYT_ORD_SHS a :Stock ;
+	rdfs:label "COLRUYT (D) ORD ETABLISSEMENTS FR. COLRUYT ORD SHS" ;
+	:ID_NOTATION "94694" ;
+	:ISIN "BE0974256852" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_SA_DIET a :Stock ;
+	rdfs:label "D'IETEREN NV NPV" ;
+	:ID_NOTATION "29282" ;
+	:ISIN "BE0974259880" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_DELHAIZE_ORD_GROUPE_DELHAIZE_ORD_SHS a :Stock ;
+	rdfs:label "DELHAIZE ORD GROUPE DELHAIZE ORD SHS" ;
+	:ID_NOTATION "29235" ;
+	:ISIN "BE0003562700" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_ELIA_SYST a :Stock ;
+	rdfs:label "ELIA SYSTEM OPERATOR NPV" ;
+	:ID_NOTATION "12349481" ;
+	:ISIN "BE0003822393" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_GDF_SUEZ :memberOf :index_BELGIUM_BEL_20 .
+
+:stock_GPE_BRUX_LAMBRT a :Stock ;
+	rdfs:label "GROUPE BRUXELLES LAMBERT NPV" ;
+	:ID_NOTATION "29217" ;
+	:ISIN "BE0003797140" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_KBC_GR a :Stock ;
+	rdfs:label "KBC GROEP NV NPV" ;
+	:ID_NOTATION "94631" ;
+	:ISIN "BE0003565737" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_MOBISTAR a :Stock ;
+	rdfs:label "MOBISTAR NPV" ;
+	:ID_NOTATION "94676" ;
+	:ISIN "BE0003735496" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_NYRSTAR_NV a :Stock ;
+	rdfs:label "NYRSTAR NV NPV" ;
+	:ID_NOTATION "19873892" ;
+	:ISIN "BE0003876936" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_SOLVAY_NPV a :Stock ;
+	rdfs:label "SOLVAY SA NPV" ;
+	:ID_NOTATION "94608" ;
+	:ISIN "BE0003470755" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_TELENET_NPV a :Stock ;
+	rdfs:label "TELENET GROUP HOLDING NPV" ;
+	:ID_NOTATION "13060366" ;
+	:ISIN "BE0003826436" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_UCB a :Stock ;
+	rdfs:label "UCB S.A. NPV" ;
+	:ID_NOTATION "29331" ;
+	:ISIN "BE0003739530" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_UMICORE_ORDUMICORE_ORD_SHS a :Stock ;
+	rdfs:label "UMICORE ORDUMICORE ORD SHS" ;
+	:ID_NOTATION "94641" ;
+	:ISIN "BE0003884047" ;
+	:memberOf :index_BELGIUM_BEL_20 .
+
+:stock_ALTRI_SGPS_SA_O_ALTRI_SGPS_ORD_SHS a :Stock ;
+	rdfs:label "ALTRI SGPS SA O ALTRI SGPS ORD SHS" ;
+	:ID_NOTATION "11394755" ;
+	:ISIN "PTALT0AE0002" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_BANCO_BPI a :Stock ;
+	rdfs:label "BANCO BPI PORTUGUES DE INVESTIMENTO EUR1(REGD)" ;
+	:ID_NOTATION "1549568" ;
+	:ISIN "PTBPI0AM0004" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_BCO_COM_PORT_NOM a :Stock ;
+	rdfs:label "BANCO COMERCIAL PORTUGUES S.A. NPV" ;
+	:ID_NOTATION "247420" ;
+	:ISIN "PTBCP0AM0007" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_BCO_ESP_SAN a :Stock ;
+	rdfs:label "BANCO ESPIRITO SANTO SA NPV" ;
+	:ID_NOTATION "1549537" ;
+	:ISIN "PTBES0AM0007" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_BRISA_AUT_PRIV a :Stock ;
+	rdfs:label "BRISA(AUTO-ESTRADAS DE PORTUGAL) EUR1(PRIVATIZED)" ;
+	:ID_NOTATION "247504" ;
+	:ISIN "PTBRI0AM0000" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_CIMPOR_CMNTS_PT a :Stock ;
+	rdfs:label "CIMPOR-CIMENTOS DE PORTUGAL EUR1(REGD)" ;
+	:ID_NOTATION "247592" ;
+	:ISIN "PTCPR0AM0003" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_EDP_RENOV a :Stock ;
+	rdfs:label "EDP RENOVAVEIS SA EUR5" ;
+	:ID_NOTATION "23199300" ;
+	:ISIN "ES0127797019" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_EDP_ENERGIAS_PORTUG a :Stock ;
+	rdfs:label "EDP-ENERGIAS DE PORTUGAL SA EUR1(REGD)" ;
+	:ID_NOTATION "247602" ;
+	:ISIN "PTEDP0AM0009" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_ESPIRITO_SANTO_ORD_NPV a :Stock ;
+	rdfs:label "ESPIRITO SANTO ORD NPV" ;
+	:ID_NOTATION "3948234" ;
+	:ISIN "LU0011904405" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_GALP_ENERGIA_SGPS a :Stock ;
+	rdfs:label "GALP ENERGIA SGPS EUR1" ;
+	:ID_NOTATION "15978327" ;
+	:ISIN "PTGAL0AM0009" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_JERONIMO_MRTNS a :Stock ;
+	rdfs:label "JERONIMO MARTINS SGPS EUR1" ;
+	:ID_NOTATION "247691" ;
+	:ISIN "PTJMT0AE0001" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_MOTA_ENGL_SGPS a :Stock ;
+	rdfs:label "MOTA ENGIL SGPS EUR1" ;
+	:ID_NOTATION "1919792" ;
+	:ISIN "PTMEN0AE0005" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_PORT_EMP_PROD a :Stock ;
+	rdfs:label "PORTUCEL-EMPRESA PRODUTORA DE PASTA EUR1" ;
+	:ID_NOTATION "247836" ;
+	:ISIN "PTPTI0AM0006" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_PORT_TEL_SG a :Stock ;
+	rdfs:label "PORTUGAL TELECOM SGPS SA EUR0.03" ;
+	:ID_NOTATION "1549608" ;
+	:ISIN "PTPTC0AM0009" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_REDES_ENEREDES_ENE a :Stock ;
+	rdfs:label "REN-REDES ENERGETICAS NACIONAIS EUR1(REGD)" ;
+	:ID_NOTATION "18427040" ;
+	:ISIN "PTREL0AM0008" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_SEMAPA_SOC a :Stock ;
+	rdfs:label "SEMAPA SOC INVEST E GESTAO SGPS EUR1" ;
+	:ID_NOTATION "65672" ;
+	:ISIN "PTSEM0AM0004" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_SONAE_INDUSTRIA a :Stock ;
+	rdfs:label "SONAE INDUSTRIA EUR5" ;
+	:ID_NOTATION "13630161" ;
+	:ISIN "PTS3P0AM0017" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_SONAE_SGPS a :Stock ;
+	rdfs:label "SONAE SGPS SA EUR1" ;
+	:ID_NOTATION "247871" ;
+	:ISIN "PTSON0AM0001" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_SONAE_COM a :Stock ;
+	rdfs:label "SONAECOM SGPS S.A EUR1" ;
+	:ID_NOTATION "1998593" ;
+	:ISIN "PTSNC0AM0006" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_ZON_MULTIMEDIA a :Stock ;
+	rdfs:label "ZON MULTIMEDIA SGPS EUR0.01" ;
+	:ID_NOTATION "2000730" ;
+	:ISIN "PTZON0AM0006" ;
+	:memberOf :index_PORTUGAL_PSI_20 .
+
+:stock_AMER_SPORTS_A a :Stock ;
+	rdfs:label "AMER SPORTS CORPORATION" ;
+	:ID_NOTATION "194270" ;
+	:ISIN "FI0009000285" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_CARGOTEC_CORP_B a :Stock ;
+	rdfs:label "CARGOTEC OYJ" ;
+	:ID_NOTATION "12093610" ;
+	:ISIN "FI0009013429" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_ELISA_OYJ_A a :Stock ;
+	rdfs:label "ELISA CORPORATION" ;
+	:ID_NOTATION "194345" ;
+	:ISIN "FI0009007884" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_FORTUM_OYJ a :Stock ;
+	rdfs:label "FORTUM CORPORATION" ;
+	:ID_NOTATION "194325" ;
+	:ISIN "FI0009007132" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_KEMIRA_OY a :Stock ;
+	rdfs:label "KEMIRA OYJ" ;
+	:ID_NOTATION "194303" ;
+	:ISIN "FI0009004824" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_KESKO_B a :Stock ;
+	rdfs:label "KESKO CORPORATION B" ;
+	:ID_NOTATION "194263" ;
+	:ISIN "FI0009000202" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_KONE_OYJ a :Stock ;
+	rdfs:label "KONE CORPORATION" ;
+	:ID_NOTATION "44729" ;
+	:ISIN "FI0009013403" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_KONECRANES_INTL a :Stock ;
+	rdfs:label "KONECRANES PLC" ;
+	:ID_NOTATION "1529330" ;
+	:ISIN "FI0009005870" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_METSO_CORP a :Stock ;
+	rdfs:label "METSO CORPORATION" ;
+	:ID_NOTATION "194344" ;
+	:ISIN "FI0009007835" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_NESTE_OIL_CORP a :Stock ;
+	rdfs:label "NESTE OIL CORPORATION" ;
+	:ID_NOTATION "11640567" ;
+	:ISIN "FI0009013296" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_NOKIA :memberOf :index_OMX_HELSINKI_25 .
+
+:stock_NOKIAN_RE a :Stock ;
+	rdfs:label "NOKIAN TYRES PLC" ;
+	:ID_NOTATION "194305" ;
+	:ISIN "FI0009005318" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_NORDEA_BANK_FDR a :Stock ;
+	rdfs:label "NORDEA BANK AB (PUBL) FDR" ;
+	:ID_NOTATION "2002555" ;
+	:ISIN "FI0009902530" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_ORION_COR a :Stock ;
+	rdfs:label "ORION CORPORATION B" ;
+	:ID_NOTATION "15139024" ;
+	:ISIN "FI0009014377" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_OUTOKUMPU_A a :Stock ;
+	rdfs:label "OUTOKUMPU OYJ" ;
+	:ID_NOTATION "194291" ;
+	:ISIN "FI0009002422" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_OUTOTEC_OYJ a :Stock ;
+	rdfs:label "OUTOTEC OYJ" ;
+	:ID_NOTATION "15841523" ;
+	:ISIN "FI0009014575" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_POHJOLA_BK_A a :Stock ;
+	rdfs:label "POHJOLA BANK A" ;
+	:ID_NOTATION "9245636" ;
+	:ISIN "FI0009003222" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_RAUTARUUKKI_OYJ a :Stock ;
+	rdfs:label "RAUTARUUKKI CORPORATION" ;
+	:ID_NOTATION "44748" ;
+	:ISIN "FI0009003552" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_SAMPO_PLC a :Stock ;
+	rdfs:label "SAMPO PLC A" ;
+	:ID_NOTATION "1544713" ;
+	:ISIN "FI0009003305" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_SANOMA_COOY a :Stock ;
+	rdfs:label "SANOMA CORPORATION" ;
+	:ID_NOTATION "1529338" ;
+	:ISIN "FI0009007694" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_STORA_ENSO_OYJ_R a :Stock ;
+	rdfs:label "STORA ENSO OYJ R" ;
+	:ID_NOTATION "194312" ;
+	:ISIN "FI0009005961" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_TELIASONERA a :Stock ;
+	rdfs:label "TELIASONERA AB NPV" ;
+	:ID_NOTATION "6493474" ;
+	:ISIN "SE0000667925" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_UPM_KYMMENE_OYJ a :Stock ;
+	rdfs:label "UPM-KYMMENE CORPORATION" ;
+	:ID_NOTATION "194315" ;
+	:ISIN "FI0009005987" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_WARTSILA_OYJ_ABP a :Stock ;
+	rdfs:label "WAERTSILAE CORPORATION" ;
+	:ID_NOTATION "44750" ;
+	:ISIN "FI0009003727" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_YIT_OYJ a :Stock ;
+	rdfs:label "YIT CORPORATION" ;
+	:ID_NOTATION "44792" ;
+	:ISIN "FI0009800643" ;
+	:memberOf :index_OMX_HELSINKI_25 .
+
+:stock_ABB_0 a :Stock ;
+	rdfs:label "ABB LTD CHF1.03 (REGD)" ;
+	:ID_NOTATION "1963973" ;
+	:ISIN "CH0012221716" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_ALFA_LAVAL a :Stock ;
+	rdfs:label "ALFA LAVAL AB NPV" ;
+	:ID_NOTATION "248315" ;
+	:ISIN "SE0000695876" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_ASSA_ABLOY_B a :Stock ;
+	rdfs:label "ASSA ABLOY SER'B'NPV" ;
+	:ID_NOTATION "66106" ;
+	:ISIN "SE0000255648" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_ASTRAZENECA_0 a :Stock ;
+	rdfs:label "ASTRAZENECA ORD USD0.25" ;
+	:ID_NOTATION "6869204" ;
+	:ISIN "GB0009895292" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_ATLAS_COPCO a :Stock ;
+	rdfs:label "ATLAS COPCO AB SER'A'NPV" ;
+	:ID_NOTATION "247941" ;
+	:ISIN "SE0000101032" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_ATLAS_COPCO_B a :Stock ;
+	rdfs:label "ATLAS COPCO AB SER'B'NPV" ;
+	:ID_NOTATION "66028" ;
+	:ISIN "SE0000122467" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_BOLIDEN a :Stock ;
+	rdfs:label "BOLIDEN AB ORDINARY" ;
+	:ID_NOTATION "66286" ;
+	:ISIN "SE0000869646" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_ELECTROLUX_B a :Stock ;
+	rdfs:label "ELECTROLUX AB ELECTROLUX CLASS B ORD SHS" ;
+	:ID_NOTATION "247948" ;
+	:ISIN "SE0000103814" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_ERICSSON_B :memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_GETINGE_B a :Stock ;
+	rdfs:label "GETINGE AB SER'B'NPV" ;
+	:ID_NOTATION "4790861" ;
+	:ISIN "SE0000202624" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_HENNES_MAURITZ :memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_INVESTOR_B a :Stock ;
+	rdfs:label "INVESTOR AB SER'B'NPV" ;
+	:ID_NOTATION "247962" ;
+	:ISIN "SE0000107419" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_LUNDIN_PETR a :Stock ;
+	rdfs:label "LUNDIN PETROLEUM AB" ;
+	:ID_NOTATION "3733735" ;
+	:ISIN "SE0000825820" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_MTG_B a :Stock ;
+	rdfs:label "MODERN TIMES GROUP(MTG) SER'B'NPV" ;
+	:ID_NOTATION "66175" ;
+	:ISIN "SE0000412371" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_NOKIA_0 a :Stock ;
+	rdfs:label "NOKIA CORPORATION" ;
+	:ID_NOTATION "17958864" ;
+	:ISIN "FI0009000681" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_NORDEA a :Stock ;
+	rdfs:label "NORDEA BANK" ;
+	:ID_NOTATION "1936326" ;
+	:ISIN "SE0000427361" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SANDVIK a :Stock ;
+	rdfs:label "SANDVIK AB NPV" ;
+	:ID_NOTATION "66413" ;
+	:ISIN "SE0000667891" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SCANIA_B a :Stock ;
+	rdfs:label "SCANIA AB SER'B'NPV" ;
+	:ID_NOTATION "248218" ;
+	:ISIN "SE0000308280" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SECURITAS a :Stock ;
+	rdfs:label "SECURITAS AB SER'B'NPV" ;
+	:ID_NOTATION "248054" ;
+	:ISIN "SE0000163594" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SEB_A a :Stock ;
+	rdfs:label "SKANDINAVISKA ENSKILDA BANKEN SER'A'NPV" ;
+	:ID_NOTATION "248037" ;
+	:ISIN "SE0000148884" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SKANSKA a :Stock ;
+	rdfs:label "SKANSKA AB SER'B'NPV" ;
+	:ID_NOTATION "66001" ;
+	:ISIN "SE0000113250" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SKF_B a :Stock ;
+	rdfs:label "SKF AB SER'B'NPV" ;
+	:ID_NOTATION "247971" ;
+	:ISIN "SE0000108227" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SSAB_A a :Stock ;
+	rdfs:label "SSAB AB SER'A'NPV" ;
+	:ID_NOTATION "66057" ;
+	:ISIN "SE0000171100" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SCA_B a :Stock ;
+	rdfs:label "SVENSKA CELLULOSA AB-SCA SER'B'NPV" ;
+	:ID_NOTATION "247989" ;
+	:ISIN "SE0000112724" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SHB_A a :Stock ;
+	rdfs:label "SVENSKA HANDELSBANKEN SER'A'NPV" ;
+	:ID_NOTATION "66072" ;
+	:ISIN "SE0000193120" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SWEDBANK_A a :Stock ;
+	rdfs:label "SWEDBANK AB SER'A'NPV" ;
+	:ID_NOTATION "66101" ;
+	:ISIN "SE0000242455" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_SWEDISH_MATCH a :Stock ;
+	rdfs:label "SWEDISH MATCH AB NPV" ;
+	:ID_NOTATION "248223" ;
+	:ISIN "SE0000310336" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_TELE2_B a :Stock ;
+	rdfs:label "TELE2 AB SER'B'NPV" ;
+	:ID_NOTATION "2580895" ;
+	:ISIN "SE0000314312" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_TELIASONERA_0 a :Stock ;
+	rdfs:label "TELIASONERA AB NPV" ;
+	:ID_NOTATION "249235" ;
+	:ISIN "SE0000667925" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_VOLVO_B a :Stock ;
+	rdfs:label "VOLVO(AB) SER'B'NPV" ;
+	:ID_NOTATION "248007" ;
+	:ISIN "SE0000115446" ;
+	:memberOf :index_OMX_STOCKHOLM_30_INDEX .
+
+:stock_3M a :Stock ;
+	rdfs:label "3M COMPANY COM USD0.01" ;
+	:ID_NOTATION "274148" ;
+	:ISIN "US88579Y1010" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_ALCOA a :Stock ;
+	rdfs:label "ALCOA INC COM USD1" ;
+	:ID_NOTATION "252524" ;
+	:ISIN "US0138171014" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_AMEXCO a :Stock ;
+	rdfs:label "AMERICAN EXPRESS CO COM USD0.20" ;
+	:ID_NOTATION "253252" ;
+	:ISIN "US0258161092" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_AT_T_INC a :Stock ;
+	rdfs:label "AT&T INC COM USD1" ;
+	:ID_NOTATION "1549994" ;
+	:ISIN "US00206R1023" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_BANK_AMERICA a :Stock ;
+	rdfs:label "BANK OF AMERICA CORPORATION COM USD0.01" ;
+	:ID_NOTATION "255248" ;
+	:ISIN "US0605051046" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_BOEING a :Stock ;
+	rdfs:label "BOEING CO COM USD5" ;
+	:ID_NOTATION "256223" ;
+	:ISIN "US0970231058" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_CATERPILLAR a :Stock ;
+	rdfs:label "CATERPILLAR INC COM STK USD1" ;
+	:ID_NOTATION "257535" ;
+	:ISIN "US1491231015" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_CHEVRON a :Stock ;
+	rdfs:label "CHEVRON CORPORATION COM USD0.75" ;
+	:ID_NOTATION "4013353" ;
+	:ISIN "US1667641005" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_CISCO_SYSTEMS a :Stock ;
+	rdfs:label "CISCO SYSTEMS INC COM USD0.001" ;
+	:ID_NOTATION "258198" ;
+	:ISIN "US17275R1023" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_COCA_COLA a :Stock ;
+	rdfs:label "COCA-COLA CO COM USD0.25" ;
+	:ID_NOTATION "258521" ;
+	:ISIN "US1912161007" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_DU_PONT a :Stock ;
+	rdfs:label "DU PONT(E.I.)DE NEMOURS & CO COM USD0.30" ;
+	:ID_NOTATION "261336" ;
+	:ISIN "US2635341090" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_EXXON_MOB a :Stock ;
+	rdfs:label "EXXON MOBIL CORPORATION COM NPV" ;
+	:ID_NOTATION "3306396" ;
+	:ISIN "US30231G1022" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_GEN_ELEC a :Stock ;
+	rdfs:label "GENERAL ELECTRIC CO COM USD0.06" ;
+	:ID_NOTATION "266034" ;
+	:ISIN "US3696041033" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_HEWLETT_PACKARD a :Stock ;
+	rdfs:label "HEWLETT PACKARD CO COM USD0.01" ;
+	:ID_NOTATION "267894" ;
+	:ISIN "US4282361033" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_HOME_DEPOT a :Stock ;
+	rdfs:label "HOME DEPOT INC COM USD0.05" ;
+	:ID_NOTATION "268077" ;
+	:ISIN "US4370761029" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_INTEL a :Stock ;
+	rdfs:label "INTEL CORP COM USD0.001" ;
+	:ID_NOTATION "269226" ;
+	:ISIN "US4581401001" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_IBM a :Stock ;
+	rdfs:label "INTERNATIONAL BUSINESS MACHINES" ;
+	:ID_NOTATION "1551887" ;
+	:ISIN "US4592001014" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_JOHNSON_JOHNSON a :Stock ;
+	rdfs:label "JOHNSON & JOHNSON COM USD1" ;
+	:ID_NOTATION "270227" ;
+	:ISIN "US4781601046" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_JPMORGAN_CHASE a :Stock ;
+	rdfs:label "JP MORGAN CHASE & CO COM USD1" ;
+	:ID_NOTATION "274385" ;
+	:ISIN "US46625H1005" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_KRAFT_FOODS a :Stock ;
+	rdfs:label "KRAFT FOODS INC COM STK NPV CLS'A'" ;
+	:ID_NOTATION "3240177" ;
+	:ISIN "US50075N1046" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_MC_DONALDS a :Stock ;
+	rdfs:label "MCDONALD'S CORPORATION COM USD0.01" ;
+	:ID_NOTATION "273053" ;
+	:ISIN "US5801351017" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_MERCK_CO a :Stock ;
+	rdfs:label "MERCK & CO INC COM USD0.50" ;
+	:ID_NOTATION "273340" ;
+	:ISIN "US58933Y1055" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_MICROSOFT a :Stock ;
+	rdfs:label "MICROSOFT CORP COM USD0.00000625" ;
+	:ID_NOTATION "273978" ;
+	:ISIN "US5949181045" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_PFIZER a :Stock ;
+	rdfs:label "PFIZER INC COM USD0.05" ;
+	:ID_NOTATION "279709" ;
+	:ISIN "US7170811035" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_PROCT_GAMB a :Stock ;
+	rdfs:label "PROCTER & GAMBLE CO COM NPV" ;
+	:ID_NOTATION "280675" ;
+	:ISIN "US7427181091" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_TRAVELERS_CO_S a :Stock ;
+	rdfs:label "TRAVELERS CO INC (THE) COM NPV" ;
+	:ID_NOTATION "17066166" ;
+	:ISIN "US89417E1091" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_UTD_TECHNOL a :Stock ;
+	rdfs:label "UNITED TECHNOLOGIES CORP COM USD1" ;
+	:ID_NOTATION "289920" ;
+	:ISIN "US9130171096" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_VERIZON a :Stock ;
+	rdfs:label "VERIZON COMMUNICATIONS COM USD0.10" ;
+	:ID_NOTATION "290534" ;
+	:ISIN "US92343V1044" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_WAL_MART_STORES a :Stock ;
+	rdfs:label "WAL-MART STORES INC COM USD0.10" ;
+	:ID_NOTATION "291252" ;
+	:ISIN "US9311421039" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_DISNEY_WALT_CO a :Stock ;
+	rdfs:label "WALT DISNEY COMPANY (THE) COM DISNEY USD0.01" ;
+	:ID_NOTATION "260731" ;
+	:ISIN "US2546871060" ;
+	:memberOf :index_DOW_JONES_INDUSTRIAL_AVERAGE .
+
+:stock_3M :memberOf :index_S_P_500_INDEX .
+
+:stock_ABBOTT_LABOR a :Stock ;
+	rdfs:label "ABBOTT LABORATORIES COM STK NPV" ;
+	:ID_NOTATION "251878" ;
+	:ISIN "US0028241000" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ABERCROMBIE_A a :Stock ;
+	rdfs:label "ABERCROMBIE & FITCH CO CL'A'COM USD0.01" ;
+	:ID_NOTATION "251890" ;
+	:ISIN "US0028962076" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ACCENTURE a :Stock ;
+	rdfs:label "ACCENTURE PLC CLS'A'USD0.0000225" ;
+	:ID_NOTATION "4463266" ;
+	:ISIN "IE00B4BNMY34" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ACE_LTD a :Stock ;
+	rdfs:label "ACE LIMITED ORD CHF30.57" ;
+	:ID_NOTATION "2764581" ;
+	:ISIN "CH0044328745" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ADOBE_SYST a :Stock ;
+	rdfs:label "ADOBE SYSTEMS INC COM USD0.0001" ;
+	:ID_NOTATION "252079" ;
+	:ISIN "US00724F1012" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ADVANCED_MIC_DEV a :Stock ;
+	rdfs:label "ADVANCED MICRO DEVICES INC COM USD0.01" ;
+	:ID_NOTATION "252218" ;
+	:ISIN "US0079031078" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AES_CORP_USD0_01 a :Stock ;
+	rdfs:label "AES CORP COM USD0.01" ;
+	:ID_NOTATION "251504" ;
+	:ISIN "US00130H1059" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AETNA_NEW a :Stock ;
+	rdfs:label "AETNA INC COM USD0.01" ;
+	:ID_NOTATION "252269" ;
+	:ISIN "US00817Y1082" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AFLAC a :Stock ;
+	rdfs:label "AFLAC INC COM USD0.10" ;
+	:ID_NOTATION "251468" ;
+	:ISIN "US0010551028" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ARGLNT_TECH a :Stock ;
+	rdfs:label "AGILENT TECHNOLOGIES INC COM STK USD0.01" ;
+	:ID_NOTATION "252326" ;
+	:ISIN "US00846U1016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AGL_RESOURCES a :Stock ;
+	rdfs:label "AGL RESOURCES COM USD5" ;
+	:ID_NOTATION "276644" ;
+	:ISIN "US0012041069" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AIR_PROD_CHEM a :Stock ;
+	rdfs:label "AIR PRODUCTS & CHEMICALS INC COM USD1" ;
+	:ID_NOTATION "252385" ;
+	:ISIN "US0091581068" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AIRGAS a :Stock ;
+	rdfs:label "AIRGAS INC COM USD0.01" ;
+	:ID_NOTATION "252402" ;
+	:ISIN "US0093631028" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AKAMAI_TECH a :Stock ;
+	rdfs:label "AKAMAI TECHNOLOGIES COM USD0.01" ;
+	:ID_NOTATION "252438" ;
+	:ISIN "US00971T1016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ALCOA :memberOf :index_S_P_500_INDEX .
+
+:stock_ALLEGHNY_TECH a :Stock ;
+	rdfs:label "ALLEGHENY TECHNOLOGIES INC COM USD0.10" ;
+	:ID_NOTATION "252620" ;
+	:ISIN "US01741R1023" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ALLERGAN a :Stock ;
+	rdfs:label "ALLERGAN INC COM USD0.01" ;
+	:ID_NOTATION "252635" ;
+	:ISIN "US0184901025" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ALLSTATE_CORP a :Stock ;
+	rdfs:label "ALLSTATE CORP COM USD0.01" ;
+	:ID_NOTATION "252910" ;
+	:ISIN "US0200021014" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ALPHA_NAT a :Stock ;
+	rdfs:label "ALPHA NATURAL RESOURCES INC COM USD0.01" ;
+	:ID_NOTATION "8728909" ;
+	:ISIN "US02076X1028" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ALTERA_CORP a :Stock ;
+	rdfs:label "ALTERA CORP COM USD0.001" ;
+	:ID_NOTATION "1550137" ;
+	:ISIN "US0214411003" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ALTRIA_GROUP a :Stock ;
+	rdfs:label "ALTRIA GROUP INC COM USD0.333333" ;
+	:ID_NOTATION "279770" ;
+	:ISIN "US02209S1033" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMAZON_COM a :Stock ;
+	rdfs:label "AMAZON COM INC COM USD0.01" ;
+	:ID_NOTATION "252992" ;
+	:ISIN "US0231351067" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMEREN_CRP a :Stock ;
+	rdfs:label "AMEREN CORP COM USD0.01" ;
+	:ID_NOTATION "253028" ;
+	:ISIN "US0236081024" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMER_ELECT_POWER a :Stock ;
+	rdfs:label "AMERICAN ELECTRIC POWER CO INC COM USD6.50" ;
+	:ID_NOTATION "253240" ;
+	:ISIN "US0255371017" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMEXCO :memberOf :index_S_P_500_INDEX .
+
+:stock_AMER_INT_GRP a :Stock ;
+	rdfs:label "AMERICAN INTERNATIONAL GROUP INC COM USD2.50" ;
+	:ID_NOTATION "253376" ;
+	:ISIN "US0268747849" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMEN_TOWE a :Stock ;
+	rdfs:label "AMERICAN TOWER CORP COM NEW USD0.01" ;
+	:ID_NOTATION "253526" ;
+	:ISIN "US03027X1000" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMERIPRISE_FINCL a :Stock ;
+	rdfs:label "AMERIPRISE FINANCIAL INC COM STK USD0.01" ;
+	:ID_NOTATION "12909555" ;
+	:ISIN "US03076C1062" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMERISOURAMERISORB a :Stock ;
+	rdfs:label "AMERISOURCEBERGEN CORPORATION COM STK USD0.01" ;
+	:ID_NOTATION "3710125" ;
+	:ISIN "US03073E1055" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMGEN a :Stock ;
+	rdfs:label "AMGEN INC COM USD0.0001" ;
+	:ID_NOTATION "253610" ;
+	:ISIN "US0311621009" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AMPHENOL_A a :Stock ;
+	rdfs:label "AMPHENOL CORP CL'A'COM USD0.001" ;
+	:ID_NOTATION "253626" ;
+	:ISIN "US0320951017" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ANADARKO_PET a :Stock ;
+	rdfs:label "ANADARKO PETROLEUM CORP COM USD0.10" ;
+	:ID_NOTATION "253729" ;
+	:ISIN "US0325111070" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ANALOG_DEVICES a :Stock ;
+	rdfs:label "ANALOG DEVICES INC COM USD0.16 2/3" ;
+	:ID_NOTATION "253735" ;
+	:ISIN "US0326541051" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AON a :Stock ;
+	rdfs:label "AON PLC COM USD0.01 CL A" ;
+	:ID_NOTATION "253870" ;
+	:ISIN "GB00B5BT0K07" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_APACHE_CP a :Stock ;
+	rdfs:label "APACHE CORP COM USD0.625" ;
+	:ID_NOTATION "253876" ;
+	:ISIN "US0374111054" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_APRT_INV a :Stock ;
+	rdfs:label "APARTMENT INVESTMENT & MANAGEMENT COM USD0.01 CL'A'" ;
+	:ID_NOTATION "1550238" ;
+	:ISIN "US03748R1014" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_APOLLO_GRP a :Stock ;
+	rdfs:label "APOLLO GROUP INC CLASS'A'COM NPV" ;
+	:ID_NOTATION "253922" ;
+	:ISIN "US0376041051" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_APPLE_INC a :Stock ;
+	rdfs:label "APPLE INC COM NPV" ;
+	:ID_NOTATION "253929" ;
+	:ISIN "US0378331005" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_APPLIED_MATERIALS a :Stock ;
+	rdfs:label "APPLIED MATERIALS INC COM USD0.01" ;
+	:ID_NOTATION "253952" ;
+	:ISIN "US0382221051" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ARCHER_DAN a :Stock ;
+	rdfs:label "ARCHER-DANIELS-MIDLAND CO COM NPV" ;
+	:ID_NOTATION "254040" ;
+	:ISIN "US0394831020" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ASSURANT a :Stock ;
+	rdfs:label "ASSURANT INC COM USD0.01" ;
+	:ID_NOTATION "9181996" ;
+	:ISIN "US04621X1081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AT_T_INC :memberOf :index_S_P_500_INDEX .
+
+:stock_AUTODESK_NPV a :Stock ;
+	rdfs:label "AUTODESK INC COM USD0.01" ;
+	:ID_NOTATION "254633" ;
+	:ISIN "US0527691069" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AUTOMATIC_DATA_PRO a :Stock ;
+	rdfs:label "AUTOMATIC DATA PROCESSING INC COM USD0.10" ;
+	:ID_NOTATION "2036204" ;
+	:ISIN "US0530151036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AUTONATION a :Stock ;
+	rdfs:label "AUTONATION INC COM USD0.01" ;
+	:ID_NOTATION "254667" ;
+	:ISIN "US05329W1027" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AUTOZONE a :Stock ;
+	rdfs:label "AUTOZONE INC COM USD0.01" ;
+	:ID_NOTATION "254675" ;
+	:ISIN "US0533321024" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AVALONBAY_COMM a :Stock ;
+	rdfs:label "AVALONBAY COMMUNITIES INC COM USD0.01" ;
+	:ID_NOTATION "69850" ;
+	:ISIN "US0534841012" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AVERY_DENN a :Stock ;
+	rdfs:label "AVERY DENNISON CORP COM USD1" ;
+	:ID_NOTATION "69876" ;
+	:ISIN "US0536111091" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_AVON_PRDCTS a :Stock ;
+	rdfs:label "AVON PRODUCTS INC COM USD0.25" ;
+	:ID_NOTATION "254824" ;
+	:ISIN "US0543031027" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BAKER_HUGHES a :Stock ;
+	rdfs:label "BAKER HUGHES INC COM USD1" ;
+	:ID_NOTATION "255043" ;
+	:ISIN "US0572241075" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BALL_CRP a :Stock ;
+	rdfs:label "BALL CORP COM NPV" ;
+	:ID_NOTATION "255064" ;
+	:ISIN "US0584981064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BANK_AMERICA :memberOf :index_S_P_500_INDEX .
+
+:stock_BANK_OF_NY_MELLON a :Stock ;
+	rdfs:label "BANK OF NEW YORK MELLON CORP COM STK USD0.01" ;
+	:ID_NOTATION "255266" ;
+	:ISIN "US0640581007" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BARD_CR a :Stock ;
+	rdfs:label "BARD(C.R.) INC COM USD0.25" ;
+	:ID_NOTATION "70255" ;
+	:ISIN "US0673831097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BAXTER_INTL a :Stock ;
+	rdfs:label "BAXTER INTERNATIONAL INC COM USD1" ;
+	:ID_NOTATION "255482" ;
+	:ISIN "US0718131099" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BB_T_CP_USD5 a :Stock ;
+	rdfs:label "BB&T CORP COM USD5" ;
+	:ID_NOTATION "254856" ;
+	:ISIN "US0549371070" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BEAM a :Stock ;
+	rdfs:label "BEAM INC COM USD3.125" ;
+	:ID_NOTATION "52579536" ;
+	:ISIN "US0737301038" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BECT_DICKIN_USD1 a :Stock ;
+	rdfs:label "BECTON DICKINSON & CO COM USD1" ;
+	:ID_NOTATION "255573" ;
+	:ISIN "US0758871091" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BED_BATH a :Stock ;
+	rdfs:label "BED BATH AND BEYOND COM USD0.01" ;
+	:ID_NOTATION "1550417" ;
+	:ISIN "US0758961009" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BEMIS a :Stock ;
+	rdfs:label "BEMIS CO INC COM USD0.10" ;
+	:ID_NOTATION "255657" ;
+	:ISIN "US0814371052" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BERK_HATH_CL_B a :Stock ;
+	rdfs:label "BERKSHIRE HATHAWAY INC CLASS'B'COM USD0.0033" ;
+	:ID_NOTATION "255747" ;
+	:ISIN "US0846707026" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BEST_BUY_CO a :Stock ;
+	rdfs:label "BEST BUY CO INC COM USD0.10" ;
+	:ID_NOTATION "255770" ;
+	:ISIN "US0865161014" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BIG_LOTS_INC a :Stock ;
+	rdfs:label "BIG LOTS INC COM USD0.01" ;
+	:ID_NOTATION "3088820" ;
+	:ISIN "US0893021032" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BIOGEN_IDEC a :Stock ;
+	rdfs:label "BIOGEN IDEC INC COM STK USD0.0005" ;
+	:ID_NOTATION "8183957" ;
+	:ISIN "US09062X1037" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BLACKROCK_INC_A a :Stock ;
+	rdfs:label "BLACKROCK INC COM STK USD0.01" ;
+	:ID_NOTATION "256135" ;
+	:ISIN "US09247X1019" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BLOCK_H_R_NPV a :Stock ;
+	rdfs:label "BLOCK(H & R) INC COM NPV" ;
+	:ID_NOTATION "256167" ;
+	:ISIN "US0936711052" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BMC_SFTWRE_USD0_01 a :Stock ;
+	rdfs:label "BMC SOFTWARE INC COM USD0.01" ;
+	:ID_NOTATION "69992" ;
+	:ISIN "US0559211000" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BOEING :memberOf :index_S_P_500_INDEX .
+
+:stock_BORG_WRN a :Stock ;
+	rdfs:label "BORG WARNER INC COM USD0.01" ;
+	:ID_NOTATION "256268" ;
+	:ISIN "US0997241064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BOSTN_PROP_USD0_01 a :Stock ;
+	rdfs:label "BOSTON PROPERTIES INC COM USD0.01" ;
+	:ID_NOTATION "70741" ;
+	:ISIN "US1011211018" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BOSTON_SCIENTIFIC a :Stock ;
+	rdfs:label "BOSTON SCIENTIFIC CORP COM USD0.01" ;
+	:ID_NOTATION "256312" ;
+	:ISIN "US1011371077" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BRISTOL_MYERS_SQUIBBDL_10 a :Stock ;
+	rdfs:label "BRISTOL-MYERS SQUIBB CO COM STK USD0.10" ;
+	:ID_NOTATION "256484" ;
+	:ISIN "US1101221083" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BROADCOM_CORP a :Stock ;
+	rdfs:label "BROADCOM CORP CL A COM USD0.0001" ;
+	:ID_NOTATION "1550505" ;
+	:ISIN "US1113201073" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_BROWN_FORMAN_B_15C a :Stock ;
+	rdfs:label "BROWN-FORMAN CORP 'B'COM USD0.15" ;
+	:ID_NOTATION "70924" ;
+	:ISIN "US1156372096" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CA_INC a :Stock ;
+	rdfs:label "CA INC COM USD0.10" ;
+	:ID_NOTATION "22769281" ;
+	:ISIN "US12673P1057" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CABLEVSN_NY_GP a :Stock ;
+	rdfs:label "CABLEVISION SYSTEMS CORP NY GROUP CM CLASS'A'USD0.01" ;
+	:ID_NOTATION "256916" ;
+	:ISIN "US12686C1099" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CABOT_OIL_A_USD a :Stock ;
+	rdfs:label "CABOT OIL & GAS CORP COM USD0.10" ;
+	:ID_NOTATION "71280" ;
+	:ISIN "US1270971039" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CAMERON_INTL a :Stock ;
+	rdfs:label "CAMERON INTERNATIONAL CORP COM USD0.01" ;
+	:ID_NOTATION "259328" ;
+	:ISIN "US13342B1052" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CAMPBELL a :Stock ;
+	rdfs:label "CAMPBELL SOUP CO CAP USD0.0375" ;
+	:ID_NOTATION "257253" ;
+	:ISIN "US1344291091" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CAP1_FINL a :Stock ;
+	rdfs:label "CAPITAL ONE FINANCIAL CORP COM USD0.01" ;
+	:ID_NOTATION "257334" ;
+	:ISIN "US14040H1059" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CARD_HLTH_NPV a :Stock ;
+	rdfs:label "CARDINAL HEALTH INC COM NPV" ;
+	:ID_NOTATION "257408" ;
+	:ISIN "US14149Y1082" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CAREFUSIO a :Stock ;
+	rdfs:label "CAREFUSION CORP COM USD0.01" ;
+	:ID_NOTATION "2779238" ;
+	:ISIN "US14170T1016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CARMAX a :Stock ;
+	rdfs:label "CARMAX INC COM USD0.50" ;
+	:ID_NOTATION "71971" ;
+	:ISIN "US1431301027" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CRNVL_CORP a :Stock ;
+	rdfs:label "CARNIVAL CORP COM USD0.01(PAIRED STOCK)" ;
+	:ID_NOTATION "246153" ;
+	:ISIN "PA1436583006" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CATERPILLAR :memberOf :index_S_P_500_INDEX .
+
+:stock_CBRE_GROU a :Stock ;
+	rdfs:label "CBRE GROUP INC COM USD0.01 CLASS 'A'" ;
+	:ID_NOTATION "9946179" ;
+	:ISIN "US12504L1098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CBS_CLS_B_COM_STK a :Stock ;
+	rdfs:label "CBS CORPORATION CLASS'B' COM STK USD0.001" ;
+	:ID_NOTATION "13481034" ;
+	:ISIN "US1248572026" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CELGENE a :Stock ;
+	rdfs:label "CELGENE CORP COM USD0.01" ;
+	:ID_NOTATION "257589" ;
+	:ISIN "US1510201049" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CNTRPNT_ENRGY a :Stock ;
+	rdfs:label "CENTERPOINT ENERGY INC COM NPV" ;
+	:ID_NOTATION "6202530" ;
+	:ISIN "US15189T1079" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CNTYR_LNK a :Stock ;
+	rdfs:label "CENTURYLINK INC COM USD1" ;
+	:ID_NOTATION "71725" ;
+	:ISIN "US1567001060" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CERNER_CRP a :Stock ;
+	rdfs:label "CERNER CORP COM USD0.01" ;
+	:ID_NOTATION "257783" ;
+	:ISIN "US1567821046" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CF_INDUST a :Stock ;
+	rdfs:label "CF INDUSTRIES HOLDINGS INC COM USD0.01" ;
+	:ID_NOTATION "257838" ;
+	:ISIN "US1252691001" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CH_ROBNSN_W_WIDE a :Stock ;
+	rdfs:label "CH ROBINSON WORLDWIDE INC COM USD0.1" ;
+	:ID_NOTATION "256752" ;
+	:ISIN "US12541W2098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CHESP_ENEGY a :Stock ;
+	rdfs:label "CHESAPEAKE ENERGY CORP COM USD0.01" ;
+	:ID_NOTATION "71857" ;
+	:ISIN "US1651671075" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CHEVRON :memberOf :index_S_P_500_INDEX .
+
+:stock_CHIPOTLE_MEXICAN a :Stock ;
+	rdfs:label "CHIPOTLE MEXICAN GRILL COM USD0.01" ;
+	:ID_NOTATION "13860170" ;
+	:ISIN "US1696561059" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CHUBB_CP a :Stock ;
+	rdfs:label "CHUBB CORP COM USD1" ;
+	:ID_NOTATION "1550660" ;
+	:ISIN "US1712321017" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CIGNA_CP a :Stock ;
+	rdfs:label "CIGNA CORP COM USD0.25" ;
+	:ID_NOTATION "256763" ;
+	:ISIN "US1255091092" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CINCINNATI_FINCL a :Stock ;
+	rdfs:label "CINCINNATI FINANCIAL CORP COM USD2" ;
+	:ID_NOTATION "258175" ;
+	:ISIN "US1720621010" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CINTAS_NPV a :Stock ;
+	rdfs:label "CINTAS CORP COM NPV" ;
+	:ID_NOTATION "258203" ;
+	:ISIN "US1729081059" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CISCO_SYSTEMS :memberOf :index_S_P_500_INDEX .
+
+:stock_CITIGROUP_USD0_01 a :Stock ;
+	rdfs:label "CITIGROUP INC COM USD0.01" ;
+	:ID_NOTATION "258242" ;
+	:ISIN "US1729674242" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CITRIX_SYSTEMS a :Stock ;
+	rdfs:label "CITRIX SYSTEMS INC COM USD0.001" ;
+	:ID_NOTATION "258357" ;
+	:ISIN "US1773761002" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CLIFFS_NAT_RES a :Stock ;
+	rdfs:label "CLIFFS NATURAL RESOURCES INC COM STK USD0.125" ;
+	:ID_NOTATION "72081" ;
+	:ISIN "US18683K1016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CLOROX_CO a :Stock ;
+	rdfs:label "CLOROX CO COM USD1" ;
+	:ID_NOTATION "258451" ;
+	:ISIN "US1890541097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CME_GROUP_INC_A a :Stock ;
+	rdfs:label "CME GROUP INC COM STK USD0.01 CLASS'A'" ;
+	:ID_NOTATION "6487848" ;
+	:ISIN "US12572Q1058" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CMS_ENERGY a :Stock ;
+	rdfs:label "CMS ENERGY CORP COM USD0.01" ;
+	:ID_NOTATION "71133" ;
+	:ISIN "US1258961002" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COACH_INC a :Stock ;
+	rdfs:label "COACH INC COM USD0.01" ;
+	:ID_NOTATION "258461" ;
+	:ISIN "US1897541041" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COCA_COLA :memberOf :index_S_P_500_INDEX .
+
+:stock_COCA_ENTE a :Stock ;
+	rdfs:label "COCA-COLA ENTERPRISES INC COM USD1.00" ;
+	:ID_NOTATION "72113" ;
+	:ISIN "US19122T1097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COGNIZANT_TEC a :Stock ;
+	rdfs:label "COGNIZANT TECHNOLOGY SOLUTIONS CORP COM CL'A'USD0.01" ;
+	:ID_NOTATION "7879721" ;
+	:ISIN "US1924461023" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COLGATE a :Stock ;
+	rdfs:label "COLGATE PALM. COM STK $1" ;
+	:ID_NOTATION "258599" ;
+	:ISIN "US1941621039" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COMCAST_CORP_NEW a :Stock ;
+	rdfs:label "COMCAST CORP COM CLS'A' USD0.01" ;
+	:ID_NOTATION "258742" ;
+	:ISIN "US20030N1019" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COMERCIA_INC a :Stock ;
+	rdfs:label "COMERICA INC COM USD5" ;
+	:ID_NOTATION "72239" ;
+	:ISIN "US2003401070" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COMSCICOMSTKUSD a :Stock ;
+	rdfs:label "COMPUTER SCIENCES CORP COM USD1" ;
+	:ID_NOTATION "258966" ;
+	:ISIN "US2053631048" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CONAGRA_FOODS a :Stock ;
+	rdfs:label "CONAGRA FOODS INC COM USD5" ;
+	:ID_NOTATION "259008" ;
+	:ISIN "US2058871029" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CONOCOPHILLIPS a :Stock ;
+	rdfs:label "CONOCOPHILLIPS COM USD0.01" ;
+	:ID_NOTATION "6063928" ;
+	:ISIN "US20825C1045" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CONSOL_ENE a :Stock ;
+	rdfs:label "CONSOL ENERGY INC COM USD0.01" ;
+	:ID_NOTATION "259166" ;
+	:ISIN "US20854P1093" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CONSOL_EDS_USD0_10 a :Stock ;
+	rdfs:label "CONSOLIDATED EDISON INC COM USD0.10" ;
+	:ID_NOTATION "259186" ;
+	:ISIN "US2091151041" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CONSTEL_A a :Stock ;
+	rdfs:label "CONSTELLATION BRANDS INC CLASS'A'COM USD0.01" ;
+	:ID_NOTATION "259211" ;
+	:ISIN "US21036P1084" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COOR_INDU a :Stock ;
+	rdfs:label "COOPER INDUSTRIES PLC (IE) COM USD0.01" ;
+	:ID_NOTATION "259354" ;
+	:ISIN "IE00B40K9117" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CORNING a :Stock ;
+	rdfs:label "CORNING INC COM USD0.50" ;
+	:ID_NOTATION "259432" ;
+	:ISIN "US2193501051" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COSTCO_WHOLESALE a :Stock ;
+	rdfs:label "COSTCO WHOLESALE CORP COM STK USD0.005" ;
+	:ID_NOTATION "72721" ;
+	:ISIN "US22160K1051" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COV_HLTHCR a :Stock ;
+	rdfs:label "COVENTRY HEALTHCARE INC COM STK USD0.01" ;
+	:ID_NOTATION "3087441" ;
+	:ISIN "US2228621049" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_COVIDIEN a :Stock ;
+	rdfs:label "COVIDIEN PLC USD0.20(POST CONSOLIDATION)" ;
+	:ID_NOTATION "18354810" ;
+	:ISIN "IE00B68SQD29" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CROWN_CASTLE_INT a :Stock ;
+	rdfs:label "CROWN CASTLE INTERNATIONAL CORP COM USD0.01" ;
+	:ID_NOTATION "2968768" ;
+	:ISIN "US2282271046" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CSX_CORP a :Stock ;
+	rdfs:label "CSX CORP COM USD1" ;
+	:ID_NOTATION "256878" ;
+	:ISIN "US1264081035" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CUMMINS_INC_COM a :Stock ;
+	rdfs:label "CUMMINS INC COM USD2.50" ;
+	:ID_NOTATION "1550829" ;
+	:ISIN "US2310211063" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_CVS_CAREMARK_CORP a :Stock ;
+	rdfs:label "CVS CAREMARK CORP COM STK USD0.01" ;
+	:ID_NOTATION "256904" ;
+	:ISIN "US1266501006" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DANAHER_CORP a :Stock ;
+	rdfs:label "DANAHER CORP COM USD0.01" ;
+	:ID_NOTATION "260032" ;
+	:ISIN "US2358511028" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DARDEN_RESTCSN a :Stock ;
+	rdfs:label "DARDEN RESTAURANTS INC COM NPV" ;
+	:ID_NOTATION "73081" ;
+	:ISIN "US2371941053" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DAVITA_INC a :Stock ;
+	rdfs:label "DAVITA INC COM USD0.001" ;
+	:ID_NOTATION "260115" ;
+	:ISIN "US23918K1088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DEAN_FOODS a :Stock ;
+	rdfs:label "DEAN FOODS CO COM USD0.01" ;
+	:ID_NOTATION "1532484" ;
+	:ISIN "US2423701042" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DEERE_CO a :Stock ;
+	rdfs:label "DEERE & CO COM USD1" ;
+	:ID_NOTATION "260156" ;
+	:ISIN "US2441991054" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DELL a :Stock ;
+	rdfs:label "DELL INC COM USD0.01" ;
+	:ID_NOTATION "1550877" ;
+	:ISIN "US24702R1014" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DENBURY_RES a :Stock ;
+	rdfs:label "DENBURY RES INC DEL COM USD0.001" ;
+	:ID_NOTATION "73185" ;
+	:ISIN "US2479162081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DENTSPLY_INTL a :Stock ;
+	rdfs:label "DENTSPLY INTERNATIONAL INC COM USD0.01" ;
+	:ID_NOTATION "260438" ;
+	:ISIN "US2490301072" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DEVON_ENERGY a :Stock ;
+	rdfs:label "DEVON ENERGY CORP COM USD0.10" ;
+	:ID_NOTATION "10666615" ;
+	:ISIN "US25179M1036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DEVRY_INC a :Stock ;
+	rdfs:label "DEVRY INC COM USD0.01" ;
+	:ID_NOTATION "73239" ;
+	:ISIN "US2518931033" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DIAMOND_ODMD_OFFSH a :Stock ;
+	rdfs:label "DIAMOND OFFSHORE DRILLING COM USD0.01" ;
+	:ID_NOTATION "73275" ;
+	:ISIN "US25271C1027" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DIRECTV a :Stock ;
+	rdfs:label "DIRECTV COM USD0.01 CLASS 'A'" ;
+	:ID_NOTATION "20499882" ;
+	:ISIN "US25490A1016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DISCOVER a :Stock ;
+	rdfs:label "DISCOVER FINANCIAL SERVICES COM STK USD0.01" ;
+	:ID_NOTATION "18354816" ;
+	:ISIN "US2547091080" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DISCOVERY_COM_A a :Stock ;
+	rdfs:label "DISCOVERY COMMUNIC COM CL A USD0.01" ;
+	:ID_NOTATION "12567582" ;
+	:ISIN "US25470F1049" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DOLLAR_TREE_INC a :Stock ;
+	rdfs:label "DOLLAR TREE INC COM USD0.01" ;
+	:ID_NOTATION "260809" ;
+	:ISIN "US2567461080" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DOMINION_RES_VIRG a :Stock ;
+	rdfs:label "DOMINION RESOURCES INC(VIRGINIA) COM STK NPV" ;
+	:ID_NOTATION "260826" ;
+	:ISIN "US25746U1097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DONNELLY_R_R a :Stock ;
+	rdfs:label "DONNELLEY RR & SONS CO COM USD1.25" ;
+	:ID_NOTATION "9955818" ;
+	:ISIN "US2578671016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DOVER_CRP a :Stock ;
+	rdfs:label "DOVER CORP COM USD1" ;
+	:ID_NOTATION "260905" ;
+	:ISIN "US2600031080" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DOW_CHEM a :Stock ;
+	rdfs:label "DOW CHEMICAL CO COM USD2.50" ;
+	:ID_NOTATION "260913" ;
+	:ISIN "US2605431038" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DR_HORTON a :Stock ;
+	rdfs:label "DR HORTON INC COM USD0.01" ;
+	:ID_NOTATION "73023" ;
+	:ISIN "US23331A1097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DR_PEPPER_SNAPPLE a :Stock ;
+	rdfs:label "DR PEPPER SNAPPLE GROUP INC COM STK USD0.01" ;
+	:ID_NOTATION "22878747" ;
+	:ISIN "US26138E1091" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DTE_ENERGY a :Stock ;
+	rdfs:label "DTE ENERGY CO COM NPV" ;
+	:ID_NOTATION "259966" ;
+	:ISIN "US2333311072" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DU_PONT :memberOf :index_S_P_500_INDEX .
+
+:stock_DUKE_ENER a :Stock ;
+	rdfs:label "DUKE ENERGY CORP COM STK NPV" ;
+	:ID_NOTATION "261370" ;
+	:ISIN "US26441C1053" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DUN_BRADST_DEL a :Stock ;
+	rdfs:label "DUN & BRADSTREET CORP(DELAWARE) COM USD0.01 (NEW)" ;
+	:ID_NOTATION "261415" ;
+	:ISIN "US26483E1001" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_E_TRADE_FIN a :Stock ;
+	rdfs:label "E TRADE FINANCIAL CORPORATION COM USD0.01" ;
+	:ID_NOTATION "36788636" ;
+	:ISIN "US2692464017" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EASTMN_CHEM a :Stock ;
+	rdfs:label "EASTMAN CHEMICAL CO COM USD0.01" ;
+	:ID_NOTATION "261698" ;
+	:ISIN "US2774321002" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EATON_CP a :Stock ;
+	rdfs:label "EATON CORP COM USD0.50" ;
+	:ID_NOTATION "261764" ;
+	:ISIN "US2780581029" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EBAY a :Stock ;
+	rdfs:label "EBAY INC COM USD0.001" ;
+	:ID_NOTATION "261835" ;
+	:ISIN "US2786421030" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ECOLAB a :Stock ;
+	rdfs:label "ECOLAB INC COM USD1" ;
+	:ID_NOTATION "261869" ;
+	:ISIN "US2788651006" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EDISON_INTL a :Stock ;
+	rdfs:label "EDISON INTERNATIONAL COM NPV" ;
+	:ID_NOTATION "261902" ;
+	:ISIN "US2810201077" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EDWARDS_LIFESCI a :Stock ;
+	rdfs:label "EDWARDS LIFESCIENCES CORP COM USD1" ;
+	:ID_NOTATION "261923" ;
+	:ISIN "US28176E1082" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EL_PASO_CORP a :Stock ;
+	rdfs:label "EL PASO CORP COM USD3" ;
+	:ID_NOTATION "4828169" ;
+	:ISIN "US28336L1098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EL_ARTS a :Stock ;
+	rdfs:label "ELECTRONIC ARTS INC COM USD0.01" ;
+	:ID_NOTATION "262027" ;
+	:ISIN "US2855121099" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LILLY_ELI a :Stock ;
+	rdfs:label "ELI LILLY AND COMPANY COM NPV" ;
+	:ID_NOTATION "271586" ;
+	:ISIN "US5324571083" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EMC_CORP_MASS a :Stock ;
+	rdfs:label "EMC CORP MASSACHUSETTS COM USD0.01" ;
+	:ID_NOTATION "261576" ;
+	:ISIN "US2686481027" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EMERS_ELEC a :Stock ;
+	rdfs:label "EMERSON ELECTRIC CO COM USD0.50" ;
+	:ID_NOTATION "262136" ;
+	:ISIN "US2910111044" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ENTERGY a :Stock ;
+	rdfs:label "ENTERGY CORP COM USD0.01" ;
+	:ID_NOTATION "262344" ;
+	:ISIN "US29364G1031" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EOG_RESRCS a :Stock ;
+	rdfs:label "EOG RESOURCES INC COM USD0.01" ;
+	:ID_NOTATION "261605" ;
+	:ISIN "US26875P1012" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EQT a :Stock ;
+	rdfs:label "EQT CORPORATION COM NPV" ;
+	:ID_NOTATION "74200" ;
+	:ISIN "US26884L1098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EQUIFAX a :Stock ;
+	rdfs:label "EQUIFAX INC COM USD1.25" ;
+	:ID_NOTATION "262534" ;
+	:ISIN "US2944291051" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EQTY_RES_SHS a :Stock ;
+	rdfs:label "EQUITY RESIDENTIAL SBI USD0.01" ;
+	:ID_NOTATION "262573" ;
+	:ISIN "US29476L1070" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ESTEE_LAUDER a :Stock ;
+	rdfs:label "ESTEE LAUDER COMPANIES INC CLASS'A'COM USD0.01" ;
+	:ID_NOTATION "271184" ;
+	:ISIN "US5184391044" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EXELON a :Stock ;
+	rdfs:label "EXELON CORP COM NPV" ;
+	:ID_NOTATION "263009" ;
+	:ISIN "US30161N1019" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EXPEDIA a :Stock ;
+	rdfs:label "EXPEDIA INC COM USD0.001 (POST-SPLIT)" ;
+	:ID_NOTATION "12562233" ;
+	:ISIN "US30212P3038" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EXPDTR_INT_WSHTON a :Stock ;
+	rdfs:label "EXPEDITORS INTERN OF WASHINGTON INC COM USD0.01" ;
+	:ID_NOTATION "263056" ;
+	:ISIN "US3021301094" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EXPS_SCRI a :Stock ;
+	rdfs:label "EXPRESS SCRIPTS HLDG CO COM USD0.01" ;
+	:ID_NOTATION "263069" ;
+	:ISIN "US30219G1085" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_EXXON_MOB :memberOf :index_S_P_500_INDEX .
+
+:stock_F5_NETWRK_INC a :Stock ;
+	rdfs:label "F5 NETWORK INC COM STK NPV" ;
+	:ID_NOTATION "263855" ;
+	:ISIN "US3156161024" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FAMILY_DOLLAR a :Stock ;
+	rdfs:label "FAMILY DOLLAR STORES INC COM USD0.10" ;
+	:ID_NOTATION "263199" ;
+	:ISIN "US3070001090" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FASTNAL a :Stock ;
+	rdfs:label "FASTENAL COM USD0.01" ;
+	:ID_NOTATION "263245" ;
+	:ISIN "US3119001044" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FED_INV_B a :Stock ;
+	rdfs:label "FEDERATED INVESTORS INC CL'B' NPV" ;
+	:ID_NOTATION "74542" ;
+	:ISIN "US3142111034" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FEDEX_CORP a :Stock ;
+	rdfs:label "FEDEX CORP COM USD0.10" ;
+	:ID_NOTATION "263833" ;
+	:ISIN "US31428X1063" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FIDELITY_NTL_INFO a :Stock ;
+	rdfs:label "FIDELITY NATL INFORMATION SERVICES COM STK USD0.01" ;
+	:ID_NOTATION "3410982" ;
+	:ISIN "US31620M1062" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_5TH_3RD_BANCO a :Stock ;
+	rdfs:label "FIFTH THIRD BANCORP COM NPV" ;
+	:ID_NOTATION "264183" ;
+	:ISIN "US3167731005" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_1ST_HORIZ a :Stock ;
+	rdfs:label "FIRST HORIZON NATIONAL CORPORATION COM USD0.625" ;
+	:ID_NOTATION "9643258" ;
+	:ISIN "US3205171057" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FIRST_SOLAR a :Stock ;
+	rdfs:label "FIRST SOLAR INC COM STK USD0.001" ;
+	:ID_NOTATION "16134535" ;
+	:ISIN "US3364331070" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FIRST_ENERGY_USD_1 a :Stock ;
+	rdfs:label "FIRSTENERGY CORP COM USD0.10" ;
+	:ID_NOTATION "1532603" ;
+	:ISIN "US3379321074" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FISERV a :Stock ;
+	rdfs:label "FISERV INC COM USD0.01" ;
+	:ID_NOTATION "264718" ;
+	:ISIN "US3377381088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FLIR_SUS a :Stock ;
+	rdfs:label "FLIR SYSTEMS INC COM USD0.01" ;
+	:ID_NOTATION "263107" ;
+	:ISIN "US3024451011" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FLOWSERVE a :Stock ;
+	rdfs:label "FLOWSERVE CORP COM USD1.25" ;
+	:ID_NOTATION "74943" ;
+	:ISIN "US34354P1057" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FLUOR a :Stock ;
+	rdfs:label "FLUOR CORP COM STK USD0.01" ;
+	:ID_NOTATION "264912" ;
+	:ISIN "US3434121022" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FMC_CP a :Stock ;
+	rdfs:label "FMC CORP COM STK USD0.10" ;
+	:ID_NOTATION "263110" ;
+	:ISIN "US3024913036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FMC_TCHNLGS a :Stock ;
+	rdfs:label "FMC TECHNOLOGIES INC COM STK USD0.01" ;
+	:ID_NOTATION "3240270" ;
+	:ISIN "US30249U1016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FORD a :Stock ;
+	rdfs:label "FORD MOTOR COM STK $0.01" ;
+	:ID_NOTATION "264959" ;
+	:ISIN "US3453708600" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FOREST_LABS a :Stock ;
+	rdfs:label "FOREST LABORATORIES INC COM USD0.10" ;
+	:ID_NOTATION "265013" ;
+	:ISIN "US3458381064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FOSSIL_INC a :Stock ;
+	rdfs:label "FOSSIL INC COM USD0.01" ;
+	:ID_NOTATION "265134" ;
+	:ISIN "US3498821004" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FRANKLIN_RES a :Stock ;
+	rdfs:label "FRANKLIN RESOURCES INC COM USD0.10" ;
+	:ID_NOTATION "1551449" ;
+	:ISIN "US3546131018" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FREEPRT_MCMRN_COPP a :Stock ;
+	rdfs:label "FREEPORT-MCMORAN COPPER & GOLD INC COM STK USD0.10" ;
+	:ID_NOTATION "265428" ;
+	:ISIN "US35671D8570" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_FRONTIER_COMM a :Stock ;
+	rdfs:label "FRONTIER COMMUNICATIONS CORPORATION COM USD0.25" ;
+	:ID_NOTATION "24083397" ;
+	:ISIN "US35906A1088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GAMESTOP a :Stock ;
+	rdfs:label "GAMESTOP CORPORATION COM USD0.001 CLASS 'A'" ;
+	:ID_NOTATION "4852810" ;
+	:ISIN "US36467W1099" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GANNETT a :Stock ;
+	rdfs:label "GANNETT CO INC COM USD1" ;
+	:ID_NOTATION "1551519" ;
+	:ISIN "US3647301015" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GAP a :Stock ;
+	rdfs:label "GAP INC COM USD0.05" ;
+	:ID_NOTATION "265906" ;
+	:ISIN "US3647601083" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GEN_DYN a :Stock ;
+	rdfs:label "GENERAL DYNAMICS CORP COM USD1" ;
+	:ID_NOTATION "266020" ;
+	:ISIN "US3695501086" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GEN_ELEC :memberOf :index_S_P_500_INDEX .
+
+:stock_GEN_MLLS a :Stock ;
+	rdfs:label "GENERAL MILLS INC COM STK USD0.10" ;
+	:ID_NOTATION "266073" ;
+	:ISIN "US3703341046" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GENUNE_PRTS a :Stock ;
+	rdfs:label "GENUINE PARTS CO COM STK USD1" ;
+	:ID_NOTATION "266231" ;
+	:ISIN "US3724601055" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GENWORTH a :Stock ;
+	rdfs:label "GENWORTH FINANCIAL INC COM CL'A'USD0.001" ;
+	:ID_NOTATION "10169923" ;
+	:ISIN "US37247D1063" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GILEAD_SCIENCES a :Stock ;
+	rdfs:label "GILEAD SCIENCES INC COM USD0.001" ;
+	:ID_NOTATION "266330" ;
+	:ISIN "US3755581036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GLD_SACHS a :Stock ;
+	rdfs:label "GOLDMAN SACHS GROUP INC COM USD0.01" ;
+	:ID_NOTATION "266507" ;
+	:ISIN "US38141G1040" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GOODRICH a :Stock ;
+	rdfs:label "GOODRICH CORP COM USD5" ;
+	:ID_NOTATION "266741" ;
+	:ISIN "US3823881061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GOODYEAR a :Stock ;
+	rdfs:label "GOODYEAR TIRE & RUBBER CO COM NPV" ;
+	:ID_NOTATION "266760" ;
+	:ISIN "US3825501014" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GOOGLE a :Stock ;
+	rdfs:label "GOOGLE INC COM USD0.001 CL'A'" ;
+	:ID_NOTATION "10390991" ;
+	:ISIN "US38259P5089" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_GRAINGER_WW a :Stock ;
+	rdfs:label "GRAINGER(W.W.) INC COM STK USD0.50" ;
+	:ID_NOTATION "266809" ;
+	:ISIN "US3848021040" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HALLIBURTON a :Stock ;
+	rdfs:label "HALLIBURTON CO COM STK USD2.50" ;
+	:ID_NOTATION "1551642" ;
+	:ISIN "US4062161017" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_Harley_Davidson_Inc a :Stock ;
+	rdfs:label "HARLEY DAVIDSON COM USD0.01" ;
+	:ID_NOTATION "267429" ;
+	:ISIN "US4128221086" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HARMAN_INTL a :Stock ;
+	rdfs:label "HARMAN INTERNATIONAL INDUSTRIES INC COM USD0.01" ;
+	:ID_NOTATION "267436" ;
+	:ISIN "US4130861093" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HARRIS_CRP a :Stock ;
+	rdfs:label "HARRIS CORP COM STK USD1" ;
+	:ID_NOTATION "267482" ;
+	:ISIN "US4138751056" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HARTFORD_FINL_USD a :Stock ;
+	rdfs:label "HARTFORD FINANCIAL SERVICES GRP INC COM USD0.01" ;
+	:ID_NOTATION "1551673" ;
+	:ISIN "US4165151048" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HASBRO a :Stock ;
+	rdfs:label "HASBRO INC COM USD0.50" ;
+	:ID_NOTATION "1551696" ;
+	:ISIN "US4180561072" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HCP a :Stock ;
+	rdfs:label "HCP INC COM USD1" ;
+	:ID_NOTATION "1532687" ;
+	:ISIN "US40414L1098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HLTH_CARE_REIT_1 a :Stock ;
+	rdfs:label "HEALTH CARE REIT INC COM USD1" ;
+	:ID_NOTATION "76158" ;
+	:ISIN "US42217K1060" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HEINZ_HJ a :Stock ;
+	rdfs:label "HEINZ(H.J.)CO COM USD0.25" ;
+	:ID_NOTATION "267752" ;
+	:ISIN "US4230741039" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HELMERICH a :Stock ;
+	rdfs:label "HELMERICH & PAYNE INC COM USD0.10" ;
+	:ID_NOTATION "76221" ;
+	:ISIN "US4234521015" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HERSHEY_CO a :Stock ;
+	rdfs:label "HERSHEY COMPANY COM USD1" ;
+	:ID_NOTATION "267874" ;
+	:ISIN "US4278661081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HESS_CORP a :Stock ;
+	rdfs:label "HESS CORPORATION COM USD1" ;
+	:ID_NOTATION "1550154" ;
+	:ISIN "US42809H1077" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HEWLETT_PACKARD :memberOf :index_S_P_500_INDEX .
+
+:stock_HOME_DEPOT :memberOf :index_S_P_500_INDEX .
+
+:stock_HONEYWELL_INTL a :Stock ;
+	rdfs:label "HONEYWELL INTERNATIONAL INC COM USD1" ;
+	:ID_NOTATION "268145" ;
+	:ISIN "US4385161066" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HORMEL_FOODS a :Stock ;
+	rdfs:label "HORMEL FOODS CORP COM USD0.0586" ;
+	:ID_NOTATION "76417" ;
+	:ISIN "US4404521001" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HOSPIRA_I a :Stock ;
+	rdfs:label "HOSPIRA INC COM USD0.01" ;
+	:ID_NOTATION "9634755" ;
+	:ISIN "US4410601003" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HOST_HOTELS_RESORT a :Stock ;
+	rdfs:label "HOST HOTELS & RESORTS INC COM STK USD0.01" ;
+	:ID_NOTATION "268187" ;
+	:ISIN "US44107P1049" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HUDSON_CITY_BNCP a :Stock ;
+	rdfs:label "HUDSON CITY BANCORP INC COM USD0.01" ;
+	:ID_NOTATION "76475" ;
+	:ISIN "US4436831071" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HUMANA_INC a :Stock ;
+	rdfs:label "HUMANA INC COM USD0.166" ;
+	:ID_NOTATION "268317" ;
+	:ISIN "US4448591028" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_HUNTINGTON_NPV a :Stock ;
+	rdfs:label "HUNTINGTON BANCSHARES INC COM STK NPV" ;
+	:ID_NOTATION "268348" ;
+	:ISIN "US4461501045" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ILL_TOOL_NPV a :Stock ;
+	rdfs:label "ILLINOIS TOOL WORKS INC COM NPV" ;
+	:ID_NOTATION "268768" ;
+	:ISIN "US4523081093" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INGERSOLL a :Stock ;
+	rdfs:label "INGERSOLL-RAND PLC SHS USD1" ;
+	:ID_NOTATION "269058" ;
+	:ISIN "IE00B6330302" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INTEGRYS_ENRGY_GRP a :Stock ;
+	rdfs:label "INTEGRYS ENERGY GROUP INC COM USD1" ;
+	:ID_NOTATION "17036317" ;
+	:ISIN "US45822P1057" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INTEL :memberOf :index_S_P_500_INDEX .
+
+:stock_INTERCONT a :Stock ;
+	rdfs:label "INTERCONTINENTALEXCHANGE INC COM STK USD0.01" ;
+	:ID_NOTATION "13347848" ;
+	:ISIN "US45865V1008" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_IBM :memberOf :index_S_P_500_INDEX .
+
+:stock_INT_FLAVORS a :Stock ;
+	rdfs:label "INTERNATIONAL FLAVORS & FRAGRANCES COM USD0.125" ;
+	:ID_NOTATION "269550" ;
+	:ISIN "US4595061015" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INTL_GAME_TECH a :Stock ;
+	rdfs:label "INTERNATIONAL GAME TECHNOLOGY COM USD0.000625" ;
+	:ID_NOTATION "269569" ;
+	:ISIN "US4599021023" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INT_PAPER a :Stock ;
+	rdfs:label "INTERNATIONAL PAPER CO COM USD1" ;
+	:ID_NOTATION "269592" ;
+	:ISIN "US4601461035" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INTPUB_GR a :Stock ;
+	rdfs:label "INTERPUBLIC GROUP OF COMPANIES COM USD0.10" ;
+	:ID_NOTATION "269672" ;
+	:ISIN "US4606901001" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INTUIT a :Stock ;
+	rdfs:label "INTUIT INC COM USD0.01" ;
+	:ID_NOTATION "269774" ;
+	:ISIN "US4612021034" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INTUITIVE_SURGICAL a :Stock ;
+	rdfs:label "INTUITIVE SURGICAL INC COM USD0.001" ;
+	:ID_NOTATION "269783" ;
+	:ISIN "US46120E6023" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_INVESCO_LTD a :Stock ;
+	rdfs:label "INVESCO LTD COM STK USD0.20" ;
+	:ID_NOTATION "17888900" ;
+	:ISIN "BMG491BT1088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_IRON_MOUNTN_INC_PA a :Stock ;
+	rdfs:label "IRON MOUNTAIN INC COM USD0.01" ;
+	:ID_NOTATION "269876" ;
+	:ISIN "US4628461067" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_J_C_Penney a :Stock ;
+	rdfs:label "J.C. PENNEY COMPANY INC." ;
+	:ID_NOTATION "1553012" ;
+	:ISIN "US7081601061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_JABIL_CIRCT a :Stock ;
+	rdfs:label "JABIL CIRCUIT INC COM USD0.001" ;
+	:ID_NOTATION "270103" ;
+	:ISIN "US4663131039" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_JACOBS_ENG_GR a :Stock ;
+	rdfs:label "JACOBS ENGINEERING GROUP INC COM USD1" ;
+	:ID_NOTATION "77598" ;
+	:ISIN "US4698141078" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_JDS_UNIPHASE a :Stock ;
+	rdfs:label "JDS UNIPHASE CORP COM STK USD0.001" ;
+	:ID_NOTATION "77548" ;
+	:ISIN "US46612J5074" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_JOHNSON_JOHNSON :memberOf :index_S_P_500_INDEX .
+
+:stock_Johnson_Controls_Inc a :Stock ;
+	rdfs:label "JOHNSON CONTROLS INC COM STK USD0.01388" ;
+	:ID_NOTATION "270240" ;
+	:ISIN "US4783661071" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_JOY_GLOBL_INC a :Stock ;
+	rdfs:label "JOY GLOBAL INC COM USD1" ;
+	:ID_NOTATION "55813224" ;
+	:ISIN "US4811651086" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_JPMORGAN_CHASE :memberOf :index_S_P_500_INDEX .
+
+:stock_JUNIPER_NETWORKS a :Stock ;
+	rdfs:label "JUNIPER NETWORKS COM USD0.00001" ;
+	:ID_NOTATION "270277" ;
+	:ISIN "US48203R1041" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_KELLOGG_CO a :Stock ;
+	rdfs:label "KELLOGG COMPANY COM USD0.25" ;
+	:ID_NOTATION "270453" ;
+	:ISIN "US4878361082" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_KEYCORP a :Stock ;
+	rdfs:label "KEYCORP COM USD1" ;
+	:ID_NOTATION "270732" ;
+	:ISIN "US4932671088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_KIMBERLY_CLARK a :Stock ;
+	rdfs:label "KIMBERLY CLARK CORP COM USD1.25" ;
+	:ID_NOTATION "270771" ;
+	:ISIN "US4943681035" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_KIMCO a :Stock ;
+	rdfs:label "KIMCO REALTY CORP COM USD0.01" ;
+	:ID_NOTATION "77866" ;
+	:ISIN "US49446R1095" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_KLA_TENCOR_CORP a :Stock ;
+	rdfs:label "KLA-TENCOR CORP COM USD0.001" ;
+	:ID_NOTATION "270319" ;
+	:ISIN "US4824801009" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_KOHLS_CORP a :Stock ;
+	rdfs:label "KOHLS CORPORATION COM USD0.01" ;
+	:ID_NOTATION "270833" ;
+	:ISIN "US5002551043" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_KRAFT_FOODS :memberOf :index_S_P_500_INDEX .
+
+:stock_KROGER a :Stock ;
+	rdfs:label "KROGER CO COM USD1" ;
+	:ID_NOTATION "270972" ;
+	:ISIN "US5010441013" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_L3_COMM a :Stock ;
+	rdfs:label "L-3 COMMUNICATIONS CORP COM USD0.01" ;
+	:ID_NOTATION "78048" ;
+	:ISIN "US5024241045" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LABORATORY_AMER a :Stock ;
+	rdfs:label "LABORATORY CORP AMER HLDGS COM USD0.1" ;
+	:ID_NOTATION "78079" ;
+	:ISIN "US50540R4092" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LEGG_MASOLEGG_MASN a :Stock ;
+	rdfs:label "LEGG MASON INC COM USD0.10" ;
+	:ID_NOTATION "78234" ;
+	:ISIN "US5249011058" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LEGGETT_PLATT_0_01 a :Stock ;
+	rdfs:label "LEGGETT & PLATT INC COM USD0.01" ;
+	:ID_NOTATION "78226" ;
+	:ISIN "US5246601075" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LENNAR a :Stock ;
+	rdfs:label "LENNAR CORP COM CL'A'USD0.10" ;
+	:ID_NOTATION "271329" ;
+	:ISIN "US5260571048" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LEUCADIA_NATL a :Stock ;
+	rdfs:label "LEUCADIA NATIONAL CORP COM USD1" ;
+	:ID_NOTATION "78259" ;
+	:ISIN "US5272881047" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LEXMAX_INTL_A a :Stock ;
+	rdfs:label "LEXMARK INTERNATIONAL INC 'A'COM USD0.01" ;
+	:ID_NOTATION "271374" ;
+	:ISIN "US5297711070" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LIFE_TECH a :Stock ;
+	rdfs:label "LIFE TECHNOLOGIES CORP COM USD0.01" ;
+	:ID_NOTATION "26169393" ;
+	:ISIN "US53217V1098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LTD_BRNDS_INC a :Stock ;
+	rdfs:label "LIMITED BRANDS INC COM USD0.50" ;
+	:ID_NOTATION "271600" ;
+	:ISIN "US5327161072" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LINCOLN_NATL a :Stock ;
+	rdfs:label "LINCOLN NATIONAL CORP COM NPV" ;
+	:ID_NOTATION "271625" ;
+	:ISIN "US5341871094" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LINEAR_TECH_CORP a :Stock ;
+	rdfs:label "LINEAR TECHNOLOGY CORPORATION COM USD0.001" ;
+	:ID_NOTATION "271657" ;
+	:ISIN "US5356781063" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LOCKHEED_MARTIN a :Stock ;
+	rdfs:label "LOCKHEED MARTIN CORP COM USD1" ;
+	:ID_NOTATION "271715" ;
+	:ISIN "US5398301094" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LOEWS_CORP a :Stock ;
+	rdfs:label "LOEWS CORP COM USD0.01" ;
+	:ID_NOTATION "21564015" ;
+	:ISIN "US5404241086" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LORILLARD a :Stock ;
+	rdfs:label "LORILLARD INC COM STK USD0.01" ;
+	:ID_NOTATION "23300558" ;
+	:ISIN "US5441471019" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LOWE_S_COS a :Stock ;
+	rdfs:label "LOWE'S COMPANIES INC COM USD0.50" ;
+	:ID_NOTATION "271884" ;
+	:ISIN "US5486611073" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_LSI_CORPOLSI a :Stock ;
+	rdfs:label "LSI CORPORATION COM STK USD0.01" ;
+	:ID_NOTATION "271051" ;
+	:ISIN "US5021611026" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_M_T_BK_CP a :Stock ;
+	rdfs:label "M & T BANK CORP COM USD0.50" ;
+	:ID_NOTATION "78521" ;
+	:ISIN "US55261F1049" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MACY_S a :Stock ;
+	rdfs:label "MACY'S INC COM STK USD0.01" ;
+	:ID_NOTATION "17943274" ;
+	:ISIN "US55616P1049" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MARATHON_OIL a :Stock ;
+	rdfs:label "MARATHON OIL CORPORATION COM USD1" ;
+	:ID_NOTATION "287957" ;
+	:ISIN "US5658491064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MARN_PETR a :Stock ;
+	rdfs:label "MARATHON PETROLEUM CORP COM USD0.01" ;
+	:ID_NOTATION "47709123" ;
+	:ISIN "US56585A1025" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MARRIOTT_INT_A a :Stock ;
+	rdfs:label "MARRIOTT INTERNATIONAL INC COM USD0.01 CLASS 'A'" ;
+	:ID_NOTATION "272776" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MARSH_MCLN a :Stock ;
+	rdfs:label "MARSH & MCLENNAN COMPANIES INC COM USD1" ;
+	:ID_NOTATION "272751" ;
+	:ISIN "US5717481023" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MASCO a :Stock ;
+	rdfs:label "MASCO CORP COM USD1" ;
+	:ID_NOTATION "272832" ;
+	:ISIN "US5745991068" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MASTERCD a :Stock ;
+	rdfs:label "MASTERCARD INC COM USD0.0001 CLASS 'A'" ;
+	:ID_NOTATION "14865888" ;
+	:ISIN "US57636Q1040" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MATTEL a :Stock ;
+	rdfs:label "MATTEL INC COM USD1" ;
+	:ID_NOTATION "272964" ;
+	:ISIN "US5770811025" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MCCORMICK_NV_NPV a :Stock ;
+	rdfs:label "MCCORMICK & COMPANY INC COM N/VTG NPV" ;
+	:ID_NOTATION "273040" ;
+	:ISIN "US5797802064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MC_DONALDS :memberOf :index_S_P_500_INDEX .
+
+:stock_MCGRAW_HILL a :Stock ;
+	rdfs:label "MCGRAW-HILL COS INC (THE) COM USD1" ;
+	:ID_NOTATION "78942" ;
+	:ISIN "US5806451093" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MCKESSON_CORP a :Stock ;
+	rdfs:label "MCKESSON CORPORATION COM USD0.01" ;
+	:ID_NOTATION "78958" ;
+	:ISIN "US58155Q1031" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MEAD_JOHN a :Stock ;
+	rdfs:label "MEAD JOHNSON NUTRITION COM USD0.01" ;
+	:ID_NOTATION "27311100" ;
+	:ISIN "US5828391061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MEADWESTVACO a :Stock ;
+	rdfs:label "MEADWESTVACO CORPORATION COM USD0.01" ;
+	:ID_NOTATION "4834974" ;
+	:ISIN "US5833341077" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MEDTRONIC a :Stock ;
+	rdfs:label "MEDTRONIC INC COM USD0.10" ;
+	:ID_NOTATION "273205" ;
+	:ISIN "US5850551061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MERCK_CO :memberOf :index_S_P_500_INDEX .
+
+:stock_METLIFE_INC a :Stock ;
+	rdfs:label "METLIFE INC COM USD0.01" ;
+	:ID_NOTATION "273835" ;
+	:ISIN "US59156R1086" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_METROPCS a :Stock ;
+	rdfs:label "METROPCS COMMUNICATIONS INC COM STK USD0.0001" ;
+	:ID_NOTATION "17507882" ;
+	:ISIN "US5917081029" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MICROCHIP_TECH a :Stock ;
+	rdfs:label "MICROCHIP TECHNOLOGY COM USD0.001" ;
+	:ID_NOTATION "273993" ;
+	:ISIN "US5950171042" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MICRON_TECHN a :Stock ;
+	rdfs:label "MICRON TECHNOLOGY INC COM USD0.10" ;
+	:ID_NOTATION "274008" ;
+	:ISIN "US5951121038" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MICROSOFT :memberOf :index_S_P_500_INDEX .
+
+:stock_MOLEX a :Stock ;
+	rdfs:label "MOLEX INC COM USD0.05" ;
+	:ID_NOTATION "274241" ;
+	:ISIN "US6085541018" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MOLSON_COORS_B a :Stock ;
+	rdfs:label "MOLSON COORS BREWING COMPANY COM CLS'B'COM USD0.01" ;
+	:ID_NOTATION "11302181" ;
+	:ISIN "US60871R2094" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MONSANTO_MNSNT a :Stock ;
+	rdfs:label "MONSANTO CO COM STK USD0.01" ;
+	:ID_NOTATION "274299" ;
+	:ISIN "US61166W1018" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MOODYS a :Stock ;
+	rdfs:label "MOODYS CORP COM USD0.01" ;
+	:ID_NOTATION "274372" ;
+	:ISIN "US6153691059" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MORGAN_STANLEY a :Stock ;
+	rdfs:label "MORGAN STANLEY COM STK USD0.01" ;
+	:ID_NOTATION "274646" ;
+	:ISIN "US6174464486" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MOSC_CO a :Stock ;
+	rdfs:label "MOSAIC CO COM USD0.01" ;
+	:ID_NOTATION "10723704" ;
+	:ISIN "US61945C1036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MOTA_MOBI a :Stock ;
+	rdfs:label "MOTOROLA MOBILITY HLDGS INC COM USD0.01" ;
+	:ID_NOTATION "41949515" ;
+	:ISIN "US6200971058" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MOTA_SOLU a :Stock ;
+	rdfs:label "MOTOROLA SOLUTIONS INC COM USD0.01" ;
+	:ID_NOTATION "41949516" ;
+	:ISIN "US6200763075" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MURPHY_OIL_CORP a :Stock ;
+	rdfs:label "MURPHY OIL CORP COM USD1" ;
+	:ID_NOTATION "79921" ;
+	:ISIN "US6267171022" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_MYLAN a :Stock ;
+	rdfs:label "MYLAN INC COM USD0.50" ;
+	:ID_NOTATION "275423" ;
+	:ISIN "US6285301072" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NABORS_INDS a :Stock ;
+	rdfs:label "NABORS INDUSTRIES LTD COM USD0.001" ;
+	:ID_NOTATION "13255431" ;
+	:ISIN "BMG6359F1032" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NASDAQ_OMNAS_STK_M a :Stock ;
+	rdfs:label "NASDAQ OMX GROUP INC COM STK USD0.01" ;
+	:ID_NOTATION "11304491" ;
+	:ISIN "US6311031081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NAT_OILWELL_VARCO a :Stock ;
+	rdfs:label "NATIONAL OILWELL VARCO INC COM USD0.01" ;
+	:ID_NOTATION "275688" ;
+	:ISIN "US6370711011" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NETWORK_APPLIANCE a :Stock ;
+	rdfs:label "NETAPP INC COM USD0.001" ;
+	:ID_NOTATION "276240" ;
+	:ISIN "US64110D1046" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NETFLIX a :Stock ;
+	rdfs:label "NETFLIX INC COM USD0.001" ;
+	:ID_NOTATION "5492248" ;
+	:ISIN "US64110L1061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NEWELL_RUBBERMAID a :Stock ;
+	rdfs:label "NEWELL RUBBERMAID INC COM USD1" ;
+	:ID_NOTATION "276494" ;
+	:ISIN "US6512291062" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NEWFIELD_EXP a :Stock ;
+	rdfs:label "NEWFIELD EXPLORATION CO COM USD0.01" ;
+	:ID_NOTATION "276502" ;
+	:ISIN "US6512901082" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NEWMONT a :Stock ;
+	rdfs:label "NEWMONT MINING CORP COM USD1.60" ;
+	:ID_NOTATION "276522" ;
+	:ISIN "US6516391066" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NEWS_CORP_CLS_A a :Stock ;
+	rdfs:label "NEWS CORPORATION COM USD0.01 CLASS'A'" ;
+	:ID_NOTATION "26724931" ;
+	:ISIN "US65248E1047" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NEXTR_EGY a :Stock ;
+	rdfs:label "NEXTERA ENERGY INC COM USD0.01" ;
+	:ID_NOTATION "37227220" ;
+	:ISIN "US65339F1012" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NIKE a :Stock ;
+	rdfs:label "NIKE INC CLASS'B'COM NPV" ;
+	:ID_NOTATION "276651" ;
+	:ISIN "US6541061031" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NISOURCE a :Stock ;
+	rdfs:label "NISOURCE INC COM NPV" ;
+	:ID_NOTATION "80462" ;
+	:ISIN "US65473P1057" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NOBLE a :Stock ;
+	rdfs:label "NOBLE CORPORATION (SWITZERLAND) COM CHF3.28" ;
+	:ID_NOTATION "276709" ;
+	:ISIN "CH0033347318" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NOBLE_ENGY a :Stock ;
+	rdfs:label "NOBLE ENERGY INC COM USD3.33 1/3" ;
+	:ID_NOTATION "80473" ;
+	:ISIN "US6550441058" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NORDSTROM a :Stock ;
+	rdfs:label "NORDSTROM INC COM NPV" ;
+	:ID_NOTATION "276734" ;
+	:ISIN "US6556641008" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NRFLK_STHRN a :Stock ;
+	rdfs:label "NORFOLK SOUTHERN CORP COM USD1" ;
+	:ID_NOTATION "276749" ;
+	:ISIN "US6558441084" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NRTHEAST_UTL a :Stock ;
+	rdfs:label "NORTHEAST UTILITIES COM USD5" ;
+	:ID_NOTATION "276845" ;
+	:ISIN "US6643971061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NRTHN_TST a :Stock ;
+	rdfs:label "NORTHERN TRUST CORP COM USD1.666" ;
+	:ID_NOTATION "276902" ;
+	:ISIN "US6658591044" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NRTHROP_GRUM a :Stock ;
+	rdfs:label "NORTHROP GRUMMAN CORP COM USD1" ;
+	:ID_NOTATION "276918" ;
+	:ISIN "US6668071029" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NOVELLUS_SYS a :Stock ;
+	rdfs:label "NOVELLUS SYSTEMS INC COM NPV" ;
+	:ID_NOTATION "276997" ;
+	:ISIN "US6700081010" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NRG_ENERGY a :Stock ;
+	rdfs:label "NRG ENERGY INC COM USD0.01" ;
+	:ID_NOTATION "9465563" ;
+	:ISIN "US6293775085" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NUCOR_CORP a :Stock ;
+	rdfs:label "NUCOR CORP COM STK USD0.40" ;
+	:ID_NOTATION "277028" ;
+	:ISIN "US6703461052" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NVIDIA_CORP a :Stock ;
+	rdfs:label "NVIDIA CORP COM USD0.001" ;
+	:ID_NOTATION "277381" ;
+	:ISIN "US67066G1040" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_NYSE_EURO a :Stock ;
+	rdfs:label "NYSE EURONEXT INC COM STK USD0.01" ;
+	:ID_NOTATION "10750384" ;
+	:ISIN "US6294911010" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_OCC_PETROL a :Stock ;
+	rdfs:label "OCCIDENTAL PETROLEUM CORP COM USD0.20" ;
+	:ID_NOTATION "277685" ;
+	:ISIN "US6745991058" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_OMNICOM_GP a :Stock ;
+	rdfs:label "OMNICOM GROUP INC COM USD0.15" ;
+	:ID_NOTATION "277861" ;
+	:ISIN "US6819191064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ONEOK_NPV a :Stock ;
+	rdfs:label "ONEOK INC COM USD0.01" ;
+	:ID_NOTATION "80765" ;
+	:ISIN "US6826801036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ORACLE_CORP a :Stock ;
+	rdfs:label "ORACLE CORP COM USD0.01" ;
+	:ID_NOTATION "1552869" ;
+	:ISIN "US68389X1054" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_OREY_AUTO a :Stock ;
+	rdfs:label "OREILLY AUTOMOTIVE INC NEW COM USD0.01" ;
+	:ID_NOTATION "278341" ;
+	:ISIN "US67103H1077" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_OWENS_ILL a :Stock ;
+	rdfs:label "OWENS-ILLINOIS INC COM USD0.01" ;
+	:ID_NOTATION "278442" ;
+	:ISIN "US6907684038" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PACCAR_INC a :Stock ;
+	rdfs:label "PACCAR INC COM STK USD1" ;
+	:ID_NOTATION "278841" ;
+	:ISIN "US6937181088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PALL_CORP a :Stock ;
+	rdfs:label "PALL CORP COM USD0.10" ;
+	:ID_NOTATION "279140" ;
+	:ISIN "US6964293079" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRK_HANNFN a :Stock ;
+	rdfs:label "PARKER-HANNIFIN CORP COM STK USD0.50" ;
+	:ID_NOTATION "279235" ;
+	:ISIN "US7010941042" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PATTERSON a :Stock ;
+	rdfs:label "PATTERSON COMPANIES INC COM USD0.01" ;
+	:ID_NOTATION "10287881" ;
+	:ISIN "US7033951036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PAYCHEX a :Stock ;
+	rdfs:label "PAYCHEX INC COM USD0.01" ;
+	:ID_NOTATION "279361" ;
+	:ISIN "US7043261079" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PEABODY_ENERGY a :Stock ;
+	rdfs:label "PEABODY ENERGY CORP COM STK USD0.01" ;
+	:ID_NOTATION "3041212" ;
+	:ISIN "US7045491047" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PEOPLE_S a :Stock ;
+	rdfs:label "PEOPLE'S UNITED FINANCIAL INC COM STK USD0.01" ;
+	:ID_NOTATION "279501" ;
+	:ISIN "US7127041058" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PEPCO a :Stock ;
+	rdfs:label "PEPCO HOLDINGS INC COM USD0.01" ;
+	:ID_NOTATION "280440" ;
+	:ISIN "US7132911022" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PEPSICO a :Stock ;
+	rdfs:label "PEPSICO INC CAP USD0.016666" ;
+	:ID_NOTATION "279541" ;
+	:ISIN "US7134481081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRKNLMR a :Stock ;
+	rdfs:label "PERKINELMER INC COM USD1" ;
+	:ID_NOTATION "279592" ;
+	:ISIN "US7140461093" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PERRIGO a :Stock ;
+	rdfs:label "PERRIGO CO COM NPV" ;
+	:ID_NOTATION "279623" ;
+	:ISIN "US7142901039" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PFIZER :memberOf :index_S_P_500_INDEX .
+
+:stock_PGE a :Stock ;
+	rdfs:label "PG&E CORP COM NPV" ;
+	:ID_NOTATION "278543" ;
+	:ISIN "US69331C1080" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PHILIP_MORRIS_INTL a :Stock ;
+	rdfs:label "PHILIP MORRIS INTERNATIONAL INC COM STK NPV" ;
+	:ID_NOTATION "22397355" ;
+	:ISIN "US7181721090" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PHIS_66 a :Stock ;
+	rdfs:label "PHILLIPS 66 COM USD0.01" ;
+	:ID_NOTATION "62421687" ;
+	:ISIN "US7185461040" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PIN_WST_CAP a :Stock ;
+	rdfs:label "PINNACLE WEST CAPITAL CORP COM NPV" ;
+	:ID_NOTATION "1553096" ;
+	:ISIN "US7234841010" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PION_NAT_USD0_01 a :Stock ;
+	rdfs:label "PIONEER NATURAL RESOURCES CO COM STK USD0.01" ;
+	:ID_NOTATION "81524" ;
+	:ISIN "US7237871071" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PITNEY_BOWES a :Stock ;
+	rdfs:label "PITNEY BOWES INC COM USD1" ;
+	:ID_NOTATION "280248" ;
+	:ISIN "US7244791007" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PLUM_CREEK_TIM a :Stock ;
+	rdfs:label "PLUM CREEK TIMBER CO INC COM USD0.01" ;
+	:ID_NOTATION "81584" ;
+	:ISIN "US7292511083" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PNC_FINAN_SERV_GP a :Stock ;
+	rdfs:label "PNC FINANCIAL SERVICES GROUP COM USD5" ;
+	:ID_NOTATION "278759" ;
+	:ISIN "US6934751057" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PPG_INDST a :Stock ;
+	rdfs:label "PPG INDUSTRIES INC COM USD1.666" ;
+	:ID_NOTATION "278782" ;
+	:ISIN "US6935061076" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PPL_CP a :Stock ;
+	rdfs:label "PPL CORP COM USD0.01" ;
+	:ID_NOTATION "80962" ;
+	:ISIN "US69351T1060" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRAXAIR a :Stock ;
+	rdfs:label "PRAXAIR INC COM USD0.01" ;
+	:ID_NOTATION "280489" ;
+	:ISIN "US74005P1049" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRECISIONPRECISN_C a :Stock ;
+	rdfs:label "PRECISION CASTPARTS COM NPV" ;
+	:ID_NOTATION "81743" ;
+	:ISIN "US7401891053" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRIE_T a :Stock ;
+	rdfs:label "PRICE T ROWE GROUP COM USD0.20" ;
+	:ID_NOTATION "280553" ;
+	:ISIN "US74144T1088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRICELINE_COM a :Stock ;
+	rdfs:label "PRICELINE.COM INC COM USD0.008" ;
+	:ID_NOTATION "280565" ;
+	:ISIN "US7415034039" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRINCIPAL_FIN a :Stock ;
+	rdfs:label "PRINCIPAL FINANCIAL GROUP COM USD0.01" ;
+	:ID_NOTATION "3986052" ;
+	:ISIN "US74251V1026" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PROCT_GAMB :memberOf :index_S_P_500_INDEX .
+
+:stock_PRGRSS_ENRGY a :Stock ;
+	rdfs:label "PROGRESS ENERGY INC COM NPV" ;
+	:ID_NOTATION "1970533" ;
+	:ISIN "US7432631056" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PROGRESSIVE_CORP a :Stock ;
+	rdfs:label "PROGRESSIVE CORP(OHIO) COM USD1" ;
+	:ID_NOTATION "1553159" ;
+	:ISIN "US7433151039" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PROLOGIS a :Stock ;
+	rdfs:label "PROLOGIS INC COM USD0.01" ;
+	:ID_NOTATION "81889" ;
+	:ISIN "US74340W1036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PRUDENT_FINANCIAL a :Stock ;
+	rdfs:label "PRUDENTIAL FINANCIAL INC COM USD0.01" ;
+	:ID_NOTATION "4820847" ;
+	:ISIN "US7443201022" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PUBLIC_SERV_NPV a :Stock ;
+	rdfs:label "PUBLIC SERVICE ENTERPRISE GROUP INC COM NPV" ;
+	:ID_NOTATION "281098" ;
+	:ISIN "US7445731067" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PUBLIC_STORAGE a :Stock ;
+	rdfs:label "PUBLIC STORAGE COM USD0.10" ;
+	:ID_NOTATION "281106" ;
+	:ISIN "US74460D1090" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_PULE_GRP a :Stock ;
+	rdfs:label "PULTE GROUP INC COM USD0.01" ;
+	:ID_NOTATION "81992" ;
+	:ISIN "US7458671010" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_QEP_RESO a :Stock ;
+	rdfs:label "QEP RESOURCES INC COM USD0.01" ;
+	:ID_NOTATION "37360930" ;
+	:ISIN "US74733V1008" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_QUALCOMM a :Stock ;
+	rdfs:label "QUALCOMM INC COM USD0.0001" ;
+	:ID_NOTATION "281509" ;
+	:ISIN "US7475251036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_QUANTA_SER_USD a :Stock ;
+	rdfs:label "QUANTA SERVICES COM STK USD0.00001" ;
+	:ID_NOTATION "82039" ;
+	:ISIN "US74762E1029" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_QUST_DIAGNSTC a :Stock ;
+	rdfs:label "QUEST DIAGNOSTICS INC COM USD0.01" ;
+	:ID_NOTATION "281590" ;
+	:ISIN "US74834L1008" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_RALH_LAUR a :Stock ;
+	rdfs:label "RALPH LAUREN CORP COM USD0.01 CLASS 'A'" ;
+	:ID_NOTATION "280369" ;
+	:ISIN "US7512121010" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_RANGE_RES_CORP a :Stock ;
+	rdfs:label "RANGE RESOURCES CORP COM USD0.01" ;
+	:ID_NOTATION "82191" ;
+	:ISIN "US75281A1097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_RAYTHEON_CO a :Stock ;
+	rdfs:label "RAYTHEON CO COM USD0.01" ;
+	:ID_NOTATION "3082218" ;
+	:ISIN "US7551115071" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_RED_HAT a :Stock ;
+	rdfs:label "RED HAT INC COM STK USD0.0001" ;
+	:ID_NOTATION "6395411" ;
+	:ISIN "US7565771026" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_REGIONS_F a :Stock ;
+	rdfs:label "REGIONS FINANCIAL CORP COM STK USD0.01" ;
+	:ID_NOTATION "10287883" ;
+	:ISIN "US7591EP1005" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_REPUBLIC_SERV a :Stock ;
+	rdfs:label "REPUBLIC SERVICES INC COM USD0.01" ;
+	:ID_NOTATION "82368" ;
+	:ISIN "US7607591002" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_REYNLDS_AMER a :Stock ;
+	rdfs:label "REYNOLDS AMERICAN INC COM USD0.0001" ;
+	:ID_NOTATION "10336523" ;
+	:ISIN "US7617131062" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ROBERT_HALF_INT a :Stock ;
+	rdfs:label "ROBERT HALF INTERNATIONAL INC COM USD0.001" ;
+	:ID_NOTATION "1553355" ;
+	:ISIN "US7703231032" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ROCKWELL_AUTO a :Stock ;
+	rdfs:label "ROCKWELL AUTOMATION INC COM USD1" ;
+	:ID_NOTATION "282429" ;
+	:ISIN "US7739031091" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_RCKWLL_CLLNS a :Stock ;
+	rdfs:label "ROCKWELL COLLINS INC COM USD0.01" ;
+	:ID_NOTATION "3385852" ;
+	:ISIN "US7743411016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ROPER_INDS a :Stock ;
+	rdfs:label "ROPER INDUSTRIES INC COM USD0.01" ;
+	:ID_NOTATION "82525" ;
+	:ISIN "US7766961061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ROSS_STORES a :Stock ;
+	rdfs:label "ROSS STORES INC COM USD0.01" ;
+	:ID_NOTATION "282494" ;
+	:ISIN "US7782961038" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ROWAN_COS a :Stock ;
+	rdfs:label "ROWAN COS INC COM USD0.125" ;
+	:ID_NOTATION "282536" ;
+	:ISIN "US7793821007" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_RYDER_SYSTM a :Stock ;
+	rdfs:label "RYDER SYSTEM INC COM USD0.50" ;
+	:ID_NOTATION "282796" ;
+	:ISIN "US7835491082" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SAFEWAY a :Stock ;
+	rdfs:label "SAFEWAY INC COM USD0.01" ;
+	:ID_NOTATION "283255" ;
+	:ISIN "US7865142084" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SAIC_INC a :Stock ;
+	rdfs:label "SAIC INC COM STK USD0.0001" ;
+	:ID_NOTATION "285124" ;
+	:ISIN "US78390X1019" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SALESFORCE a :Stock ;
+	rdfs:label "SALESFORCE.COM INC COM USD0.001" ;
+	:ID_NOTATION "10344703" ;
+	:ISIN "US79466L3024" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SANDISK_CORP a :Stock ;
+	rdfs:label "SANDISK CORP COM USD0.001" ;
+	:ID_NOTATION "283397" ;
+	:ISIN "US80004C1018" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SARA_LEE a :Stock ;
+	rdfs:label "SARA LEE CORP COM USD0.01" ;
+	:ID_NOTATION "283476" ;
+	:ISIN "US8031111037" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SCANA_NEW a :Stock ;
+	rdfs:label "SCANA CORPORATION COM NPV" ;
+	:ID_NOTATION "82882" ;
+	:ISIN "US80589M1027" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SCHLUMBERGER a :Stock ;
+	rdfs:label "SCHLUMBERGER LIMITED COM USD0.01" ;
+	:ID_NOTATION "87717" ;
+	:ISIN "AN8068571086" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SCHWB_CHRLS a :Stock ;
+	rdfs:label "SCHWAB(CHARLES)CORP COM USD0.01" ;
+	:ID_NOTATION "13547886" ;
+	:ISIN "US8085131055" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SCRIPPS_NET_A a :Stock ;
+	rdfs:label "SCRIPPS NETWORKS INTERACTIVE INC COM USD0.01 CL 'A'" ;
+	:ID_NOTATION "23620530" ;
+	:ISIN "US8110651010" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SEALED_AIR a :Stock ;
+	rdfs:label "SEALED AIR CORP COM USD0.10" ;
+	:ID_NOTATION "283790" ;
+	:ISIN "US81211K1007" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SEARS_HLDGS a :Stock ;
+	rdfs:label "SEARS HOLDINGS CORP COM USD0.01" ;
+	:ID_NOTATION "11555907" ;
+	:ISIN "US8123501061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SEMPRA_ENER_NPV a :Stock ;
+	rdfs:label "SEMPRA ENERGY COM NPV" ;
+	:ID_NOTATION "1553563" ;
+	:ISIN "US8168511090" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SHRWN_WLLMS a :Stock ;
+	rdfs:label "SHERWIN-WILLIAMS CO COM USD1" ;
+	:ID_NOTATION "284246" ;
+	:ISIN "US8243481061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SIGMA_ALDRCH a :Stock ;
+	rdfs:label "SIGMA ALDRICH CORPORATION COM USD1" ;
+	:ID_NOTATION "284303" ;
+	:ISIN "US8265521018" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SIMON_PROP a :Stock ;
+	rdfs:label "SIMON PROPERTY GROUP INC COM USD0.0001" ;
+	:ID_NOTATION "83218" ;
+	:ISIN "US8288061091" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SLM_CORP a :Stock ;
+	rdfs:label "SLM CORP COM USD0.20" ;
+	:ID_NOTATION "85098" ;
+	:ISIN "US78442P1066" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SMUCKER_J a :Stock ;
+	rdfs:label "SMUCKER(J.M.)CO COM NPV" ;
+	:ID_NOTATION "83336" ;
+	:ISIN "US8326964058" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SNAP_ON_1 a :Stock ;
+	rdfs:label "SNAP-ON INC COM USD1" ;
+	:ID_NOTATION "83344" ;
+	:ISIN "US8330341012" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STHRN_CO a :Stock ;
+	rdfs:label "SOUTHERN CO. COM USD5" ;
+	:ID_NOTATION "284917" ;
+	:ISIN "US8425871071" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SW_AIR_1 a :Stock ;
+	rdfs:label "SOUTHWEST AIRLINES CO COM USD1" ;
+	:ID_NOTATION "284968" ;
+	:ISIN "US8447411088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SW_ENERGY_USD a :Stock ;
+	rdfs:label "SOUTHWESTERN ENERGY CO COM USD0.10" ;
+	:ID_NOTATION "83489" ;
+	:ISIN "US8454671095" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SPECTRA_E a :Stock ;
+	rdfs:label "SPECTRA ENERGY CORP COM STK USD0.001" ;
+	:ID_NOTATION "284179" ;
+	:ISIN "US8475601097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SPR_NEXTEL_CORP_FON_1_DL2 a :Stock ;
+	rdfs:label "SPRINT NEXTEL CORPORATION COM USD2 SERIE 1" ;
+	:ID_NOTATION "283808" ;
+	:ISIN "US8520611000" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ST_JUDE_MED a :Stock ;
+	rdfs:label "ST.JUDE MEDICAL INC COM USD0.10" ;
+	:ID_NOTATION "283292" ;
+	:ISIN "US7908491035" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STAY_BLAC a :Stock ;
+	rdfs:label "STANLEY BLACK & DECKER INC COM USD2.50" ;
+	:ID_NOTATION "83646" ;
+	:ISIN "US8545021011" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STAPLES a :Stock ;
+	rdfs:label "STAPLES INC COM STK USD0.0006" ;
+	:ID_NOTATION "285262" ;
+	:ISIN "US8550301027" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STARBUCKS_CORP a :Stock ;
+	rdfs:label "STARBUCKS CORP COM USD0.001" ;
+	:ID_NOTATION "1553684" ;
+	:ISIN "US8552441094" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STARWOOD a :Stock ;
+	rdfs:label "STARWOOD HOTELS & RESORTS WORLDWIDE COM STK USD0.01" ;
+	:ID_NOTATION "285287" ;
+	:ISIN "US85590A4013" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STATE_STREET a :Stock ;
+	rdfs:label "STATE STREET CORPORATION COM STK USD1" ;
+	:ID_NOTATION "1553696" ;
+	:ISIN "US8574771031" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STERCYCLE a :Stock ;
+	rdfs:label "STERICYCLE INC COM USD0.01" ;
+	:ID_NOTATION "285389" ;
+	:ISIN "US8589121081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_STRYKER a :Stock ;
+	rdfs:label "STRYKER CORP COM USD0.10" ;
+	:ID_NOTATION "285618" ;
+	:ISIN "US8636671013" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SUNOCO a :Stock ;
+	rdfs:label "SUNOCO INC COM USD1" ;
+	:ID_NOTATION "83920" ;
+	:ISIN "US86764P1093" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SUNTST_BNKS a :Stock ;
+	rdfs:label "SUNTRUST BANKS INC COM USD1" ;
+	:ID_NOTATION "285807" ;
+	:ISIN "US8679141031" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SYMANTEC_CORP a :Stock ;
+	rdfs:label "SYMANTEC CORP COM USD0.01" ;
+	:ID_NOTATION "285910" ;
+	:ISIN "US8715031089" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_SYSCO a :Stock ;
+	rdfs:label "SYSCO CORP COM USD1" ;
+	:ID_NOTATION "285960" ;
+	:ISIN "US8718291078" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TARGET_CO a :Stock ;
+	rdfs:label "TARGET CORP COM STK USD0.0833" ;
+	:ID_NOTATION "286318" ;
+	:ISIN "US87612E1064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TE_CONN a :Stock ;
+	rdfs:label "TE CONNECTIVITY LTD COM CHF1.37" ;
+	:ID_NOTATION "18354857" ;
+	:ISIN "CH0102993182" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TECO_ENERGY a :Stock ;
+	rdfs:label "TECO ENERGY INC COM USD1" ;
+	:ID_NOTATION "286112" ;
+	:ISIN "US8723751009" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TENET_HLTH a :Stock ;
+	rdfs:label "TENET HEALTHCARE CORP COM USD0.05" ;
+	:ID_NOTATION "286751" ;
+	:ISIN "US88033G1004" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TERADATA a :Stock ;
+	rdfs:label "TERADATA CORPORATION COM STK USD0.01" ;
+	:ID_NOTATION "19296937" ;
+	:ISIN "US88076W1036" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TERADYNE a :Stock ;
+	rdfs:label "TERADYNE INC COM USD0.125" ;
+	:ID_NOTATION "286861" ;
+	:ISIN "US8807701029" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TESORO a :Stock ;
+	rdfs:label "TESORO CORPORATION COM USD0.1666" ;
+	:ID_NOTATION "84442" ;
+	:ISIN "US8816091016" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TEXAS_INSTR a :Stock ;
+	rdfs:label "TEXAS INSTRUMENTS INC COM USD1" ;
+	:ID_NOTATION "1553860" ;
+	:ISIN "US8825081040" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TEXTRON a :Stock ;
+	rdfs:label "TEXTRON INC COM STK USD0.125" ;
+	:ID_NOTATION "286949" ;
+	:ISIN "US8832031012" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_THERMO_FISHER_SC a :Stock ;
+	rdfs:label "THERMO FISHER SCIENTIFIC INC COM USD1" ;
+	:ID_NOTATION "286988" ;
+	:ISIN "US8835561023" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TIFFANY_CO a :Stock ;
+	rdfs:label "TIFFANY & CO COM USD0.01" ;
+	:ID_NOTATION "287150" ;
+	:ISIN "US8865471085" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TIME_WARNCBLE a :Stock ;
+	rdfs:label "TIME WARNER CABLE INC USD0.01" ;
+	:ID_NOTATION "17087174" ;
+	:ISIN "US88732J2078" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TIME_WARN a :Stock ;
+	rdfs:label "TIME WARNER INC COM USD0.01" ;
+	:ID_NOTATION "8127243" ;
+	:ISIN "US8873173038" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TITANIUM_METALS a :Stock ;
+	rdfs:label "TITANIUM METALS CORP COM USD0.01" ;
+	:ID_NOTATION "287231" ;
+	:ISIN "US8883392073" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TJX_COS a :Stock ;
+	rdfs:label "TJX COS INC COM USD1" ;
+	:ID_NOTATION "286170" ;
+	:ISIN "US8725401090" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TORCHMRK a :Stock ;
+	rdfs:label "TORCHMARK CORP COM USD1" ;
+	:ID_NOTATION "287299" ;
+	:ISIN "US8910271043" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TOTAL_SYSTEM_SRVCS a :Stock ;
+	rdfs:label "TOTAL SYSTEM SERVICES INC COM STK USD0.10" ;
+	:ID_NOTATION "84679" ;
+	:ISIN "US8919061098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TRAVELERS_CO_S :memberOf :index_S_P_500_INDEX .
+
+:stock_TRIPADVIS a :Stock ;
+	rdfs:label "TRIPADVISOR INC COM USD0.001" ;
+	:ID_NOTATION "9494701" ;
+	:ISIN "US8969452015" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TYCO_LTDS a :Stock ;
+	rdfs:label "TYCO INTERNATIONAL LTD(SWITZERLAND) COM CHF6.70" ;
+	:ID_NOTATION "29587" ;
+	:ISIN "CH0100383485" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_TYSON_FOOD_A a :Stock ;
+	rdfs:label "TYSON FOODS INC CLASS'A'COM USD0.10" ;
+	:ID_NOTATION "84969" ;
+	:ISIN "US9024941034" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_UNION_PAC_CORP a :Stock ;
+	rdfs:label "UNION PACIFIC CORP COM USD2.50" ;
+	:ID_NOTATION "288229" ;
+	:ISIN "US9078181081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_UNITED_PARCEL_SE_B a :Stock ;
+	rdfs:label "UNITED PARCEL SERVICE INC CLASS'B'COM USD0.01" ;
+	:ID_NOTATION "288352" ;
+	:ISIN "US9113121068" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_UNITED_STATES_STEEL_CORP a :Stock ;
+	rdfs:label "UNITED STATES STEEL CORP COM USD1" ;
+	:ID_NOTATION "288100" ;
+	:ISIN "US9129091081" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_UTD_TECHNOL :memberOf :index_S_P_500_INDEX .
+
+:stock_UNITEDHEALTH_GRP a :Stock ;
+	rdfs:label "UNITEDHEALTH GROUP INC COM USD0.01" ;
+	:ID_NOTATION "85339" ;
+	:ISIN "US91324P1021" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_UNUM a :Stock ;
+	rdfs:label "UNUM GROUP COM USD0.10" ;
+	:ID_NOTATION "290004" ;
+	:ISIN "US91529Y1064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_URBAN_OUTFTTRS a :Stock ;
+	rdfs:label "URBAN OUTFITTERS INC COM USD0.0001" ;
+	:ID_NOTATION "290024" ;
+	:ISIN "US9170471026" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_US_BANCORP a :Stock ;
+	rdfs:label "US BANCORP COM USD0.01" ;
+	:ID_NOTATION "287997" ;
+	:ISIN "US9029733048" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VF_CORP_NPV a :Stock ;
+	rdfs:label "V F CORP COM NPV" ;
+	:ID_NOTATION "290058" ;
+	:ISIN "US9182041080" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VALERO a :Stock ;
+	rdfs:label "VALERO ENERGY CORP(NEW) COM USD0.01" ;
+	:ID_NOTATION "290113" ;
+	:ISIN "US91913Y1001" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VARIAN_MED_SYST a :Stock ;
+	rdfs:label "VARIAN MEDICAL SYSTEMS INC COM USD1" ;
+	:ID_NOTATION "85706" ;
+	:ISIN "US92220P1057" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VENTAS_0_25 a :Stock ;
+	rdfs:label "VENTAS INC COM USD0.25" ;
+	:ID_NOTATION "85745" ;
+	:ISIN "US92276F1003" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VERISIGN a :Stock ;
+	rdfs:label "VERISIGN COM USD0.001" ;
+	:ID_NOTATION "290516" ;
+	:ISIN "US92343E1029" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VERIZON :memberOf :index_S_P_500_INDEX .
+
+:stock_VIACOM_B_N_VT a :Stock ;
+	rdfs:label "VIACOM INC NEW CL'B' NON-VTG USD0.001" ;
+	:ID_NOTATION "55524447" ;
+	:ISIN "US92553P2011" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VISA_INC a :Stock ;
+	rdfs:label "VISA INC COM STK USD0.0001" ;
+	:ID_NOTATION "22119292" ;
+	:ISIN "US92826C8394" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VORNADO_RLTY a :Stock ;
+	rdfs:label "VORNADO REALTY TRUST COM USD0.04" ;
+	:ID_NOTATION "85909" ;
+	:ISIN "US9290421091" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_VULCAN_MATLS a :Stock ;
+	rdfs:label "VULCAN MATERIALS CO COM STK USD1" ;
+	:ID_NOTATION "85937" ;
+	:ISIN "US9291601097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WAL_MART_STORES :memberOf :index_S_P_500_INDEX .
+
+:stock_WALGREEN a :Stock ;
+	rdfs:label "WALGREEN CO COM USD0.078125" ;
+	:ID_NOTATION "291268" ;
+	:ISIN "US9314221097" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_DISNEY_WALT_CO :memberOf :index_S_P_500_INDEX .
+
+:stock_WASHGTN_POST_B a :Stock ;
+	rdfs:label "WASHINGTON POST CO CLASS'B'COM USD1" ;
+	:ID_NOTATION "1554184" ;
+	:ISIN "US9396401088" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WASTE_MGMT a :Stock ;
+	rdfs:label "WASTE MANAGEMENT INC COM USD0.01" ;
+	:ID_NOTATION "291396" ;
+	:ISIN "US94106L1098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WATERS_CRP a :Stock ;
+	rdfs:label "WATERS CORP COM USD0.01" ;
+	:ID_NOTATION "291415" ;
+	:ISIN "US9418481035" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WATSON_PHARM a :Stock ;
+	rdfs:label "WATSON PHARMACEUTICALS INC COM USD0.0033" ;
+	:ID_NOTATION "291422" ;
+	:ISIN "US9426831031" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WELLPOINT_INC a :Stock ;
+	rdfs:label "WELLPOINT INC COM USD0.01" ;
+	:ID_NOTATION "10878933" ;
+	:ISIN "US94973V1070" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WELLS_FARGO a :Stock ;
+	rdfs:label "WELLS FARGO & COMPANY COM USD1 2/3" ;
+	:ID_NOTATION "86195" ;
+	:ISIN "US9497461015" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WESTN_DIGITAL a :Stock ;
+	rdfs:label "WESTERN DIGITAL CORP COM USD0.01" ;
+	:ID_NOTATION "1554223" ;
+	:ISIN "US9581021055" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WESTERN_UNION_CO a :Stock ;
+	rdfs:label "WESTERN UNION COMPANY (THE) COM STK USD0.01" ;
+	:ID_NOTATION "15674848" ;
+	:ISIN "US9598021098" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WEYERHAEUSER_1_25 a :Stock ;
+	rdfs:label "WEYERHAEUSER COMPANY COM USD1.25" ;
+	:ID_NOTATION "291784" ;
+	:ISIN "US9621661043" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WHRLPOOL a :Stock ;
+	rdfs:label "WHIRLPOOL CORP COM USD1" ;
+	:ID_NOTATION "291799" ;
+	:ISIN "US9633201069" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WHOLE_FOODS a :Stock ;
+	rdfs:label "WHOLE FOODS MARKET INC COM NPV" ;
+	:ID_NOTATION "291819" ;
+	:ISIN "US9668371068" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WILLIAMS_COS a :Stock ;
+	rdfs:label "WILLIAMS COMPANIES INC COM USD1" ;
+	:ID_NOTATION "291851" ;
+	:ISIN "US9694571004" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WINDSTREAM a :Stock ;
+	rdfs:label "WINDSTREAM CORP COM STK USD0.0001" ;
+	:ID_NOTATION "86359" ;
+	:ISIN "US97381W1045" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WIS_N_ENER a :Stock ;
+	rdfs:label "WISCONSIN ENERGY CORP COM USD0.01" ;
+	:ID_NOTATION "291971" ;
+	:ISIN "US9766571064" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WPX_ENER a :Stock ;
+	rdfs:label "WPX ENERGY INC COM USD1" ;
+	:ID_NOTATION "56020408" ;
+	:ISIN "US98212B1035" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WYNDHAM_WORLDWIDE a :Stock ;
+	rdfs:label "WYNDHAM WORLDWIDE CORPORATION COM STK USD0.01" ;
+	:ID_NOTATION "15233942" ;
+	:ISIN "US98310W1080" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_WYNN_RESORTS_LTD a :Stock ;
+	rdfs:label "WYNN RESORTS LTD COM USD0.01" ;
+	:ID_NOTATION "6264642" ;
+	:ISIN "US9831341071" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_XCEL_ENGY a :Stock ;
+	rdfs:label "XCEL ENERGY INC COM USD2.5" ;
+	:ID_NOTATION "292109" ;
+	:ISIN "US98389B1008" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_XEROX a :Stock ;
+	rdfs:label "XEROX CORP COM USD1" ;
+	:ID_NOTATION "292165" ;
+	:ISIN "US9841211033" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_XILINX a :Stock ;
+	rdfs:label "XILINX INC COM USD0.01" ;
+	:ID_NOTATION "292140" ;
+	:ISIN "US9839191015" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_XL_GRP a :Stock ;
+	rdfs:label "XL GROUP PLC ORD USD0.01" ;
+	:ID_NOTATION "61822" ;
+	:ISIN "IE00B5LRLL25" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_XYLEM a :Stock ;
+	rdfs:label "XYLEM INC COM USD0.01" ;
+	:ID_NOTATION "54016674" ;
+	:ISIN "US98419M1009" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_YAHOO a :Stock ;
+	rdfs:label "YAHOO INC COM STK USD0.001" ;
+	:ID_NOTATION "292204" ;
+	:ISIN "US9843321061" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_YUM_BRANDS a :Stock ;
+	rdfs:label "YUM BRANDS INC COM NPV" ;
+	:ID_NOTATION "287628" ;
+	:ISIN "US9884981013" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ZIMMER_HLD a :Stock ;
+	rdfs:label "ZIMMER HOLDINGS INC COM USD0.01" ;
+	:ID_NOTATION "3581867" ;
+	:ISIN "US98956P1021" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ZIONS_BANCORP a :Stock ;
+	rdfs:label "ZIONS BANCORP COM NPV" ;
+	:ID_NOTATION "292307" ;
+	:ISIN "US9897011071" ;
+	:memberOf :index_S_P_500_INDEX .
+
+:stock_ACTIVISION_BLIZZRD a :Stock ;
+	rdfs:label "ACTIVISION BLIZZARD INC COM STK USD0.000001" ;
+	:ID_NOTATION "23754766" ;
+	:ISIN "US00507V1098" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_ADOBE_SYST :memberOf :index_NASDAQ_100 .
+
+:stock_AKAMAI_TECH :memberOf :index_NASDAQ_100 .
+
+:stock_ALEXION_PHARM a :Stock ;
+	rdfs:label "ALEXION PHARMACEUTICAL INC COM USD0.0001" ;
+	:ID_NOTATION "252559" ;
+	:ISIN "US0153511094" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_ALTERA_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_AMAZON_COM :memberOf :index_NASDAQ_100 .
+
+:stock_AMGEN :memberOf :index_NASDAQ_100 .
+
+:stock_APOLLO_GRP :memberOf :index_NASDAQ_100 .
+
+:stock_APPLE_INC :memberOf :index_NASDAQ_100 .
+
+:stock_APPLIED_MATERIALS :memberOf :index_NASDAQ_100 .
+
+:stock_AUTODESK_NPV :memberOf :index_NASDAQ_100 .
+
+:stock_AUTOMATIC_DATA_PRO :memberOf :index_NASDAQ_100 .
+
+:stock_AVAO_TECH a :Stock ;
+	rdfs:label "AVAGO TECHNOLOGIES LTD NPV" ;
+	:ID_NOTATION "30300105" ;
+	:ISIN "SG9999006241" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_BAIDU_COM a :Stock ;
+	rdfs:label "BAIDU INC ADS EACH REP 0.10 ORD CLS'A" ;
+	:ID_NOTATION "12624108" ;
+	:ISIN "US0567521085" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_BED_BATH :memberOf :index_NASDAQ_100 .
+
+:stock_BIOGEN_IDEC :memberOf :index_NASDAQ_100 .
+
+:stock_BMC_SFTWRE_USD0_01 :memberOf :index_NASDAQ_100 .
+
+:stock_BROADCOM_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_CA_INC :memberOf :index_NASDAQ_100 .
+
+:stock_CELGENE :memberOf :index_NASDAQ_100 .
+
+:stock_CERNER_CRP :memberOf :index_NASDAQ_100 .
+
+:stock_CH_ROBNSN_W_WIDE :memberOf :index_NASDAQ_100 .
+
+:stock_CHECK_POINT_SOFTW_TECHS a :Stock ;
+	rdfs:label "CHECK POINT SOFTWARE TECHNOLOGIES ORD ILS0.01" ;
+	:ID_NOTATION "206712" ;
+	:ISIN "IL0010824113" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_CISCO_SYSTEMS :memberOf :index_NASDAQ_100 .
+
+:stock_CITRIX_SYSTEMS :memberOf :index_NASDAQ_100 .
+
+:stock_COGNIZANT_TEC :memberOf :index_NASDAQ_100 .
+
+:stock_COMCAST_CORP_NEW :memberOf :index_NASDAQ_100 .
+
+:stock_COSTCO_WHOLESALE :memberOf :index_NASDAQ_100 .
+
+:stock_CTRIP_COM_ADR a :Stock ;
+	rdfs:label "CTRIP.COM INTERNATIONAL LTD ADS EA REP 0.25 ORD USD0.01" ;
+	:ID_NOTATION "8229092" ;
+	:ISIN "US22943F1003" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_DELL :memberOf :index_NASDAQ_100 .
+
+:stock_DENTSPLY_INTL :memberOf :index_NASDAQ_100 .
+
+:stock_DIRECTV :memberOf :index_NASDAQ_100 .
+
+:stock_DOLLAR_TREE_INC :memberOf :index_NASDAQ_100 .
+
+:stock_EBAY :memberOf :index_NASDAQ_100 .
+
+:stock_EL_ARTS :memberOf :index_NASDAQ_100 .
+
+:stock_EXPEDIA :memberOf :index_NASDAQ_100 .
+
+:stock_EXPDTR_INT_WSHTON :memberOf :index_NASDAQ_100 .
+
+:stock_EXPS_SCRI :memberOf :index_NASDAQ_100 .
+
+:stock_F5_NETWRK_INC :memberOf :index_NASDAQ_100 .
+
+:stock_FASTNAL :memberOf :index_NASDAQ_100 .
+
+:stock_FISERV :memberOf :index_NASDAQ_100 .
+
+:stock_FLXTRNCS_INTL a :Stock ;
+	rdfs:label "FLEXTRONICS INTERNATIONAL COM USD0.01" ;
+	:ID_NOTATION "86642" ;
+	:ISIN "SG9999000020" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_FOSSIL_INC :memberOf :index_NASDAQ_100 .
+
+:stock_GARMIN a :Stock ;
+	rdfs:label "GARMIN LTD COM CHF10.00" ;
+	:ID_NOTATION "2009389" ;
+	:ISIN "CH0114405324" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_GILEAD_SCIENCES :memberOf :index_NASDAQ_100 .
+
+:stock_GOOGLE :memberOf :index_NASDAQ_100 .
+
+:stock_GREEN_MTN_COF a :Stock ;
+	rdfs:label "GREEN MOUNTAIN COFFEE ROASTERS INC COM USD0.10" ;
+	:ID_NOTATION "266891" ;
+	:ISIN "US3931221069" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_HENRY_SCHEIN_NPV a :Stock ;
+	rdfs:label "HENRY SCHEIN CORP COM USD0.01" ;
+	:ID_NOTATION "283545" ;
+	:ISIN "US8064071025" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_INFOSYS_TECHS_ADR_IR_10 a :Stock ;
+	rdfs:label "INFOSYS LTD SPON ADR EACH REP 1 INR5" ;
+	:ID_NOTATION "269025" ;
+	:ISIN "US4567881085" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_INTEL :memberOf :index_NASDAQ_100 .
+
+:stock_INTUIT :memberOf :index_NASDAQ_100 .
+
+:stock_INTUITIVE_SURGICAL :memberOf :index_NASDAQ_100 .
+
+:stock_KLA_TENCOR_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_LAM_RESEARCH a :Stock ;
+	rdfs:label "LAM RESEARCH CORP COM USD0.001" ;
+	:ID_NOTATION "1552050" ;
+	:ISIN "US5128071082" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_LBTY_INT a :Stock ;
+	rdfs:label "LIBERTY INTERACTIVE CORP INTERACTIVE COM SER A" ;
+	:ID_NOTATION "14776300" ;
+	:ISIN "US53071M1045" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_LIFE_TECH :memberOf :index_NASDAQ_100 .
+
+:stock_LINEAR_TECH_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_MARVELL_TECH a :Stock ;
+	rdfs:label "MARVELL TECH GROUP COM USD0.002" ;
+	:ID_NOTATION "95255" ;
+	:ISIN "BMG5876H1051" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_MATTEL :memberOf :index_NASDAQ_100 .
+
+:stock_MAXIM_INTEGRTD a :Stock ;
+	rdfs:label "MAXIM INTEGRATED PRODUCTS COM USD0.001" ;
+	:ID_NOTATION "19558843" ;
+	:ISIN "US57772K1016" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_MICROCHIP_TECH :memberOf :index_NASDAQ_100 .
+
+:stock_MICRON_TECHN :memberOf :index_NASDAQ_100 .
+
+:stock_MICROSOFT :memberOf :index_NASDAQ_100 .
+
+:stock_MONR_BEVE a :Stock ;
+	rdfs:label "MONSTER BEVERAGE CORP COM USD0.005" ;
+	:ID_NOTATION "267382" ;
+	:ISIN "US6117401017" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_MYLAN :memberOf :index_NASDAQ_100 .
+
+:stock_NETWORK_APPLIANCE :memberOf :index_NASDAQ_100 .
+
+:stock_NETFLIX :memberOf :index_NASDAQ_100 .
+
+:stock_NEWS_CORP_CLS_A :memberOf :index_NASDAQ_100 .
+
+:stock_NUANCE_COMM a :Stock ;
+	rdfs:label "NUANCE COMMUNICATIONS INC COM USD0.001" ;
+	:ID_NOTATION "276990" ;
+	:ISIN "US67020Y1001" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_NVIDIA_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_ORACLE_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_OREY_AUTO :memberOf :index_NASDAQ_100 .
+
+:stock_PACCAR_INC :memberOf :index_NASDAQ_100 .
+
+:stock_PAYCHEX :memberOf :index_NASDAQ_100 .
+
+:stock_PERRIGO :memberOf :index_NASDAQ_100 .
+
+:stock_PRICELINE_COM :memberOf :index_NASDAQ_100 .
+
+:stock_QUALCOMM :memberOf :index_NASDAQ_100 .
+
+:stock_RANDGOLD_ADS_ADS_EACH_REPR_1_ORD_USD0_05 a :Stock ;
+	rdfs:label "RANDGOLD ADS ADS (EACH REPR 1 ORD USD0.05)" ;
+	:ID_NOTATION "6489417" ;
+	:ISIN "US7523443098" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_RESEARCH_IN_MOTION a :Stock ;
+	rdfs:label "RESEARCH IN MOTION LIMITED" ;
+	:ID_NOTATION "98948" ;
+	:ISIN "CA7609751028" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_ROSS_STORES :memberOf :index_NASDAQ_100 .
+
+:stock_SANDISK_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_SEAE_TECH a :Stock ;
+	rdfs:label "SEAGATE TECHNOLOGY PLC COM USD0.00001" ;
+	:ID_NOTATION "6492318" ;
+	:ISIN "IE00B58JVZ52" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_SEARS_HLDGS :memberOf :index_NASDAQ_100 .
+
+:stock_SIGMA_ALDRCH :memberOf :index_NASDAQ_100 .
+
+:stock_SIRIUS_XM_RAD a :Stock ;
+	rdfs:label "SIRIUS XM RADIO INC COM USD0.001" ;
+	:ID_NOTATION "284373" ;
+	:ISIN "US82967N1081" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_STAPLES :memberOf :index_NASDAQ_100 .
+
+:stock_STARBUCKS_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_STERCYCLE :memberOf :index_NASDAQ_100 .
+
+:stock_SYMANTEC_CORP :memberOf :index_NASDAQ_100 .
+
+:stock_TEVA_PHARMACEUT_ADR a :Stock ;
+	rdfs:label "TEVA PHARMACEUTICAL INDUSTRIES ADR(CNV 1 ORD ILS0.10)" ;
+	:ID_NOTATION "1553849" ;
+	:ISIN "US8816242098" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_TEXAS_INSTR :memberOf :index_NASDAQ_100 .
+
+:stock_VERISIGN :memberOf :index_NASDAQ_100 .
+
+:stock_VERTEX_PHARMAC a :Stock ;
+	rdfs:label "VERTEX PHARMACEUTICAL COM USD0.01" ;
+	:ID_NOTATION "290562" ;
+	:ISIN "US92532F1003" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_Virgin_Media_Inc a :Stock ;
+	rdfs:label "VIRGIN MEDIA INC COM SHS USD0.01" ;
+	:ID_NOTATION "16877774" ;
+	:ISIN "US92769L1017" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_VODAFONE_ADR a :Stock ;
+	rdfs:label "VODAFONE GROUP SP ADR REP 10 USD0.11428571" ;
+	:ID_NOTATION "15332339" ;
+	:ISIN "US92857W2098" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_WARR_CHIL a :Stock ;
+	rdfs:label "WARNER CHILCOTT PLC COM CLASS 'A' USD0.01" ;
+	:ID_NOTATION "265859" ;
+	:ISIN "IE00B446CM77" ;
+	:memberOf :index_NASDAQ_100 .
+
+:stock_WHOLE_FOODS :memberOf :index_NASDAQ_100 .
+
+:stock_WYNN_RESORTS_LTD :memberOf :index_NASDAQ_100 .
+
+:stock_XILINX :memberOf :index_NASDAQ_100 .
+
+:stock_YAHOO :memberOf :index_NASDAQ_100 .
+
+:stock_AMP a :Stock ;
+	rdfs:label "AMP LIMITED NPV(POST RECON)" ;
+	:ID_NOTATION "92924" ;
+	:ISIN "AU000000AMP6" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_A_N_Z_BKG_GRP a :Stock ;
+	rdfs:label "AUSTRALIA & NEW ZEALAND BANK GROUP NPV" ;
+	:ID_NOTATION "27904" ;
+	:ISIN "AU000000ANZ3" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_BHP_BILLITON_0 a :Stock ;
+	rdfs:label "BHP BILLITON LIMITED NPV" ;
+	:ID_NOTATION "92946" ;
+	:ISIN "AU000000BHP4" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_CANON a :Stock ;
+	rdfs:label "CANON INC NPV" ;
+	:ID_NOTATION "212910" ;
+	:ISIN "JP3242800005" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_CHEUNG_KONG a :Stock ;
+	rdfs:label "CHEUNG KONG (HOLDINGS) LTD HKD0.50" ;
+	:ID_NOTATION "1545808" ;
+	:ISIN "HK0001000014" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_CHINA_MOBILE_HK a :Stock ;
+	rdfs:label "CHINA MOBILE LTD HKD0.10" ;
+	:ID_NOTATION "205923" ;
+	:ISIN "HK0941009539" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_CHUBU_ELC_PWR a :Stock ;
+	rdfs:label "CHUBU ELECTRIC POWER CO INC NPV" ;
+	:ID_NOTATION "215246" ;
+	:ISIN "JP3526600006" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_CLP_HLDGS a :Stock ;
+	rdfs:label "CLP HLDGS HKD5" ;
+	:ID_NOTATION "49934" ;
+	:ISIN "HK0002007356" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_COMMONW_BK_AUSTR a :Stock ;
+	rdfs:label "COMMONWEALTH BANK OF AUSTRALIA NPV" ;
+	:ID_NOTATION "92955" ;
+	:ISIN "AU000000CBA7" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_DBS_GRP_HLDGS a :Stock ;
+	rdfs:label "DBS GROUP HLDGS LTD NPV" ;
+	:ID_NOTATION "249859" ;
+	:ISIN "SG1L01001701" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_EAST_JPN_RLWY a :Stock ;
+	rdfs:label "EAST JAPAN RAILWAY CO NPV" ;
+	:ID_NOTATION "218801" ;
+	:ISIN "JP3783600004" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_FUJI_PHOTO_FILM_YN_50 a :Stock ;
+	rdfs:label "FUJI FILM HOLDINGS CORPORATION NPV" ;
+	:ID_NOTATION "219039" ;
+	:ISIN "JP3814000000" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_HANG_SENG_BK a :Stock ;
+	rdfs:label "HANG SENG BANK HKD5" ;
+	:ID_NOTATION "205753" ;
+	:ISIN "HK0011000095" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_HITACHI a :Stock ;
+	rdfs:label "HITACHI NPV" ;
+	:ID_NOTATION "218866" ;
+	:ISIN "JP3788600009" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_HONDA_MOTOR a :Stock ;
+	rdfs:label "HONDA MOTOR CO LD Y50" ;
+	:ID_NOTATION "219370" ;
+	:ISIN "JP3854600008" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_HUTCHISON_WHAMPOA a :Stock ;
+	rdfs:label "HUTCHISON WHAMPOA HKD0.25" ;
+	:ID_NOTATION "205761" ;
+	:ISIN "HK0013000119" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_HYNDAI_MTR_KW5000 a :Stock ;
+	rdfs:label "HYUNDAI MOTOR CO KRW5000" ;
+	:ID_NOTATION "60834" ;
+	:ISIN "KR7005380001" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_KANSAI_ELEC a :Stock ;
+	rdfs:label "KANSAI ELECTRIC POWER CO INC NPV" ;
+	:ID_NOTATION "1546567" ;
+	:ISIN "JP3228600007" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_KookMinBk a :Stock ;
+	rdfs:label "KOOKMINBK" ;
+	:ID_NOTATION "4157701" ;
+	:ISIN "KR7060000007" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_KT a :Stock ;
+	rdfs:label "KT CORPORATION KRW5000" ;
+	:ID_NOTATION "61353" ;
+	:ISIN "KR7030200000" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_KYOCERA_CORP a :Stock ;
+	rdfs:label "KYOCERA CORP NPV" ;
+	:ID_NOTATION "213006" ;
+	:ISIN "JP3249600002" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_MITSUBISHI_TOKYO_FINL_GRP a :Stock ;
+	rdfs:label "MITSUBISHI UFJ FINANCIAL GROUP INC NPV" ;
+	:ID_NOTATION "2590138" ;
+	:ISIN "JP3902900004" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_NATL_AUSTR_BK a :Stock ;
+	rdfs:label "NATIONAL AUSTRALIA BANK NPV" ;
+	:ID_NOTATION "93121" ;
+	:ISIN "AU000000NAB4" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_NINTENDO_CO_LTD_YN_50 a :Stock ;
+	rdfs:label "NINTENDO CO LTD NPV" ;
+	:ID_NOTATION "218339" ;
+	:ISIN "JP3756600007" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_NIPPON_TEL_TEL_YN_50000 a :Stock ;
+	rdfs:label "NIPPON TEL & TEL CORPORATION NPV" ;
+	:ID_NOTATION "1547334" ;
+	:ISIN "JP3735400008" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_NISSAN_MOTOR a :Stock ;
+	rdfs:label "NISSAN MOTOR CO NPV" ;
+	:ID_NOTATION "216601" ;
+	:ISIN "JP3672400003" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_NOMURA_HOLDING a :Stock ;
+	rdfs:label "NOMURA HOLDINGS INC. NPV" ;
+	:ID_NOTATION "218694" ;
+	:ISIN "JP3762600009" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_NTT_DOCOMO a :Stock ;
+	rdfs:label "NTT DOCOMO INC COM SHS NPV" ;
+	:ID_NOTATION "212280" ;
+	:ISIN "JP3165650007" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_MATSUSHITA_EL_IND a :Stock ;
+	rdfs:label "PANASONIC CORP NPV" ;
+	:ID_NOTATION "1547506" ;
+	:ISIN "JP3866800000" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_RIO_TINTO_0 a :Stock ;
+	rdfs:label "RIO TINTO LIMITED NPV" ;
+	:ID_NOTATION "93201" ;
+	:ISIN "AU000000RIO1" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_SHARP a :Stock ;
+	rdfs:label "SHARP CORP NPV" ;
+	:ID_NOTATION "1546699" ;
+	:ISIN "JP3359600008" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_SHIN_ETSU_CHEM_YN_50 a :Stock ;
+	rdfs:label "SHIN-ETSU CHEMICAL CO NPV" ;
+	:ID_NOTATION "214160" ;
+	:ISIN "JP3371200001" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_SK_TELE_CO a :Stock ;
+	rdfs:label "SK TELECOM KRW500" ;
+	:ID_NOTATION "61182" ;
+	:ISIN "KR7017670001" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_SONY_CORP a :Stock ;
+	rdfs:label "SONY CORPORATION COM STK NPV" ;
+	:ID_NOTATION "214761" ;
+	:ISIN "JP3435000009" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_SUMITOMO_MITSUI_FINL_GRP a :Stock ;
+	rdfs:label "SUMITOMO MITSUI FINANCIAL GROUP INC NPV" ;
+	:ID_NOTATION "6348037" ;
+	:ISIN "JP3890350006" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_SUN_HUNG_PRP a :Stock ;
+	rdfs:label "SUN HUNG KAI PROPERTIES LTD HKD0.50" ;
+	:ID_NOTATION "205766" ;
+	:ISIN "HK0016000132" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_TAIWAN_SEMICON_MANU_TA10 a :Stock ;
+	rdfs:label "TAIWAN SEMICONDUCTOR MANUFACTURING TWD10" ;
+	:ID_NOTATION "1927296" ;
+	:ISIN "TW0002330008" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_TAKEDA_PHARM_CO_LTD_YN_50 a :Stock ;
+	rdfs:label "TAKEDA PHARMACEUTICAL CO LTD NPV" ;
+	:ID_NOTATION "214906" ;
+	:ISIN "JP3463000004" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_TELSTR_CORP a :Stock ;
+	rdfs:label "TELSTRA CORPORATION LTD NPV" ;
+	:ID_NOTATION "93232" ;
+	:ISIN "AU000000TLS2" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_TOKIO_MARINE a :Stock ;
+	rdfs:label "TOKIO MARINE HOLDINGS INC NPV" ;
+	:ID_NOTATION "6453795" ;
+	:ISIN "JP3910660004" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_TOKYO_EL_PWR_YN_500 a :Stock ;
+	rdfs:label "TOKYO ELECTRIC POWER CO INC NPV" ;
+	:ID_NOTATION "215604" ;
+	:ISIN "JP3585800000" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_TOSHIBA a :Stock ;
+	rdfs:label "TOSHIBA CORPORATION JPY50" ;
+	:ID_NOTATION "216089" ;
+	:ISIN "JP3592200004" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_TOYOTA_MOTOR_CORP_YN_50 a :Stock ;
+	rdfs:label "TOYOTA MOTOR CORPORATION Y50" ;
+	:ID_NOTATION "216349" ;
+	:ISIN "JP3633400001" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_UTD_MICROELECTR_CORP_TA10 a :Stock ;
+	rdfs:label "UNITED MICRO ELECTRONICS TWD10" ;
+	:ID_NOTATION "67978" ;
+	:ISIN "TW0002303005" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_UTD_OV_BK a :Stock ;
+	rdfs:label "UNITED OVERSEAS BANK LTD NPV" ;
+	:ID_NOTATION "249867" ;
+	:ISIN "SG1M31001969" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_WESTPAC_BK a :Stock ;
+	rdfs:label "WESTPAC BANKING CORPORATION NPV" ;
+	:ID_NOTATION "93248" ;
+	:ISIN "AU000000WBC1" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_WOOLWRTHS a :Stock ;
+	rdfs:label "WOOLWORTHS LIMITED NPV" ;
+	:ID_NOTATION "93254" ;
+	:ISIN "AU000000WOW2" ;
+	:memberOf :index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD .
+
+:stock_ANDRITZ a :Stock ;
+	rdfs:label "ANDRITZ AG" ;
+	:ID_NOTATION "740752" ;
+	:ISIN "AT0000730007" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_CA_IMM_ANLAGEN_CA_IMMOBILIEN_ORD_SHS a :Stock ;
+	rdfs:label "CA IMMOBILIEN ANLAGEN AG" ;
+	:ID_NOTATION "26345" ;
+	:ISIN "AT0000641352" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_CONWERT_IMMO_OR_CONWERT_IMMO_ORD_SHS a :Stock ;
+	rdfs:label "CONWERT IMMOBILIEN INVEST SE" ;
+	:ID_NOTATION "6366134" ;
+	:ISIN "AT0000697750" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_ERSTE_GROUP_BAN_ERSTE_GROUP_BANK_AG_ORD_SHS a :Stock ;
+	rdfs:label "ERSTE GROUP BANK AG" ;
+	:ID_NOTATION "1534068" ;
+	:ISIN "AT0000652011" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_EVN a :Stock ;
+	rdfs:label "EVN AG" ;
+	:ID_NOTATION "92144" ;
+	:ISIN "AT0000741053" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_IMMOFINANZ_IMMOB_ANLAGEN a :Stock ;
+	rdfs:label "IMMOFINANZ AG" ;
+	:ID_NOTATION "27124" ;
+	:ISIN "AT0000809058" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_LENZING_ORD_LENZING_AG_ORD_SHS a :Stock ;
+	rdfs:label "LENZING AG" ;
+	:ID_NOTATION "92011" ;
+	:ISIN "AT0000644505" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_MAYR_MELNHOF_KARTON a :Stock ;
+	rdfs:label "MAYR-MELNHOF KARTON AG" ;
+	:ID_NOTATION "1953547" ;
+	:ISIN "AT0000938204" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_OESTERREICHISCHE_POST a :Stock ;
+	rdfs:label "OESTERR. POST AG" ;
+	:ID_NOTATION "14932606" ;
+	:ISIN "AT0000APOST4" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_OMV a :Stock ;
+	rdfs:label "OMV AG" ;
+	:ID_NOTATION "92148" ;
+	:ISIN "AT0000743059" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_RAIFF_BANK_INT_RAIFFEISEN_BANK_INT_AG_ORD_SHS a :Stock ;
+	rdfs:label "RAIFFEISEN BANK INTERNAT. AG" ;
+	:ID_NOTATION "11578202" ;
+	:ISIN "AT0000606306" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_RHI a :Stock ;
+	rdfs:label "RHI AG" ;
+	:ID_NOTATION "1969730" ;
+	:ISIN "AT0000676903" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_SCHOELLER_BLECKMANN_OILF a :Stock ;
+	rdfs:label "SCHOELLER-BLECKMANN AG" ;
+	:ID_NOTATION "7028970" ;
+	:ISIN "AT0000946652" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_STRABAG_SE_ORD_STRABAG_SE_ORD_SHS a :Stock ;
+	rdfs:label "STRABAG SE" ;
+	:ID_NOTATION "19741168" ;
+	:ISIN "AT000000STR1" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_TELEKOM_AUSTRIA a :Stock ;
+	rdfs:label "TELEKOM AUSTRIA AG" ;
+	:ID_NOTATION "992823" ;
+	:ISIN "AT0000720008" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_OESTERR_EL_WIRT_INH a :Stock ;
+	rdfs:label "VERBUND AG KAT. A" ;
+	:ID_NOTATION "92175" ;
+	:ISIN "AT0000746409" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_VIENNA_INSURANCE_GROUP a :Stock ;
+	rdfs:label "VIENNA INSURANCE GROUP" ;
+	:ID_NOTATION "12363620" ;
+	:ISIN "AT0000908504" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_VOESTALPINE a :Stock ;
+	rdfs:label "VOESTALPINE AG" ;
+	:ID_NOTATION "1932565" ;
+	:ISIN "AT0000937503" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_WIENERBERGER a :Stock ;
+	rdfs:label "WIENERBERGER AG" ;
+	:ID_NOTATION "92612" ;
+	:ISIN "AT0000831706" ;
+	:memberOf :index_AUSTRIA_ATX .
+
+:stock_ZUMTOBEL_ORD_ZUMTOBEL_ORD_SHS a :Stock ;
+	rdfs:label "ZUMTOBEL AG" ;
+	:ID_NOTATION "14771706" ;
+	:ISIN "AT0000837307" ;
+	:memberOf :index_AUSTRIA_ATX .
+

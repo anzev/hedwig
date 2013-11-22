@@ -1,0 +1,189 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://project-first.eu/ontology#> .
+
+#
+# Sentiment object
+#
+
+:SentimentObject a owl:Class ;
+	rdfs:label "Sentiment object" .
+
+:ID_NOTATION a owl:DatatypeProperty ;
+	rdfs:label "ID_NOTATION" ;
+	rdfs:domain :SentimentObject ;
+	rdfs:range xsd:string .
+
+#
+# Financial sentiment objects
+#
+
+:FinancialInstrument a owl:Class ;
+	:settings "c=auc" ;
+	rdfs:label "Financial instrument" ;
+	rdfs:subClassOf :SentimentObject .
+
+:Index a owl:Class ;
+	rdfs:label "Index" ;
+	#rdfs:subClassOf :FinancialInstrument .
+	rdfs:subClassOf :SentimentObject .
+
+:Company a owl:Class ;
+	rdfs:label "Company" ;
+	:settings "c=icl" ;
+	rdfs:subClassOf :SentimentObject .
+
+:ISIN a owl:DatatypeProperty ;
+	rdfs:label "ISIN" ;
+	rdfs:domain :FinancialInstrument ;
+	rdfs:range xsd:string .
+
+:memberOf a owl:ObjectProperty ;
+	rdfs:label "member of" ;
+	rdfs:domain :FinancialInstrument ;
+	rdfs:range :Index .
+
+:issues a owl:ObjectProperty ;
+	rdfs:label "issues" ;
+	rdfs:domain :Company ;
+	rdfs:range :FinancialInstrument .
+
+#
+# Topics
+#
+
+:Topic a owl:Class ;
+	rdfs:label "Topic" ;
+	rdfs:subClassOf :SentimentObject .
+
+:subtopicOf a owl:ObjectProperty ;
+	rdfs:label "subtopic of" ;
+	rdfs:domain :Topic ;
+	rdfs:range :Topic .
+
+#
+# Vocabularies
+#
+
+:Vocabulary a owl:Class ;
+	rdfs:label "Vocabulary" .
+
+:WordGroup a owl:Class ;
+	rdfs:label "Word group" .
+
+:containsWordGroup a owl:ObjectProperty ;
+	rdfs:label "contains word group" ;
+	rdfs:domain :Vocabulary ;
+	rdfs:range :WordGroup .
+
+#
+# Geography
+#
+
+:GeographicalRegion a owl:Class ;
+	rdfs:label "Geographical region" ;
+	:settings "c=icl" ;
+	rdfs:subClassOf :SentimentObject .
+
+:Continent a owl:Class ;
+	rdfs:label "Continent" ;
+	rdfs:subClassOf :GeographicalRegion .
+
+:Country a owl:Class ;
+	rdfs:label "Country" ;
+	rdfs:subClassOf :GeographicalRegion .
+
+:City a owl:Class ;
+	rdfs:label "City" ;
+	rdfs:subClassOf :GeographicalRegion .
+
+:Capital a owl:Class ;
+	rdfs:label "Capital city" ;
+	rdfs:subClassOf :City .
+
+:containedIn a owl:ObjectProperty ;
+	rdfs:label "contained in" ;
+	rdfs:domain :GeographicalRegion;
+	rdfs:range :GeographicalRegion .
+
+:locatedIn a owl:ObjectProperty ;
+	rdfs:label "located in" ;
+	rdfs:domain :Company ;
+	rdfs:range :Country .
+
+#
+# Organizations
+#
+
+:Organization a owl:Class ;
+    :settings "c=em";
+	rdfs:label "Organization" ;
+	rdfs:subClassOf :SentimentObject .
+
+:hasMember a owl:ObjectProperty ;
+	rdfs:label "has member" ;
+	rdfs:domain :Organization ;
+	rdfs:range :Country .
+
+#
+# Currencies
+#
+
+:Currency a owl:Class ;
+	rdfs:label "Currency" ;
+	rdfs:subClassOf :SentimentObject .
+
+:usedInCountry a owl:ObjectProperty ;
+	rdfs:label "used in" ;
+	rdfs:domain :Currency ;
+	rdfs:range :Country .
+
+#
+# Gazetteers
+#
+
+:Gazetteer a owl:Class ;
+	rdfs:label "Gazetteer" .
+
+:identifiedBy a owl:ObjectProperty ;
+	rdfs:label "identified by" ;
+	rdfs:domain :SentimentObject ;
+	rdfs:domain :WordGroup ;
+	rdfs:range :Gazetteer .
+
+:term a owl:DatatypeProperty ;
+	rdfs:label "term" ;
+	rdfs:domain :Gazetteer ;
+	rdfs:range xsd:string .
+
+:stopWord a owl:DatatypeProperty ;
+	rdfs:label "stop word" ;
+	rdfs:domain :Gazetteer ;
+	rdfs:range xsd:string .
+
+:imports a owl:ObjectProperty ;
+	rdfs:label "imports" ;
+	rdfs:domain :Gazetteer ;
+	rdfs:range :Gazetteer .
+
+:settings a owl:DatatypeProperty ;
+	rdfs:label "settings" ;
+	rdfs:domain :Gazetteer ;
+	rdfs:range xsd:string .
+
+:hasSentenceLevelCondition a owl:ObjectProperty ;
+	rdfs:label "has sentence constraint" ;
+	rdfs:domain :Gazetteer ;
+	rdfs:range :Gazetteer .
+
+:hasBlockLevelCondition a owl:ObjectProperty ;
+	rdfs:label "has text-block constraint" ;
+	rdfs:domain :Gazetteer ;
+	rdfs:range :Gazetteer .
+
+:hasDocumentLevelCondition a owl:ObjectProperty ;
+	rdfs:label "has document constraint" ;
+	rdfs:domain :Gazetteer ;
+	rdfs:range :Gazetteer .

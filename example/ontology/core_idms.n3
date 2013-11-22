@@ -1,0 +1,147 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://project-first.eu/ontology#> .
+
+:Stock a owl:Class ;
+	rdfs:label "Stock" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Bond a owl:Class ;
+	rdfs:label "Bond" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Option a owl:Class ;
+	rdfs:label "Option" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Warrant a owl:Class ;
+	rdfs:label "Warrant" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Currency a owl:Class ;
+	rdfs:label "Currency" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Commodities a owl:Class ;
+	rdfs:label "Commodities" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Mutual_Funds a owl:Class ;
+	rdfs:label "Mutual Funds" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Future a owl:Class ;
+	rdfs:label "Future" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Future_Option a owl:Class ;
+	rdfs:label "Future Option" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Interest_rate a owl:Class ;
+	rdfs:label "Interest rate" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Certificate a owl:Class ;
+	rdfs:label "Certificate" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Basis a owl:Class ;
+	rdfs:label "Basis" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Metal a owl:Class ;
+	rdfs:label "Metal" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Grains_and_Oils a owl:Class ;
+	rdfs:label "Grains and Oils" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Precious_metals a owl:Class ;
+	rdfs:label "Precious metals" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Future_Spreads a owl:Class ;
+	rdfs:label "Future Spreads" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:USWarrant a owl:Class ;
+	rdfs:label "USWarrant" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Repo a owl:Class ;
+	rdfs:label "Repo" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Page a owl:Class ;
+	rdfs:label "Page" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Contract_for_Difference a owl:Class ;
+	rdfs:label "Contract for Difference" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:1Futures_Strip a owl:Class ;
+	rdfs:label "1Futures Strip" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Statistics a owl:Class ;
+	rdfs:label "Statistics" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Basket a owl:Class ;
+	rdfs:label "Basket" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:OTC_Instrument a owl:Class ;
+	rdfs:label "OTC Instrument" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:unknown a owl:Class ;
+	rdfs:label "unknown" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Inactive_instrument a owl:Class ;
+	rdfs:label "Inactive instrument" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Ignore a owl:Class ;
+	rdfs:label "Ignore" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:ClickOptions a owl:Class ;
+	rdfs:label "ClickOptions" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Class_Option a owl:Class ;
+	rdfs:label "Class Option" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Class_Future a owl:Class ;
+	rdfs:label "Class Future" ;
+	rdfs:subClassOf :FinancialInstrument .
+
+:Stock_Index a owl:Class ;
+	:settings "ml=3" ;      #Minimum annotation length constraint
+	rdfs:label "Stock Index" ;
+	rdfs:subClassOf :Index .
+
+:Industry a owl:Class ;
+	rdfs:label "Industry" ;
+	rdfs:subClassOf :Company .
+
+:Insurance a owl:Class ;
+	rdfs:label "Insurance" ;
+	rdfs:subClassOf :Company .
+
+:Bank a owl:Class ;
+	rdfs:label "Bank" ;
+	rdfs:subClassOf :Company .
+
+:Other a owl:Class ;
+	rdfs:label "Other" ;
+	rdfs:subClassOf :Company .
+

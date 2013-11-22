@@ -1,0 +1,186 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://project-first.eu/ontology#> .
+
+
+:curr_AUD a :Currency ;
+	 rdfs:label "Australian dollar" ;
+	 :usedinCountry :cou_AU ;
+	 :usedinCountry :cou_CC ;
+	 :usedinCountry :cou_CX ;
+	 :usedinCountry :cou_HM ;
+	 :usedinCountry :cou_KI ;
+	 :usedinCountry :cou_NF ;
+	 :usedinCountry :cou_NR ;
+	 :usedinCountry :cou_TV ;
+	 :identifiedBy :curr_AUD_Gazetteer .
+:curr_AUD_Gazetteer a :Gazetteer ;
+	 :term "AUD" ;
+	 :term "Australian dollar" .
+:curr_BRL a :Currency ;
+	 rdfs:label "Real" ;
+	 :usedinCountry :cou_BR ;
+	 :identifiedBy :curr_BRL_Gazetteer .
+:curr_BRL_Gazetteer a :Gazetteer ;
+	 :term "BRL" ;
+	 :term "Brazilian real" .
+:curr_CAD a :Currency ;
+	 rdfs:label "Canadian dollar" ;
+	 :usedinCountry :cou_CA ;
+	 :identifiedBy :curr_CAD_Gazetteer .
+:curr_CAD_Gazetteer a :Gazetteer ;
+	 :term "CAD" ;
+	 :term "Canadian dollar" .
+:curr_CHF a :Currency ;
+	 rdfs:label "Swiss franc" ;
+	 :usedinCountry :cou_CH ;
+	 :usedinCountry :cou_LI ;
+	 :identifiedBy :curr_CHF_Gazetteer .
+:curr_CHF_Gazetteer a :Gazetteer ;
+	 :term "CHF" ;
+	 :term "Swiss franc" .
+:curr_CNY a :Currency ;
+	 rdfs:label "Chinese yuan" ;
+	 :usedinCountry :cou_CN ;
+	 :identifiedBy :curr_CNY_Gazetteer .
+:curr_CNY_Gazetteer a :Gazetteer ;
+	 :term "CNY" ;
+	 :term "yuan" ;
+	 :term "Yuan" ;
+	 :term "Chinese yuan" .
+:curr_DKK a :Currency ;
+	 rdfs:label "Danish krone" ;
+	 :usedinCountry :cou_DK ;
+	 :usedinCountry :cou_FO ;
+	 :usedinCountry :cou_GL ;
+	 :identifiedBy :curr_DKK_Gazetteer .
+:curr_DKK_Gazetteer a :Gazetteer ;
+	 :term "DKK" ;
+	 :term "Danish krone" .
+:curr_EUR a :Currency ;
+	 rdfs:label "Euro" ;
+	 :usedinCountry :cou_AD ;
+	 :usedinCountry :cou_AT ;
+	 :usedinCountry :cou_AX ;
+	 :usedinCountry :cou_BE ;
+	 :usedinCountry :cou_BL ;
+	 :usedinCountry :cou_CY ;
+	 :usedinCountry :cou_DE ;
+	 :usedinCountry :cou_EE ;
+	 :usedinCountry :cou_ES ;
+	 :usedinCountry :cou_FI ;
+	 :usedinCountry :cou_FR ;
+	 :usedinCountry :cou_GF ;
+	 :usedinCountry :cou_GP ;
+	 :usedinCountry :cou_GR ;
+	 :usedinCountry :cou_IE ;
+	 :usedinCountry :cou_IT ;
+	 :usedinCountry :cou_LU ;
+	 :usedinCountry :cou_MC ;
+	 :usedinCountry :cou_ME ;
+	 :usedinCountry :cou_MF ;
+	 :usedinCountry :cou_MQ ;
+	 :usedinCountry :cou_MT ;
+	 :usedinCountry :cou_NL ;
+	 :usedinCountry :cou_PM ;
+	 :usedinCountry :cou_PT ;
+	 :usedinCountry :cou_RE ;
+	 :usedinCountry :cou_SI ;
+	 :usedinCountry :cou_SK ;
+	 :usedinCountry :cou_SM ;
+	 :usedinCountry :cou_TF ;
+	 :usedinCountry :cou_VA ;
+	 :usedinCountry :cou_XK ;
+	 :usedinCountry :cou_YT ;
+	 :identifiedBy :curr_EUR_Gazetteer .
+:curr_EUR_Gazetteer a :Gazetteer ;
+	 :term "EUR" ;
+	 :term "euro" ;
+	 :term "Euro" .
+:curr_GBP a :Currency ;
+	 rdfs:label "Pound sterling" ;
+	 :usedinCountry :cou_GB ;
+	 :usedinCountry :cou_GG ;
+	 :usedinCountry :cou_GS ;
+	 :usedinCountry :cou_IM ;
+	 :usedinCountry :cou_JE ;
+	 :identifiedBy :curr_GBP_Gazetteer .
+:curr_GBP_Gazetteer a :Gazetteer ;
+	 :term "GBP" ;
+	 :term "pound" ;
+	 :term "Pound sterling" .
+:curr_INR a :Currency ;
+	 rdfs:label "Indian rupee" ;
+	 :usedinCountry :cou_IN ;
+	 :identifiedBy :curr_INR_Gazetteer .
+:curr_INR_Gazetteer a :Gazetteer ;
+	 :term "INR" ;
+	 :term "rupee" ;
+	 :term "Rupee" ;
+	 :term "Indian rupee" .
+:curr_JPY a :Currency ;
+	 rdfs:label "Yen" ;
+	 :usedinCountry :cou_JP ;
+	 :identifiedBy :curr_JPY_Gazetteer .
+:curr_JPY_Gazetteer a :Gazetteer ;
+	 :term "JPY" ;
+	 :term "yen" ;
+	 :term "Yen" .
+:curr_NOK a :Currency ;
+	 rdfs:label "Norwegian krone" ;
+	 :usedinCountry :cou_BV ;
+	 :usedinCountry :cou_NO ;
+	 :usedinCountry :cou_SJ ;
+	 :identifiedBy :curr_NOK_Gazetteer .
+:curr_NOK_Gazetteer a :Gazetteer ;
+	 :term "NOK" ;
+	 :term "Norwegian krone" .
+:curr_RUB a :Currency ;
+	 rdfs:label "Ruble" ;
+	 :usedinCountry :cou_RU ;
+	 :identifiedBy :curr_RUB_Gazetteer .
+:curr_RUB_Gazetteer a :Gazetteer ;
+	 :term "RUB" ;
+	 :term "ruble" ;
+	 :term "Ruble" .
+:curr_SEK a :Currency ;
+	 rdfs:label "Swedish krona" ;
+	 :usedinCountry :cou_SE ;
+	 :identifiedBy :curr_SEK_Gazetteer .
+:curr_SEK_Gazetteer a :Gazetteer ;
+	 :term "SEK" ;
+	 :term "Swedish krona" .
+:curr_USD a :Currency ;
+	 rdfs:label "US dollar" ;
+	 :usedinCountry :cou_AS ;
+	 :usedinCountry :cou_BQ ;
+	 :usedinCountry :cou_EC ;
+	 :usedinCountry :cou_FM ;
+	 :usedinCountry :cou_GU ;
+	 :usedinCountry :cou_IO ;
+	 :usedinCountry :cou_MH ;
+	 :usedinCountry :cou_MP ;
+	 :usedinCountry :cou_PR ;
+	 :usedinCountry :cou_PW ;
+	 :usedinCountry :cou_SV ;
+	 :usedinCountry :cou_TC ;
+	 :usedinCountry :cou_TL ;
+	 :usedinCountry :cou_UM ;
+	 :usedinCountry :cou_US ;
+	 :usedinCountry :cou_VG ;
+	 :usedinCountry :cou_VI ;
+	 :identifiedBy :curr_USD_Gazetteer .
+:curr_USD_Gazetteer a :Gazetteer ;
+	 :term "USD" ;
+	 :term "dollar" ;
+	 :term "US$" ;
+	 :term "US dollar" .
+:curr_ZAR a :Currency ;
+	 rdfs:label "South African rand" ;
+	 :usedinCountry :cou_ZA ;
+	 :identifiedBy :curr_ZAR_Gazetteer .
+:curr_ZAR_Gazetteer a :Gazetteer ;
+	 :term "ZAR" ;
+	 :term "South African rand" .

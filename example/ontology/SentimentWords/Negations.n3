@@ -1,0 +1,194 @@
+@prefix : <http://project-first.eu/ontology#>.
+@prefix OWL: <http://www.w3.org/2002/07/owl#>.
+@prefix RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix XSD: <http://www.w3.org/2001/XMLSchema#>.
+
+:n_aint_Gazetteer
+	:term "aint";
+	a :Gazetteer.
+
+:n_aint
+	:identifiedBy :n_aint_Gazetteer;
+	a :Negation;
+	RDFS:label "aint".
+
+:n_arent_Gazetteer
+	:term "arent";
+	a :Gazetteer.
+
+:n_arent
+	:identifiedBy :n_arent_Gazetteer;
+	a :Negation;
+	RDFS:label "arent".
+
+:n_cant_Gazetteer
+	:term "cant";
+	a :Gazetteer.
+
+:n_cant
+	:identifiedBy :n_cant_Gazetteer;
+	a :Negation;
+	RDFS:label "cant".
+
+:n_couldnt_Gazetteer
+	:term "couldnt";
+	a :Gazetteer.
+
+:n_couldnt
+	:identifiedBy :n_couldnt_Gazetteer;
+	a :Negation;
+	RDFS:label "couldnt".
+
+:n_didnt_Gazetteer
+	:term "didnt";
+	a :Gazetteer.
+
+:n_didnt
+	:identifiedBy :n_didnt_Gazetteer;
+	a :Negation;
+	RDFS:label "didnt".
+
+:n_doesnt_Gazetteer
+	:term "doesnt";
+	a :Gazetteer.
+
+:n_doesnt
+	:identifiedBy :n_doesnt_Gazetteer;
+	a :Negation;
+	RDFS:label "doesnt".
+
+:n_dont_Gazetteer
+	:term "dont";
+	a :Gazetteer.
+
+:n_dont
+	:identifiedBy :n_dont_Gazetteer;
+	a :Negation;
+	RDFS:label "dont".
+
+:n_hadnt_Gazetteer
+	:term "hadnt";
+	a :Gazetteer.
+
+:n_hadnt
+	:identifiedBy :n_hadnt_Gazetteer;
+	a :Negation;
+	RDFS:label "hadnt".
+
+:n_hasnt_Gazetteer
+	:term "hasnt";
+	a :Gazetteer.
+
+:n_hasnt
+	:identifiedBy :n_hasnt_Gazetteer;
+	a :Negation;
+	RDFS:label "hasnt".
+
+:n_havent_Gazetteer
+	:term "havent";
+	a :Gazetteer.
+
+:n_havent
+	:identifiedBy :n_havent_Gazetteer;
+	a :Negation;
+	RDFS:label "havent".
+
+:n_isnt_Gazetteer
+	:term "isnt";
+	a :Gazetteer.
+
+:n_isnt
+	:identifiedBy :n_isnt_Gazetteer;
+	a :Negation;
+	RDFS:label "isnt".
+
+:n_never_Gazetteer
+	:term "never";
+	a :Gazetteer.
+
+:n_never
+	:identifiedBy :n_never_Gazetteer;
+	a :Negation;
+	RDFS:label "never".
+
+:n_no_Gazetteer
+	:term "no";
+	a :Gazetteer.
+
+:n_no
+	:identifiedBy :n_no_Gazetteer;
+	a :Negation;
+	RDFS:label "no".
+
+:n_none_Gazetteer
+	:term "none";
+	a :Gazetteer.
+
+:n_none
+	:identifiedBy :n_none_Gazetteer;
+	a :Negation;
+	RDFS:label "none".
+
+:n_noone_Gazetteer
+	:term "noone";
+	a :Gazetteer.
+
+:n_noone
+	:identifiedBy :n_noone_Gazetteer;
+	a :Negation;
+	RDFS:label "noone".
+
+:n_not_Gazetteer
+	:term "not";
+	a :Gazetteer.
+
+:n_not
+	:identifiedBy :n_not_Gazetteer;
+	a :Negation;
+	RDFS:label "not".
+
+:n_nothing_Gazetteer
+	:term "nothing";
+	a :Gazetteer.
+
+:n_nothing
+	:identifiedBy :n_nothing_Gazetteer;
+	a :Negation;
+	RDFS:label "nothing".
+
+:n_nowhere_Gazetteer
+	:term "nowhere";
+	a :Gazetteer.
+
+:n_nowhere
+	:identifiedBy :n_nowhere_Gazetteer;
+	a :Negation;
+	RDFS:label "nowhere".
+
+:n_shouldnt_Gazetteer
+	:term "shouldnt";
+	a :Gazetteer.
+
+:n_shouldnt
+	:identifiedBy :n_shouldnt_Gazetteer;
+	a :Negation;
+	RDFS:label "shouldnt".
+
+:n_wont_Gazetteer
+	:term "wont";
+	a :Gazetteer.
+
+:n_wont
+	:identifiedBy :n_wont_Gazetteer;
+	a :Negation;
+	RDFS:label "wont".
+
+:n_wouldnt_Gazetteer
+	:term "wouldnt";
+	a :Gazetteer.
+
+:n_wouldnt
+	:identifiedBy :n_wouldnt_Gazetteer;
+	a :Negation;
+	RDFS:label "wouldnt".

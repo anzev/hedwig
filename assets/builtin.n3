@@ -1,4 +1,4 @@
-@prefix : <http://project-first.eu/ontology#>.
+@prefix : <http://kt.ijs.si/hedwig#>.
 @prefix OWL: <http://www.w3.org/2002/07/owl#>.
 @prefix RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#>.

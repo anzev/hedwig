@@ -1,0 +1,203 @@
+﻿@prefix : <http://project-first.eu/ontology#>.
+@prefix OWL: <http://www.w3.org/2002/07/owl#>.
+@prefix RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix XSD: <http://www.w3.org/2001/XMLSchema#>.
+
+:comp_ABN_AMRO
+	:identifiedBy :gaz_comp_ABN_AMRO;
+	a :Bank;
+	RDFS:label "ABN AMRO".
+
+:comp_Bank_of_America
+	:identifiedBy :gaz_comp_Bank_of_America;
+    :identifiedBy :gaz_ACR_comp_Bank_of_America;
+	a :Bank;
+	RDFS:label "Bank of America".
+
+:comp_Bank_of_India
+	:identifiedBy :gaz_comp_Bank_of_India;
+	a :Bank;
+	RDFS:label "Bank of India".
+
+:comp_BBVA
+	:identifiedBy :gaz_comp_BBVA;
+    :identifiedBy :gaz_ACR_comp_BBVA;
+	a :Bank;
+	RDFS:label "BBVA".
+
+:comp_BNP
+	:identifiedBy :gaz_comp_BNP;
+	a :Bank;
+	RDFS:label "BNP".
+
+:comp_Calyon
+	:identifiedBy :gaz_comp_Calyon;
+	a :Bank;
+	RDFS:label "Calyon".
+
+:comp_Citibank
+	:identifiedBy :gaz_comp_Citibank;
+	a :Bank;
+	RDFS:label "Citibank".
+
+:comp_Dexia
+	:identifiedBy :gaz_comp_Dexia;
+	a :Bank;
+	RDFS:label "Dexia".
+
+:comp_First_National_Bank_of_South_Africa
+	:identifiedBy :gaz_comp_First_National_Bank_of_South_Africa;
+	a :Bank;
+	RDFS:label "First National Bank of South Africa".
+
+:comp_ING
+	:identifiedBy :gaz_comp_ING;
+    :identifiedBy :gaz_ACR_comp_ING;
+	a :Bank;
+	RDFS:label "ING     ".
+
+:comp_JP_Morgan
+	:identifiedBy :gaz_comp_JP_Morgan;
+	a :Bank;
+	RDFS:label "JP Morgan".
+
+:comp_Rabobank
+	:identifiedBy :gaz_comp_Rabobank;
+	a :Bank;
+	RDFS:label "Rabobank".
+
+:comp_Reiffeisen
+	:identifiedBy :gaz_comp_Reiffeisen;
+	a :Bank;
+	RDFS:label "Reiffeisen".
+
+#######################    
+######## gazetteers
+
+:gaz_comp_ABN_AMRO
+	:term "ABN AMRO";
+	a :Gazetteer.
+
+:gaz_comp_Bank_of_America	
+	:term "Bank Of America",
+		"Bank Of America Corp";	
+	a :Gazetteer.
+
+:gaz_ACR_comp_Bank_of_America
+        :term "BOFA/c=auc",
+        "BAC/c=auc",
+        "BOA/c=auc";
+        :hasDocumentLevelCondition :gaz_bank;
+        a :Gazetteer.
+
+:bank_Bank_Of_America_Corp
+	:identifiedBy :bank_Bank_Of_America_Corp_Gazetteer;
+    :identifiedBy :bank_Bank_Of_America_Corp_ACR_Gazetteer;
+	a :Bank;
+	RDFS:label "Bank Of America Corp".
+
+:gaz_comp_Bank_of_India
+	:term "Bank of India";
+	a :Gazetteer.
+
+:gaz_comp_BBVA
+	:term "Bbva Gestion Sa";
+    :term "Banco Bilbao Vizcaya Argentaria";
+	a :Gazetteer.
+    
+:gaz_ACR_comp_BBVA
+        :term "BBVA/c=auc";
+        :hasDocumentLevelCondition :cou_ES_Gazetteer;        
+        a :Gazetteer.    
+
+:gaz_comp_BNP
+	:term "BNP Paribas S.A.";
+    :term "BNP";
+	a :Gazetteer.
+
+:gaz_comp_Calyon
+	:term "Calyon";
+    :term "Calyon Financial Inc";
+	a :Gazetteer.
+
+:gaz_comp_Citibank
+	:term "Citibank";
+	a :Gazetteer.
+
+:gaz_comp_Dexia
+	:term "Dexia";
+    :term "Dexia Group";
+	a :Gazetteer.
+
+:gaz_comp_First_National_Bank_of_South_Africa
+	:term "First National Bank of South Africa";
+    :term "First National Bank";
+	a :Gazetteer.
+
+:gaz_comp_ING
+	:term "ING Group";
+    :term "ING Groep";
+    :term "Internationale Nederlanden Groep";
+    :term "International Netherlands Group";
+	a :Gazetteer.
+
+:gaz_ACR_comp_ING    
+    :term "ING";
+    :hasFollowedByCondition :gaz_comp. 
+    
+
+:gaz_comp_JP_Morgan
+	:term "JP Morgan";
+    :term "JPMorgan Chase & Co.";
+    :term "JPMorgan Chase";
+    :term "J.P. Morgan";
+	a :Gazetteer.
+
+:gaz_comp_Rabobank
+	:term "Rabobank";
+    :term "Coöperatieve Centrale Raiffeisen-Boerenleenbank B.A.";
+	a :Gazetteer.
+
+:gaz_comp_Reiffeisen
+	:term "Reiffeisen";
+	a :Gazetteer.
+    
+    
+#
+# Glossary for gazetter limitation (constraints)
+#    
+    
+:gaz_bank a :Gazetteer;
+    :settings "c=ic/l=y" ;   # ignore case, lematize = yes
+	:term "bank".
+
+:gaz_fund a :Gazetteer;
+    :settings "c=ic/l=y" ;   # ignore case, lematize = yes
+	:term "fund".	
+    
+:gaz_insurer a :Gazetteer;
+    :settings "c=ic/l=y" ;   # ignore case, lematize = yes
+	:term "insurer";
+    :term "insurence".
+    
+:gaz_loan a :Gazetteer;
+    :settings "c=ic/l=y" ;   # ignore case, lematize = yes
+	:term "loan";
+    :term "credit";
+    :term "debt";
+    :term "mortgage";
+    :term "investment".	
+    
+:gaz_company a :Gazetteer;
+    :settings "c=ic/l=y" ;   # ignore case, lematize = yes
+	:term "company";
+    :term "business organization";
+    :term "corporation";
+    :term "firm".    
+
+
+
+
+
+    

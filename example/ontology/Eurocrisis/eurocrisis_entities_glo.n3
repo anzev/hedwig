@@ -1,0 +1,1177 @@
+@prefix : <http://project-first.eu/ontology#>.
+@prefix OWL: <http://www.w3.org/2002/07/owl#>.
+@prefix RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix XSD: <http://www.w3.org/2001/XMLSchema#>.
+
+:glo_asset_backed_commercial_paper_Gazetteer
+	:term " ABCP",
+		"asset-backed commercial paper";
+	a :Gazetteer.
+
+:glo_asset_backed_commercial_paper
+	:identifiedBy :glo_asset_backed_commercial_paper_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "asset-backed commercial paper".
+
+:glo_asset_backed_security_Gazetteer
+	:term " ABS",
+		"asset-backed security";
+	a :Gazetteer.
+
+:glo_asset_backed_security
+	:identifiedBy :glo_asset_backed_security_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "asset-backed security".
+
+:glo_austerity_Gazetteer
+	:term "austerity";
+	a :Gazetteer.
+
+:glo_austerity
+	:identifiedBy :glo_austerity_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "austerity".
+
+:glo_bail_out_Gazetteer
+	:term "bail out";
+	a :Gazetteer.
+
+:glo_bail_out
+	:identifiedBy :glo_bail_out_Gazetteer;
+	a :Financial_Failure_Term;
+	RDFS:label "bail out".
+
+:glo_balance_of_payment_Gazetteer
+	:term "balance of payment";
+	a :Gazetteer.
+
+:glo_balance_of_payment
+	:identifiedBy :glo_balance_of_payment_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "balance of payment".
+
+:glo_balanced_budget_amendment_Gazetteer
+	:term "balanced budget amendment";
+	a :Gazetteer.
+
+:glo_balanced_budget_amendment
+	:identifiedBy :glo_balanced_budget_amendment_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "balanced budget amendment".
+
+:glo_banking_crisis_Gazetteer
+	:term "banking crisis";
+	a :Gazetteer.
+
+:glo_banking_crisis
+	:identifiedBy :glo_banking_crisis_Gazetteer;
+	a :Financial_Crisis_Term;
+	RDFS:label "banking crisis".
+
+:glo_sovereign_debt_Gazetteer
+	:term "sovereign debt";
+	a :Gazetteer.
+
+:glo_banking_crisis
+	:identifiedBy :glo_sovereign_debt_Gazetteer;
+	a :Financial_Crisis_Term;
+	RDFS:label "sovereign debt".    
+    
+:glo_bankrupt_Gazetteer
+	:term "bankrupt";
+	a :Gazetteer.
+
+:glo_bankrupt
+	:identifiedBy :glo_bankrupt_Gazetteer;
+	a :Financial_Failure_Term;
+	RDFS:label "bankrupt".
+
+:glo_bond_purchase_Gazetteer
+	:term "bond purchase";
+	a :Gazetteer.
+
+:glo_bond_purchase
+	:identifiedBy :glo_bond_purchase_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "bond purchase".
+
+:glo_break_up_Gazetteer
+	:term "break up";
+	a :Gazetteer.
+
+:glo_break_up
+	:identifiedBy :glo_break_up_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "break up".
+
+:glo_budget_cut_Gazetteer
+	:term "budget cut";
+	a :Gazetteer.
+
+:glo_budget_cut
+	:identifiedBy :glo_budget_cut_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "budget cut".
+
+:glo_budget_deficit_Gazetteer
+	:term "budget deficit";
+	a :Gazetteer.
+
+:glo_budget_deficit
+	:identifiedBy :glo_budget_deficit_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "budget deficit".
+    
+:glo_clearing_bank_Gazetteer
+	:term "clearing bank";
+	a :Gazetteer.
+
+:glo_clearing_bank
+	:identifiedBy :glo_clearing_bank_Gazetteer;
+	a :Other_Financial_Institution;
+	RDFS:label "clearing bank".
+
+:glo_collateral_Gazetteer
+	:term "collateral";
+	a :Gazetteer.
+
+:glo_collateral
+	:identifiedBy :glo_collateral_Gazetteer;
+	a :Loan_Insurance_Term;
+	RDFS:label "collateral".
+
+:glo_collateralized_obligations_Gazetteer
+	:term "collateralized obligations";
+	a :Gazetteer.
+
+:glo_collateralized_obligations
+	:identifiedBy :glo_collateralized_obligations_Gazetteer;
+	a :Loan_Insurance_Term;
+	RDFS:label "collateralized obligations".
+
+:glo_commercial_paper_funding_facility_Gazetteer
+	:term " CPFF",
+		"commercial paper funding facility";
+	a :Gazetteer.
+
+:glo_commercial_paper_funding_facility
+	:identifiedBy :glo_commercial_paper_funding_facility_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "commercial paper funding facility".
+
+:glo_commercial_paper_Gazetteer
+	:term "commercial paper";
+	a :Gazetteer.
+
+:glo_commercial_paper
+	:identifiedBy :glo_commercial_paper_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "commercial paper".
+
+:glo_competitiveness_Gazetteer
+	:term "competitiveness";
+	a :Gazetteer.
+
+:glo_competitiveness
+	:identifiedBy :glo_competitiveness_Gazetteer;
+	a :Pos_Financial_Sentiment;
+	RDFS:label "competitiveness".
+
+:glo_confidence_Gazetteer
+	:term "confidence";
+	a :Gazetteer.
+
+:glo_confidence
+	:identifiedBy :glo_confidence_Gazetteer;
+	a :Pos_Financial_Sentiment;
+	RDFS:label "confidence".
+
+:glo_contagion_Gazetteer
+	:term "contagion";
+	a :Gazetteer.
+
+:glo_contagion
+	:identifiedBy :glo_contagion_Gazetteer;
+	a :Financial_Crisis_Term;
+	RDFS:label "contagion".
+
+:glo_counterparty_risk_Gazetteer
+	:term "counterparty risk";
+	a :Gazetteer.
+
+:glo_counterparty_risk
+	:identifiedBy :glo_counterparty_risk_Gazetteer;
+	a :Loan_Risk_Term;
+	RDFS:label "counterparty risk".
+
+:glo_credibility_Gazetteer
+	:term "credibility";
+	a :Gazetteer.
+
+:glo_credibility
+	:identifiedBy :glo_credibility_Gazetteer;
+	a :Pos_Financial_Sentiment;
+	RDFS:label "credibility".
+
+:glo_credit_crunch_Gazetteer
+	:term "credit crunch";
+	a :Gazetteer.
+
+:glo_credit_crunch
+	:identifiedBy :glo_credit_crunch_Gazetteer;
+	a :Financial_Crisis_Term;
+	RDFS:label "credit crunch".
+
+:glo_credit_default_swap_Gazetteer
+	:term " CDS",
+		"credit default swap";
+	a :Gazetteer.
+
+:glo_credit_default_swap
+	:identifiedBy :glo_credit_default_swap_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "credit default swap".
+
+:glo_credit_rating_Gazetteer
+	:term "credit rating";
+	a :Gazetteer.
+
+:glo_credit_rating
+	:identifiedBy :glo_credit_rating_Gazetteer;
+	a :Loan_Risk_Term;
+	RDFS:label "credit rating".
+
+:glo_credit_risk_Gazetteer
+	:term "credit risk";
+	a :Gazetteer.
+
+:glo_credit_risk
+	:identifiedBy :glo_credit_risk_Gazetteer;
+	a :Loan_Risk_Term;
+	RDFS:label "credit risk".
+
+:glo_credit_spread_Gazetteer
+	:term "credit spread";
+	a :Gazetteer.
+
+:glo_credit_spread
+	:identifiedBy :glo_credit_spread_Gazetteer;
+	a :Loan_Term;
+	RDFS:label "credit spread".
+
+:glo_creditworthiness_Gazetteer
+	:term "creditworthiness";
+	a :Gazetteer.
+
+:glo_creditworthiness
+	:identifiedBy :glo_creditworthiness_Gazetteer;
+	a :Pos_Financial_Sentiment;
+	RDFS:label "creditworthiness".
+
+:glo_current_account_imbalance_Gazetteer
+	:term "current account imbalance";
+	a :Gazetteer.
+
+:glo_current_account_imbalance
+	:identifiedBy :glo_current_account_imbalance_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "current account imbalance".
+
+:glo_debt_restructuring_Gazetteer
+	:term "debt restructuring";
+	a :Gazetteer.
+
+:glo_debt_restructuring
+	:identifiedBy :glo_debt_restructuring_Gazetteer;
+	a :Public_Debt_Term;
+	RDFS:label "debt restructuring".
+
+:glo_default_Gazetteer
+	:term "default";
+	a :Gazetteer.
+
+:glo_default
+	:identifiedBy :glo_default_Gazetteer;
+	a :Financial_Failure_Term;
+	RDFS:label "default".
+
+:glo_deficit_rule_Gazetteer
+	:term "deficit rule";
+	a :Gazetteer.
+
+:glo_deficit_rule
+	:identifiedBy :glo_deficit_rule_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "deficit rule".
+
+:glo_deficit_spending_Gazetteer
+	:term "deficit spending";
+	a :Gazetteer.
+
+:glo_deficit_spending
+	:identifiedBy :glo_deficit_spending_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "deficit spending".
+
+:glo_deficit_target_Gazetteer
+	:term "deficit target";
+	a :Gazetteer.
+
+:glo_deficit_target
+	:identifiedBy :glo_deficit_target_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "deficit target".
+
+:glo_deflation_Gazetteer
+	:term "deflation";
+	a :Gazetteer.
+
+:glo_deflation
+	:identifiedBy :glo_deflation_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "deflation".
+
+:glo_depreciation_Gazetteer
+	:term "depreciation";
+	a :Gazetteer.
+
+:glo_depreciation
+	:identifiedBy :glo_depreciation_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "depreciation".
+
+:glo_devaluation_Gazetteer
+	:term "devaluation";
+	a :Gazetteer.
+
+:glo_devaluation
+	:identifiedBy :glo_devaluation_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "devaluation".
+
+:glo_divergence_Gazetteer
+	:term "divergence";
+	a :Gazetteer.
+
+:glo_divergence
+	:identifiedBy :glo_divergence_Gazetteer;
+	a :Financial_markets_term;
+	RDFS:label "divergence".
+
+:glo_downgrade_Gazetteer
+	:term "downgrade";
+	a :Gazetteer.
+
+:glo_downgrade
+	:identifiedBy :glo_downgrade_Gazetteer;
+	a :Loan_Risk_Term;
+	RDFS:label "downgrade".
+
+:glo_emergency_fund_Gazetteer
+	:term "emergency fund";
+	a :Gazetteer.
+
+:glo_emergency_fund
+	:identifiedBy :glo_emergency_fund_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "emergency fund".
+
+:glo_EU_summit_Gazetteer
+	:term "EU summit";
+	a :Gazetteer.
+
+:glo_EU_summit
+	:identifiedBy :glo_EU_summit_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "EU summit".
+
+:glo_Eurobond_Gazetteer
+	:term "Eurobond";
+	a :Gazetteer.
+
+:glo_Eurobond
+	:identifiedBy :glo_Eurobond_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "Eurobond".
+
+:glo_European_Central_Bank_Gazetteer
+	:term " ECB",
+		"ECB",
+		"European Central Bank";
+	a :Gazetteer.
+
+:glo_European_Central_Bank
+	:identifiedBy :glo_European_Central_Bank_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "European Central Bank".
+
+:glo_European_Financial_Stability_Facility_Gazetteer
+	:term "EFSF",
+		"European Financial Stability Facility";
+	a :Gazetteer.
+
+:glo_European_Financial_Stability_Facility
+	:identifiedBy :glo_European_Financial_Stability_Facility_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "European Financial Stability Facility".
+
+:glo_European_Investment_Bank_Gazetteer
+	:term "EIB",
+		"European Investment Bank";
+	a :Gazetteer.
+
+:glo_European_Investment_Bank
+	:identifiedBy :glo_European_Investment_Bank_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "European Investment Bank".
+
+:glo_European_Investment_Fund_Gazetteer
+	:term "European Investment Fund";
+	a :Gazetteer.
+
+:glo_European_Investment_Fund
+	:identifiedBy :glo_European_Investment_Fund_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "European Investment Fund".
+
+:glo_European_Stability_Mechanism_Gazetteer
+	:term "ESM",
+		"European Stability Mechanism";
+	a :Gazetteer.
+
+:glo_European_Stability_Mechanism
+	:identifiedBy :glo_European_Stability_Mechanism_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "European Stability Mechanism".
+
+:glo_excessive_debt_Gazetteer
+	:term "excessive debt";
+	a :Gazetteer.
+
+:glo_excessive_debt
+	:identifiedBy :glo_excessive_debt_Gazetteer;
+	a :Public_Debt_Term;
+	RDFS:label "excessive debt".
+
+:glo_Fannie_Mae_Gazetteer
+	:term "Fannie Mae";
+	a :Gazetteer.
+
+:glo_Fannie_Mae
+	:identifiedBy :glo_Fannie_Mae_Gazetteer;
+	a :US_Financial_Institution;
+	RDFS:label "Fannie Mae".
+
+:glo_federal_reserve_limited_liability_companies_Gazetteer
+	:term " FED/c=auc",		
+        "Federal Reserve System",
+		"Federal Reserve",
+		"Federal Reserve limited liability companies";
+	a :Gazetteer.
+
+:glo_federal_reserve_limited_liability_companies
+	:identifiedBy :glo_federal_reserve_limited_liability_companies_Gazetteer;
+	a #:Central_Bank,
+		:US_Financial_Institution;
+	RDFS:label "federal reserve limited liability companies".
+
+:glo_financial_contagion_Gazetteer
+	:term "financial contagion";
+	a :Gazetteer.
+
+:glo_financial_contagion
+	:identifiedBy :glo_financial_contagion_Gazetteer;
+	a :Financial_Crisis_Term;
+	RDFS:label "financial contagion".
+
+:glo_financial_failure_Gazetteer
+	:term "financial_failure";
+	a :Gazetteer.
+
+:glo_financial_failure
+	:identifiedBy :glo_financial_failure_Gazetteer;
+	a :Financial_Failure_Term;
+	RDFS:label "financial_failure".
+
+:glo_fiscal_deficit_Gazetteer
+	:term "fiscal deficit";
+	a :Gazetteer.
+
+:glo_fiscal_deficit
+	:identifiedBy :glo_fiscal_deficit_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "fiscal deficit".
+
+:glo_fiscal_stimulus_Gazetteer
+	:term "fiscal stimulus";
+	a :Gazetteer.
+
+:glo_fiscal_stimulus
+	:identifiedBy :glo_fiscal_stimulus_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "fiscal stimulus".
+
+:glo_fiscal_union_Gazetteer
+	:term "fiscal union";
+	a :Gazetteer.
+
+:glo_fiscal_union
+	:identifiedBy :glo_fiscal_union_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "fiscal union".
+
+:glo_Fitch_Gazetteer
+	:term "Fitch";
+	a :Gazetteer.
+
+:glo_Fitch
+	:identifiedBy :glo_Fitch_Gazetteer;
+	a :Rating_Agency;
+	RDFS:label "Fitch".
+
+:glo_foreclosure_Gazetteer
+	:term "foreclosure";
+	a :Gazetteer.
+
+:glo_foreclosure
+	:identifiedBy :glo_foreclosure_Gazetteer;
+	a :Financial_Failure_Term;
+	RDFS:label "foreclosure".
+
+:glo_Freddie_Mac_Gazetteer
+	:term "Freddie Mac";
+	a :Gazetteer.
+
+:glo_Freddie_Mac
+	:identifiedBy :glo_Freddie_Mac_Gazetteer;
+	a :US_Financial_Institution;
+	RDFS:label "Freddie Mac".
+
+:glo_government_bond_Gazetteer
+	:term "government bond";
+	a :Gazetteer.
+
+:glo_government_bond
+	:identifiedBy :glo_government_bond_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "government bond".
+
+:glo_government_spending_Gazetteer
+	:term "government spending";
+	a :Gazetteer.
+
+:glo_government_spending
+	:identifiedBy :glo_government_spending_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "government spending".
+
+:glo_haircut_Gazetteer
+	:term "haircut";
+	a :Gazetteer.
+
+:glo_haircut
+	:identifiedBy :glo_haircut_Gazetteer;
+	a :Loan_Insurance_Term;
+	RDFS:label "haircut".
+
+:glo_hedge_fund_Gazetteer
+	:term "hedge fund";
+	a :Gazetteer.
+
+:glo_hedge_fund
+	:identifiedBy :glo_hedge_fund_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "hedge fund".
+
+:glo_inflation_Gazetteer
+	:term "inflation";
+	a :Gazetteer.
+
+:glo_inflation
+	:identifiedBy :glo_inflation_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "inflation".
+
+:glo_instability_Gazetteer
+	:term "instability";
+	a :Gazetteer.
+
+:glo_instability
+	:identifiedBy :glo_instability_Gazetteer;
+	a :Neg_Financial_Sentiment;
+	RDFS:label "instability".
+
+:glo_interest_rate_Gazetteer
+	:term "interest rate";
+	a :Gazetteer.
+
+:glo_interest_rate
+	:identifiedBy :glo_interest_rate_Gazetteer;
+	a :Loan_Term;
+	RDFS:label "interest rate".
+
+:glo_International_Monetary_Fund_Gazetteer
+	:term "IMF",
+		"International Monetary Fund";
+	a :Gazetteer.
+
+:glo_International_Monetary_Fund
+	:identifiedBy :glo_International_Monetary_Fund_Gazetteer;
+	a :Int_Financial_Institution;
+	RDFS:label "International Monetary Fund".
+
+:glo_intervention_Gazetteer
+	:term "intervention";
+	a :Gazetteer.
+
+:glo_intervention
+	:identifiedBy :glo_intervention_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "intervention".
+
+:glo_investment_banking_company_Gazetteer
+	:term " investment bank",
+		"investment banking company";
+	a :Gazetteer.
+
+:glo_investment_banking_company
+	:identifiedBy :glo_investment_banking_company_Gazetteer;
+	a :Other_Financial_Institution;
+	RDFS:label "investment banking company".
+
+:glo_investment_grade_securities_Gazetteer
+	:term "investment grade securities";
+	a :Gazetteer.
+
+:glo_investment_grade_securities
+	:identifiedBy :glo_investment_grade_securities_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "investment grade securities".
+
+:glo_jumbo_loan_Gazetteer
+	:term "jumbo loan";
+	a :Gazetteer.
+
+:glo_jumbo_loan
+	:identifiedBy :glo_jumbo_loan_Gazetteer;
+	a :Loan_Term;
+	RDFS:label "jumbo loan".
+
+:glo_labour_cost_Gazetteer
+	:term "labour cost";
+	a :Gazetteer.
+
+:glo_labour_cost
+	:identifiedBy :glo_labour_cost_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "labour cost".
+
+:glo_liquidation_Gazetteer
+	:term "liquidation";
+	a :Gazetteer.
+
+:glo_liquidation
+	:identifiedBy :glo_liquidation_Gazetteer;
+	a :Financial_Failure_Term;
+	RDFS:label "liquidation".
+
+:glo_liquidity_Gazetteer
+	:term "liquidity";
+	a :Gazetteer.
+
+:glo_liquidity
+	:identifiedBy :glo_liquidity_Gazetteer;
+	a :Financial_markets_term;
+	RDFS:label "liquidity".
+
+:glo_Maastricht_treaty_Gazetteer
+	:term "Maastricht treaty";
+	a :Gazetteer.
+
+:glo_Maastricht_treaty
+	:identifiedBy :glo_Maastricht_treaty_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "Maastricht treaty".
+
+:glo_medium_term_note_Gazetteer
+	:term "medium-term note";
+	a :Gazetteer.
+
+:glo_medium_term_note
+	:identifiedBy :glo_medium_term_note_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "medium-term note".
+
+:glo_monetary_policy_Gazetteer
+	:term "monetary policy";
+	a :Gazetteer.
+
+:glo_monetary_policy
+	:identifiedBy :glo_monetary_policy_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "monetary policy".
+
+:glo_Moodys_Gazetteer
+	:term "Moody's";
+    :term "Moody";
+	a :Gazetteer.
+
+:glo_Moodys
+	:identifiedBy :glo_Moodys_Gazetteer;
+	a :Rating_Agency;
+	RDFS:label "Moody's".
+
+:glo_moral_hazard_Gazetteer
+	:term "moral hazard";
+	a :Gazetteer.
+
+:glo_moral_hazard
+	:identifiedBy :glo_moral_hazard_Gazetteer;
+	a :Financial_markets_term;
+	RDFS:label "moral hazard".
+
+:glo_mortgage_related_asset_Gazetteer
+	:term "mortgage-related asset";
+	a :Gazetteer.
+
+:glo_mortgage_related_asset
+	:identifiedBy :glo_mortgage_related_asset_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "mortgage-related asset".
+
+:glo_national_debt_Gazetteer
+	:term "national debt";
+	a :Gazetteer.
+
+:glo_national_debt
+	:identifiedBy :glo_national_debt_Gazetteer;
+	a :Public_Debt_Term;
+	RDFS:label "national debt".
+
+:glo_occupy_Gazetteer
+	:term "occupy",
+		"OWS";
+	a :Gazetteer.
+
+:glo_occupy
+	:identifiedBy :glo_occupy_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "occupy".
+
+:glo_open_market_operation_Gazetteer
+	:term "open market operation";
+	a :Gazetteer.
+
+:glo_open_market_operation
+	:identifiedBy :glo_open_market_operation_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "open market operation".
+
+:glo_optimum_currency_area_Gazetteer
+	:term "optimum currency area";
+	a :Gazetteer.
+
+:glo_optimum_currency_area
+	:identifiedBy :glo_optimum_currency_area_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "optimum currency area".
+
+:glo_originate_to_distribute_model_Gazetteer
+	:term "originate-to-distribute model";
+	a :Gazetteer.
+
+:glo_originate_to_distribute_model
+	:identifiedBy :glo_originate_to_distribute_model_Gazetteer;
+	a :Financial_markets_term;
+	RDFS:label "originate-to-distribute model".
+
+:glo_periphery_Gazetteer
+	:term "periphery";
+	a :Gazetteer.
+
+:glo_periphery
+	:identifiedBy :glo_periphery_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "periphery".
+
+:glo_primary_dealer_credit_facility_Gazetteer
+	:term " PDCF",
+		"primary dealer credit facility";
+	a :Gazetteer.
+
+:glo_primary_dealer_credit_facility
+	:identifiedBy :glo_primary_dealer_credit_facility_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "primary dealer credit facility".
+
+:glo_primary_dealer_Gazetteer
+	:term "primary dealer";
+	a :Gazetteer.
+
+:glo_primary_dealer
+	:identifiedBy :glo_primary_dealer_Gazetteer;
+	a :Other_Financial_Institution;
+	RDFS:label "primary dealer".
+
+:glo_privatisation_Gazetteer
+	:term "privatisation";
+	a :Gazetteer.
+
+:glo_privatisation
+	:identifiedBy :glo_privatisation_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "privatisation".
+
+:glo_protest_Gazetteer
+	:term "protest";
+	a :Gazetteer.
+
+:glo_protest
+	:identifiedBy :glo_protest_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "protest".
+
+:glo_public_debt_Gazetteer
+	:term "public debt";
+	a :Gazetteer.
+
+:glo_public_debt
+	:identifiedBy :glo_public_debt_Gazetteer;
+	a :Public_Debt_Term;
+	RDFS:label "public debt".
+
+:glo_public_spending_Gazetteer
+	:term "public spending";
+	a :Gazetteer.
+
+:glo_public_spending
+	:identifiedBy :glo_public_spending_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "public spending".
+
+:glo_rating_agency_Gazetteer
+	:term "rating agency";
+	a :Gazetteer.
+
+:glo_rating_agency
+	:identifiedBy :glo_rating_agency_Gazetteer;
+	a :Rating_Agency;
+	RDFS:label "rating agency".
+
+:glo_recession_Gazetteer
+	:term "recession";
+	a :Gazetteer.
+
+:glo_recession
+	:identifiedBy :glo_recession_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "recession".
+
+:glo_referendum_Gazetteer
+	:term "referendum";
+	a :Gazetteer.
+
+:glo_referendum
+	:identifiedBy :glo_referendum_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "referendum".
+
+:glo_rescue_fund_Gazetteer
+	:term "rescue fund";
+	a :Gazetteer.
+
+:glo_rescue_fund
+	:identifiedBy :glo_rescue_fund_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "rescue fund".
+
+:glo_sanction_Gazetteer
+	:term "sanction";
+	a :Gazetteer.
+
+:glo_sanction
+	:identifiedBy :glo_sanction_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "sanction".
+
+:glo_securitization_Gazetteer
+	:term "securitization";
+	a :Gazetteer.
+
+:glo_securitization
+	:identifiedBy :glo_securitization_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "securitization".
+
+:glo_senior_debt_Gazetteer
+	:term "senior debt";
+	a :Gazetteer.
+
+:glo_senior_debt
+	:identifiedBy :glo_senior_debt_Gazetteer;
+	a :Loan_Term;
+	RDFS:label "senior debt".
+
+:glo_short_selling_Gazetteer
+	:term "short selling";
+	a :Gazetteer.
+
+:glo_short_selling
+	:identifiedBy :glo_short_selling_Gazetteer;
+	a :Financial_markets_term;
+	RDFS:label "short selling".
+
+:glo_solidarity_Gazetteer
+	:term "solidarity";
+	a :Gazetteer.
+
+:glo_solidarity
+	:identifiedBy :glo_solidarity_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "solidarity".
+
+:glo_special_purpose_vehicle_Gazetteer
+	:term " SPV",
+		"special purpose vehicle";
+	a :Gazetteer.
+
+:glo_special_purpose_vehicle
+	:identifiedBy :glo_special_purpose_vehicle_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "special purpose vehicle".
+
+:glo_speculation_Gazetteer
+	:term "speculation";
+	a :Gazetteer.
+
+:glo_speculation
+	:identifiedBy :glo_speculation_Gazetteer;
+	a :Financial_markets_term;
+	RDFS:label "speculation".
+
+:glo_spending_cut_Gazetteer
+	:term "spending cut";
+	a :Gazetteer.
+
+:glo_spending_cut
+	:identifiedBy :glo_spending_cut_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "spending cut".
+
+:glo_Stability_and_Growth_Pact_Gazetteer
+	:term "Stability and Growth Pact";
+	a :Gazetteer.
+
+:glo_Stability_and_Growth_Pact
+	:identifiedBy :glo_Stability_and_Growth_Pact_Gazetteer;
+	a :EU_Mechanism;
+	RDFS:label "Stability and Growth Pact".
+
+:glo_StandardPoor_Gazetteer
+	:term "S&P",
+		"Standard&Poor";
+	a :Gazetteer.
+
+:glo_StandardPoor
+	:identifiedBy :glo_StandardPoor_Gazetteer;
+	a :Rating_Agency;
+	RDFS:label "Standard&Poor".
+
+:glo_stress_test_Gazetteer
+	:term "stress test";
+	a :Gazetteer.
+
+:glo_stress_test
+	:identifiedBy :glo_stress_test_Gazetteer;
+	a :Monetary_Policy_Term;
+	RDFS:label "stress test".
+
+:glo_subprime_mortgage_loan_Gazetteer
+	:term "subprime mortgage loan";
+	a :Gazetteer.
+
+:glo_subprime_mortgage_loan
+	:identifiedBy :glo_subprime_mortgage_loan_Gazetteer;
+	a :Loan_Term;
+	RDFS:label "subprime mortgage loan".
+
+:glo_systemic_risk_Gazetteer
+	:term "systemic risk";
+	a :Gazetteer.
+
+:glo_systemic_risk
+	:identifiedBy :glo_systemic_risk_Gazetteer;
+	a :Loan_Risk_Term;
+	RDFS:label "systemic risk".
+
+:glo_tax_reform_Gazetteer
+	:term "tax reform";
+	a :Gazetteer.
+
+:glo_tax_reform
+	:identifiedBy :glo_tax_reform_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "tax reform".
+
+:glo_too_big_too_fail_Gazetteer
+	:term " TBTF",
+		" too-big-to-fail",
+		"too big too fail";
+	a :Gazetteer.
+
+:glo_too_big_too_fail
+	:identifiedBy :glo_too_big_too_fail_Gazetteer;
+	a :Financial_Crisis_Term;
+	RDFS:label "too big too fail".
+
+:glo_trade_imbalance_Gazetteer
+	:term "trade imbalance";
+	a :Gazetteer.
+
+:glo_trade_imbalance
+	:identifiedBy :glo_trade_imbalance_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "trade imbalance".
+
+:glo_trade_union_Gazetteer
+	:term "trade union";
+	a :Gazetteer.
+
+:glo_trade_union
+	:identifiedBy :glo_trade_union_Gazetteer;
+	a :Workforce_term;
+	RDFS:label "trade union".
+
+:glo_troubled_assets_Gazetteer
+	:term " TARP",
+		"troubled assets";
+	a :Gazetteer.
+
+:glo_troubled_assets
+	:identifiedBy :glo_troubled_assets_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "troubled assets".
+
+:glo_uncertainty_Gazetteer
+	:term "uncertainty";
+	a :Gazetteer.
+
+:glo_uncertainty
+	:identifiedBy :glo_uncertainty_Gazetteer;
+	a :Neg_Financial_Sentiment;
+	RDFS:label "uncertainty".
+
+:glo_warrant_Gazetteer
+	:term "warrant";
+	a :Gazetteer.
+
+:glo_warrant
+	:identifiedBy :glo_warrant_Gazetteer;
+	a :Financial_Instrument;
+	RDFS:label "warrant".
+
+:glo_yield_spread_Gazetteer
+	:term "yield spread";
+	a :Gazetteer.
+
+:glo_yield_spread
+	:identifiedBy :glo_yield_spread_Gazetteer;
+	a :Loan_Term;
+	RDFS:label "yield spread".
+    
+    
+######
+:glo_eurozone_Gazetteer
+    :settings "c=ic";
+	:term "eurozone",
+        "euro-zone",
+		"euro zone";
+	a :Gazetteer.
+
+:glo_eurozone
+	:identifiedBy :glo_eurozone_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "eurozone".
+    
+:glo_European_Commission_Gazetteer
+	:term "European Commission";
+	a :Gazetteer.
+
+:glo_European_Commission
+	:identifiedBy :glo_European_Commission_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "European Commission".
+
+:glo_Eurostat_Gazetteer
+	:term "Eurostat";
+	a :Gazetteer.
+
+:glo_Eurostat
+	:identifiedBy :glo_Eurostat_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "Eurostat".
+
+:glo_European_Banking_Authority_Gazetteer
+	:term "EBA/c=auc",
+		"European Banking Authority";
+	a :Gazetteer.
+
+:glo_European_Banking_Authority
+	:identifiedBy :glo_European_Banking_Authority_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "European Banking Authority".    
+    
+:glo_Economic_and_Monetary_Union_Gazetteer
+	:term "EMU/c=auc",
+		"Economic and Monetary Union";
+	a :Gazetteer.
+
+:glo_Economic_and_Monetary_Union
+	:identifiedBy :glo_Economic_and_Monetary_Union_Gazetteer;
+	a :EU_Financial_Institution;
+	RDFS:label "Economic and Monetary Union".    
+
+:glo_gross_domestic_product_Gazetteer
+    :term "GDP/c=auc";
+	:term "gross domestic product";
+	a :Gazetteer.
+
+:glo_gross_domestic_product
+	:identifiedBy :glo_gross_domestic_product_Gazetteer;
+	a :Budget_Term;
+	RDFS:label "gross domestic product".    
+    
+    
+####################
+
+:glo_Bank_of_England
+	:identifiedBy :gaz_glo_Bank_of_England;
+	a :Central_Bank;
+	RDFS:label "Bank of England".
+
+:gaz_glo_Bank_of_England
+	:term "Bank of England";
+	a :Gazetteer.    
+    
+:glo_Bank_of_Greece
+	:identifiedBy :gaz_glo_Bank_of_Greece;
+	a :Central_Bank;
+	RDFS:label "Bank of Greece".    
+    
+:gaz_glo_Bank_of_Greece
+	:term "Bank of Greece";
+	a :Gazetteer.
+
+:glo_Bundesbank
+	:identifiedBy :gaz_glo_Bundesbank;
+	a :Central_Bank;
+	RDFS:label "Bundesbank".    
+    
+:gaz_glo_Bundesbank
+	:term "Bundesbank";
+    :term "Deutsche Bundesbank";
+    :term "German Federal Bank";
+    :term "Germany’s central bank";
+	a :Gazetteer.
+    

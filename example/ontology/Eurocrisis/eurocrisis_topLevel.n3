@@ -1,0 +1,143 @@
+@prefix : <http://project-first.eu/ontology#>.
+@prefix OWL: <http://www.w3.org/2002/07/owl#>.
+@prefix RDF: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix RDFS: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix XSD: <http://www.w3.org/2001/XMLSchema#>.
+
+:BRICS_Country
+	a OWL:Class;
+	RDFS:label "BRICS_Country";
+	RDFS:subClassOf :Country.
+
+:Budget_Term
+	a OWL:Class;
+	RDFS:label "Budget_Term";
+	RDFS:subClassOf :Public_Spending.
+
+:Central_Bank
+	a OWL:Class;
+	RDFS:label "Central_Bank";
+	RDFS:subClassOf :Financial_lnstitution.
+
+:Currency
+	RDFS:subClassOf :Financial_Instrument.
+
+:EU_Financial_Institution
+	a OWL:Class;
+	RDFS:label "EU_Financial_Institution";
+	RDFS:subClassOf :Financial_lnstitution.
+
+:EU_Mechanism
+	a OWL:Class;
+	RDFS:label "EU_Mechanism";
+	RDFS:subClassOf :Financial_lnstitution.
+
+:Financial_Crisis_Term
+	a OWL:Class;
+	RDFS:label "Financial_Crisis_Term";
+	RDFS:subClassOf :Financial_Markets.
+
+:Financial_Failure_Term
+	a OWL:Class;
+	RDFS:label "Financial_Failure_Term";
+	RDFS:subClassOf :Public_Spending.
+
+:Financial_Instrument
+	a OWL:Class;
+	RDFS:label "Financial_Instrument";
+	RDFS:subClassOf :Finance.
+
+:Financial_lnstitution
+	a OWL:Class;
+	RDFS:label "Financial_lnstitution";
+	RDFS:subClassOf :Finance.
+
+:Financial_markets_term
+	a OWL:Class;
+	RDFS:label "Financial_markets_term";
+	RDFS:subClassOf :Financial_Markets.
+
+:Financial_Markets
+	a OWL:Class;
+	RDFS:label "Financial_Markets";
+	RDFS:subClassOf :Finance.
+
+:Fiscal_Policy
+	a OWL:Class;
+	RDFS:label "Fiscal_Policy";
+	RDFS:subClassOf :Public_Finance.
+
+:Int_Financial_Institution
+	a OWL:Class;
+	RDFS:label "Int_Financial_Institution";
+	RDFS:subClassOf :Financial_lnstitution.
+
+:Loan_Insurance_Term
+	a OWL:Class;
+	RDFS:label "Loan_Insurance_Term";
+	RDFS:subClassOf :Public_Spending.
+
+:Loan_Risk_Term
+	a OWL:Class;
+	RDFS:label "Loan_Risk_Term";
+	RDFS:subClassOf :Public_Spending.
+
+:Loan_Term
+	a OWL:Class;
+	RDFS:label "Loan_Term";
+	RDFS:subClassOf :Public_Spending.
+
+:Monetary_Policy_Term
+	a OWL:Class;
+	RDFS:label "Monetary_Policy_Term";
+	RDFS:subClassOf :Public_Finance.
+
+:Neg_Financial_Sentiment
+	a OWL:Class;
+	RDFS:label "Neg_Financial_Sentiment";
+	RDFS:subClassOf :Financial_Markets.
+
+:Other_Financial_Institution
+	a OWL:Class;
+	RDFS:label "Other_Financial_Institution";
+	RDFS:subClassOf :Financial_lnstitution.
+
+:PIIGS_Country
+	a OWL:Class;
+	RDFS:label "PIIGS_Country";
+	RDFS:subClassOf :Country.
+
+:Pos_Financial_Sentiment
+	a OWL:Class;
+	RDFS:label "Pos_Financial_Sentiment";
+	RDFS:subClassOf :Financial_Markets.
+
+:Public_Debt_Term
+	a OWL:Class;
+	RDFS:label "Public_Debt_Term";
+	RDFS:subClassOf :Public_Spending.
+
+:Public_Finance
+	a OWL:Class;
+	RDFS:label "Public_Finance";
+	RDFS:subClassOf :Finance.
+
+:Public_Spending
+	a OWL:Class;
+	RDFS:label "Public_Spending";
+	RDFS:subClassOf :Fiscal_Policy.
+
+:Rating_Agency
+	a OWL:Class;
+	RDFS:label "Rating_Agency";
+	RDFS:subClassOf :Financial_lnstitution.
+
+:US_Financial_Institution
+	a OWL:Class;
+	RDFS:label "US_Financial_Institution";
+	RDFS:subClassOf :Financial_lnstitution.
+
+:Workforce_term
+	a OWL:Class;
+	RDFS:label "Workforce_term";
+	RDFS:subClassOf :Fiscal_Policy.

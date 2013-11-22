@@ -1,7 +1,7 @@
 '''
 Reading input data.
 
-@author: anzev
+@author: anze.vavpetic@ijs.si
 '''
 import rdflib
 import core

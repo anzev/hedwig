@@ -1,0 +1,78 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://project-first.eu/ontology#> .
+
+:index_EURO_STOXX_50_EUR a :Stock_Index ;
+	rdfs:label "EURO STOXX 50 (EUR)" ;
+	:ID_NOTATION "193736" .
+
+:index_STOXX_EUROPE_50_EUR a :Stock_Index ;
+	rdfs:label "STOXX EUROPE 50 (EUR)" ;
+	:ID_NOTATION "1544655" .
+
+:index_FTSE_100_INDEX a :Stock_Index ;
+	rdfs:label "FTSE 100 INDEX" ;
+	:ID_NOTATION "1918069" .
+
+:index_GERMANY_DAX_TR a :Stock_Index ;
+	rdfs:label "GERMANY DAX(TR)" ;
+	:ID_NOTATION "20735" .
+
+:index_FRANCE_CAC_40 a :Stock_Index ;
+	rdfs:label "FRANCE CAC 40" ;
+	:ID_NOTATION "324965" .
+
+:index_FTSE_MIB_INDEX a :Stock_Index ;
+	rdfs:label "FTSE MIB INDEX" ;
+	:ID_NOTATION "7385442" .
+
+:index_SPAIN_IBEX_35 a :Stock_Index ;
+	rdfs:label "SPAIN IBEX 35" ;
+	:ID_NOTATION "324911" .
+
+:index_SWITZERLAND_SMI a :Stock_Index ;
+	rdfs:label "SWITZERLAND SMI" ;
+	:ID_NOTATION "1555183" .
+
+:index_NETHERLANDS_AEX_INDEX a :Stock_Index ;
+	rdfs:label "NETHERLANDS AEX INDEX" ;
+	:ID_NOTATION "324912" .
+
+:index_BELGIUM_BEL_20 a :Stock_Index ;
+	rdfs:label "BELGIUM BEL-20" ;
+	:ID_NOTATION "293666" .
+
+:index_PORTUGAL_PSI_20 a :Stock_Index ;
+	rdfs:label "PORTUGAL PSI-20" ;
+	:ID_NOTATION "324727" .
+
+:index_OMX_HELSINKI_25 a :Stock_Index ;
+	rdfs:label "OMX HELSINKI 25" ;
+	:ID_NOTATION "3726266" .
+
+:index_OMX_STOCKHOLM_30_INDEX a :Stock_Index ;
+	rdfs:label "OMX STOCKHOLM 30 INDEX" ;
+	:ID_NOTATION "248271" .
+
+:index_DOW_JONES_INDUSTRIAL_AVERAGE a :Stock_Index ;
+	rdfs:label "DOW JONES INDUSTRIAL AVERAGE" ;
+	:ID_NOTATION "324977" .
+
+:index_S_P_500_INDEX a :Stock_Index ;
+	rdfs:label "S&P 500 INDEX" ;
+	:ID_NOTATION "4359526" .
+
+:index_NASDAQ_100 a :Stock_Index ;
+	rdfs:label "NASDAQ 100" ;
+	:ID_NOTATION "325104" .
+
+:index_DOW_JONES_ASIAN_TITANS_50_INDEX_USD a :Stock_Index ;
+	rdfs:label "DOW JONES ASIAN TITANS 50 INDEX (USD)" ;
+	:ID_NOTATION "1952346" .
+
+:index_AUSTRIA_ATX a :Stock_Index ;
+	rdfs:label "AUSTRIA ATX" ;
+	:ID_NOTATION "92866" .
+
