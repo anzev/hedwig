@@ -10,7 +10,7 @@ from learners import Learner, ScoreFunctions
 ontology_dir = './ontology/'
 if __name__ == '__main__':
 
-    data = 'data_mod.n3'
+    data = 'data.n3'
     base_name = data.split('.')[0]
 
     ontology_list = []
