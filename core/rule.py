@@ -205,13 +205,21 @@ class Rule:
         indices = self.kb.bits_to_indices(self.covered_examples)
         return [self.kb.examples[idx] for idx in indices]
 
-    def __str__(self):
+    def rule_report(self, show_uris=False):
+        '''
+        Rule as string with some statistics.
+        '''
         conjuncts = []
         for pred in self.predicates:
+
+            label = pred.label 
+            if '#' in label and show_uris:
+                label = pred.label.split('#')[-1]
+
             if isinstance(pred, UnaryPredicate):
-                conj = '%s(%s)' % (pred.label, pred.input_var)
+                conj = '%s(%s)' % (label, pred.input_var)
             else:
-                conj = '%s(%s, %s)' % (pred.label,
+                conj = '%s(%s, %s)' % (label,
                                        pred.input_var,
                                        pred.output_var)
             conjuncts.append(conj)
@@ -231,3 +239,15 @@ class Rule:
             s += ' [size=%d, score=%.3f]' % (self.coverage, self.score)
 
         return s
+
+    def __str__(self):
+        return self.rule_report(show_uris=True)
+
+    @staticmethod
+    def ruleset_report(rules, show_uris=False):
+        ruleset = []
+        for rule in rules:
+            rule = str(rule)
+            rule = rule if show_uris else rule.split('#')[-1]
+            ruleset.append(rule)
+        return '\n'.join(ruleset)
