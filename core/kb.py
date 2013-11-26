@@ -5,19 +5,12 @@ Knowledge-base class.
 '''
 from collections import defaultdict
 from bitarray import bitarray
-from rdflib import RDF, RDFS, Namespace, URIRef
-import os
+from rdflib import RDF, RDFS, URIRef
 
 from example import Example
 from predicate import UnaryPredicate
 from helpers import avg, std
-
-PAR_DIR = os.path.join(os.path.dirname(__file__), os.pardir)
-ASSETS_DIR = os.path.abspath(os.path.join(PAR_DIR, 'assets'))
-EXAMPLE_SCHEMA = os.path.join(ASSETS_DIR, 'builtin.n3')
-
-# Built-in namespace
-HEDWIG = Namespace('http://kt.ijs.si/hedwig#')
+from settings import EXAMPLE_SCHEMA, HEDWIG
 
 
 class ExperimentKB:

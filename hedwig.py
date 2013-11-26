@@ -11,13 +11,8 @@ import logging
 from core import ExperimentKB, Rule
 from learners import Learner, ScoreFunctions
 from load import load_triplets
+from core.settings import logger
 
-# Logging setup
-logger = logging.getLogger("Hedwig")
-ch = logging.StreamHandler()
-formatter = logging.Formatter("%(name)s %(levelname)s: %(message)s")
-ch.setFormatter(formatter)
-logger.addHandler(ch)
 
 description = '''Hedwig semantic subgroup discovery.'''
 
@@ -53,13 +48,13 @@ parser.add_argument('-d', '--depth', default='4', type=int,
 parser.add_argument("-v", "--verbose", help="Increase output verbosity.",
                     action="store_true")
 
-if __name__ == '__main__':
 
-    start = time.time()
-    logging.info('Starting Hedwig')
+if __name__ == '__main__':
     args = parser.parse_args()
 
     logger.setLevel(logging.DEBUG if args.verbose else logging.INFO)
+    logger.info('Starting Hedwig')
+    start = time.time()
 
     data = args.data
     base_name = data.split('.')[0]
@@ -69,16 +64,16 @@ if __name__ == '__main__':
     for root, sub_folders, files in os.walk(args.bk_dir):
         ontology_list.extend(map(lambda f: os.path.join(root, f), files))
 
-    logging.info('Building a graph from ontologies and data')
+    logger.info('Building a graph from ontologies and data')
     graph = load_triplets(ontology_list + [data])
     score_func = getattr(ScoreFunctions, args.score)
 
-    logging.info('Building the knowledge base')
+    logger.info('Building the knowledge base')
     kb = ExperimentKB(graph, score_func,
                       user_namespaces=[],
                       instances_as_leaves=args.leaves)
 
-    logging.info('Starting learner')
+    logger.info('Starting learner')
     learner = Learner(kb,
                       n=args.beam,
                       min_sup=int(args.support*kb.n_examples()),
@@ -87,6 +82,7 @@ if __name__ == '__main__':
                       sim=0.9)
     rules = learner.induce()
 
+    logger.info('Outputing results')
     rules_report = Rule.ruleset_report(rules, show_uris=args.uris)
 
     if args.output:
@@ -96,4 +92,4 @@ if __name__ == '__main__':
         print rules_report
 
     end = time.time()
-    logging.info('Finished in', (end-start), 'seconds')
+    logger.info('Finished in %d seconds' % (end-start))
