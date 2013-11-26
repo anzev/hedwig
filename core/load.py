@@ -4,10 +4,11 @@ Reading input data.
 @author: anze.vavpetic@ijs.si
 '''
 import rdflib
-import core
 import json
 
-def load_json_examples(path):
+from example import Example
+
+def json_examples(path):
     '''
     Loads from a json file of examples.
     '''
@@ -15,10 +16,10 @@ def load_json_examples(path):
     examples = []
     for ex in input:
         id, label, rank, annotations = ex['id'], ex['label'], ex['rank'], ex['annotations']
-        examples.append(core.Example(id, label, rank, annotations))
+        examples.append(Example(id, label, rank, annotations))
     return examples
 
-def load_triplets(paths, def_format='n3'):
+def rdf(paths, def_format='n3'):
     '''
     Loads the ontology into an rdf graph.
     '''

@@ -10,7 +10,7 @@ import logging
 
 from core import ExperimentKB, Rule
 from learners import Learner, ScoreFunctions
-from load import load_triplets
+from core.load import rdf
 from core.settings import logger
 
 
@@ -65,7 +65,7 @@ if __name__ == '__main__':
         ontology_list.extend(map(lambda f: os.path.join(root, f), files))
 
     logger.info('Building a graph from ontologies and data')
-    graph = load_triplets(ontology_list + [data])
+    graph = rdf(ontology_list + [data])
     score_func = getattr(ScoreFunctions, args.score)
 
     logger.info('Building the knowledge base')

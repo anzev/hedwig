@@ -1,5 +1,7 @@
 '''
 Global settings file.
+
+@author: anze.vavpetic@ijs.si
 '''
 import os
 import logging
