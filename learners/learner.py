@@ -4,6 +4,7 @@ Main learner class.
 @author: anze.vavpetic@ijs.si
 '''
 from core import UnaryPredicate, Rule
+from core.settings import logger
 
 
 class Learner:
@@ -11,7 +12,9 @@ class Learner:
     Learner class, supporting various types of induction
     from the knowledge base.
 
-    TODO: Bottom clause?
+    TODO:
+        - bottom clause approach
+        - feature construction
     '''
     Similarity = 'similarity'
     Improvement = 'improvement'
@@ -139,6 +142,7 @@ class Learner:
         '''
         Returns a list of all specializations of 'rule'.
         '''
+        logger.debug('Specializing rule: %s' % rule)
         specializations = []
         eligible_preds = rule.shared_var[rule.latest_var]
         is_unary = lambda p: isinstance(p, UnaryPredicate)
@@ -146,7 +150,9 @@ class Learner:
         # Swapping unary predicates with subclasses, swap only
         # the predicates with the latest variable
         for pred in filter(is_unary, eligible_preds):
+            logger.debug('Predicate to swap: %s' % pred.label)
             for sub_class in self.kb.get_subclasses(pred):
+                logger.debug('Swapping with %s' % sub_class)
                 new_rule = rule.clone_swap_with_subclass(pred, sub_class)
                 if self.can_specialize(new_rule):
                     specializations.append(new_rule)
@@ -185,6 +191,7 @@ class Learner:
         if isinstance(rule.predicates[-1], UnaryPredicate):
             specializations.extend(self.specialize_add_relation(rule))
 
+        logger.debug('All specializations %s' % [str(rule) for rule in specializations])
         return specializations
 
     def specialize_add_relation(self, rule):

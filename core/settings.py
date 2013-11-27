@@ -20,5 +20,6 @@ PAR_DIR = os.path.join(os.path.dirname(__file__), os.pardir)
 ASSETS_DIR = os.path.abspath(os.path.join(PAR_DIR, 'assets'))
 EXAMPLE_SCHEMA = os.path.join(ASSETS_DIR, 'builtin.n3')
 
-# Built-in namespace
+# Built-in namespaces
+W3C = Namespace('http://www.w3.org/')
 HEDWIG = Namespace('http://kt.ijs.si/hedwig#')

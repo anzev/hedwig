@@ -10,7 +10,7 @@ from rdflib import RDF, RDFS, URIRef
 from example import Example
 from predicate import UnaryPredicate
 from helpers import avg, std
-from settings import EXAMPLE_SCHEMA, HEDWIG
+from settings import EXAMPLE_SCHEMA, logger, W3C, HEDWIG
 
 
 class ExperimentKB:
@@ -18,7 +18,6 @@ class ExperimentKB:
     The knowledge base for one specific experiment.
     '''
     def __init__(self, triplets, score_fun,
-                 user_namespaces=[],
                  instances_as_leaves=True):
         '''
         Initialize the knowledge base with the given triplet graph.
@@ -26,7 +25,6 @@ class ExperimentKB:
         class to be described in the induction step.
         '''
         self.g = triplets
-        self.user_namespaces = user_namespaces
         self.score_fun = score_fun
         self.sub_class_of = defaultdict(list)
         self.super_class_of = defaultdict(list)
@@ -91,8 +89,8 @@ class ExperimentKB:
         self.examples = examples
 
         if not self.examples:
-            raise Exception("No examples provided! Examples should be \
-                             instances of %s." % HEDWIG)
+            raise Exception("No examples provided! Examples should be " + 
+                            "instances of %s." % HEDWIG)
 
         # Ranked or class-labeled data
         self.target_type = self.examples[0].target_type
@@ -136,6 +134,8 @@ class ExperimentKB:
         # Find the root classes
         roots = filter(lambda pred: self.sub_class_of[pred] == [],
                        self.super_class_of.keys())
+
+        logger.debug('Detected root nodes: %s' % str(roots))
 
         # Add a dummy root
         self.dummy_root = 'root'
@@ -230,16 +230,14 @@ class ExperimentKB:
         '''
         Is this resource user defined?
         '''
-        defined = True
-        if self.user_namespaces:
-            defined = any([uri.startswith(ns) for ns in self.user_namespaces])
-
-        return defined
+        return not uri.startswith(W3C) and not uri.startswith(HEDWIG)
 
     def add_sub_class(self, sub, obj):
         '''
         Adds the resource 'sub' as a subclass of 'obj'.
         '''
+        logger.debug('Adding subclass: %s sof %s' % (sub, obj))
+
         to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
         sub, obj = to_uni(sub), to_uni(obj)
 

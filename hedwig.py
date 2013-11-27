@@ -28,8 +28,7 @@ parser.add_argument('-o', '--output', help='Output file. If none is specified, \
 parser.add_argument('-m', '--mode', choices=['features', 'subgroups'],
                     default='subgroups',
                     help='Running mode.')
-parser.add_argument('-t', '--target', type=str,
-                    help='Target class label.')
+parser.add_argument('-t', '--target', help='Target class label.')
 parser.add_argument('-s', '--score', choices=['precision', 'wracc', 'z_score',
                                               't_score', 'enrichment_score',
                                               'chisq'],
@@ -69,9 +68,7 @@ if __name__ == '__main__':
     score_func = getattr(ScoreFunctions, args.score)
 
     logger.info('Building the knowledge base')
-    kb = ExperimentKB(graph, score_func,
-                      user_namespaces=[],
-                      instances_as_leaves=args.leaves)
+    kb = ExperimentKB(graph, score_func, instances_as_leaves=args.leaves)
 
     logger.info('Starting learner')
     learner = Learner(kb,
