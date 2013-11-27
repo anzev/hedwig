@@ -212,7 +212,7 @@ class Rule:
         conjuncts = []
         for pred in self.predicates:
 
-            label = pred.label 
+            label = pred.label
             if '#' in label and show_uris:
                 label = pred.label.split('#')[-1]
 
@@ -245,9 +245,13 @@ class Rule:
 
     @staticmethod
     def ruleset_report(rules, show_uris=False):
+        target, var = rules[0].target, rules[0].head_var
+        head = '\'%s\'(%s) <--\n\t' % (target, var)
+
         ruleset = []
         for rule in rules:
             rule = str(rule)
             rule = rule if show_uris else rule.split('#')[-1]
             ruleset.append(rule)
-        return '\n'.join(ruleset)
+
+        return head + '\n\t'.join(ruleset)

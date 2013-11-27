@@ -28,7 +28,9 @@ parser.add_argument('-o', '--output', help='Output file. If none is specified, \
 parser.add_argument('-m', '--mode', choices=['features', 'subgroups'],
                     default='subgroups',
                     help='Running mode.')
-parser.add_argument('-t', '--target', help='Target class label.')
+parser.add_argument('-t', '--target',
+                    help='Target class label. If it is not specified, rules \
+                          produced for each class label.')
 parser.add_argument('-s', '--score', choices=['precision', 'wracc', 'z_score',
                                               't_score', 'enrichment_score',
                                               'chisq'],
@@ -70,18 +72,20 @@ if __name__ == '__main__':
     logger.info('Building the knowledge base')
     kb = ExperimentKB(graph, score_func, instances_as_leaves=args.leaves)
 
-    logger.info('Starting learner')
-    learner = Learner(kb,
-                      n=args.beam,
-                      min_sup=int(args.support*kb.n_examples()),
-                      target=args.target,
-                      depth=args.depth,
-                      sim=0.9)
-    rules = learner.induce()
+    rules_report = ''
+    targets = kb.class_values if not args.target else args.target
+    for target in targets:
+        logger.info('Starting learner for target \'%s\'' % target)
+        learner = Learner(kb,
+                          n=args.beam,
+                          min_sup=int(args.support*kb.n_examples()),
+                          target=target,
+                          depth=args.depth,
+                          sim=0.9)
+        rules = learner.induce()
+        rules_report += Rule.ruleset_report(rules, show_uris=args.uris) + '\n'
 
     logger.info('Outputing results')
-    rules_report = Rule.ruleset_report(rules, show_uris=args.uris)
-
     if args.output:
         with open(args.output, 'w') as f:
             f.write(rules_report)
