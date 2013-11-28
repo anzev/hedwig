@@ -29,6 +29,7 @@ class Learner:
         self.depth = depth  # Max number of conjunctions
         self.target = list(self.kb.class_values)[0] if not target else target
 
+
     def induce_beam(self):
         '''
         Induces rules for the given knowledge base using beam search.

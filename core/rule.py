@@ -45,6 +45,9 @@ class Rule:
         self.__refresh_coverage()
         self.__refresh_statistics()
 
+        # Validation
+        self.pval = -1
+
     def clone(self):
         '''
         Returns a clone of this rule. The predicates themselves are NOT cloned.
@@ -232,8 +235,9 @@ class Rule:
                      self.distribution[self.target],
                      accuracy,
                      self.kb.score_fun.__name__,
-                     self.score)
-            s += ' [cov=%d, pos=%d, prec=%.3f, %s=%.3f]' % stats
+                     self.score,
+                     self.pval)
+            s += ' [cov=%d, pos=%d, prec=%.3f, %s=%.3f, pval=%.3f]' % stats
 
         else:
             s += ' [size=%d, score=%.3f]' % (self.coverage, self.score)
