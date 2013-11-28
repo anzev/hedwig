@@ -31,10 +31,9 @@ parser.add_argument('-m', '--mode', choices=['features', 'subgroups'],
 parser.add_argument('-t', '--target',
                     help='Target class label. If it is not specified, rules \
                           produced for each class label.')
-parser.add_argument('-s', '--score', choices=['precision', 'wracc', 'z_score',
-                                              't_score', 'enrichment_score',
-                                              'chisq'],
-                    default='precision',
+
+functions = filter(lambda s: not s.startswith('_'), dir(ScoreFunctions))
+parser.add_argument('-s', '--score', choices=functions, default='lift',
                     help='Score function.')
 parser.add_argument('-l', '--leaves', action='store_true',
                     help='Use instance names in rule conjunctions.')

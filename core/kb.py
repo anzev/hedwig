@@ -225,6 +225,7 @@ class ExperimentKB:
             self.distribution = defaultdict(int)
             for ex in self.examples:
                 self.distribution[ex.score] += 1
+            logger.debug('Class distribution: %s' % str(self.distribution))
 
     def user_defined(self, uri):
         '''

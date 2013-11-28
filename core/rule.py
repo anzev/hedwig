@@ -49,13 +49,12 @@ class Rule:
         '''
         Returns a clone of this rule. The predicates themselves are NOT cloned.
         '''
-        new_rule = Rule(self.kb)
+        new_rule = Rule(self.kb, target=self.target)
         new_rule.predicates = self.predicates[:]
         new_rule.covered_examples = self.covered_examples
         new_rule.latest_var = self.latest_var
         new_rule.head_var = self.head_var
         new_rule.shared_var = {}
-        new_rule.target = self.target
         for var in self.shared_var:
             new_rule.shared_var[var] = self.shared_var[var][:]
         return new_rule
@@ -190,7 +189,7 @@ class Rule:
         Calculates the similarity between this rule and 'rule'.
         '''
         intersection = self.covered_examples & rule.covered_examples
-        return intersection.count() / float(max(self.coverage, rule.coverage))
+        return intersection.count()/float(max(self.coverage, rule.coverage))
 
     def size(self):
         '''
@@ -232,8 +231,9 @@ class Rule:
             stats = (self.coverage,
                      self.distribution[self.target],
                      accuracy,
+                     self.kb.score_fun.__name__,
                      self.score)
-            s += ' [cov=%d, pos=%d, prec=%.3f, score=%.3f]' % stats
+            s += ' [cov=%d, pos=%d, prec=%.3f, %s=%.3f]' % stats
 
         else:
             s += ' [size=%d, score=%.3f]' % (self.coverage, self.score)

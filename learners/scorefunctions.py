@@ -71,3 +71,27 @@ class ScoreFunctions:
             return N*(z - x*y)**2 / float(x*y*(1 - x)*(1 - y))
         else:
             return 0
+
+    @staticmethod
+    def lift(rule):
+        nX = float(rule.coverage)
+        N = float(len(rule.kb.examples))
+        nXY = rule.distribution[rule.target]
+        nY = rule.kb.distribution[rule.target]
+
+        if nX != 0 and N != 0:
+            return (nXY/nX)/(nY/N)
+        else:
+            return 0
+
+    @staticmethod
+    def leverage(rule):
+        nX = float(rule.coverage)
+        N = float(len(rule.kb.examples))
+        nXY = rule.distribution[rule.target]
+        nY = rule.kb.distribution[rule.target]
+
+        if N != 0:
+            return nXY/N - (nX/N)*(nY/N)
+        else:
+            return 0
