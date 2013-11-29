@@ -253,7 +253,7 @@ class Rule:
         head = '\'%s\'(%s) <--\n\t' % (target, var)
 
         ruleset = []
-        for rule in rules:
+        for rule in sorted(rules, key=lambda r: r.score, reverse=True):
             rule = str(rule)
             rule = rule if show_uris else rule.split('#')[-1]
             ruleset.append(rule)

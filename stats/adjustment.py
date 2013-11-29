@@ -5,17 +5,24 @@ Multiple-testing adjustment methods.
 '''
 
 
-def holdout(ruleset):
+def _holdout(ruleset):
     '''
-    The holdout approach to avoid the multiple-testing problem.
+    TODO: The holdout approach.
     '''
     return ruleset
 
 
-def fwer(ruleset):
+def fwer(ruleset, alpha=0.05):
     '''
     The Holm-Bonferroni direct adjustment method to control the FWER.
     '''
+    m = float(len(ruleset))
+    ruleset = sorted(ruleset, key=lambda r: r.pval)
+    for k, rule in enumerate(ruleset):
+        if rule.pval > alpha/(m + 1 - (k + 1)):
+            ruleset = ruleset[:k]
+            break
+
     return ruleset
 
 
@@ -25,10 +32,10 @@ def fdr(ruleset, q=0.05):
     method to control the FDR.
     '''
     m = float(len(ruleset))
-    max_k = 0
-    sorted_rules = sorted(ruleset, key=lambda r: r.pval)
-    for k, rule in enumerate(sorted_rules):
-        if rule.pval > ((k+1)*q)/m:
-            max_k = k
+    ruleset = sorted(ruleset, key=lambda r: r.pval)
+    for k, rule in enumerate(ruleset):
+        if rule.pval > ((k + 1)*q)/m:
+            ruleset = ruleset[:k]
             break
-    return sorted_rules[:max_k]
+
+    return ruleset

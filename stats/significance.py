@@ -18,5 +18,4 @@ def fisher(ruleset):
         nXnotY = nX-nXY
         nnotXY = nY-nXY
         nnotXnotY = N-nXnotY-nnotXY
-        p = pvalue(nXY, nXnotY, nnotXY, nnotXnotY)
-        rule.pval = p.two_tail
+        rule.pval = pvalue(nXY, nXnotY, nnotXY, nnotXnotY).two_tail

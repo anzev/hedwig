@@ -14,7 +14,7 @@ class Validate:
         self.significance_test = significance_test
         self.adjustment = adjustment
 
-    def test(self, ruleset, pval=0.05, q=0.01):
+    def test(self, ruleset, alpha=0.05, q=0.01):
         '''
         Tests the given ruleset and returns the significant rules.
         '''
@@ -22,7 +22,7 @@ class Validate:
 
         if self.adjustment.__name__ == 'fdr':
             ruleset = self.adjustment(ruleset, q=q)
-        else:
-            ruleset = self.adjustment(ruleset)
+        elif self.adjustment.__name__ == 'fwer':
+            ruleset = self.adjustment(ruleset, alpha=alpha)
 
-        return filter(lambda r: r.pval <= pval, ruleset)
+        return ruleset
