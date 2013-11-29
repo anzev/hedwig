@@ -65,7 +65,7 @@ parser.add_argument('-b', '--beam', default='20', type=int,
 parser.add_argument('-S', '--support', default='0.1', type=float,
                     help='Minimum support.')
 
-parser.add_argument('-d', '--depth', default='4', type=int,
+parser.add_argument('-d', '--depth', default='5', type=int,
                     help='Maximum number of conjunctions.')
 
 parser.add_argument("-v", "--verbose", help="Increase output verbosity.",
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     logger.info('Building the knowledge base')
     kb = ExperimentKB(graph, score_func, instances_as_leaves=args.leaves)
 
-    validator = Validate(kb, significance_test=significance.fisher,
+    validator = Validate(kb, significance_test=significance.apply_fisher,
                          adjustment=getattr(adjustment, args.adjust))
 
     rules_report = ''
@@ -109,7 +109,10 @@ if __name__ == '__main__':
                           sim=0.9)
         rules = learner.induce()
 
-        logger.info('Validating rules, alpha = %.3f' % args.alpha)
+        if args.adjust == 'fdr':
+            logger.info('Validating rules, FDR = %.3f' % args.FDR)
+        else:
+            logger.info('Validating rules, alpha = %.3f' % args.alpha)
         rules = validator.test(rules, alpha=args.alpha, q=args.FDR)
 
         if rules:

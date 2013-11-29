@@ -5,6 +5,7 @@ Main learner class.
 '''
 from core import UnaryPredicate, Rule
 from core.settings import logger
+from stats.significance import redundancy_coeff
 
 
 class Learner:
@@ -28,7 +29,6 @@ class Learner:
         self.extending = Learner.Similarity
         self.depth = depth  # Max number of conjunctions
         self.target = list(self.kb.class_values)[0] if not target else target
-
 
     def induce_beam(self):
         '''
@@ -69,9 +69,11 @@ class Learner:
             for i, rule in enumerate(rules):
                 specializations = self.specialize(rule)
                 self.extend(new_rules, specializations)
+
             # Take the first N rules
             rules = sorted(new_rules,
-                           key=lambda rule: rule.score, reverse=True)[:self.n]
+                           key=lambda rule: rule.score,
+                           reverse=True)[:self.n]
 
             new_score = self.group_score(rules)
 
@@ -184,7 +186,8 @@ class Learner:
                         last_pred = rule.predicates[-1]
                         new_rule = rule.clone_append(pred,
                                                      producer_pred=last_pred)
-                        if self.can_specialize(new_rule):
+                        if self.can_specialize(new_rule) and \
+                           self.non_redundant(rule, new_rule):
                             specializations.append(new_rule)
                             break
 
@@ -192,7 +195,9 @@ class Learner:
         if isinstance(rule.predicates[-1], UnaryPredicate):
             specializations.extend(self.specialize_add_relation(rule))
 
-        logger.debug('All specializations %s' % [str(rule) for rule in specializations])
+        logger.debug('All specializations %s'
+                     % [str(rule) for rule in specializations])
+
         return specializations
 
     def specialize_add_relation(self, rule):
@@ -215,6 +220,12 @@ class Learner:
         Is the rule good enough to be further refined?
         '''
         return rule.coverage > self.min_sup and rule.size() < self.depth
+
+    def non_redundant(self, rule, new_rule):
+        '''
+        Is the rule non-redundant compared to its immediate generalization?
+        '''
+        return redundancy_coeff(rule, new_rule) > 1
 
     def group_score(self, rules):
         '''

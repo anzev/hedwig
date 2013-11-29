@@ -4,12 +4,12 @@ Module for ruleset validation.
 @author: anze.vavpetic@ijs.si
 '''
 from adjustment import fdr
-from significance import fisher
+from significance import apply_fisher
 
 
 class Validate:
 
-    def __init__(self, kb, significance_test=fisher, adjustment=fdr):
+    def __init__(self, kb, significance_test=apply_fisher, adjustment=fdr):
         self.kb = kb
         self.significance_test = significance_test
         self.adjustment = adjustment
