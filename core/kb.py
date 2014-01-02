@@ -127,7 +127,8 @@ class ExperimentKB:
                     # Query for 'parents' of a given instance
                     inst_parents = self.g.objects(subject=URIRef(inst),
                                                   predicate=RDF.type)
-
+                    inst_parents += self.g.objects(subject=URIRef(inst),
+                                                  predicate=RDFS.subClassOf)
                     for obj in inst_parents:
                         self.members[str(obj)].add(ex.id)
 

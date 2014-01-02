@@ -21,13 +21,15 @@ class Learner:
     Improvement = 'improvement'
     Default = 'default'
 
-    def __init__(self, kb, n=None, min_sup=1, sim=1, depth=4, target=None):
+    def __init__(self, kb, n=None, min_sup=1, sim=1, depth=4, target=None,
+                 use_negations=False):
         self.kb = kb
         self.n = n          # Beam length
         self.min_sup = min_sup
         self.sim = sim
         self.extending = Learner.Similarity
         self.depth = depth  # Max number of conjunctions
+        self.use_negations = use_negations
         self.target = list(self.kb.class_values)[0] if not target else target
 
     def induce_beam(self):
@@ -157,6 +159,14 @@ class Learner:
             for sub_class in self.kb.get_subclasses(pred):
                 logger.debug('Swapping with %s' % sub_class)
                 new_rule = rule.clone_swap_with_subclass(pred, sub_class)
+                if self.can_specialize(new_rule):
+                    specializations.append(new_rule)
+
+        if self.use_negations:
+            # Negate the last predicate
+            for pred in filter(is_unary, eligible_preds):
+                logger.debug('Predicate to negate: %s' % pred.label)
+                new_rule = rule.clone_negate(pred)
                 if self.can_specialize(new_rule):
                     specializations.append(new_rule)
 

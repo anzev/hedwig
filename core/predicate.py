@@ -37,7 +37,8 @@ class UnaryPredicate(Predicate):
     '''
     def __init__(self, label, members, kb,
                  producer_pred=None,
-                 custom_var_name=None):
+                 custom_var_name=None,
+                 negated=False):
         Predicate.__init__(self, label, kb, producer_pred)
 
         if not producer_pred:
@@ -49,6 +50,7 @@ class UnaryPredicate(Predicate):
             self.input_var = producer_pred.output_var
 
         self.output_var = self.input_var
+        self.negated = negated
         self.domain = {self.input_var: members}
 
 

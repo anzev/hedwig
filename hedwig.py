@@ -6,6 +6,7 @@ Main command-line executable
 import os
 import argparse
 import time
+from datetime import datetime
 import logging
 
 from core import ExperimentKB, Rule
@@ -15,7 +16,9 @@ from core.load import rdf
 from core.settings import logger
 
 
-description = '''Hedwig semantic subgroup discovery.'''
+__version__ = '0.1.1'
+
+description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)
 functions = filter(lambda s: not s.startswith('_'), dir(scorefunctions))
 adjustments = filter(lambda s: not s.startswith('_'), dir(adjustment))
@@ -41,6 +44,9 @@ parser.add_argument('-t', '--target',
 
 parser.add_argument('-s', '--score', choices=functions, default='lift',
                     help='Score function.')
+
+parser.add_argument('-n', '--negations', action='store_true',
+                    help='Use negations.')
 
 parser.add_argument('-A', '--alpha', default='0.05', type=float,
                     help='P-value threshold; applies if "--adjust fwer" \
@@ -72,12 +78,28 @@ parser.add_argument("-v", "--verbose", help="Increase output verbosity.",
                     action="store_true")
 
 
+def _parameters_report(args, start, time_taken):
+    sep = '-'*40 + '\n'
+    rep = description + '\n' +\
+        'Version: %s' % __version__ + '\n' +\
+        'Start: %s' % start + '\n' +\
+        'Time taken: %.2f seconds' % time_taken + '\n' +\
+        'Parameters:' + '\n'
+
+    for arg, val in vars(args).items():
+        rep += '\t%s=%s\n' % (arg, str(val))
+    rep = sep + rep + sep
+
+    return rep
+
+
 if __name__ == '__main__':
     args = parser.parse_args()
 
     logger.setLevel(logging.DEBUG if args.verbose else logging.INFO)
     logger.info('Starting Hedwig')
     start = time.time()
+    start_date = datetime.now().isoformat()
 
     data = args.data
     base_name = data.split('.')[0]
@@ -106,13 +128,15 @@ if __name__ == '__main__':
                           min_sup=int(args.support*kb.n_examples()),
                           target=target,
                           depth=args.depth,
-                          sim=0.9)
+                          sim=0.9,
+                          use_negations=args.negations)
         rules = learner.induce()
 
         if args.adjust == 'fdr':
             logger.info('Validating rules, FDR = %.3f' % args.FDR)
         else:
             logger.info('Validating rules, alpha = %.3f' % args.alpha)
+
         rules = validator.test(rules, alpha=args.alpha, q=args.FDR)
 
         if rules:
@@ -122,12 +146,16 @@ if __name__ == '__main__':
     if not rules_report:
         rules_report = 'No significant rules found'
 
+    end = time.time()
+    time_taken = end-start
+    logger.info('Finished in %d seconds' % time_taken)
+
     logger.info('Outputing results')
+    parameters_report = _parameters_report(args, start_date, time_taken)
     if args.output:
         with open(args.output, 'w') as f:
+            f.write(parameters_report)
             f.write(rules_report)
     else:
+        print parameters_report
         print rules_report
-
-    end = time.time()
-    logger.info('Finished in %d seconds' % (end-start))

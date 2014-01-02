@@ -62,6 +62,27 @@ class Rule:
             new_rule.shared_var[var] = self.shared_var[var][:]
         return new_rule
 
+    def clone_negate(self, target_pred):
+        '''
+        Returns a copy of this rule where 'taget_pred' is negated.
+        '''
+        new_rule = self.clone()
+
+        # Create the instance of the child pred
+        producer_pred = target_pred.producer_predicate
+        var_name = target_pred.input_var
+        members = target_pred.domain[target_pred.input_var].copy()
+        members.invert()
+        neg_pred = UnaryPredicate(target_pred.label,
+                                  members,
+                                  self.kb,
+                                  producer_pred=producer_pred,
+                                  custom_var_name=var_name,
+                                  negated=True)
+
+        new_rule._replace_predicate(target_pred, neg_pred)
+        return new_rule
+
     def clone_swap_with_subclass(self, target_pred, child_pred_label):
         '''
         Returns a copy of this rule where
@@ -78,27 +99,7 @@ class Rule:
                                     producer_pred=producer_pred,
                                     custom_var_name=var_name)
 
-        Rule.__replace(new_rule.predicates, target_pred, child_pred)
-        new_rule.covered_examples = self.covered_examples & \
-            child_pred.domain[child_pred.input_var]
-
-        # Reference possible consumers
-        child_pred.consumer_predicate = target_pred.consumer_predicate
-
-        # Update the backlinks
-        if child_pred.producer_predicate:
-            child_pred.producer_predicate.consumer_predicate = child_pred
-        if child_pred.consumer_predicate:
-            child_pred.consumer_predicate.producer_predicate = child_pred
-
-        # Update the shared var list
-        shared_list = new_rule.shared_var[target_pred.input_var]
-        Rule.__replace(shared_list, target_pred, child_pred)
-
-        # Recalc the covered examples and statistics
-        new_rule.__refresh_coverage()
-        new_rule.__refresh_statistics()
-
+        new_rule._replace_predicate(target_pred, child_pred)
         return new_rule
 
     def clone_append(self, predicate_label, producer_pred, bin=False):
@@ -130,6 +131,31 @@ class Rule:
         new_rule.__refresh_coverage()
         new_rule.__refresh_statistics()
         return new_rule
+
+    def _replace_predicate(self, target, replacement):
+        '''
+        Replaces 'target' with 'replacement' in the rule.
+        '''
+        Rule.__replace(self.predicates, target, replacement)
+        self.covered_examples = self.covered_examples & \
+            replacement.domain[replacement.input_var]
+
+        # Reference possible consumers
+        replacement.consumer_predicate = target.consumer_predicate
+
+        # Update the backlinks
+        if replacement.producer_predicate:
+            replacement.producer_predicate.consumer_predicate = replacement
+        if replacement.consumer_predicate:
+            replacement.consumer_predicate.producer_predicate = replacement
+
+        # Update the shared var list
+        shared_list = self.shared_var[target.input_var]
+        Rule.__replace(shared_list, target, replacement)
+
+        # Recalc the covered examples and statistics
+        self.__refresh_coverage()
+        self.__refresh_statistics()
 
     @staticmethod
     def __replace(l, target, replacement):
@@ -219,6 +245,8 @@ class Rule:
                 label = pred.label.split('#')[-1]
 
             if isinstance(pred, UnaryPredicate):
+                if pred.negated:
+                    label = '~' + label
                 conj = '%s(%s)' % (label, pred.input_var)
             else:
                 conj = '%s(%s, %s)' % (label,
