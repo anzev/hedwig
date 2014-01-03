@@ -9,8 +9,10 @@ from math import sqrt
 def z_score(rule):
     return sqrt(rule.coverage) * (rule.mean - rule.kb.mean) / rule.kb.sd
 
+
 def t_score(rule):
     return sqrt(rule.coverage) * (rule.mean - rule.kb.mean) / rule.sd
+
 
 def enrichment_score(rule):
     # The enrichment score of a rule covering all examples is 1
@@ -34,6 +36,7 @@ def enrichment_score(rule):
             max_diff = partial
     return max_diff
 
+
 def wracc(rule):
     nX = rule.coverage
     N = len(rule.kb.examples)
@@ -44,6 +47,7 @@ def wracc(rule):
     else:
         return 0
 
+
 def precision(rule):
     nX = rule.coverage
     nXY = rule.distribution[rule.target]
@@ -51,6 +55,7 @@ def precision(rule):
         return nXY/float(nX)
     else:
         return 0
+
 
 def chisq(rule):
     N = len(rule.kb.examples)
@@ -61,6 +66,7 @@ def chisq(rule):
         return N*(z - x*y)**2 / float(x*y*(1 - x)*(1 - y))
     else:
         return 0
+
 
 def lift(rule):
     nX = float(rule.coverage)
@@ -73,6 +79,7 @@ def lift(rule):
     else:
         return 0
 
+
 def leverage(rule):
     nX = float(rule.coverage)
     N = float(len(rule.kb.examples))
@@ -83,3 +90,25 @@ def leverage(rule):
         return nXY/N - (nX/N)*(nY/N)
     else:
         return 0
+
+
+# Bounds of interest for each score function
+# A rule is interesting if its score is in (A, B] as defined below.
+_bounds = {
+    z_score: (0, float('inf')),
+    t_score: (0, float('inf')),
+    enrichment_score: (-float('inf'), 1),
+    wracc: (0, 1),
+    precision: (0, 1),
+    chisq: (0, float('inf')),
+    lift: (1, float('inf')),
+    leverage: (0, 1)
+}
+
+
+def interesting(rule):
+    '''
+    Checks if a given rule is interesting for the given score function
+    '''
+    score_fun = rule.kb.score_fun
+    return _bounds[score_fun][0] < rule.score <= _bounds[score_fun][1]

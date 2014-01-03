@@ -6,6 +6,7 @@ Main learner class.
 from core import UnaryPredicate, Rule
 from core.settings import logger
 from stats.significance import redundancy_coeff
+from stats.scorefunctions import interesting
 
 
 class Learner:
@@ -59,7 +60,7 @@ class Learner:
         root_pred = self.kb.get_root()
         rules = [Rule(self.kb, predicates=[root_pred], target=self.target)]
         rules = self.__induce_level(rules)
-        return rules
+        return filter(interesting, rules)
 
     def __induce_level(self, rules):
         '''
