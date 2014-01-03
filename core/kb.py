@@ -82,6 +82,7 @@ class ExperimentKB:
                 self.class_values.add(score)
 
             self.uri_to_idx[ex_uri] = i
+
             examples.append(Example(i, str(ex_uri), score,
                                     annotations=annotations,
                                     weights=weights))
@@ -125,16 +126,17 @@ class ExperimentKB:
                     self.members[inst].add(ex.id)
                 else:
                     # Query for 'parents' of a given instance
-                    inst_parents = self.g.objects(subject=URIRef(inst),
-                                                  predicate=RDF.type)
-                    inst_parents += self.g.objects(subject=URIRef(inst),
-                                                  predicate=RDFS.subClassOf)
+                    inst_parents = list(self.g.objects(subject=URIRef(inst),
+                                                       predicate=RDF.type))
+                    inst_parents += list(self.g.objects(subject=URIRef(inst),
+                                                    predicate=RDFS.subClassOf))
                     for obj in inst_parents:
                         self.members[str(obj)].add(ex.id)
 
         # Find the root classes
-        roots = filter(lambda pred: self.sub_class_of[pred] == [],
+        roots = filter(lambda pred: not self.sub_class_of[pred],
                        self.super_class_of.keys())
+
 
         logger.debug('Detected root nodes: %s' % str(roots))
 
@@ -159,9 +161,9 @@ class ExperimentKB:
                     parent_closure = self.sub_class_of_closure[pred]
                     self.sub_class_of_closure[child].update(parent_closure)
                     mems.update(closure(child, lvl + 1))
-                self.members[pred] = mems
+                self.members[pred].update(mems)
 
-                return mems
+                return self.members[pred]
             else:
                 return self.members[pred]
 
