@@ -233,9 +233,18 @@ class Rule:
         indices = self.kb.bits_to_indices(self.covered_examples)
         return [self.kb.examples[idx] for idx in indices]
 
-    def rule_report(self, show_uris=False):
+    def rule_report(self, show_uris=False, latex=False):
         '''
         Rule as string with some statistics.
+        '''
+        if latex:
+            return self._latex_report()
+        else:
+            return self._plain_report(show_uris=show_uris)
+
+    def _plain_report(self, show_uris=False):
+        '''
+        Plain text rule report
         '''
         conjuncts = []
         for pred in self.predicates:
@@ -272,18 +281,76 @@ class Rule:
 
         return s
 
+    def _latex_report(self):
+        '''
+        Latex rule report
+        '''
+        conjuncts = []
+        for pred in self.predicates:
+
+            label = pred.label
+            if '#' in label:
+                label = pred.label.split('#')[-1]
+
+            if isinstance(pred, UnaryPredicate):
+                if pred.negated:
+                    label = r'\neg ' + label
+                conj = '%s(%s)' % (label, pred.input_var)
+            else:
+                conj = '%s(%s, %s)' % (label,
+                                       pred.input_var,
+                                       pred.output_var)
+            conjuncts.append(conj)
+
+        s = r' $\wedge$ '.join(conjuncts)
+
+        return s
+
     def __str__(self):
         return self.rule_report(show_uris=True)
 
     @staticmethod
-    def ruleset_report(rules, show_uris=False):
+    def ruleset_report(rules, show_uris=False, latex=False):
+        if latex:
+            return Rule._latex_ruleset_report(rules)
+        else:
+            return Rule._plain_ruleset_report(rules, show_uris=show_uris)
+
+    @staticmethod
+    def _latex_ruleset_report(rules):
+        target, var = rules[0].target, rules[0].head_var
+        head = '%s(%s) $\leftarrow$ ' % (target, var)
+
+        _tex_report = \
+            r'\begin{tabular}{clccccc}\hline' + '\n' \
+            r'\textbf{\#} & \textbf{Rule} & \textbf{TP} & \textbf{FP} & \textbf{Precision} & \textbf{Lift} & \textbf{p-value}\\\hline' + '\n'
+
+        for i, rule in enumerate(sorted(rules, key=lambda r: r.score, reverse=True)):
+            rule_report = rule._latex_report()
+            stats = (i,
+                     head + rule_report,
+                     rule.distribution[rule.target],
+                     rule.coverage - rule.distribution[rule.target],
+                     rule.distribution[rule.target]/float(rule.coverage),
+                     rule.score,
+                     rule.pval)
+            _tex_report += r'%d & \texttt{%s} & %d & %d & %.2f & %.2f & %.2f\\' % stats
+            _tex_report += '\n'
+        
+        _tex_report += \
+            r'\hline' + '\n' \
+            r'\end{tabular}' + '\n'
+
+        return _tex_report
+
+    @staticmethod
+    def _plain_ruleset_report(rules, show_uris=False):
         target, var = rules[0].target, rules[0].head_var
         head = '\'%s\'(%s) <--\n\t' % (target, var)
 
         ruleset = []
         for rule in sorted(rules, key=lambda r: r.score, reverse=True):
-            rule = str(rule)
-            rule = rule if show_uris else rule.split('#')[-1]
+            rule = rule._plain_report(show_uris=show_uris)
             ruleset.append(rule)
 
         return head + '\n\t'.join(ruleset)

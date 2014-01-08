@@ -140,7 +140,7 @@ if __name__ == '__main__':
         rules = validator.test(rules, alpha=args.alpha, q=args.FDR)
 
         if rules:
-            rules_report += Rule.ruleset_report(rules, show_uris=args.uris)
+            rules_report += Rule.ruleset_report(rules, show_uris=args.uris, latex=True)
             rules_report += '\n'
 
     if not rules_report:
