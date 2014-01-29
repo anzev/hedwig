@@ -16,7 +16,7 @@ from core.load import rdf
 from core.settings import logger
 
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)
@@ -140,7 +140,7 @@ if __name__ == '__main__':
         rules = validator.test(rules, alpha=args.alpha, q=args.FDR)
 
         if rules:
-            rules_report += Rule.ruleset_report(rules, show_uris=args.uris, latex=True)
+            rules_report += Rule.ruleset_report(rules, show_uris=args.uris)
             rules_report += '\n'
 
     if not rules_report:

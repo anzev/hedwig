@@ -250,7 +250,7 @@ class Rule:
         for pred in self.predicates:
 
             label = pred.label
-            if '#' in label and show_uris:
+            if '#' in label and not show_uris:
                 label = pred.label.split('#')[-1]
 
             if isinstance(pred, UnaryPredicate):
@@ -294,7 +294,7 @@ class Rule:
 
             if isinstance(pred, UnaryPredicate):
                 if pred.negated:
-                    label = r'\neg ' + label
+                    label = r'$\neg$' + label
                 conj = '%s(%s)' % (label, pred.input_var)
             else:
                 conj = '%s(%s, %s)' % (label,
@@ -327,14 +327,14 @@ class Rule:
 
         for i, rule in enumerate(sorted(rules, key=lambda r: r.score, reverse=True)):
             rule_report = rule._latex_report()
-            stats = (i,
+            stats = (i+1,
                      head + rule_report,
                      rule.distribution[rule.target],
                      rule.coverage - rule.distribution[rule.target],
                      rule.distribution[rule.target]/float(rule.coverage),
                      rule.score,
                      rule.pval)
-            _tex_report += r'%d & \texttt{%s} & %d & %d & %.2f & %.2f & %.2f\\' % stats
+            _tex_report += r'%d & \texttt{%s} & %d & %d & %.2f & %.2f & %.3f\\' % stats
             _tex_report += '\n'
         
         _tex_report += \

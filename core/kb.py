@@ -137,7 +137,6 @@ class ExperimentKB:
         roots = filter(lambda pred: not self.sub_class_of[pred],
                        self.super_class_of.keys())
 
-
         logger.debug('Detected root nodes: %s' % str(roots))
 
         # Add a dummy root
@@ -151,17 +150,23 @@ class ExperimentKB:
             self.sub_class_of_closure[pred].update(self.sub_class_of[pred])
 
         # Calc the closure to get the members of the subClassOf hierarchy
-        def closure(pred, lvl):
+        def closure(pred, lvl, visited=[]):
+
+            if pred in visited:
+                raise Exception('Cycle detected in the hierarchy!')
+
             children = self.super_class_of[pred]
             self.levels[lvl].add(pred)
 
             if children:
                 mems = set()
+                visited.append(pred)
                 for child in children:
                     parent_closure = self.sub_class_of_closure[pred]
                     self.sub_class_of_closure[child].update(parent_closure)
-                    mems.update(closure(child, lvl + 1))
+                    mems.update(closure(child, lvl + 1, visited=visited))
                 self.members[pred].update(mems)
+                visited.remove(pred)
 
                 return self.members[pred]
             else:
