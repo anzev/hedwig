@@ -90,7 +90,7 @@ def _parameters_report(args, start, time_taken):
         'Time taken: %.2f seconds' % time_taken + '\n' +\
         'Parameters:' + '\n'
 
-    for arg, val in vars(args).items():
+    for arg, val in args.items():
         rep += '\t%s=%s\n' % (arg, str(val))
     rep = sep + rep + sep
 
@@ -138,7 +138,7 @@ def run(kwargs, cli=False):
             examples = Rule.ruleset_examples_json(rules)
             f.write(json.dumps(examples))
 
-    parameters_report = _parameters_report(args, start_date, time_taken)
+    parameters_report = _parameters_report(kwargs, start_date, time_taken)
     if kwargs['output']:
         with open(kwargs['output'], 'w') as f:
             f.write(parameters_report)
