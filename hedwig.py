@@ -8,6 +8,7 @@ import argparse
 import time
 from datetime import datetime
 import logging
+import json
 
 from core import ExperimentKB, Rule
 from learners import Learner
@@ -16,7 +17,7 @@ from core.load import rdf
 from core.settings import logger
 
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)
@@ -33,6 +34,9 @@ parser.add_argument('data', metavar='DATASET',
 
 parser.add_argument('-o', '--output', help='Output file. If none is specified, \
                                             the results are written to stdout.')
+
+parser.add_argument('-c', '--covered', help='File to write IDs of covered \
+                                             examples.')
 
 parser.add_argument('-m', '--mode', choices=['features', 'subgroups'],
                     default='subgroups',
@@ -93,56 +97,33 @@ def _parameters_report(args, start, time_taken):
     return rep
 
 
-if __name__ == '__main__':
-    args = parser.parse_args()
+def run(kwargs, cli=False):
 
-    logger.setLevel(logging.DEBUG if args.verbose else logging.INFO)
+    if cli:
+        logger.setLevel(logging.DEBUG if kwargs['verbose'] else logging.INFO)
+    else:
+        logger.setLevel(logging.NOTSET)
+
     logger.info('Starting Hedwig')
     start = time.time()
     start_date = datetime.now().isoformat()
 
-    data = args.data
-    base_name = data.split('.')[0]
-
-    # Walk the dir to find BK files
-    ontology_list = []
-    for root, sub_folders, files in os.walk(args.bk_dir):
-        ontology_list.extend(map(lambda f: os.path.join(root, f), files))
-
-    logger.info('Building a graph from ontologies and data')
-    graph = rdf(ontology_list + [data])
-    score_func = getattr(scorefunctions, args.score)
+    graph = build_graph(kwargs)
 
     logger.info('Building the knowledge base')
-    kb = ExperimentKB(graph, score_func, instances_as_leaves=args.leaves)
+    score_func = getattr(scorefunctions, kwargs['score'])
+    kb = ExperimentKB(graph, score_func, instances_as_leaves=kwargs['leaves'])
 
     validator = Validate(kb, significance_test=significance.apply_fisher,
-                         adjustment=getattr(adjustment, args.adjust))
+                         adjustment=getattr(adjustment, kwargs['adjust']))
+
+    rules_per_target = run_learner(kwargs, kb, validator)
 
     rules_report = ''
-    targets = kb.class_values if not args.target else [args.target]
-    for target in targets:
-        logger.info('Starting learner for target \'%s\'' % target)
-        learner = Learner(kb,
-                          n=args.beam,
-                          min_sup=int(args.support*kb.n_examples()),
-                          target=target,
-                          depth=args.depth,
-                          sim=0.9,
-                          use_negations=args.negations)
-        rules = learner.induce()
-
-        if args.adjust == 'fdr':
-            logger.info('Validating rules, FDR = %.3f' % args.FDR)
-        else:
-            logger.info('Validating rules, alpha = %.3f' % args.alpha)
-
-        rules = validator.test(rules, alpha=args.alpha, q=args.FDR)
-
+    for _, rules in rules_per_target:
         if rules:
-            rules_report += Rule.ruleset_report(rules, show_uris=args.uris)
+            rules_report += Rule.ruleset_report(rules, show_uris=kwargs['uris'])
             rules_report += '\n'
-
     if not rules_report:
         rules_report = 'No significant rules found'
 
@@ -151,11 +132,75 @@ if __name__ == '__main__':
     logger.info('Finished in %d seconds' % time_taken)
 
     logger.info('Outputing results')
+
+    if kwargs['covered']:
+        with open(kwargs['covered'], 'w') as f:
+            examples = Rule.ruleset_examples_json(rules)
+            f.write(json.dumps(examples))
+
     parameters_report = _parameters_report(args, start_date, time_taken)
-    if args.output:
-        with open(args.output, 'w') as f:
+    if kwargs['output']:
+        with open(kwargs['output'], 'w') as f:
             f.write(parameters_report)
             f.write(rules_report)
-    else:
+    elif cli:
         print parameters_report
         print rules_report
+
+    return rules
+
+
+def build_graph(kwargs):
+    data = kwargs['data']
+    base_name = data.split('.')[0]
+
+    # Walk the dir to find BK files
+    ontology_list = []
+    for root, sub_folders, files in os.walk(kwargs['bk_dir']):
+        ontology_list.extend(map(lambda f: os.path.join(root, f), files))
+
+    logger.info('Building a graph from ontologies and data')
+    graph = rdf(ontology_list + [data])
+
+    return graph
+
+
+def run_learner(kwargs, kb, validator):
+
+    if kb.is_discrete_target():
+        targets = kb.class_values if not kwargs['target'] else [kwargs['target']]
+    else:
+        targets = [None]
+
+    rules_report = ''
+    rules_per_target = []
+
+    for target in targets:
+        if target:
+            logger.info('Starting learner for target \'%s\'' % target)
+        else:
+            logger.info('Ranks detected - starting learner.')
+        learner = Learner(kb,
+                          n=kwargs['beam'],
+                          min_sup=int(kwargs['support']*kb.n_examples()),
+                          target=target,
+                          depth=kwargs['depth'],
+                          sim=0.9,
+                          use_negations=kwargs['negations'])
+        rules = learner.induce()
+
+        if kb.is_discrete_target():
+            if kwargs['adjust'] == 'fdr':
+                logger.info('Validating rules, FDR = %.3f' % kwargs['FDR'])
+            else:
+                logger.info('Validating rules, alpha = %.3f' % kwargs['alpha'])
+            rules = validator.test(rules, alpha=kwargs['alpha'], q=kwargs['FDR'])
+
+        rules_per_target.append((target, rules))
+
+    return rules_per_target
+
+
+if __name__ == '__main__':
+    args = parser.parse_args()
+    run(args.__dict__, cli=True)

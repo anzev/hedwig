@@ -3,7 +3,7 @@ Main learner class.
 
 @author: anze.vavpetic@ijs.si
 '''
-from core import UnaryPredicate, Rule
+from core import UnaryPredicate, Rule, Example
 from core.settings import logger
 from stats.significance import redundancy_coeff
 from stats.scorefunctions import interesting
@@ -31,7 +31,11 @@ class Learner:
         self.extending = Learner.Similarity
         self.depth = depth  # Max number of conjunctions
         self.use_negations = use_negations
-        self.target = list(self.kb.class_values)[0] if not target else target
+
+        if kb.is_discrete_target():
+            self.target = list(self.kb.class_values)[0] if not target else target
+        else:
+            self.target = None
 
     def induce_beam(self):
         '''
@@ -79,6 +83,8 @@ class Learner:
                            reverse=True)[:self.n]
 
             new_score = self.group_score(rules)
+
+            logger.debug("Old score: %.3f, New score: %.3f" % (old_score, new_score))
 
             if 1 - abs(old_score/(new_score+0.0001)) < 0.01:
                 break
@@ -236,7 +242,10 @@ class Learner:
         '''
         Is the rule non-redundant compared to its immediate generalization?
         '''
-        return redundancy_coeff(rule, new_rule) > 1
+        if rule.target_type == Example.Ranked:
+            return True
+        else:
+            return redundancy_coeff(rule, new_rule) > 1
 
     def group_score(self, rules):
         '''

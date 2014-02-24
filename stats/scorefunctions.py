@@ -92,11 +92,44 @@ def leverage(rule):
         return 0
 
 
+def kaplan_meier_AUC(rule):
+    examples = rule.kb.bits_to_indices(rule.covered_examples)
+    n_examples = float(len(examples))
+
+    if n_examples == 0:
+        return 0.0
+
+    def n_alive(examples, day):
+
+        def is_alive(ex):
+            return rule.kb.get_score(ex) > day
+
+        return len(filter(is_alive, examples))
+
+    auc, day = 0, 0
+    prev = -1
+    while True:
+        alive = n_alive(examples, day)
+        day += 14
+
+        curr = alive/n_examples
+        if prev != -1:
+            auc += (prev + curr)/2.0
+        prev = curr
+
+        if alive == 0:
+            break
+
+    #print auc
+    return auc
+
+
 # Bounds of interest for each score function
 # A rule is interesting if its score is in (A, B] as defined below.
 _bounds = {
     z_score: (0, float('inf')),
     t_score: (0, float('inf')),
+    kaplan_meier_AUC: (0, float('inf')),
     enrichment_score: (-float('inf'), 1),
     wracc: (0, 1),
     precision: (0, 1),

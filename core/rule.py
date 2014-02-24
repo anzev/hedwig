@@ -319,7 +319,10 @@ class Rule:
     @staticmethod
     def _latex_ruleset_report(rules):
         target, var = rules[0].target, rules[0].head_var
-        head = '%s(%s) $\leftarrow$ ' % (target, var)
+        if target:
+            head = '%s(%s) $\leftarrow$ ' % (target, var)
+        else:
+            head = ''
 
         _tex_report = \
             r'\begin{tabular}{clccccc}\hline' + '\n' \
@@ -346,7 +349,10 @@ class Rule:
     @staticmethod
     def _plain_ruleset_report(rules, show_uris=False):
         target, var = rules[0].target, rules[0].head_var
-        head = '\'%s\'(%s) <--\n\t' % (target, var)
+        if target:
+            head = '\'%s\'(%s) <--\n\t' % (target, var)
+        else:
+            head = ''
 
         ruleset = []
         for rule in sorted(rules, key=lambda r: r.score, reverse=True):
@@ -354,3 +360,11 @@ class Rule:
             ruleset.append(rule)
 
         return head + '\n\t'.join(ruleset)
+
+    @staticmethod
+    def ruleset_examples_json(rules, show_uris=False):
+        examples_output = []
+        for i, rule in enumerate(sorted(rules, key=lambda r: r.score, reverse=True)):
+            examples = rule.examples()
+            examples_output.append((i, [ex.id for ex in examples]))
+        return examples_output

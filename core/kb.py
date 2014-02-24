@@ -90,7 +90,7 @@ class ExperimentKB:
         self.examples = examples
 
         if not self.examples:
-            raise Exception("No examples provided! Examples should be " + 
+            raise Exception("No examples provided! Examples should be " +
                             "instances of %s." % HEDWIG)
 
         # Ranked or class-labeled data
@@ -245,8 +245,6 @@ class ExperimentKB:
         '''
         Adds the resource 'sub' as a subclass of 'obj'.
         '''
-        logger.debug('Adding subclass: %s sof %s' % (sub, obj))
-
         to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
         sub, obj = to_uni(sub), to_uni(obj)
 
@@ -356,3 +354,6 @@ class ExperimentKB:
         for idx in indices:
             bits[idx] = True
         return bits
+
+    def is_discrete_target(self):
+        return bool(self.class_values)

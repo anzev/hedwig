@@ -5,9 +5,18 @@ Helper functions.
 '''
 from math import sqrt
 
+
 def avg(x):
-    return sum(x)/float(len(x))
+    n = float(len(x))
+    if n:
+        return sum(x)/n
+    else:
+        return 0
+
 
 def std(x):
     n = float(len(x))
-    return sqrt((sum(i*i for i in x) - sum(x)**2/n)/n)
+    if n:
+        return sqrt((sum(i*i for i in x) - sum(x)**2/n)/n)
+    else:
+        return 0
