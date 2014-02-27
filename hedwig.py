@@ -160,8 +160,11 @@ def build_graph(kwargs):
         ontology_list.extend(map(lambda f: os.path.join(root, f), files))
 
     logger.info('Building a graph from ontologies and data')
-    graph = rdf(ontology_list + [data])
-
+    try:
+        graph = rdf(ontology_list + [data])
+    except Exception, e:
+        print e
+        exit(1)
     return graph
 
 
