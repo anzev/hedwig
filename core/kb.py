@@ -24,6 +24,7 @@ class ExperimentKB:
         The target class is given with 'target_class' - this is the
         class to be described in the induction step.
         '''
+        self.instances_as_leaves = instances_as_leaves
         self.score_fun = score_fun
         self.sub_class_of = defaultdict(list)
         self.super_class_of = defaultdict(list)
@@ -31,9 +32,29 @@ class ExperimentKB:
         self.binary_predicates = set()
         self.class_values = set()
 
-        g = triplets
+        self.examples = self._build_examples(triplets)
 
-        # Parse the examples schema
+        # Ranked or class-labeled data
+        self.target_type = self.examples[0].target_type
+
+        self._build_subclassof(triplets)
+        self._calc_predicate_members(triplets)
+        self._find_roots()
+        self._calc_members_closure()
+        self._calc_binary_members()
+
+        # Statistics
+        if self.target_type == Example.Ranked:
+            self.mean = avg([ex.score for ex in self.examples])
+            self.sd = std([ex.score for ex in self.examples])
+        else:
+            self.distribution = defaultdict(int)
+            for ex in self.examples:
+                self.distribution[ex.score] += 1
+            logger.debug('Class distribution: %s' % str(self.distribution))
+
+
+    def _build_examples(self, g):
         g.parse(EXAMPLE_SCHEMA, format='n3')
 
         # Extract the available examples from the graph
@@ -88,22 +109,19 @@ class ExperimentKB:
                                     annotations=annotations,
                                     weights=weights))
 
-        self.examples = examples
-
-        if not self.examples:
+        if not examples:
             raise Exception("No examples provided! Examples should be " +
                             "instances of %s." % HEDWIG)
+        return examples
 
-        # Ranked or class-labeled data
-        self.target_type = self.examples[0].target_type
 
-        # Get the subClassOf hierarchy
+    def _build_subclassof(self, g):
         for sub, obj in g.subject_objects(predicate=RDFS.subClassOf):
             if self.user_defined(sub) and self.user_defined(obj):
                 self.add_sub_class(sub, obj)
 
         # Include the instances as predicates as well
-        if instances_as_leaves:
+        if self.instances_as_leaves:
             for sub, obj in g.subject_objects(predicate=RDF.type):
                 if self.user_defined(sub) and self.user_defined(obj):
                     self.add_sub_class(sub, obj)
@@ -119,11 +137,12 @@ class ExperimentKB:
             if self.user_defined(pred):
                 self.binary_predicates.add(str(pred))
 
-        # Calculate the members for each predicate
+
+    def _calc_predicate_members(self, g):
         self.members = defaultdict(set)
-        for ex in examples:
+        for ex in self.examples:
             for inst in ex.annotations:
-                if instances_as_leaves:
+                if self.instances_as_leaves:
                     self.members[inst].add(ex.id)
                 else:
                     # Query for 'parents' of a given instance
@@ -134,7 +153,8 @@ class ExperimentKB:
                     for obj in inst_parents:
                         self.members[str(obj)].add(ex.id)
 
-        # Find the root classes
+
+    def _find_roots(self):
         roots = filter(lambda pred: not self.sub_class_of[pred],
                        self.super_class_of.keys())
 
@@ -146,6 +166,8 @@ class ExperimentKB:
         for root in roots:
             self.add_sub_class(root, self.dummy_root)
 
+
+    def _calc_members_closure(self):
         self.sub_class_of_closure = defaultdict(set)
         for pred in self.super_class_of.keys():
             self.sub_class_of_closure[pred].update(self.sub_class_of[pred])
@@ -179,7 +201,8 @@ class ExperimentKB:
         # Run the closure from root
         closure(self.dummy_root, 0)
 
-        # Members of non-unary predicates
+
+    def _calc_binary_members(self):
         self.binary_members = defaultdict(dict)
         self.reverse_binary_members = defaultdict(dict)
 
@@ -226,15 +249,6 @@ class ExperimentKB:
                 indices = self.indices_to_bits(reverse_members)
                 self.reverse_bit_binary_members[pred][el] = indices
 
-        # Statistics
-        if self.target_type == Example.Ranked:
-            self.mean = avg([ex.score for ex in self.examples])
-            self.sd = std([ex.score for ex in self.examples])
-        else:
-            self.distribution = defaultdict(int)
-            for ex in self.examples:
-                self.distribution[ex.score] += 1
-            logger.debug('Class distribution: %s' % str(self.distribution))
 
     def user_defined(self, uri):
         '''
