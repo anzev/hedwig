@@ -5,7 +5,7 @@ Main learner class.
 '''
 from core import UnaryPredicate, Rule, Example
 from core.settings import logger
-from stats.significance import redundancy_coeff
+from stats.significance import is_redundant
 from stats.scorefunctions import interesting
 
 
@@ -236,7 +236,7 @@ class Learner:
         '''
         Is the rule good enough to be further refined?
         '''
-        return rule.coverage > self.min_sup and rule.size() < self.depth
+        return rule.coverage >= self.min_sup and rule.size() <= self.depth
 
     def non_redundant(self, rule, new_rule):
         '''
@@ -245,7 +245,7 @@ class Learner:
         if rule.target_type == Example.Ranked:
             return True
         else:
-            return redundancy_coeff(rule, new_rule) > 1
+            return not is_redundant(rule, new_rule)
 
     def group_score(self, rules):
         '''
