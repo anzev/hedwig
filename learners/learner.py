@@ -38,12 +38,12 @@ class Learner:
         else:
             self.target = None
 
-        self.pruned_subclasses = self.calc_pruned_subclasses()
-        self.pruned_superclasses_closure = self.calc_pruned_superclasses()
+        self.pruned_subclasses = self._pruned_subclasses()
+        self.pruned_superclasses_closure = self._pruned_superclasses()
+        self.implicit_roots = self._implicit_roots()
 
-    def calc_pruned_subclasses(self):
-        n_mems = lambda pred: self.kb.get_members(pred).count()
-        min_sup = lambda pred: n_mems(pred) >= self.min_sup
+    def _pruned_subclasses(self):
+        min_sup = lambda pred: self.kb.n_members(pred) >= self.min_sup
         pruned_subclasses = {}
         for pred in self.kb.predicates:
             subclasses = self.kb.get_subclasses(pred)
@@ -51,9 +51,8 @@ class Learner:
 
         return pruned_subclasses
 
-    def calc_pruned_superclasses(self):
-        n_mems = lambda pred: self.kb.get_members(pred).count()
-        min_sup = lambda pred: n_mems(pred) >= self.min_sup
+    def _pruned_superclasses(self):
+        min_sup = lambda pred: self.kb.n_members(pred) >= self.min_sup
         pruned_superclasses = {}
         for pred in self.kb.predicates:
             superclasses = self.kb.super_classes(pred)
@@ -61,11 +60,23 @@ class Learner:
         
         return pruned_superclasses
 
+    def _implicit_roots(self):
+        implicit_roots = set()
+        n_examples = self.kb.n_examples()
+        for pred in self.kb.predicates:
+            if self.kb.n_members(pred) == n_examples:
+                implicit_roots.add(pred)
+
+        return implicit_roots
+
     def get_subclasses(self, pred):
         return self.pruned_subclasses[pred.label]
 
     def get_superclasses(self, pred):
         return self.pruned_superclasses_closure[pred]
+
+    def is_implicit_root(self, pred):
+        return pred in self.implicit_roots
 
     def induce_beam(self):
         '''
@@ -210,7 +221,8 @@ class Learner:
         # This makes sure we are not specializing a default rule by appending,
         # this rule should instead be reached by the specialization step above.
         if not (len(eligible_preds) == 1 and
-           eligible_preds[0].label == self.kb.get_root().label):
+           (eligible_preds[0].label == self.kb.get_root().label or
+           self.is_implicit_root(eligible_preds[0].label))):
 
             # Calculate the union of superclasses of each predicate
             supers = set()

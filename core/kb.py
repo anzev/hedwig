@@ -307,6 +307,9 @@ class ExperimentKB:
 
         return reverse_members
 
+    def n_members(self, predicate):
+        return self.get_members(predicate, bit=True).count()
+
     def get_domains(self, predicate):
         '''
         Returns the bitsets for input and outputexamples
