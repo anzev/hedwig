@@ -6,14 +6,14 @@ Significance testing methods.
 from fisher import pvalue
 
 
-def redundancy_coeff(rule, new_rule):
+def is_redundant(rule, new_rule):
     '''
     Computes the redundancy coefficient of a new rule compared to its
     immediate generalization.
 
     Rules with a coeff > 1 are deemed non-redundant.
     '''
-    return fisher(new_rule)/fisher(rule)
+    return fisher(new_rule) > fisher(rule)
 
 
 def fisher(rule):
