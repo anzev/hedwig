@@ -24,7 +24,6 @@ class ExperimentKB:
         The target class is given with 'target_class' - this is the
         class to be described in the induction step.
         '''
-        self.g = triplets
         self.score_fun = score_fun
         self.sub_class_of = defaultdict(list)
         self.super_class_of = defaultdict(list)
@@ -32,11 +31,13 @@ class ExperimentKB:
         self.binary_predicates = set()
         self.class_values = set()
 
+        g = triplets
+
         # Parse the examples schema
-        self.g.parse(EXAMPLE_SCHEMA, format='n3')
+        g.parse(EXAMPLE_SCHEMA, format='n3')
 
         # Extract the available examples from the graph
-        ex_subjects = self.g.subjects(predicate=RDF.type, object=HEDWIG.Example)
+        ex_subjects = g.subjects(predicate=RDF.type, object=HEDWIG.Example)
         self.examples_uris = [ex for ex in ex_subjects]
         self.uri_to_idx = {}
 
@@ -44,7 +45,7 @@ class ExperimentKB:
         for i, ex_uri in enumerate(self.examples_uris):
 
             # Query for annotation link objects
-            annot_objects = self.g.objects(subject=ex_uri,
+            annot_objects = g.objects(subject=ex_uri,
                                            predicate=HEDWIG.annotated_with)
 
             annotation_links = [annot for annot in annot_objects]
@@ -55,12 +56,12 @@ class ExperimentKB:
             for link in annotation_links:
 
                 # Query for annotation objects via this link
-                annot_objects = self.g.objects(subject=link,
+                annot_objects = g.objects(subject=link,
                                                predicate=HEDWIG.annotation)
                 annotation = [to_uni(one) for one in annot_objects][0]
 
                 # Query for weights on this link
-                weight_objects = self.g.objects(subject=link,
+                weight_objects = g.objects(subject=link,
                                                 predicate=HEDWIG.weight)
                 weights_list = [one for one in weight_objects]
 
@@ -70,13 +71,13 @@ class ExperimentKB:
                 annotations.append(annotation)
 
             # Scores
-            score_list = list(self.g.objects(subject=ex_uri,
+            score_list = list(g.objects(subject=ex_uri,
                                              predicate=HEDWIG.score))
             if score_list:
                 score = float(score_list[0])
             else:
                 # Classes
-                score_list = list(self.g.objects(subject=ex_uri,
+                score_list = list(g.objects(subject=ex_uri,
                                                  predicate=HEDWIG.class_label))
                 score = str(score_list[0])
                 self.class_values.add(score)
@@ -97,21 +98,21 @@ class ExperimentKB:
         self.target_type = self.examples[0].target_type
 
         # Get the subClassOf hierarchy
-        for sub, obj in self.g.subject_objects(predicate=RDFS.subClassOf):
+        for sub, obj in g.subject_objects(predicate=RDFS.subClassOf):
             if self.user_defined(sub) and self.user_defined(obj):
                 self.add_sub_class(sub, obj)
 
         # Include the instances as predicates as well
         if instances_as_leaves:
-            for sub, obj in self.g.subject_objects(predicate=RDF.type):
+            for sub, obj in g.subject_objects(predicate=RDF.type):
                 if self.user_defined(sub) and self.user_defined(obj):
                     self.add_sub_class(sub, obj)
 
         # Find the user-defined object predicates defined between examples
-        examples_as_domain = set(self.g.subjects(object=HEDWIG.Example,
+        examples_as_domain = set(g.subjects(object=HEDWIG.Example,
                                                  predicate=RDFS.domain))
 
-        examples_as_range = set(self.g.subjects(object=HEDWIG.Example,
+        examples_as_range = set(g.subjects(object=HEDWIG.Example,
                                                 predicate=RDFS.range))
 
         for pred in examples_as_domain.intersection(examples_as_range):
@@ -126,9 +127,9 @@ class ExperimentKB:
                     self.members[inst].add(ex.id)
                 else:
                     # Query for 'parents' of a given instance
-                    inst_parents = list(self.g.objects(subject=URIRef(inst),
+                    inst_parents = list(g.objects(subject=URIRef(inst),
                                                        predicate=RDF.type))
-                    inst_parents += list(self.g.objects(subject=URIRef(inst),
+                    inst_parents += list(g.objects(subject=URIRef(inst),
                                                     predicate=RDFS.subClassOf))
                     for obj in inst_parents:
                         self.members[str(obj)].add(ex.id)
@@ -183,7 +184,7 @@ class ExperimentKB:
         self.reverse_binary_members = defaultdict(dict)
 
         for pred in self.binary_predicates:
-            pairs = self.g.subject_objects(predicate=URIRef(pred))
+            pairs = g.subject_objects(predicate=URIRef(pred))
 
             for pair in pairs:
                 el1, el2 = self.uri_to_idx[pair[0]], self.uri_to_idx[pair[1]]
