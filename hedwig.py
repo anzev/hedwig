@@ -97,6 +97,18 @@ def _parameters_report(args, start, time_taken):
     return rep
 
 
+def generate_rules_report(kwargs, rules_per_target, human={}):
+    rules_report = ''
+    for _, rules in rules_per_target:
+        if rules:
+            rules_report += Rule.ruleset_report(rules, show_uris=kwargs['uris'],
+                                                human=human)
+            rules_report += '\n'
+    if not rules_report:
+        rules_report = 'No significant rules found'
+    return rules_report
+
+
 def run(kwargs, cli=False):
 
     if cli:
@@ -118,14 +130,8 @@ def run(kwargs, cli=False):
                          adjustment=getattr(adjustment, kwargs['adjust']))
 
     rules_per_target = run_learner(kwargs, kb, validator)
-
-    rules_report = ''
-    for _, rules in rules_per_target:
-        if rules:
-            rules_report += Rule.ruleset_report(rules, show_uris=kwargs['uris'])
-            rules_report += '\n'
-    if not rules_report:
-        rules_report = 'No significant rules found'
+    rules_report = generate_rules_report(kwargs, rules_per_target)
+    
 
     end = time.time()
     time_taken = end-start
@@ -135,7 +141,7 @@ def run(kwargs, cli=False):
 
     if kwargs['covered']:
         with open(kwargs['covered'], 'w') as f:
-            examples = Rule.ruleset_examples_json(rules)
+            examples = Rule.ruleset_examples_json(rules_per_target)
             f.write(json.dumps(examples))
 
     parameters_report = _parameters_report(kwargs, start_date, time_taken)
@@ -147,7 +153,7 @@ def run(kwargs, cli=False):
         print parameters_report
         print rules_report
 
-    return rules
+    return rules_per_target
 
 
 def build_graph(kwargs):
