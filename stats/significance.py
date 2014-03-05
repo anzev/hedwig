@@ -27,7 +27,7 @@ def fisher(rule):
     nXnotY = nX - nXY
     nnotXY = nY - nXY
     nnotXnotY = N - nXnotY - nnotXY
-    return pvalue(nXY, nXnotY, nnotXY, nnotXnotY).two_tail
+    return pvalue(nXY, nXnotY, nnotXY, nnotXnotY).right_tail
 
 
 def apply_fisher(ruleset):
