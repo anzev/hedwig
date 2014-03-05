@@ -13,10 +13,16 @@ def is_redundant(rule, new_rule):
 
     Rules with a coeff > 1 are deemed non-redundant.
     '''
-    return fisher(new_rule) > fisher(rule)
+    return _fisher(new_rule).right_tail > _fisher(rule).right_tail
 
 
 def fisher(rule):
+    '''
+    Fisher's p-value for one rule.
+    '''
+    return _fisher(rule).two_tail
+
+def _fisher(rule):
     '''
     Fisher's p-value for one rule.
     '''
@@ -27,8 +33,7 @@ def fisher(rule):
     nXnotY = nX - nXY
     nnotXY = nY - nXY
     nnotXnotY = N - nXnotY - nnotXY
-    return pvalue(nXY, nXnotY, nnotXY, nnotXnotY).right_tail
-
+    return pvalue(nXY, nXnotY, nnotXY, nnotXnotY)
 
 def apply_fisher(ruleset):
     '''
