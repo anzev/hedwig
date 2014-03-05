@@ -242,7 +242,7 @@ class Rule:
         else:
             return self._plain_report(show_uris=show_uris)
 
-    def _plain_report(self, show_uris=False):
+    def _plain_report(self, show_uris=False, human={}):
         '''
         Plain text rule report
         '''
@@ -252,6 +252,7 @@ class Rule:
             label = pred.label
             if '#' in label and not show_uris:
                 label = pred.label.split('#')[-1]
+                label = human.get(label, label)
 
             if isinstance(pred, UnaryPredicate):
                 if pred.negated:
@@ -307,14 +308,15 @@ class Rule:
         return s
 
     def __str__(self):
-        return self.rule_report(show_uris=True)
+        return self.rule_report(show_uris=False)
 
     @staticmethod
-    def ruleset_report(rules, show_uris=False, latex=False):
+    def ruleset_report(rules, show_uris=False, latex=False, human={}):
         if latex:
             return Rule._latex_ruleset_report(rules)
         else:
-            return Rule._plain_ruleset_report(rules, show_uris=show_uris)
+            return Rule._plain_ruleset_report(rules, show_uris=show_uris,
+                                              human=human)
 
     @staticmethod
     def _latex_ruleset_report(rules):
@@ -339,7 +341,7 @@ class Rule:
                      rule.pval)
             _tex_report += r'%d & \texttt{%s} & %d & %d & %.2f & %.2f & %.3f\\' % stats
             _tex_report += '\n'
-        
+
         _tex_report += \
             r'\hline' + '\n' \
             r'\end{tabular}' + '\n'
@@ -347,7 +349,7 @@ class Rule:
         return _tex_report
 
     @staticmethod
-    def _plain_ruleset_report(rules, show_uris=False):
+    def _plain_ruleset_report(rules, show_uris=False, human={}):
         target, var = rules[0].target, rules[0].head_var
         if target:
             head = '\'%s\'(%s) <--\n\t' % (target, var)
@@ -356,15 +358,17 @@ class Rule:
 
         ruleset = []
         for rule in sorted(rules, key=lambda r: r.score, reverse=True):
-            rule = rule._plain_report(show_uris=show_uris)
+            rule = rule._plain_report(show_uris=show_uris, human=human)
             ruleset.append(rule)
 
         return head + '\n\t'.join(ruleset)
 
     @staticmethod
-    def ruleset_examples_json(rules, show_uris=False):
+    def ruleset_examples_json(rules_per_target, show_uris=False):
         examples_output = []
-        for i, rule in enumerate(sorted(rules, key=lambda r: r.score, reverse=True)):
-            examples = rule.examples()
-            examples_output.append((i, [ex.id for ex in examples]))
+        for _, rules in rules_per_target:
+            for i, rule in enumerate(sorted(rules, key=lambda r: r.score,
+                                            reverse=True)):
+                examples = rule.examples()
+                examples_output.append((i, [ex.label for ex in examples]))
         return examples_output
