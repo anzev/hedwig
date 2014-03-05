@@ -3,11 +3,12 @@ Main learner class.
 
 @author: anze.vavpetic@ijs.si
 '''
+from collections import defaultdict
+
 from core import UnaryPredicate, Rule, Example
 from core.settings import logger
 from stats.significance import is_redundant
 from stats.scorefunctions import interesting
-
 
 class Learner:
     '''
@@ -36,6 +37,35 @@ class Learner:
             self.target = list(self.kb.class_values)[0] if not target else target
         else:
             self.target = None
+
+        self.pruned_subclasses = self.calc_pruned_subclasses()
+        self.pruned_superclasses_closure = self.calc_pruned_superclasses()
+
+    def calc_pruned_subclasses(self):
+        n_mems = lambda pred: self.kb.get_members(pred).count()
+        min_sup = lambda pred: n_mems(pred) >= self.min_sup
+        pruned_subclasses = {}
+        for pred in self.kb.predicates:
+            subclasses = self.kb.get_subclasses(pred)
+            pruned_subclasses[pred] = filter(min_sup, subclasses)
+
+        return pruned_subclasses
+
+    def calc_pruned_superclasses(self):
+        n_mems = lambda pred: self.kb.get_members(pred).count()
+        min_sup = lambda pred: n_mems(pred) >= self.min_sup
+        pruned_superclasses = {}
+        for pred in self.kb.predicates:
+            superclasses = self.kb.super_classes(pred)
+            pruned_superclasses[pred] = filter(min_sup, superclasses)
+        
+        return pruned_superclasses
+
+    def get_subclasses(self, pred):
+        return self.pruned_subclasses[pred.label]
+
+    def get_superclasses(self, pred):
+        return self.pruned_superclasses_closure[pred]
 
     def induce_beam(self):
         '''
@@ -139,7 +169,7 @@ class Learner:
         # Swapping unary predicates with subclasses, swap only the predicates
         # with the latest variable
         for pred in filter(is_unary, eligible_preds):
-            for sub_class in self.kb.get_subclasses(pred):
+            for sub_class in self.get_subclasses(pred):
                 new_rule = rule.clone_swap_with_subclass(pred, sub_class)
                 if self.can_specialize(new_rule):
                     specializations.append(new_rule)
@@ -163,7 +193,7 @@ class Learner:
         # the predicates with the latest variable
         for pred in filter(is_unary, eligible_preds):
             logger.debug('Predicate to swap: %s' % pred.label)
-            for sub_class in self.kb.get_subclasses(pred):
+            for sub_class in self.get_subclasses(pred):
                 logger.debug('Swapping with %s' % sub_class)
                 new_rule = rule.clone_swap_with_subclass(pred, sub_class)
                 if self.can_specialize(new_rule):
@@ -185,7 +215,7 @@ class Learner:
             # Calculate the union of superclasses of each predicate
             supers = set()
             for pred in eligible_preds:
-                supers.update(self.kb.super_classes(pred.label))
+                supers.update(self.get_superclasses(pred.label))
                 supers.add(pred)
 
             # Calculate the top-most left-most non-ancestor

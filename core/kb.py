@@ -270,7 +270,10 @@ class ExperimentKB:
         '''
         Returns a list of subclasses (as predicate objects) for 'predicate'.
         '''
-        return self.super_class_of[predicate.label]
+        if isinstance(predicate, UnaryPredicate):
+            return self.super_class_of[predicate.label]
+        else:
+            return self.super_class_of[predicate]
 
     def get_members(self, predicate, bit=True):
         '''
