@@ -233,6 +233,13 @@ class Rule:
         indices = self.kb.bits_to_indices(self.covered_examples)
         return [self.kb.examples[idx] for idx in indices]
 
+    @property
+    def positives(self):
+        return self.distribution[self.target]
+
+    def precision(self):
+        return self.positives / float(self.coverage)
+
     def rule_report(self, show_uris=False, latex=False):
         '''
         Rule as string with some statistics.
@@ -267,10 +274,9 @@ class Rule:
 
         if self.target_type == Example.ClassLabeled:
 
-            accuracy = self.distribution[self.target] / float(self.coverage)
             stats = (self.coverage,
-                     self.distribution[self.target],
-                     accuracy,
+                     self.positives,
+                     self.precision(),
                      self.kb.score_fun.__name__,
                      self.score,
                      self.pval)

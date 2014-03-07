@@ -17,7 +17,7 @@ from core.load import rdf
 from core.settings import logger
 
 
-__version__ = '0.1.3'
+__version__ = '0.1.4'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)

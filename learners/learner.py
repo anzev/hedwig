@@ -284,6 +284,9 @@ class Learner:
         '''
         Is the rule non-redundant compared to its immediate generalization?
         '''
+        if new_rule.score < rule.score:
+            return False
+
         if rule.target_type == Example.Ranked:
             return True
         else:
