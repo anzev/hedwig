@@ -19,4 +19,9 @@
 	RDFS:label "annotated with" ;
 	RDFS:domain :Example ;
 	RDFS:range RDF:Resource .
-    
+
+:GeneralizationPredicate
+    a OWL:Class.
+
+RDFS:subClassOf
+    a :GeneralizationPredicate.
