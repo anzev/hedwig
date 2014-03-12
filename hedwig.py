@@ -97,7 +97,8 @@ def _parameters_report(args, start, time_taken):
     return rep
 
 
-def generate_rules_report(kwargs, rules_per_target, human={}):
+def generate_rules_report(kwargs, rules_per_target,
+                          human=lambda label, rule: label):
     rules_report = ''
     for _, rules in rules_per_target:
         if rules:
@@ -142,7 +143,7 @@ def run(kwargs, cli=False):
     if kwargs['covered']:
         with open(kwargs['covered'], 'w') as f:
             examples = Rule.ruleset_examples_json(rules_per_target)
-            f.write(json.dumps(examples))
+            f.write(json.dumps(examples, indent=2))
 
     parameters_report = _parameters_report(kwargs, start_date, time_taken)
     if kwargs['output']:

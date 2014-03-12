@@ -249,17 +249,23 @@ class Rule:
         else:
             return self._plain_report(show_uris=show_uris)
 
-    def _plain_report(self, show_uris=False, human={}):
+    def _plain_report(self, show_uris=False, human=lambda label, rule: label):
         '''
         Plain text rule report
         '''
+        s = self._plain_conjunctions(show_uris=show_uris, human=human) + ' ' + \
+            self._plain_statistics()
+        return s
+
+    def _plain_conjunctions(self, show_uris=False,
+                            human=lambda label, rule: label):
         conjuncts = []
         for pred in self.predicates:
 
             label = pred.label
             if '#' in label and not show_uris:
                 label = pred.label.split('#')[-1]
-                label = human.get(label, label)
+                label = human(label, self)
 
             if isinstance(pred, UnaryPredicate):
                 if pred.negated:
@@ -272,21 +278,20 @@ class Rule:
             conjuncts.append(conj)
 
         s = ', '.join(conjuncts)
+        return s
 
+    def _plain_statistics(self):
         if self.target_type == Example.ClassLabeled:
-
             stats = (self.coverage,
                      self.positives,
                      self.precision(),
                      self.kb.score_fun.__name__,
                      self.score,
                      self.pval)
-            s += ' [cov=%d, pos=%d, prec=%.3f, %s=%.3f, pval=%.3f]' % stats
+            return '[cov=%d, pos=%d, prec=%.3f, %s=%.3f, pval=%.3f]' % stats
 
         else:
-            s += ' [size=%d, score=%.3f]' % (self.coverage, self.score)
-
-        return s
+            return '[size=%d, score=%.3f]' % (self.coverage, self.score)
 
     def _latex_report(self):
         '''
@@ -317,7 +322,8 @@ class Rule:
         return self.rule_report(show_uris=False)
 
     @staticmethod
-    def ruleset_report(rules, show_uris=False, latex=False, human={}):
+    def ruleset_report(rules, show_uris=False, latex=False,
+                       human=lambda label, rule: label):
         if latex:
             return Rule._latex_ruleset_report(rules)
         else:
@@ -355,7 +361,9 @@ class Rule:
         return _tex_report
 
     @staticmethod
-    def _plain_ruleset_report(rules, show_uris=False, human={}):
+    def _plain_ruleset_report(rules, show_uris=False,
+                              human=lambda label, rule: label):
+
         target, var = rules[0].target, rules[0].head_var
         if target:
             head = '\'%s\'(%s) <--\n\t' % (target, var)
@@ -372,9 +380,12 @@ class Rule:
     @staticmethod
     def ruleset_examples_json(rules_per_target, show_uris=False):
         examples_output = []
-        for _, rules in rules_per_target:
-            for i, rule in enumerate(sorted(rules, key=lambda r: r.score,
+        for target_class, rules in rules_per_target:
+            class_examples = []
+            for _, rule in enumerate(sorted(rules, key=lambda r: r.score,
                                             reverse=True)):
                 examples = rule.examples()
-                examples_output.append((i, [ex.label for ex in examples]))
+                class_examples.append((rule._plain_conjunctions(),
+                                       [ex.label for ex in examples]))
+            examples_output.append((target_class, class_examples))
         return examples_output
