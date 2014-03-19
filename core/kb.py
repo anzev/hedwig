@@ -123,6 +123,14 @@ class ExperimentKB:
                 if self.user_defined(sub) and self.user_defined(obj):
                     self.add_sub_class(sub, obj)
 
+        for predicate in g.subjects(predicate=RDF.type,
+                                    object=HEDWIG.SpecializationPredicate):
+            for sub, obj in g.subject_objects(predicate=predicate):
+                if self.user_defined(sub) and self.user_defined(obj):
+                    # The subclass relation is reversed for predicates
+                    # that specialize
+                    self.add_sub_class(obj, sub)
+
         # Include the instances as predicates as well
         if self.instances_as_leaves:
             for sub, obj in g.subject_objects(predicate=RDF.type):

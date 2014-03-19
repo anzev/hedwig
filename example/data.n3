@@ -8,6 +8,9 @@
 ns1:containedIn a 
     ns2:GeneralizationPredicate.
 
+ns1:issues a 
+    ns2:SpecializationPredicate.
+
 <http://project-first.eu/document#100117> a ns2:Example ;
     ns2:annotated_with [ ns2:annotation ns1:cou_IE ],
         [ ns2:annotation ns1:city_Luxembourg ],
