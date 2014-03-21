@@ -13,11 +13,11 @@ import json
 from core import ExperimentKB, Rule
 from learners import Learner
 from stats import scorefunctions, adjustment, significance, Validate
-from core.load import rdf
+from core.load import load_graph
 from core.settings import logger
 
 
-__version__ = '0.2.0'
+__version__ = '0.2.0b'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)
@@ -166,9 +166,8 @@ def build_graph(kwargs):
     for root, sub_folders, files in os.walk(kwargs['bk_dir']):
         ontology_list.extend(map(lambda f: os.path.join(root, f), files))
 
-    logger.info('Building a graph from ontologies and data')
     try:
-        graph = rdf(ontology_list + [data])
+        graph = load_graph(ontology_list + [data])
     except Exception, e:
         print e
         exit(1)
