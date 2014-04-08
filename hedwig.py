@@ -11,7 +11,7 @@ import logging
 import json
 
 from core import ExperimentKB, Rule
-from learners import Learner
+from learners import HeuristicLearner, OptimalLearner
 from stats import scorefunctions, adjustment, significance, Validate
 from core.load import load_graph
 from core.settings import logger
@@ -65,6 +65,10 @@ parser.add_argument('-q', '--FDR', default='0.05', type=float,
 
 parser.add_argument('-l', '--leaves', action='store_true',
                     help='Use instance names in rule conjunctions.')
+
+parser.add_argument('-L', '--learner', choices=['heuristic', 'optimal'],
+                    default='heuristic',
+                    help='Type of learner to use.')
 
 parser.add_argument('-u', '--uris', action='store_true',
                     help='Show URIs in rule conjunctions.')
@@ -189,7 +193,12 @@ def run_learner(kwargs, kb, validator):
             logger.info('Starting learner for target \'%s\'' % target)
         else:
             logger.info('Ranks detected - starting learner.')
-        learner = Learner(kb,
+
+        learner_cls = {
+            'heuristic': HeuristicLearner,
+            'optimal': OptimalLearner
+        } [kwargs['learner']]
+        learner = learner_cls(kb,
                           n=kwargs['beam'],
                           min_sup=int(kwargs['support']*kb.n_examples()),
                           target=target,
@@ -197,6 +206,7 @@ def run_learner(kwargs, kb, validator):
                           sim=0.9,
                           use_negations=kwargs['negations'])
         rules = learner.induce()
+        #print map(str, rules)
 
         if kb.is_discrete_target():
             if kwargs['adjust'] == 'fdr':
