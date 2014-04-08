@@ -217,8 +217,12 @@ class Rule:
         '''
         Calculates the similarity between this rule and 'rule'.
         '''
-        intersection = self.covered_examples & rule.covered_examples
-        return intersection.count()/float(max(self.coverage, rule.coverage))
+        intersection = (self.covered_examples & rule.covered_examples).count()
+        union = (self.covered_examples | rule.covered_examples).count()
+        if union == 0:
+            return 1
+        else:
+            return intersection/float(union)
 
     def size(self):
         '''

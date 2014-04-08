@@ -10,6 +10,7 @@ from core.settings import logger
 from stats.significance import is_redundant
 from stats.scorefunctions import interesting
 
+
 class Learner:
     '''
     Learner class, supporting various types of induction
@@ -29,7 +30,7 @@ class Learner:
         self.n = n          # Beam length
         self.min_sup = min_sup
         self.sim = sim
-        self.extending = Learner.Similarity
+        self.extending = Learner.Improvement
         self.depth = depth  # Max number of conjunctions
         self.use_negations = use_negations
 
@@ -57,7 +58,7 @@ class Learner:
         for pred in self.kb.predicates:
             superclasses = self.kb.super_classes(pred)
             pruned_superclasses[pred] = filter(min_sup, superclasses)
-        
+
         return pruned_superclasses
 
     def _implicit_roots(self):
@@ -77,26 +78,6 @@ class Learner:
 
     def is_implicit_root(self, pred):
         return pred in self.implicit_roots
-
-    def induce_beam(self):
-        '''
-        Induces rules for the given knowledge base using beam search.
-        '''
-        root_pred = self.kb.get_root()
-        rules = [Rule(self.kb, predicates=[root_pred], target=self.target)]
-        while True:
-            old_score = self.group_score(rules)
-            new_rules = rules[:]
-            for rule in rules:
-                self.extend(new_rules, self.specialize_naive(rule))
-
-            # Take the first N rules
-            rules = sorted(new_rules,
-                           key=lambda rule: rule.score, reverse=True)[:self.n]
-            new_score = self.group_score(rules)
-            if 1 - abs(old_score/new_score) < 0.001:
-                break
-        return rules
 
     def induce(self):
         '''
@@ -161,35 +142,26 @@ class Learner:
         '''
         Extends the list by replacing the worst rules.
         '''
+        def is_similar(new_rule):
+            for rule in rules[:]:
+                if rule.similarity(new_rule) == 1:
+                    return True
+            return False
+
         improved = False
         for new_rule in sorted(specializations, key=lambda rule: rule.score):
-            worst = min(rules, key=lambda rule: rule.score)
-            if new_rule.score > worst:
-                Rule.__replace(rules, worst, new_rule)
+            worst = sorted(rules, key=lambda rule: rule.score)[0]
+            if len(rules) < self.n:
+                rules.append(new_rule)
+                improved = True
+            elif new_rule.score > worst.score and not is_similar(new_rule):
+                self._replace(rules, worst, new_rule)
                 improved = True
         return improved
 
-    def specialize_naive(self, rule):
-        '''
-        Returns a list of all specializations of 'rule'.
-        '''
-        specializations = []
-        eligible_preds = rule.shared_var[rule.latest_var]
-        is_unary = lambda p: isinstance(p, UnaryPredicate)
-
-        # Swapping unary predicates with subclasses, swap only the predicates
-        # with the latest variable
-        for pred in filter(is_unary, eligible_preds):
-            for sub_class in self.get_subclasses(pred):
-                new_rule = rule.clone_swap_with_subclass(pred, sub_class)
-                if self.can_specialize(new_rule):
-                    specializations.append(new_rule)
-
-        # Append new root
-        new_rule = rule.clone_append(self.kb.dummy_root,
-                                     producer_pred=rule.predicates[-1])
-        specializations.append(new_rule)
-        return specializations
+    def _replace(self, rules, worst, new_rule):
+        idx = rules.index(worst)
+        rules[idx] = new_rule
 
     def specialize(self, rule):
         '''
