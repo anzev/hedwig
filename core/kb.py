@@ -31,6 +31,7 @@ class ExperimentKB:
         self.predicates = set()
         self.binary_predicates = set()
         self.class_values = set()
+        self.annotation_name = defaultdict(list)
 
         self.examples = self._build_examples(triplets)
 
@@ -42,6 +43,7 @@ class ExperimentKB:
         self._find_roots()
         self._calc_members_closure()
         self._calc_binary_members()
+        self._propagate_annotation_names(triplets)
 
         # Statistics
         if self.target_type == Example.Ranked:
@@ -260,6 +262,22 @@ class ExperimentKB:
                 indices = self.indices_to_bits(reverse_members)
                 self.reverse_bit_binary_members[pred][el] = indices
 
+    def _propagate_annotation_names(self, g):
+        to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
+
+        # Query for annotation names
+        for sub, obj in g.subject_objects(predicate=HEDWIG.annotation_name):
+            sub, obj = to_uni(sub), to_uni(obj)
+            self.annotation_name[sub].append(obj)
+            logger.debug('Annotation name root: %s, %s' % (sub, obj))
+
+        # Propagate the annotation names to children
+        annotation_name_roots = self.annotation_name.keys()
+        for pred in self.predicates:
+            for annotation_root in annotation_name_roots:
+                if annotation_root in self.super_classes(pred):
+                    name = self.annotation_name[annotation_root]
+                    self.annotation_name[pred] = name
 
     def user_defined(self, uri):
         '''

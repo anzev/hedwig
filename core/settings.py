@@ -23,3 +23,4 @@ EXAMPLE_SCHEMA = os.path.join(ASSETS_DIR, 'builtin.n3')
 # Built-in namespaces
 W3C = Namespace('http://www.w3.org/')
 HEDWIG = Namespace('http://kt.ijs.si/hedwig#')
+DEFAULT_ANNOTATION_NAME = 'annotated_with'

@@ -17,7 +17,7 @@ from core.load import load_graph
 from core.settings import logger
 
 
-__version__ = '0.2.0b'
+__version__ = '0.2.1'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)

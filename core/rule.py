@@ -8,6 +8,7 @@ from collections import defaultdict
 from predicate import UnaryPredicate, BinaryPredicate
 from example import Example
 from helpers import avg, std
+from settings import DEFAULT_ANNOTATION_NAME
 
 
 class Rule:
@@ -272,9 +273,13 @@ class Rule:
                 label = human(label, self)
 
             if isinstance(pred, UnaryPredicate):
+                anno_names = self.kb.annotation_name.get(pred.label, [DEFAULT_ANNOTATION_NAME])
+                predicate_label = '_and_'.join(anno_names)
+                
                 if pred.negated:
-                    label = '~' + label
-                conj = '%s(%s)' % (label, pred.input_var)
+                    predicate_label = '~' + predicate_label
+                
+                conj = '%s(%s, %s)' % (predicate_label, pred.input_var, label)
             else:
                 conj = '%s(%s, %s)' % (label,
                                        pred.input_var,
