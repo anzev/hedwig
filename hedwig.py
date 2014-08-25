@@ -17,7 +17,7 @@ from core.load import load_graph
 from core.settings import logger
 
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)
@@ -69,6 +69,10 @@ parser.add_argument('-l', '--leaves', action='store_true',
 parser.add_argument('-L', '--learner', choices=['heuristic', 'optimal'],
                     default='heuristic',
                     help='Type of learner to use.')
+
+parser.add_argument('-O', '--optimalsubclass', action='store_true',
+                    help='In each step the full hierarchy under a particular \
+                          concept is searched')
 
 parser.add_argument('-u', '--uris', action='store_true',
                     help='Show URIs in rule conjunctions.')
@@ -204,9 +208,9 @@ def run_learner(kwargs, kb, validator):
                           target=target,
                           depth=kwargs['depth'],
                           sim=0.9,
-                          use_negations=kwargs['negations'])
+                          use_negations=kwargs['negations'],
+                          optimal_subclass=kwargs['optimalsubclass'])
         rules = learner.induce()
-        #print map(str, rules)
 
         if kb.is_discrete_target():
             if kwargs['adjust'] == 'fdr':

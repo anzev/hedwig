@@ -25,7 +25,7 @@ class Learner:
     Default = 'default'
 
     def __init__(self, kb, n=None, min_sup=1, sim=1, depth=4, target=None,
-                 use_negations=False):
+                 use_negations=False, optimal_subclass=False):
         self.kb = kb
         self.n = n          # Beam length
         self.min_sup = min_sup
@@ -33,6 +33,7 @@ class Learner:
         self.extending = Learner.Improvement
         self.depth = depth  # Max number of conjunctions
         self.use_negations = use_negations
+        self.optimal_subclass = optimal_subclass
 
         if kb.is_discrete_target():
             self.target = list(self.kb.class_values)[0] if not target else target
@@ -167,20 +168,36 @@ class Learner:
         '''
         Returns a list of all specializations of 'rule'.
         '''
+        is_unary = lambda p: isinstance(p, UnaryPredicate)
+
+        def specialize_optimal_subclass(rule):
+            rules = []
+            eligible_preds = rule.shared_var[rule.latest_var]
+            for pred in filter(is_unary, eligible_preds):
+                for sub_class in self.get_subclasses(pred):
+                    logger.debug('Swapping with %s' % sub_class)
+                    new_rule = rule.clone_swap_with_subclass(pred, sub_class)
+                    if self.can_specialize(new_rule):
+                        rules.append(new_rule)
+                        rules.extend(specialize_optimal_subclass(new_rule))
+            return rules
+
         logger.debug('Specializing rule: %s' % rule)
         specializations = []
         eligible_preds = rule.shared_var[rule.latest_var]
-        is_unary = lambda p: isinstance(p, UnaryPredicate)
 
         # Swapping unary predicates with subclasses, swap only
         # the predicates with the latest variable
-        for pred in filter(is_unary, eligible_preds):
-            logger.debug('Predicate to swap: %s' % pred.label)
-            for sub_class in self.get_subclasses(pred):
-                logger.debug('Swapping with %s' % sub_class)
-                new_rule = rule.clone_swap_with_subclass(pred, sub_class)
-                if self.can_specialize(new_rule):
-                    specializations.append(new_rule)
+        if not self.optimal_subclass:
+            for pred in filter(is_unary, eligible_preds):
+                logger.debug('Predicate to swap: %s' % pred.label)
+                for sub_class in self.get_subclasses(pred):
+                    logger.debug('Swapping with %s' % sub_class)
+                    new_rule = rule.clone_swap_with_subclass(pred, sub_class)
+                    if self.can_specialize(new_rule):
+                        specializations.append(new_rule)
+        else:
+            specializations.extend(specialize_optimal_subclass(rule))
 
         if self.use_negations:
             # Negate the last predicate
