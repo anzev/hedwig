@@ -1,3 +1,0 @@
-#!/bin/sh
-
-python ../hedwig.py ontology/ data.n3 -l -o rules

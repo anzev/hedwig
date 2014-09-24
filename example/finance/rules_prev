@@ -1,0 +1,50 @@
+----------------------------------------
+Hedwig semantic pattern mining (anze.vavpetic@ijs.si)
+Version: 0.2.0b
+Start: 2014-08-22T11:56:29.021781
+Time taken: 20.27 seconds
+Parameters:
+	adjust=fwer
+	FDR=0.05
+	target=None
+	leaves=True
+	support=0.1
+	learner=heuristic
+	depth=5
+	verbose=False
+	beam=20
+	alpha=0.05
+	bk_dir=ontology/
+	mode=subgroups
+	covered=None
+	output=rules
+	score=lift
+	data=data.n3
+	uris=False
+	negations=False
+----------------------------------------
+'A'(X) <--
+	cou_NL(X), City(X) [cov=27, pos=25, prec=0.926, lift=1.268, pval=0.000]
+	cou_NL(X), Capital(X) [cov=26, pos=24, prec=0.923, lift=1.264, pval=0.000]
+	cou_NL(X) [cov=29, pos=26, prec=0.897, lift=1.228, pval=0.000]
+'B'(X) <--
+	reg_Eastern_Asia(X), Pos_Financial_Sentiment(X), Organization(X) [cov=13, pos=11, prec=0.846, lift=3.134, pval=0.000]
+	reg_Eastern_Asia(X), glo_StandardPoor(X) [cov=12, pos=10, prec=0.833, lift=3.086, pval=0.000]
+	reg_Eastern_Asia(X), Pos_Financial_Sentiment(X), Angela_Merkel(X) [cov=12, pos=10, prec=0.833, lift=3.086, pval=0.000]
+	reg_Eastern_Asia(X), glo_confidence(X), Organization(X) [cov=12, pos=10, prec=0.833, lift=3.086, pval=0.000]
+	cou_JP(X), Angela_Merkel(X) [cov=11, pos=9, prec=0.818, lift=3.030, pval=0.000]
+	cou_JP(X), glo_StandardPoor(X) [cov=11, pos=9, prec=0.818, lift=3.030, pval=0.000]
+	reg_Eastern_Asia(X), glo_confidence(X), Angela_Merkel(X) [cov=11, pos=9, prec=0.818, lift=3.030, pval=0.000]
+	org_IMF(X), Financial_Failure_Term(X) [cov=10, pos=8, prec=0.800, lift=2.963, pval=0.000]
+	Nicolas_Sarkozy(X), Financial_Crisis_Term(X) [cov=10, pos=8, prec=0.800, lift=2.963, pval=0.000]
+	org_EU(X), Rating_Agency(X), Nicolas_Sarkozy(X) [cov=14, pos=11, prec=0.786, lift=2.910, pval=0.000]
+	org_EU(X), glo_StandardPoor(X), Company(X) [cov=14, pos=11, prec=0.786, lift=2.910, pval=0.000]
+	reg_Eastern_Asia(X), Angela_Merkel(X) [cov=16, pos=12, prec=0.750, lift=2.778, pval=0.000]
+	org_EU(X), Rating_Agency(X), Company(X) [cov=16, pos=12, prec=0.750, lift=2.778, pval=0.000]
+	Other(X), Angela_Merkel(X) [cov=11, pos=8, prec=0.727, lift=2.694, pval=0.001]
+	org_EU(X), glo_StandardPoor(X) [cov=18, pos=13, prec=0.722, lift=2.675, pval=0.000]
+	reg_Eastern_Asia(X), Pos_Financial_Sentiment(X) [cov=17, pos=12, prec=0.706, lift=2.614, pval=0.000]
+	Index(X), Pos_Financial_Sentiment(X), Angela_Merkel(X) [cov=10, pos=7, prec=0.700, lift=2.593, pval=0.002]
+	Industry(X), Angela_Merkel(X) [cov=10, pos=7, prec=0.700, lift=2.593, pval=0.002]
+	org_IMF(X), glo_StandardPoor(X) [cov=10, pos=7, prec=0.700, lift=2.593, pval=0.002]
+	cou_CN(X), Angela_Merkel(X) [cov=10, pos=7, prec=0.700, lift=2.593, pval=0.002]

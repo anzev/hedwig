@@ -1,0 +1,19 @@
+@prefix ns1: <http://kt.ijs.si/hedwig#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/domain-knowledge#> .
+
+:EvenVariable a owl:Class .
+:OddVariable a owl:Class .
+
+:x1 a :OddVariable .
+:x3 a :OddVariable .
+:x5 a :OddVariable .
+:x7 a :OddVariable .
+
+:x2 a :EvenVariable .
+:x4 a :EvenVariable .
+:x6 a :EvenVariable .
+:x8 a :EvenVariable .
+

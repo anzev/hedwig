@@ -1,0 +1,51 @@
+----------------------------------------
+Hedwig semantic pattern mining (anze.vavpetic@ijs.si)
+Version: 0.2.1
+Start: 2014-08-25T11:20:45.157505
+Time taken: 23.78 seconds
+Parameters:
+	adjust=fwer
+	FDR=0.05
+	target=None
+	leaves=True
+	support=0.1
+	learner=heuristic
+	depth=5
+	verbose=False
+	beam=20
+	alpha=0.05
+	bk_dir=ontology/
+	mode=subgroups
+	covered=None
+	output=rules
+	score=wracc
+	data=data.n3
+	uris=False
+	negations=False
+----------------------------------------
+'A'(X) <--
+	geo_region(X, cou_NL), geo_region(X, City) [cov=27, pos=25, prec=0.926, wracc=0.053, pval=0.000]
+	geo_region(X, cou_NL), geo_region(X, Capital) [cov=26, pos=24, prec=0.923, wracc=0.050, pval=0.000]
+	geo_region(X, cou_NL) [cov=29, pos=26, prec=0.897, wracc=0.048, pval=0.000]
+	annotated_with(X, Other) [cov=42, pos=33, prec=0.786, wracc=0.023, pval=0.000]
+'B'(X) <--
+	geo_region(X, cou_GR), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy), annotated_with(X, Organization) [cov=33, pos=19, prec=0.576, wracc=0.101, pval=0.000]
+	annotated_with(X, Organization), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy), geo_region(X, reg_Eastern_Asia) [cov=20, pos=15, prec=0.750, wracc=0.096, pval=0.000]
+	geo_region(X, cou_GR), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy), annotated_with(X, org_EU) [cov=32, pos=18, prec=0.562, wracc=0.094, pval=0.000]
+	annotated_with(X, Organization), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy) [cov=36, pos=19, prec=0.528, wracc=0.093, pval=0.000]
+	annotated_with(X, Nicolas_Sarkozy) [cov=25, pos=16, prec=0.640, wracc=0.092, pval=0.000]
+	geo_region(X, cou_GR), annotated_with(X, glo_StandardPoor), annotated_with(X, Organization) [cov=18, pos=14, prec=0.778, wracc=0.091, pval=0.000]
+	annotated_with(X, org_EU), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy) [cov=33, pos=18, prec=0.545, wracc=0.091, pval=0.000]
+	annotated_with(X, org_EU), annotated_with(X, Protagonist) [cov=30, pos=17, prec=0.567, wracc=0.089, pval=0.000]
+	annotated_with(X, org_EU), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy), geo_region(X, reg_Eastern_Asia) [cov=19, pos=14, prec=0.737, wracc=0.089, pval=0.000]
+	annotated_with(X, Organization), geo_region(X, cou_FR) [cov=38, pos=19, prec=0.500, wracc=0.087, pval=0.000]
+	geo_region(X, cou_GR), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy) [cov=38, pos=19, prec=0.500, wracc=0.087, pval=0.000]
+	annotated_with(X, Organization), annotated_with(X, Protagonist) [cov=31, pos=17, prec=0.548, wracc=0.086, pval=0.000]
+	annotated_with(X, org_EU), geo_region(X, cou_FR) [cov=35, pos=18, prec=0.514, wracc=0.085, pval=0.000]
+	geo_region(X, reg_Eastern_Asia), geo_region(X, City), geo_region(X, cou_FR), annotated_with(X, Fiscal_Policy) [cov=24, pos=15, prec=0.625, wracc=0.085, pval=0.000]
+	geo_region(X, cou_GR), annotated_with(X, glo_StandardPoor), annotated_with(X, org_EU) [cov=17, pos=13, prec=0.765, wracc=0.084, pval=0.000]
+	geo_region(X, cou_GR), annotated_with(X, glo_StandardPoor) [cov=21, pos=14, prec=0.667, wracc=0.083, pval=0.000]
+	annotated_with(X, Organization), annotated_with(X, glo_StandardPoor) [cov=21, pos=14, prec=0.667, wracc=0.083, pval=0.000]
+	geo_region(X, reg_Eastern_Asia), geo_region(X, Capital) [cov=36, pos=18, prec=0.500, wracc=0.083, pval=0.000]
+	geo_region(X, reg_Eastern_Asia), geo_region(X, City), geo_region(X, cou_FR) [cov=25, pos=15, prec=0.600, wracc=0.082, pval=0.000]
+	geo_region(X, cou_GR), geo_region(X, cou_FR) [cov=40, pos=19, prec=0.475, wracc=0.082, pval=0.000]

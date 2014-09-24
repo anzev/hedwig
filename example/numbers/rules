@@ -1,0 +1,47 @@
+----------------------------------------
+Hedwig semantic pattern mining (anze.vavpetic@ijs.si)
+Version: 0.2.2
+Start: 2014-09-24T14:22:56.565865
+Time taken: 0.07 seconds
+Parameters:
+	adjust=none
+	FDR=0.05
+	target=None
+	leaves=True
+	support=0.0
+	learner=heuristic
+	depth=5
+	optimalsubclass=False
+	beam=20
+	alpha=0.05
+	bk_dir=ontology/
+	verbose=False
+	mode=subgroups
+	covered=None
+	output=rules
+	score=lift
+	data=data.n3
+	uris=False
+	negations=False
+----------------------------------------
+'+'(X) <--
+	annotated_with(X, OddVariable) [cov=3, pos=3, prec=1.000, lift=2.000, pval=0.012]
+	annotated_with(X, x3) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x1) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x5) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, OddVariable), annotated_with(X, EvenVariable) [cov=3, pos=3, prec=1.000, lift=2.000, pval=0.012]
+	annotated_with(X, OddVariable) [cov=3, pos=3, prec=1.000, lift=2.000, pval=0.012]
+	annotated_with(X, x3) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x1) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x5) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, OddVariable), annotated_with(X, EvenVariable) [cov=3, pos=3, prec=1.000, lift=2.000, pval=0.012]
+	annotated_with(X, x3), annotated_with(X, EvenVariable) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+'-'(X) <--
+	annotated_with(X, x8) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x8), annotated_with(X, EvenVariable) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x8), annotated_with(X, x6) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x6), annotated_with(X, x4) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x6), annotated_with(X, x2) [cov=1, pos=1, prec=1.000, lift=2.000, pval=0.429]
+	annotated_with(X, x6) [cov=4, pos=3, prec=0.750, lift=1.500, pval=0.048]
+	annotated_with(X, x6), annotated_with(X, EvenVariable) [cov=4, pos=3, prec=0.750, lift=1.500, pval=0.048]
+	annotated_with(X, x6), annotated_with(X, x6) [cov=4, pos=3, prec=0.750, lift=1.500, pval=0.048]
