@@ -17,7 +17,7 @@ from core.load import load_graph
 from core.settings import logger
 
 
-__version__ = '0.2.2'
+__version__ = '0.2.3'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)
@@ -215,7 +215,7 @@ def run_learner(kwargs, kb, validator):
         if kb.is_discrete_target():
             if kwargs['adjust'] == 'fdr':
                 logger.info('Validating rules, FDR = %.3f' % kwargs['FDR'])
-            else:
+            elif kwargs['adjust'] == 'fwer':
                 logger.info('Validating rules, alpha = %.3f' % kwargs['alpha'])
             rules = validator.test(rules, alpha=kwargs['alpha'], q=kwargs['FDR'])
 

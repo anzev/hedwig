@@ -39,3 +39,6 @@ def fdr(ruleset, q=0.05):
             break
 
     return ruleset
+
+def none(ruleset):
+    return ruleset

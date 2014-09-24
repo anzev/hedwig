@@ -19,7 +19,7 @@ class OptimalLearner(Learner):
     Finds the optimal top-k rules.
     '''
     def __init__(self, kb, n=None, min_sup=1, sim=1, depth=4, target=None,
-                 use_negations=False):
+                 use_negations=False, optimal_subclass=True):
         Learner.__init__(self, kb, n=n, min_sup=min_sup, sim=sim, depth=depth,
                          target=target, use_negations=use_negations)
 

@@ -243,7 +243,10 @@ class Rule:
         return self.distribution[self.target]
 
     def precision(self):
-        return self.positives / float(self.coverage)
+        if self.coverage:
+            return self.positives / float(self.coverage)
+        else:
+            return 0
 
     def rule_report(self, show_uris=False, latex=False):
         '''
