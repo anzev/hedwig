@@ -3,7 +3,7 @@ Significance testing methods.
 
 @author: anze.vavpetic@ijs.si
 '''
-from fisher import pvalue
+import scipy.stats as st
 
 
 def is_redundant(rule, new_rule):
@@ -13,18 +13,21 @@ def is_redundant(rule, new_rule):
 
     Rules with a coeff > 1 are deemed non-redundant.
     '''
-    return _fisher(new_rule).right_tail > _fisher(rule).right_tail
+    return _fisher(new_rule, 'greater') > _fisher(rule, 'greater')
 
 
 def fisher(rule):
     '''
     Fisher's p-value for one rule.
     '''
-    return _fisher(rule).two_tail
+    return _fisher(rule, 'two-sided')
 
-def _fisher(rule):
+def _fisher(rule, alternative):
     '''
     Fisher's p-value for one rule.
+	fisher.two_tail   ==> alternative = 'two-sided'
+	fisher.left_tail  ==> alternative = 'less'
+	fisher.right_tail ==> alternative = 'greater'
     '''
     N = float(len(rule.kb.examples))
     nX = float(rule.coverage)
@@ -33,7 +36,7 @@ def _fisher(rule):
     nXnotY = nX - nXY
     nnotXY = nY - nXY
     nnotXnotY = N - nXnotY - nnotXY
-    return pvalue(nXY, nXnotY, nnotXY, nnotXnotY)
+    return st.fisher_exact([[nXY, nXnotY], [nnotXY, nnotXnotY]], alternative=alternative)[1]
 
 def apply_fisher(ruleset):
     '''
