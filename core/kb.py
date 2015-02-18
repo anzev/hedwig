@@ -9,7 +9,7 @@ from rdflib import RDF, RDFS, URIRef
 
 from example import Example
 from predicate import UnaryPredicate
-from helpers import avg, std
+from helpers import avg, std, user_defined
 from settings import EXAMPLE_SCHEMA, logger, W3C, HEDWIG
 
 
@@ -122,13 +122,13 @@ class ExperimentKB:
         for predicate in g.subjects(predicate=RDF.type,
                                     object=HEDWIG.GeneralizationPredicate):
             for sub, obj in g.subject_objects(predicate=predicate):
-                if self.user_defined(sub) and self.user_defined(obj):
+                if user_defined(sub) and user_defined(obj):
                     self.add_sub_class(sub, obj)
 
         for predicate in g.subjects(predicate=RDF.type,
                                     object=HEDWIG.SpecializationPredicate):
             for sub, obj in g.subject_objects(predicate=predicate):
-                if self.user_defined(sub) and self.user_defined(obj):
+                if user_defined(sub) and user_defined(obj):
                     # The subclass relation is reversed for predicates
                     # that specialize
                     self.add_sub_class(obj, sub)
@@ -136,7 +136,7 @@ class ExperimentKB:
         # Include the instances as predicates as well
         if self.instances_as_leaves:
             for sub, obj in g.subject_objects(predicate=RDF.type):
-                if self.user_defined(sub) and self.user_defined(obj):
+                if user_defined(sub) and user_defined(obj):
                     self.add_sub_class(sub, obj)
 
         # Find the user-defined object predicates defined between examples
@@ -147,7 +147,7 @@ class ExperimentKB:
                                                 predicate=RDFS.range))
 
         for pred in examples_as_domain.intersection(examples_as_range):
-            if self.user_defined(pred):
+            if user_defined(pred):
                 self.binary_predicates.add(str(pred))
 
 
@@ -278,12 +278,6 @@ class ExperimentKB:
                 if annotation_root in self.super_classes(pred):
                     name = self.annotation_name[annotation_root]
                     self.annotation_name[pred] = name
-
-    def user_defined(self, uri):
-        '''
-        Is this resource user defined?
-        '''
-        return not uri.startswith(W3C) and not uri.startswith(HEDWIG)
 
     def add_sub_class(self, sub, obj):
         '''

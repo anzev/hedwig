@@ -38,9 +38,9 @@ def rdf(paths, def_format='n3'):
                 g.parse(path, format=def_format)
             except Exception, e:
                 errorMsg = errorMsg + 'Error parsing file: ' + path +'.\n' + str(e) + '\n\n'
-                errorCount +=1
-    if errorCount >0:
-        raise Exception(str(errorCount) + " errors loading files:\n"+errorMsg)
+                errorCount += 1
+    if errorCount > 0:
+        raise Exception(str(errorCount) + " errors loading files:\n" + errorMsg)
     return g
 
 
