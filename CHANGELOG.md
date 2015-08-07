@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+2015/08/07 VERSION 0.2.5
+========================
+
+* Added support for simple (CSV) inputs.
 
 2015/02/18 VERSION 0.2.4
 ========================

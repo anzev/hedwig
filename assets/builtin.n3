@@ -25,3 +25,6 @@
 
 RDFS:subClassOf
     a :GeneralizationPredicate.
+
+:partOf
+    a :GeneralizationPredicate.

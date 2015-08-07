@@ -95,13 +95,19 @@ class ExperimentKB:
 
             # Scores
             score_list = list(g.objects(subject=ex_uri,
-                                             predicate=HEDWIG.score))
+                                        predicate=HEDWIG.score))
             if score_list:
                 score = float(score_list[0])
             else:
                 # Classes
                 score_list = list(g.objects(subject=ex_uri,
-                                                 predicate=HEDWIG.class_label))
+                                            predicate=HEDWIG.class_label))
+
+                # If no scores or labels found at this stage
+                if not score_list:
+                    raise Exception("No example labels or scores found! Examples should be " +
+                                    "instances of %s, with %s or %s provided." % (HEDWIG.Example, HEDWIG.score, HEDWIG.class_label))
+
                 score = str(score_list[0])
                 self.class_values.add(score)
 
@@ -113,7 +119,7 @@ class ExperimentKB:
 
         if not examples:
             raise Exception("No examples provided! Examples should be " +
-                            "instances of %s." % HEDWIG)
+                            "instances of %s." % HEDWIG.Example)
         return examples
 
 

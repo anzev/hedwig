@@ -24,3 +24,6 @@ EXAMPLE_SCHEMA = os.path.join(ASSETS_DIR, 'builtin.n3')
 W3C = Namespace('http://www.w3.org/')
 HEDWIG = Namespace('http://kt.ijs.si/hedwig#')
 DEFAULT_ANNOTATION_NAME = 'annotated_with'
+GENERIC_NAMESPACE = Namespace('http://kt.ijs.si/ontology/generic#')
+
+INPUT_FORMATS = ['n3', 'xml', 'ntriples', 'trix', 'csv']

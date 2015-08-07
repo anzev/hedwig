@@ -14,10 +14,10 @@ from core import ExperimentKB, Rule
 from learners import HeuristicLearner, OptimalLearner
 from stats import scorefunctions, adjustment, significance, Validate
 from core.load import load_graph
-from core.settings import logger
+from core.settings import logger, INPUT_FORMATS
 
 
-__version__ = '0.2.4'
+__version__ = '0.2.5'
 
 description = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 parser = argparse.ArgumentParser(description=description)
@@ -31,6 +31,9 @@ parser.add_argument('bk_dir', metavar='BKDIR',
 parser.add_argument('data', metavar='DATASET',
                     help='File containing the learning examples. \
                           Can be in RDF or JSON.')
+
+parser.add_argument('-f', '--format', choices=INPUT_FORMATS,
+                    help="Input file format.", default=INPUT_FORMATS[0])
 
 parser.add_argument('-o', '--output', help='Output file. If none is specified, \
                                             the results are written to stdout.')
@@ -175,7 +178,7 @@ def build_graph(kwargs):
         ontology_list.extend(map(lambda f: os.path.join(root, f), files))
 
     try:
-        graph = load_graph(ontology_list + [data])
+        graph = load_graph(ontology_list, data, def_format=kwargs['format'])
     except Exception, e:
         print e
         exit(1)
