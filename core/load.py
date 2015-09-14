@@ -50,16 +50,16 @@ def csv_parse_hierarchy(g, path):
     '''
     Assumes a hierarchy file of the following format:
 
-    class_1<tab>superclass_1_1, superclass_1_2, ..., superclass_1_n
-    class_2<tab>superclass_2_1, superclass_2_2, ..., superclass_2_n
+    class_1<tab>superclass_1_1; superclass_1_2; ...; superclass_1_n
+    class_2<tab>superclass_2_1; superclass_2_2; ...; superclass_2_n
     ...
-    class_m<tab>superclass_m_1, superclass_m_2, ..., superclass_m_n
+    class_m<tab>superclass_m_1; superclass_m_2; ...; superclass_m_n
     '''
     with open(path) as f:
         lines = f.read().splitlines()
         for line in lines:
             class_ = line.split('\t')[0]
-            superclasses = line.split('\t')[1].split(',')
+            superclasses = line.split('\t')[1].split(';')
             for superclass in superclasses:
                 class_uri = build_uri(class_)
                 superclass_uri = build_uri(superclass)
@@ -70,10 +70,12 @@ def csv_parse_data(g, data_file):
     '''
     Assumes the following csv format:
 
-    example_uri_or_label, attr_uri_1, attr_uri_2, ..., attr_uri_n
-    http://example.org/uri_1, 0/1, 0/1, 0/1, 0/1, ...
-    http://example.org/uri_2, 0/1, 0/1, 0/1, 0/1, ...
+    example_uri_or_label; attr_uri_1; attr_uri_2; ...; attr_uri_n
+    http://example.org/uri_1; 0/1; 0/1; 0/1; 0/1; ...
+    http://example.org/uri_2; 0/1; 0/1; 0/1; 0/1; ...
     ...
+
+    Alternatively attribute values can be URIs themselves.
     '''
     attributes = []
     class_labels = []
@@ -81,11 +83,17 @@ def csv_parse_data(g, data_file):
 
     with open(data_file) as f:
         data_lines = f.readlines()
-        domain = [a.strip() for a in data_lines[0].split(',')]
+        domain = [a.strip() for a in data_lines[0].split(';')]
         attributes = domain[:-1]
 
+        logger.debug('Attributes: %s' % str(attributes))
+        logger.debug('# Examples: %d' % (len(data_lines) - 1))
+
         for ex_i, example_line in enumerate(data_lines[1:]):
-            values = [v.strip() for v in example_line.split(',')]
+            values = [v.strip() for v in example_line.split(';')]
+            if len(values) != len(attributes) + 1:
+                raise Exception('Whoa! The number of values %d != the number of attributes (%d) on line %d.' % (len(values), len(attributes) + 1, ex_i + 2))
+
             examples.append(values)
 
     for example in examples:
@@ -101,9 +109,10 @@ def csv_parse_data(g, data_file):
                 continue
 
             attribute_value = example[att_idx]
-            if attribute_value != '1':
+            value_is_uri = attribute_value.startswith('http://')
+            if not (value_is_uri or attribute_value == '1'):
                 continue
-            annotation_uri = build_uri(att)
+            annotation_uri = build_uri(attribute_value) if value_is_uri else build_uri(att)
             blank = rdflib.BNode()
             g.add((u, HEDWIG.annotated_with, blank))
             g.add((blank, HEDWIG.annotation, annotation_uri))
