@@ -33,14 +33,14 @@ class ExperimentKB:
         self.class_values = set()
         self.annotation_name = defaultdict(list)
 
-        self.examples = self._build_examples(triplets)
+        self.examples, all_annotations = self._build_examples(triplets)
 
         # Ranked or class-labeled data
         self.target_type = self.examples[0].target_type
 
         self._build_subclassof(triplets)
         self._calc_predicate_members(triplets)
-        self._find_roots()
+        self._find_roots(all_annotations)
         self._calc_members_closure()
         self._calc_binary_members()
         self._propagate_annotation_names(triplets)
@@ -64,6 +64,7 @@ class ExperimentKB:
         self.examples_uris = [ex for ex in ex_subjects]
         self.uri_to_idx = {}
 
+        all_annotations = set()
         examples = []
         for i, ex_uri in enumerate(self.examples_uris):
 
@@ -93,6 +94,8 @@ class ExperimentKB:
 
                 annotations.append(annotation)
 
+            all_annotations.update(annotations)
+
             # Scores
             score_list = list(g.objects(subject=ex_uri,
                                         predicate=HEDWIG.score))
@@ -120,7 +123,8 @@ class ExperimentKB:
         if not examples:
             raise Exception("No examples provided! Examples should be " +
                             "instances of %s." % HEDWIG.Example)
-        return examples
+        
+        return examples, all_annotations
 
 
     def _build_subclassof(self, g):
@@ -173,9 +177,15 @@ class ExperimentKB:
                         self.members[str(obj)].add(ex.id)
 
 
-    def _find_roots(self):
+    def _find_roots(self, all_annotations):
         roots = filter(lambda pred: not self.sub_class_of[pred],
                        self.super_class_of.keys())
+
+        # Check for annotations not in the ontology to add them as roots
+        for annotation in all_annotations:
+            if annotation not in self.predicates:
+                roots.append(annotation)
+                logger.debug('Adding leaf %s as root, as it is not specified in the ontology' % annotation)
 
         logger.debug('Detected root nodes: %s' % str(roots))
 
@@ -195,7 +205,7 @@ class ExperimentKB:
         def closure(pred, lvl, visited=[]):
 
             if pred in visited:
-                raise Exception('Cycle detected in the hierarchy!')
+                raise Exception('Cycle detected in the hierarchy at predicate %s!' % pred)
 
             children = self.super_class_of[pred]
             self.levels[lvl].add(pred)
