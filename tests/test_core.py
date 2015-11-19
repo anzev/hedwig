@@ -3,8 +3,8 @@ import sys
 import logging
 sys.path.append('..')
 
-from core import Rule, ExperimentKB, load
-from stats import scorefunctions
+from hedwig.core import Rule, ExperimentKB, load
+from hedwig.stats import scorefunctions
 
 logging.basicConfig()
 
