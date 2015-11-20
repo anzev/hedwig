@@ -143,3 +143,5 @@ def run_learner(kwargs, kb, validator):
         rules_per_target.append((target, rules))
 
     return rules_per_target
+
+

@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ========================
 
 * Restructured the package so it can be easily imported and used as a library.
-* Added to PyPI.
+* Added setup.py
 
 2015/08/07 VERSION 0.2.5
 ========================
