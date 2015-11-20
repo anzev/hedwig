@@ -7,6 +7,8 @@ import os
 import logging
 from rdflib import Namespace
 
+VERSION = '0.3.0'
+DESCRIPTION = '''Hedwig semantic pattern mining (anze.vavpetic@ijs.si)'''
 
 # Logging setup
 logger = logging.getLogger("Hedwig")

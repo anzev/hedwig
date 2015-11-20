@@ -1,0 +1,9 @@
+include CHANGELOG.md
+include LICENSE.md
+include README.md
+include main.py
+include run_tests.py
+include requirements.txt
+
+recursive-include hedwig *
+global-exclude *.pyc

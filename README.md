@@ -7,18 +7,18 @@ A pattern mining tool that can exploit background knowledge in the form of RDF t
 View all the options:
 
 ```bash
-python hedwig.py --help
+python main.py --help
 ```
 
 Running with default parameters and outputing the rules to a file:
 
 ```bash
-python hedwig.py <path-to-folder-with-domain-rdf-files> <examples-file>.n3 -o rules
+python main.py <path-to-folder-with-domain-rdf-files> <examples-file>.n3 -o rules
 ```
 Running the included `numbers` mini-example:
 
 ```bash
-python hedwig.py example/numbers/ontology/ example/numbers/data.n3 --output=rules --adjust=none --leaves --support=0 --beam=1
+python main.py example/numbers/ontology/ example/numbers/data.n3 --output=rules --adjust=none --leaves --support=0 --beam=1
 ```
 
 ## Simple hierarchy example with CSV data ##
@@ -27,7 +27,7 @@ If you want to use just simple hierarchies of features, you don't need to resort
 to RDF. Just run hedwig with the `--format=csv` flag, for example:
 
 ```bash
-python hedwig.py --format=csv tests/data/csv/ontology/ tests/data/csv/Cities_clusters.csv -o rules
+python main.py --format=csv tests/data/csv/ontology/ tests/data/csv/Cities_clusters.csv -o rules
 ```
 
 Hierarchy files must have the `.tsv` suffix, with the following structure:

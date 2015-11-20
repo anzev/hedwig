@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+2015/11/20 VERSION 0.3.0
+========================
+
+* Restructured the package so it can be easily imported and used as a library.
+* Added to PyPI.
+
 2015/08/07 VERSION 0.2.5
 ========================
 
