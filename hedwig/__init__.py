@@ -96,7 +96,12 @@ def build_graph(kwargs):
         ontology_list.extend(map(lambda f: os.path.join(root, f), files))
 
     try:
-        graph = load_graph(ontology_list, data, def_format=kwargs['format'])
+        graph = load_graph(
+            ontology_list,
+            data,
+            def_format=kwargs['format'],
+            cache=not kwargs['nocache']
+        )
     except Exception, e:
         print e
         exit(1)

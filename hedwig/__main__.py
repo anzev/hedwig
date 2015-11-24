@@ -75,6 +75,9 @@ parser.add_argument('-S', '--support', default='0.1', type=float,
 parser.add_argument('-d', '--depth', default='5', type=int,
                     help='Maximum number of conjunctions.')
 
+parser.add_argument('-C', '--nocache', action='store_true',
+                    help='Don\'t cache background knowledge graph files.')
+
 parser.add_argument("-v", "--verbose", help="Increase output verbosity.",
                     action="store_true")
 

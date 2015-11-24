@@ -139,7 +139,7 @@ def csv(hierarchy_files, data):
     return g
 
 
-def load_graph(ontology_list, data, def_format='n3'):
+def load_graph(ontology_list, data, def_format='n3', cache=True):
 
     def filter_valid_files(paths):
         if def_format == 'csv':
@@ -153,7 +153,7 @@ def load_graph(ontology_list, data, def_format='n3'):
     md5 = _md5_checksum(filter_valid_files(paths))
 
     cached_fn = '.%s' % md5
-    if os.path.exists(cached_fn):
+    if os.path.exists(cached_fn) and cache:
         logger.info('Loading cached graph structure')
         g = _load_cached_graph(cached_fn)
     else:
