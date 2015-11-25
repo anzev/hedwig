@@ -231,12 +231,17 @@ class Rule:
         '''
         return len(self.predicates)
 
-    def examples(self):
+    def examples(self, positive_only=False):
         '''
         Returns the covered examples.
         '''
         indices = self.kb.bits_to_indices(self.covered_examples)
-        return [self.kb.examples[idx] for idx in indices]
+        all_examples = [self.kb.examples[idx] for idx in indices]
+
+        if positive_only:
+            return filter(lambda ex: ex.score == self.target, all_examples)
+        else:
+            return all_examples
 
     @property
     def positives(self):
