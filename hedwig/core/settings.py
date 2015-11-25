@@ -29,3 +29,25 @@ DEFAULT_ANNOTATION_NAME = 'annotated_with'
 GENERIC_NAMESPACE = Namespace('http://kt.ijs.si/ontology/generic#')
 
 INPUT_FORMATS = ['n3', 'xml', 'ntriples', 'trix', 'csv']
+
+# Defaults
+class Defaults:
+    FORMAT = INPUT_FORMATS[0]
+    OUTPUT = None
+    COVERED = None
+    MODE = 'subgroups'
+    TARGET = None
+    SCORE = 'lift'
+    NEGATIONS = False
+    ALPHA = 0.05
+    ADJUST = 'fwer'
+    FDR_Q = 0.05
+    LEAVES = False
+    LEARNER = 'heuristic'
+    OPTIMAL_SUBCLASS = False
+    URIS = False
+    BEAM_SIZE = 20
+    SUPPORT = 0.1
+    DEPTH = 5
+    NO_CACHE = False
+    VERBOSE = False
