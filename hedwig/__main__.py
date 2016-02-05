@@ -66,7 +66,7 @@ parser.add_argument('-O', '--optimalsubclass', action='store_true',
 parser.add_argument('-u', '--uris', action='store_true',
                     help='Show URIs in rule conjunctions.')
 
-parser.add_argument('-b', '--beam', default=Defaults.BEAM, type=int,
+parser.add_argument('-b', '--beam', default=Defaults.BEAM_SIZE, type=int,
                     help='Beam size.')
 
 parser.add_argument('-S', '--support', default=Defaults.SUPPORT, type=float,
