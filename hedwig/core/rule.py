@@ -3,6 +3,7 @@ The rule class.
 
 @author: anze.vavpetic@ijs.si
 '''
+import json
 from collections import defaultdict
 
 from hedwig.core.predicate import UnaryPredicate, BinaryPredicate
@@ -406,3 +407,11 @@ class Rule:
                                        [ex.label for ex in examples]))
             examples_output.append((target_class, class_examples))
         return examples_output
+
+    @staticmethod
+    def to_json(rules_per_target, show_uris=False):
+        results = {}
+        for target, rules in rules_per_target:
+            results[target] = [str(rule) for rule in rules]
+
+        return json.dumps(results, indent=2)

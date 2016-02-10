@@ -75,10 +75,14 @@ def run(kwargs, cli=False):
             f.write(json.dumps(examples, indent=2))
 
     parameters_report = _parameters_report(kwargs, start_date, time_taken)
-    if kwargs['output']:
-        with open(kwargs['output'], 'w') as f:
-            f.write(parameters_report)
-            f.write(rules_report)
+    rules_out_file = kwargs['output']
+    if rules_out_file:
+        with open(rules_out_file, 'w') as f:
+            if rules_out_file.endswith('json'):
+                f.write(Rule.to_json(rules_per_target, show_uris=kwargs['uris']))
+            else:
+                f.write(parameters_report)
+                f.write(rules_report)
     elif cli:
         print parameters_report
         print rules_report

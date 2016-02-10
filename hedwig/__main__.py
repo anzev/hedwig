@@ -22,7 +22,9 @@ parser.add_argument('-f', '--format', choices=INPUT_FORMATS,
                     help="Input file format.", default=Defaults.FORMAT)
 
 parser.add_argument('-o', '--output', help='Output file. If none is specified, \
-                                            the results are written to stdout.')
+                                            the results are written to stdout. \
+                                            Use .json suffix to write the results \
+                                            in json.')
 
 parser.add_argument('-c', '--covered', help='File to write IDs of covered \
                                              examples.')
