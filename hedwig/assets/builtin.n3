@@ -7,6 +7,16 @@
 :Example 
     a OWL:Class ;
     RDFS:label "Example".
+
+:Target
+    a OWL:class ;
+    RDFS:label "Target".
+
+:attribute_name
+    a OWL:DatatypeProperty ;
+    RDFS:label "attribute_name" ;
+    RDFS:domain :Target ;
+    RDFS:range XSD:string .
     
 :score 
     a OWL:DatatypeProperty ;

@@ -78,6 +78,7 @@ def csv_parse_data(g, data_file):
     Alternatively attribute values can be URIs themselves.
     '''
     attributes = []
+    class_name = None
     class_labels = []
     examples = []
 
@@ -85,6 +86,7 @@ def csv_parse_data(g, data_file):
         data_lines = f.readlines()
         domain = [a.strip() for a in data_lines[0].split(';')]
         attributes = domain[:-1]
+        class_name = domain[-1]
 
         logger.debug('Attributes: %s' % str(attributes))
         logger.debug('# Examples: %d' % (len(data_lines) - 1))
@@ -95,6 +97,10 @@ def csv_parse_data(g, data_file):
                 raise Exception('Whoa! The number of values %d != the number of attributes (%d) on line %d.' % (len(values), len(attributes) + 1, ex_i + 2))
 
             examples.append(values)
+
+    u = build_uri("target")
+    g.add((u, rdflib.RDF.type, HEDWIG.Target))
+    g.add((u, HEDWIG.attribute_name, rdflib.Literal(class_name)))
 
     for example in examples:
         # Write to rdf graph
@@ -132,7 +138,7 @@ def csv(hierarchy_files, data):
             elif path.endswith('csv'):
                 csv_parse_data(g, data)
         except Exception, e:
-            errorMsg = errorMsg + 'Error parsing file: ' + path +'.\n' + str(e) + '\n\n'
+            errorMsg = errorMsg + 'Error parsing file: ' + path +'; ' + str(e) + '\n\n'
             errorCount += 1
     if errorCount > 0:
         raise Exception(str(errorCount) + " errors loading files:\n" + errorMsg)

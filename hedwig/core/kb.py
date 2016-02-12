@@ -10,7 +10,7 @@ from rdflib import RDF, RDFS, URIRef
 from hedwig.core.example import Example
 from hedwig.core.predicate import UnaryPredicate
 from hedwig.core.helpers import avg, std, user_defined
-from hedwig.core.settings import EXAMPLE_SCHEMA, logger, W3C, HEDWIG
+from hedwig.core.settings import EXAMPLE_SCHEMA, logger, W3C, HEDWIG, Defaults
 
 
 class ExperimentKB:
@@ -31,6 +31,7 @@ class ExperimentKB:
         self.predicates = set()
         self.binary_predicates = set()
         self.class_values = set()
+        self.class_name = Defaults.CLASS_NAME
         self.annotation_name = defaultdict(list)
 
         self.examples, all_annotations = self._build_examples(triplets)
@@ -119,6 +120,12 @@ class ExperimentKB:
             examples.append(Example(i, str(ex_uri), score,
                                     annotations=annotations,
                                     weights=weights))
+
+        # Parse additional target information
+        targets = [target for target in g.subjects(predicate=RDF.type, object=HEDWIG.Target)]
+        if targets:
+            target = targets[0]
+            self.class_name = [name for name in g.objects(subject=target, predicate=HEDWIG.attribute_name)][0]
 
         if not examples:
             raise Exception("No examples provided! Examples should be " +
