@@ -8,35 +8,8 @@ from hedwig.core import ExperimentKB, Rule
 from hedwig.learners import HeuristicLearner, OptimalLearner
 from hedwig.stats import scorefunctions, adjustment, significance, Validate
 from hedwig.core.load import load_graph
-from hedwig.core.settings import VERSION, DESCRIPTION, logger
-
-
-def _parameters_report(args, start, time_taken):
-    sep = '-'*40 + '\n'
-    rep = DESCRIPTION + '\n' +\
-        'Version: %s' % VERSION + '\n' +\
-        'Start: %s' % start + '\n' +\
-        'Time taken: %.2f seconds' % time_taken + '\n' +\
-        'Parameters:' + '\n'
-
-    for arg, val in args.items():
-        rep += '\t%s=%s\n' % (arg, str(val))
-    rep = sep + rep + sep
-
-    return rep
-
-
-def generate_rules_report(kwargs, rules_per_target,
-                          human=lambda label, rule: label):
-    rules_report = ''
-    for _, rules in rules_per_target:
-        if rules:
-            rules_report += Rule.ruleset_report(rules, show_uris=kwargs['uris'],
-                                                human=human)
-            rules_report += '\n'
-    if not rules_report:
-        rules_report = 'No significant rules found'
-    return rules_report
+from hedwig.core.settings import VERSION, logger
+from hedwig.core import save
 
 
 def run(kwargs, cli=False):
@@ -60,7 +33,7 @@ def run(kwargs, cli=False):
                          adjustment=getattr(adjustment, kwargs['adjust']))
 
     rules_per_target = run_learner(kwargs, kb, validator)
-    rules_report = generate_rules_report(kwargs, rules_per_target)
+    rules_report = save.generate_rules_report(kwargs, rules_per_target)
     
 
     end = time.time()
@@ -71,15 +44,22 @@ def run(kwargs, cli=False):
 
     if kwargs['covered']:
         with open(kwargs['covered'], 'w') as f:
-            examples = Rule.ruleset_examples_json(rules_per_target)
+            examples = save.ruleset_examples_json(rules_per_target)
             f.write(json.dumps(examples, indent=2))
 
-    parameters_report = _parameters_report(kwargs, start_date, time_taken)
+    parameters_report = save.parameters_report(kwargs, start_date, time_taken)
     rules_out_file = kwargs['output']
     if rules_out_file:
         with open(rules_out_file, 'w') as f:
             if rules_out_file.endswith('json'):
-                f.write(Rule.to_json(rules_per_target, show_uris=kwargs['uris']))
+                f.write(
+                    save.results_to_json(
+                        kwargs,
+                        kb,
+                        rules_per_target,
+                        show_uris=kwargs['uris']
+                    )
+                )
             else:
                 f.write(parameters_report)
                 f.write(rules_report)

@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+2016/02/15 VERSION 0.3.1
+========================
+
+* Added JSON output capability; the format respects [this specification](http://source.ijs.si/hbp/modelformatschema/raw/master/model_schema.json) for rule sets.
+
 2015/11/20 VERSION 0.3.0
 ========================
 

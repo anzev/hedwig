@@ -3,7 +3,6 @@ The rule class.
 
 @author: anze.vavpetic@ijs.si
 '''
-import json
 from collections import defaultdict
 
 from hedwig.core.predicate import UnaryPredicate, BinaryPredicate
@@ -338,80 +337,3 @@ class Rule:
 
     def __str__(self):
         return self.rule_report(show_uris=False)
-
-    @staticmethod
-    def ruleset_report(rules, show_uris=False, latex=False,
-                       human=lambda label, rule: label):
-        if latex:
-            return Rule._latex_ruleset_report(rules)
-        else:
-            return Rule._plain_ruleset_report(rules, show_uris=show_uris,
-                                              human=human)
-
-    @staticmethod
-    def _latex_ruleset_report(rules):
-        target, var = rules[0].target, rules[0].head_var
-        if target:
-            head = '%s(%s) $\leftarrow$ ' % (target, var)
-        else:
-            head = ''
-
-        _tex_report = \
-            r'\begin{tabular}{clccccc}\hline' + '\n' \
-            r'\textbf{\#} & \textbf{Rule} & \textbf{TP} & \textbf{FP} & \textbf{Precision} & \textbf{Lift} & \textbf{p-value}\\\hline' + '\n'
-
-        for i, rule in enumerate(sorted(rules, key=lambda r: r.score, reverse=True)):
-            rule_report = rule._latex_report()
-            stats = (i+1,
-                     head + rule_report,
-                     rule.distribution[rule.target],
-                     rule.coverage - rule.distribution[rule.target],
-                     rule.distribution[rule.target]/float(rule.coverage),
-                     rule.score,
-                     rule.pval)
-            _tex_report += r'%d & \texttt{%s} & %d & %d & %.2f & %.2f & %.3f\\' % stats
-            _tex_report += '\n'
-
-        _tex_report += \
-            r'\hline' + '\n' \
-            r'\end{tabular}' + '\n'
-
-        return _tex_report
-
-    @staticmethod
-    def _plain_ruleset_report(rules, show_uris=False,
-                              human=lambda label, rule: label):
-
-        target, var = rules[0].target, rules[0].head_var
-        if target:
-            head = '\'%s\'(%s) <--\n\t' % (target, var)
-        else:
-            head = ''
-
-        ruleset = []
-        for rule in sorted(rules, key=lambda r: r.score, reverse=True):
-            rule = rule._plain_report(show_uris=show_uris, human=human)
-            ruleset.append(rule)
-
-        return head + '\n\t'.join(ruleset)
-
-    @staticmethod
-    def ruleset_examples_json(rules_per_target, show_uris=False):
-        examples_output = []
-        for target_class, rules in rules_per_target:
-            class_examples = []
-            for _, rule in enumerate(sorted(rules, key=lambda r: r.score,
-                                            reverse=True)):
-                examples = rule.examples()
-                class_examples.append((rule._plain_conjunctions(),
-                                       [ex.label for ex in examples]))
-            examples_output.append((target_class, class_examples))
-        return examples_output
-
-    @staticmethod
-    def to_json(rules_per_target, show_uris=False):
-        results = {}
-        for target, rules in rules_per_target:
-            results[target] = [str(rule) for rule in rules]
-
-        return json.dumps(results, indent=2)

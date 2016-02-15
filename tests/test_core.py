@@ -1,9 +1,13 @@
 import unittest
 import sys
 import logging
+import urllib2
+import json
+from subprocess import call
+from jsonschema import validate
 sys.path.append('..')
 
-from hedwig.core import Rule, ExperimentKB, load
+from hedwig.core import Rule, ExperimentKB, load, save
 from hedwig.stats import scorefunctions
 
 logging.basicConfig()
@@ -34,3 +38,30 @@ class TestCSVExperimentKB(TestExperimentKB):
 
     def test_examples(self):
         self.assertEqual(len(self.kb.examples), 177)
+
+
+class TestSaving(unittest.TestCase):
+
+    def setUp(self):
+        self.data_paths = ['tests/data/n3/data.n3', 'tests/data/n3/ontology/']
+        self.graph = load.rdf(self.data_paths)
+        self.kb = ExperimentKB(self.graph, scorefunctions.lift)
+        self.schema = json.load(urllib2.urlopen('http://source.ijs.si/hbp/modelformatschema/raw/master/model_schema.json'))
+
+    def test_save_json(self):
+        call([
+            'python', '-m', 'hedwig',
+            self.data_paths[1],
+            self.data_paths[0],
+            '-l',
+            '-o', 'out.json',
+            '-a', 'none',
+            '--nocache'
+        ])
+        try:
+            with open('out.json') as f:
+                validate(json.load(f), self.schema)
+        except Exception as e:
+            print str(e)
+            self.assertTrue(False)
+        self.assertTrue(True)
