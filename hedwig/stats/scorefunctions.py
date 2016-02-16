@@ -8,10 +8,12 @@ from math import sqrt
 
 def z_score(rule):
     return sqrt(rule.coverage) * (rule.mean - rule.kb.mean) / rule.kb.sd
+z_score.name = 'z-score'
 
 
 def t_score(rule):
     return sqrt(rule.coverage) * (rule.mean - rule.kb.mean) / rule.sd
+t_score.name = 't-score'
 
 
 def enrichment_score(rule):
@@ -35,6 +37,7 @@ def enrichment_score(rule):
         if partial > max_diff:
             max_diff = partial
     return max_diff
+enrichment_score.name = 'enrichment score'
 
 
 def wracc(rule):
@@ -46,6 +49,7 @@ def wracc(rule):
         return nX / float(N) * (nXY/float(nX) - nY/float(N))
     else:
         return 0
+wracc.name = 'WRAcc'
 
 
 def precision(rule):
@@ -55,6 +59,7 @@ def precision(rule):
         return nXY/float(nX)
     else:
         return 0
+precision.name = 'precision'
 
 
 def chisq(rule):
@@ -66,6 +71,7 @@ def chisq(rule):
         return N*(z - x*y)**2 / float(x*y*(1 - x)*(1 - y))
     else:
         return 0
+chisq.name = 'chisq'
 
 
 def lift(rule):
@@ -78,6 +84,7 @@ def lift(rule):
         return (nXY/nX)/(nY/N)
     else:
         return 0
+lift.name = 'lift'
 
 
 def leverage(rule):
@@ -90,6 +97,7 @@ def leverage(rule):
         return nXY/N - (nX/N)*(nY/N)
     else:
         return 0
+leverage.name = 'leverage'
 
 
 def kaplan_meier_AUC(rule):
@@ -122,6 +130,7 @@ def kaplan_meier_AUC(rule):
 
     #print auc
     return auc
+kaplan_meier_AUC.name = 'kaplan-meier AUC'
 
 
 # Bounds of interest for each score function

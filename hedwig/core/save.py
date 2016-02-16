@@ -173,6 +173,21 @@ def results_to_json(args, kb, rules_per_target, show_uris=False,
             "predictions": [{
                 "attribute": kb.class_name,
                 "value": rule.target
+            }],
+            "weight": 1.0,
+            "statistics": [{
+                "statisticsType": "train",
+                "numberOfExamples": rule.coverage,
+                "measures": [
+                    {
+                        "measureName": "lift",
+                        "value": rule.score
+                    },
+                    {
+                        "measureName": "p-value",
+                        "value": rule.pval
+                    }
+                ]
             }]
         }
 
@@ -202,14 +217,14 @@ def results_to_json(args, kb, rules_per_target, show_uris=False,
             "parameters": parameters_string,
             "version": VERSION
         },
-        "statistics": {
-            "numberOfExamples": len(kb.examples),
-            "targetErrors": []
-        },
+        "statistics": [{
+            "statisticsType": "train",
+            "numberOfExamples": len(kb.examples)
+        }],
         "ruleSet": {
             "ruleSetID": str(uuid.uuid4()),
-            "defaultRule": "",
-            "rules": rule_set
+            "rules": rule_set,
+            "interpretationMode": "DescriptiveUnordered"
         }
     }
 
