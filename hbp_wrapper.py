@@ -39,7 +39,6 @@ if __name__ == '__main__':
         '-f', 'csv',
         '-l',
         '-o', rules_out_file,
-        '-a', 'none',
         '--nocache'
     ])
 
