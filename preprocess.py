@@ -18,15 +18,15 @@ def binarize(matrix, attributes, bins=4):
             binned_attributes.append(att)
             target_values = []
             for i, _ in enumerate(edges):
-                lower, upper = str(edges[i-1]), str(edges[i])
-                target_values.append('{}=<{}<{}'.format(lower,att,upper))
+                lower, upper = str(edges[i]), str(edges[(i + 1) % len(edges)])
+                target_values.append('{}<={}<{}'.format(lower,att,upper))
 
             for j, bin_idx in enumerate(membership):
                 binarized_data[j].append(target_values[bin_idx-1])
         else:
-            for i, _ in enumerate(edges):
-                lower, upper = str(edges[i-1]), str(edges[i])
-                binned_attributes.append('{}=<{}<{}'.format(lower,att,upper))
+            for i in range(1, len(edges)):
+                lower, upper = str(edges[i - 1]), str(edges[i])
+                binned_attributes.append('{}<={}<{}'.format(lower,att,upper))
 
             for i, _ in enumerate(binned_attributes):
                 for j, bin_idx in enumerate(membership):
