@@ -162,7 +162,8 @@ def load_graph(ontology_list, data, def_format='n3', cache=True):
             g = rdf(paths, def_format=def_format)
         elif def_format == 'csv':
             g = csv(ontology_list, data)
-        _save_graph_to_cache(g, cached_fn)
+        if cache:
+            _save_graph_to_cache(g, cached_fn)
     return g
 
 
