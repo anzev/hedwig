@@ -1,6 +1,0 @@
-fisher/__init__.py
-pip-egg-info/fisher.egg-info/PKG-INFO
-pip-egg-info/fisher.egg-info/SOURCES.txt
-pip-egg-info/fisher.egg-info/dependency_links.txt
-pip-egg-info/fisher.egg-info/top_level.txt
-src/cfisher.c
