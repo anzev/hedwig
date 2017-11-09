@@ -7,7 +7,7 @@ import rdflib
 import json
 import hashlib
 import os
-import cPickle
+import pickle
 
 from hedwig.core.settings import logger, HEDWIG, GENERIC_NAMESPACE
 from hedwig.core.example import Example
@@ -24,8 +24,8 @@ def rdf(paths, def_format='n3'):
         if path.endswith(def_format):
             try:
                 g.parse(path, format=def_format)
-            except Exception, e:
-                errorMsg = errorMsg + 'Error parsing file: ' + path +'.\n' + str(e) + '\n\n'
+            except Exception as e:
+                errorMsg = errorMsg + 'Error parsing file: ' + path + '.\n' + str(e) + '\n\n'
                 errorCount += 1
     if errorCount > 0:
         raise Exception(str(errorCount) + " errors loading files:\n" + errorMsg)
@@ -77,8 +77,6 @@ def csv_parse_data(g, data_file):
 
     Alternatively attribute values can be URIs themselves.
     '''
-    attributes = []
-    class_labels = []
     examples = []
 
     with open(data_file) as f:
@@ -92,7 +90,8 @@ def csv_parse_data(g, data_file):
         for ex_i, example_line in enumerate(data_lines[1:]):
             values = [v.strip() for v in example_line.split(';')]
             if len(values) != len(attributes) + 1:
-                raise Exception('Whoa! The number of values %d != the number of attributes (%d) on line %d.' % (len(values), len(attributes) + 1, ex_i + 2))
+                raise Exception('Whoa! The number of values %d != the number of attributes (%d) on line %d.' % (
+                len(values), len(attributes) + 1, ex_i + 2))
 
             examples.append(values)
 
@@ -103,7 +102,7 @@ def csv_parse_data(g, data_file):
         g.add((u, HEDWIG.class_label, rdflib.Literal(example[-1])))
 
         for att_idx, att in enumerate(attributes):
-            
+
             # Skip the label 
             if att_idx == 0:
                 continue
@@ -131,8 +130,8 @@ def csv(hierarchy_files, data):
                 csv_parse_hierarchy(g, path)
             elif path.endswith('csv'):
                 csv_parse_data(g, data)
-        except Exception, e:
-            errorMsg = errorMsg + 'Error parsing file: ' + path +'.\n' + str(e) + '\n\n'
+        except Exception as e:
+            errorMsg = errorMsg + 'Error parsing file: ' + path + '.\n' + str(e) + '\n\n'
             errorCount += 1
     if errorCount > 0:
         raise Exception(str(errorCount) + " errors loading files:\n" + errorMsg)
@@ -140,13 +139,12 @@ def csv(hierarchy_files, data):
 
 
 def load_graph(ontology_list, data, def_format='n3', cache=True):
-
     def filter_valid_files(paths):
         if def_format == 'csv':
             filter_fn = lambda p: p.endswith('.csv') or p.endswith('.tsv')
         else:
             filter_fn = lambda p: p.endswith(def_format)
-        return filter(filter_fn, paths)
+        return list(filter(filter_fn, paths))
 
     logger.info('Calculating data checksum')
     paths = ontology_list + [data]
@@ -170,17 +168,17 @@ def load_graph(ontology_list, data, def_format='n3', cache=True):
 def _md5_checksum(paths):
     md5 = hashlib.md5()
     for path in paths:
-            with open(path, 'rb') as f:
-                for chunk in iter(lambda: f.read(2**20), b''):
-                    md5.update(chunk)
+        with open(path, 'rb') as f:
+            for chunk in iter(lambda: f.read(2 ** 20), b''):
+                md5.update(chunk)
     return md5.hexdigest()
 
 
 def _load_cached_graph(fn):
-    g = cPickle.load(open(fn))
+    g = pickle.load(open(fn, 'rb'))
     return g
 
 
 def _save_graph_to_cache(g, fn):
-    with open(fn, 'w') as f:
-        cPickle.dump(g, f)
+    with open(fn, 'wb') as f:
+        pickle.dump(g, f)

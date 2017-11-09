@@ -49,7 +49,7 @@ class Learner:
         pruned_subclasses = {}
         for pred in self.kb.predicates:
             subclasses = self.kb.get_subclasses(pred)
-            pruned_subclasses[pred] = filter(min_sup, subclasses)
+            pruned_subclasses[pred] = list(filter(min_sup, subclasses))
 
         return pruned_subclasses
 
@@ -58,7 +58,7 @@ class Learner:
         pruned_superclasses = {}
         for pred in self.kb.predicates:
             superclasses = self.kb.super_classes(pred)
-            pruned_superclasses[pred] = filter(min_sup, superclasses)
+            pruned_superclasses[pred] = list(filter(min_sup, superclasses))
 
         return pruned_superclasses
 
@@ -87,7 +87,7 @@ class Learner:
         root_pred = self.kb.get_root()
         rules = [Rule(self.kb, predicates=[root_pred], target=self.target)]
         rules = self.__induce_level(rules)
-        return filter(interesting, rules)
+        return list(filter(interesting, rules))
 
     def __induce_level(self, rules):
         '''
@@ -191,6 +191,7 @@ class Learner:
         if not self.optimal_subclass:
             for pred in filter(is_unary, eligible_preds):
                 logger.debug('Predicate to swap: %s' % pred.label)
+                logger.debug(self.get_subclasses(pred))
                 for sub_class in self.get_subclasses(pred):
                     logger.debug('Swapping with %s' % sub_class)
                     new_rule = rule.clone_swap_with_subclass(pred, sub_class)

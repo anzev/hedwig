@@ -189,7 +189,7 @@ class Rule:
 
                 # Calculate all examples that have a pair for this relation
                 for idx in self.kb.bits_to_indices(existential_cov_examples):
-                    if reverse_members.has_key(idx):
+                    if idx in reverse_members:
                         tmp_covered |= reverse_members[idx]
                 covered_examples &= tmp_covered
             else:
@@ -240,7 +240,7 @@ class Rule:
         all_examples = [self.kb.examples[idx] for idx in indices]
 
         if positive_only:
-            return filter(lambda ex: ex.score == self.target, all_examples)
+            return [ex for ex in all_examples if ex.score == self.target]
         else:
             return all_examples
 

@@ -11,7 +11,7 @@ from hedwig.core.settings import logger
 from hedwig.stats.significance import is_redundant
 from hedwig.stats.scorefunctions import interesting
 
-from learner import Learner
+from .learner import Learner
 
 
 class OptimalLearner(Learner):
@@ -29,7 +29,7 @@ class OptimalLearner(Learner):
         '''
         kb = self.kb
         has_min_sup = lambda pred: kb.get_members(pred).count() >= self.min_sup
-        all_predicates = filter(has_min_sup, kb.predicates)
+        all_predicates = list(filter(has_min_sup, kb.predicates))
         rules = []
         for depth in range(1, self.depth+1):
             for attrs in combinations(all_predicates, depth):

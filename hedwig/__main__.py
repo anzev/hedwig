@@ -7,8 +7,8 @@ from hedwig.core.settings import VERSION, DESCRIPTION, INPUT_FORMATS, Defaults
 __version__ = VERSION
 
 parser = argparse.ArgumentParser(description=DESCRIPTION)
-functions = filter(lambda s: not s.startswith('_'), dir(scorefunctions))
-adjustments = filter(lambda s: not s.startswith('_'), dir(adjustment))
+functions = [s for s in dir(scorefunctions) if not s.startswith('_')]
+adjustments = [s for s in dir(adjustment) if not s.startswith('_')]
 
 parser.add_argument('bk_dir', metavar='BKDIR',
                     help='Background knowledge directory. The program attempts\

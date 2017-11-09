@@ -12,14 +12,14 @@ from hedwig.core.settings import VERSION, DESCRIPTION, logger
 
 
 def _parameters_report(args, start, time_taken):
-    sep = '-'*40 + '\n'
-    rep = DESCRIPTION + '\n' +\
-        'Version: %s' % VERSION + '\n' +\
-        'Start: %s' % start + '\n' +\
-        'Time taken: %.2f seconds' % time_taken + '\n' +\
-        'Parameters:' + '\n'
+    sep = '-' * 40 + '\n'
+    rep = DESCRIPTION + '\n' + \
+          'Version: %s' % VERSION + '\n' + \
+          'Start: %s' % start + '\n' + \
+          'Time taken: %.2f seconds' % time_taken + '\n' + \
+          'Parameters:' + '\n'
 
-    for arg, val in args.items():
+    for arg, val in list(args.items()):
         rep += '\t%s=%s\n' % (arg, str(val))
     rep = sep + rep + sep
 
@@ -40,7 +40,6 @@ def generate_rules_report(kwargs, rules_per_target,
 
 
 def run(kwargs, cli=False):
-
     if cli:
         logger.setLevel(logging.DEBUG if kwargs['verbose'] else logging.INFO)
     else:
@@ -61,10 +60,9 @@ def run(kwargs, cli=False):
 
     rules_per_target = run_learner(kwargs, kb, validator)
     rules_report = generate_rules_report(kwargs, rules_per_target)
-    
 
     end = time.time()
-    time_taken = end-start
+    time_taken = end - start
     logger.info('Finished in %d seconds' % time_taken)
 
     logger.info('Outputing results')
@@ -84,8 +82,8 @@ def run(kwargs, cli=False):
                 f.write(parameters_report)
                 f.write(rules_report)
     elif cli:
-        print parameters_report
-        print rules_report
+        print(parameters_report)
+        print(rules_report)
 
     return rules_per_target
 
@@ -97,23 +95,18 @@ def build_graph(kwargs):
     # Walk the dir to find BK files
     ontology_list = []
     for root, sub_folders, files in os.walk(kwargs['bk_dir']):
-        ontology_list.extend(map(lambda f: os.path.join(root, f), files))
+        ontology_list.extend([os.path.join(root, f) for f in files])
 
-    try:
-        graph = load_graph(
-            ontology_list,
-            data,
-            def_format=kwargs['format'],
-            cache=not kwargs['nocache']
-        )
-    except Exception, e:
-        print e
-        exit(1)
+    graph = load_graph(
+        ontology_list,
+        data,
+        def_format=kwargs['format'],
+        cache=not kwargs['nocache']
+    )
     return graph
 
 
 def run_learner(kwargs, kb, validator):
-
     if kb.is_discrete_target():
         targets = kb.class_values if not kwargs['target'] else [kwargs['target']]
     else:
@@ -131,15 +124,15 @@ def run_learner(kwargs, kb, validator):
         learner_cls = {
             'heuristic': HeuristicLearner,
             'optimal': OptimalLearner
-        } [kwargs['learner']]
+        }[kwargs['learner']]
         learner = learner_cls(kb,
-                          n=kwargs['beam'],
-                          min_sup=int(kwargs['support']*kb.n_examples()),
-                          target=target,
-                          depth=kwargs['depth'],
-                          sim=0.9,
-                          use_negations=kwargs['negations'],
-                          optimal_subclass=kwargs['optimalsubclass'])
+                              n=kwargs['beam'],
+                              min_sup=int(kwargs['support'] * kb.n_examples()),
+                              target=target,
+                              depth=kwargs['depth'],
+                              sim=0.9,
+                              use_negations=kwargs['negations'],
+                              optimal_subclass=kwargs['optimalsubclass'])
         rules = learner.induce()
 
         if kb.is_discrete_target():
@@ -152,5 +145,3 @@ def run_learner(kwargs, kb, validator):
         rules_per_target.append((target, rules))
 
     return rules_per_target
-
-

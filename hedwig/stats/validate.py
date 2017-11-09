@@ -3,8 +3,8 @@ Module for ruleset validation.
 
 @author: anze.vavpetic@ijs.si
 '''
-from adjustment import fdr
-from significance import apply_fisher
+from .adjustment import fdr
+from .significance import apply_fisher
 
 
 class Validate:

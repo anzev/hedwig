@@ -16,7 +16,7 @@ class Example:
         self.id = id
         self.label = label
         self.score = score
-        if not type(score) in [str, unicode]:
+        if not type(score) in [str, str]:
             self.target_type = Example.Ranked
         else:
             self.target_type = Example.ClassLabeled

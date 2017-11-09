@@ -17,6 +17,7 @@ class ExperimentKB:
     '''
     The knowledge base for one specific experiment.
     '''
+
     def __init__(self, triplets, score_fun,
                  instances_as_leaves=True):
         '''
@@ -55,7 +56,6 @@ class ExperimentKB:
                 self.distribution[ex.score] += 1
             logger.debug('Class distribution: %s' % str(self.distribution))
 
-
     def _build_examples(self, g):
         g.parse(EXAMPLE_SCHEMA, format='n3')
 
@@ -70,23 +70,22 @@ class ExperimentKB:
 
             # Query for annotation link objects
             annot_objects = g.objects(subject=ex_uri,
-                                           predicate=HEDWIG.annotated_with)
+                                      predicate=HEDWIG.annotated_with)
 
             annotation_links = [annot for annot in annot_objects]
             annotations = []
             weights = {}
-            to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
 
             for link in annotation_links:
 
                 # Query for annotation objects via this link
                 annot_objects = g.objects(subject=link,
-                                               predicate=HEDWIG.annotation)
-                annotation = [to_uni(one) for one in annot_objects][0]
+                                          predicate=HEDWIG.annotation)
+                annotation = [str(one) for one in annot_objects][0]
 
                 # Query for weights on this link
                 weight_objects = g.objects(subject=link,
-                                                predicate=HEDWIG.weight)
+                                           predicate=HEDWIG.weight)
                 weights_list = [one for one in weight_objects]
 
                 if weights_list:
@@ -109,7 +108,8 @@ class ExperimentKB:
                 # If no scores or labels found at this stage
                 if not score_list:
                     raise Exception("No example labels or scores found! Examples should be " +
-                                    "instances of %s, with %s or %s provided." % (HEDWIG.Example, HEDWIG.score, HEDWIG.class_label))
+                                    "instances of %s, with %s or %s provided." % (
+                                        HEDWIG.Example, HEDWIG.score, HEDWIG.class_label))
 
                 score = str(score_list[0])
                 self.class_values.add(score)
@@ -123,9 +123,8 @@ class ExperimentKB:
         if not examples:
             raise Exception("No examples provided! Examples should be " +
                             "instances of %s." % HEDWIG.Example)
-        
-        return examples, all_annotations
 
+        return examples, all_annotations
 
     def _build_subclassof(self, g):
 
@@ -151,15 +150,14 @@ class ExperimentKB:
 
         # Find the user-defined object predicates defined between examples
         examples_as_domain = set(g.subjects(object=HEDWIG.Example,
-                                                 predicate=RDFS.domain))
+                                            predicate=RDFS.domain))
 
         examples_as_range = set(g.subjects(object=HEDWIG.Example,
-                                                predicate=RDFS.range))
+                                           predicate=RDFS.range))
 
         for pred in examples_as_domain.intersection(examples_as_range):
             if user_defined(pred):
                 self.binary_predicates.add(str(pred))
-
 
     def _calc_predicate_members(self, g):
         self.members = defaultdict(set)
@@ -170,16 +168,17 @@ class ExperimentKB:
                 else:
                     # Query for 'parents' of a given instance
                     inst_parents = list(g.objects(subject=URIRef(inst),
-                                                       predicate=RDF.type))
+                                                  predicate=RDF.type))
                     inst_parents += list(g.objects(subject=URIRef(inst),
-                                                    predicate=RDFS.subClassOf))
+                                                   predicate=RDFS.subClassOf))
                     for obj in inst_parents:
                         self.members[str(obj)].add(ex.id)
 
+        for member in self.members.keys():
+            print(member, len(self.members[member]))
 
     def _find_roots(self, all_annotations):
-        roots = filter(lambda pred: not self.sub_class_of[pred],
-                       self.super_class_of.keys())
+        roots = [pred for pred in list(self.super_class_of.keys()) if not self.sub_class_of[pred]]
 
         # Check for annotations not in the ontology to add them as roots
         for annotation in all_annotations:
@@ -195,10 +194,9 @@ class ExperimentKB:
         for root in roots:
             self.add_sub_class(root, self.dummy_root)
 
-
     def _calc_members_closure(self):
         self.sub_class_of_closure = defaultdict(set)
-        for pred in self.super_class_of.keys():
+        for pred in list(self.super_class_of.keys()):
             self.sub_class_of_closure[pred].update(self.sub_class_of[pred])
 
         # Calc the closure to get the members of the subClassOf hierarchy
@@ -229,7 +227,7 @@ class ExperimentKB:
 
         # Run the closure from root
         closure(self.dummy_root, 0)
-
+        logger.debug('root members {}'.format(len(self.members[self.dummy_root])))
 
     def _calc_binary_members(self):
         self.binary_members = defaultdict(dict)
@@ -240,13 +238,13 @@ class ExperimentKB:
 
             for pair in pairs:
                 el1, el2 = self.uri_to_idx[pair[0]], self.uri_to_idx[pair[1]]
-                if self.binary_members[pred].has_key(el1):
+                if el1 in self.binary_members[pred]:
                     self.binary_members[pred][el1].append(el2)
                 else:
                     self.binary_members[pred][el1] = [el2]
 
                 # Add the reverse as well
-                if self.reverse_binary_members[pred].has_key(el2):
+                if el2 in self.reverse_binary_members[pred]:
                     self.reverse_binary_members[pred][el2].append(el1)
                 else:
                     self.reverse_binary_members[pred][el2] = [el1]
@@ -255,40 +253,38 @@ class ExperimentKB:
         self.binary_domains = {}
         for pred in self.binary_predicates:
             self.binary_domains[pred] = (
-                self.indices_to_bits(self.binary_members[pred].keys()),
-                self.indices_to_bits(self.reverse_binary_members[pred].keys())
+                self.indices_to_bits(list(self.binary_members[pred].keys())),
+                self.indices_to_bits(list(self.reverse_binary_members[pred].keys()))
             )
 
         # Calc the corresponding bitsets
         self.bit_members = {}
-        for pred in self.members.keys():
+        for pred in list(self.members.keys()):
             self.bit_members[pred] = self.indices_to_bits(self.members[pred])
 
         self.bit_binary_members = defaultdict(dict)
         self.reverse_bit_binary_members = defaultdict(dict)
 
-        for pred in self.binary_members.keys():
+        for pred in list(self.binary_members.keys()):
 
-            for el in self.binary_members[pred].keys():
+            for el in list(self.binary_members[pred].keys()):
                 indices = self.indices_to_bits(self.binary_members[pred][el])
                 self.bit_binary_members[pred][el] = indices
 
-            for el in self.reverse_binary_members[pred].keys():
+            for el in list(self.reverse_binary_members[pred].keys()):
                 reverse_members = self.reverse_binary_members[pred][el]
                 indices = self.indices_to_bits(reverse_members)
                 self.reverse_bit_binary_members[pred][el] = indices
 
     def _propagate_annotation_names(self, g):
-        to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
-
         # Query for annotation names
         for sub, obj in g.subject_objects(predicate=HEDWIG.annotation_name):
-            sub, obj = to_uni(sub), to_uni(obj)
+            sub, obj = str(sub), str(obj)
             self.annotation_name[sub].append(obj)
             logger.debug('Annotation name root: %s, %s' % (sub, obj))
 
         # Propagate the annotation names to children
-        annotation_name_roots = self.annotation_name.keys()
+        annotation_name_roots = list(self.annotation_name.keys())
         for pred in self.predicates:
             for annotation_root in annotation_name_roots:
                 if annotation_root in self.super_classes(pred):
@@ -299,8 +295,7 @@ class ExperimentKB:
         '''
         Adds the resource 'sub' as a subclass of 'obj'.
         '''
-        to_uni = lambda s: unicode(s).encode('ascii', 'ignore')
-        sub, obj = to_uni(sub), to_uni(obj)
+        sub, obj = str(sub), str(obj)
 
         self.predicates.update([sub, obj])
         if obj not in self.sub_class_of[sub]:

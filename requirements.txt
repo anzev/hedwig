@@ -4,6 +4,5 @@ html5lib==1.0b3
 isodate==0.4.9
 numpy>=1.8.0
 scipy>=0.15.0
-rdflib==4.1.2
+rdflib==4.2.2
 six==1.4.1
-wsgiref==0.1.2

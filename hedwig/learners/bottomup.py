@@ -43,7 +43,7 @@ class BottomUpLearner:
         pruned_subclasses = {}
         for pred in self.kb.predicates:
             subclasses = self.kb.get_subclasses(pred)
-            pruned_subclasses[pred] = filter(min_sup, subclasses)
+            pruned_subclasses[pred] = list(filter(min_sup, subclasses))
 
         return pruned_subclasses
 
@@ -52,7 +52,7 @@ class BottomUpLearner:
         pruned_superclasses = {}
         for pred in self.kb.predicates:
             superclasses = self.kb.super_classes(pred)
-            pruned_superclasses[pred] = filter(min_sup, superclasses)
+            pruned_superclasses[pred] = list(filter(min_sup, superclasses))
 
         return pruned_superclasses
 

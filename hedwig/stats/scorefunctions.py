@@ -104,7 +104,7 @@ def kaplan_meier_AUC(rule):
         def is_alive(ex):
             return rule.kb.get_score(ex) > day
 
-        return len(filter(is_alive, examples))
+        return len(list(filter(is_alive, examples)))
 
     auc, day = 0, 0
     prev = -1
